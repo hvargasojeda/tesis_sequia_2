@@ -1,0 +1,33 @@
+# Entornos virtuales
+.venv/
+venv/
+env/
+
+# Archivos de caché de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de configuración de IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Archivos de Jupyter Notebook
+.ipynb_checkpoints
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Archivos de datos y salida
+# NUNCA subas datos brutos o resultados al repositorio, especialmente si son grandes
+# o contienen información sensible.
+/data/
+/output/
+
+# Archivos de dependencias (si usas Poetry o Pipenv)
+poetry.lock
+Pipfile.lock
