@@ -1,0 +1,201 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Ch{\'a}vez%
+}{%
+Ch{\'a}vez%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+chavez2023}
+\APACinsertmetastar {%
+chavez2023}%
+\begin{APACrefauthors}%
+Ch{\'a}vez, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An{\'a}lisis de tendencias hist{\'o}ricas de la temperatura del aire en el per{\'i}odo (1960-2018) en Paraguay} {An{\'a}lisis de tendencias hist{\'o}ricas de la temperatura del aire en el per{\'i}odo (1960-2018) en paraguay}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Kera Yvoty: Reflexiones Climatol{\'o}gicas e Hidrol{\'o}gicas}{4}{1}{54--69}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Comisi{\'o}n Econ{\'o}mica para Am{\'e}rica Latina y el Caribe (CEPAL)}%
+}{%
+{Comisi{\'o}n Econ{\'o}mica para Am{\'e}rica Latina y el Caribe (CEPAL)}%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+cepal2014}
+\APACinsertmetastar {%
+cepal2014}%
+\begin{APACrefauthors}%
+{Comisi{\'o}n Econ{\'o}mica para Am{\'e}rica Latina y el Caribe (CEPAL)}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+\APACrefbtitle {La econom{\'i}a del cambio clim{\'a}tico en el Paraguay} {La econom{\'i}a del cambio clim{\'a}tico en el paraguay}\ \APACbVolEdTR{}{\BTR{}}.
+\newblock
+\APACaddressInstitution{Santiago, Chile}{Naciones Unidas (CEPAL)}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Grassi%
+}{%
+Grassi%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+grassi2020}
+\APACinsertmetastar {%
+grassi2020}%
+\begin{APACrefauthors}%
+Grassi, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+\APACrefbtitle {Estudio del Clima Paraguay 2019} {Estudio del clima paraguay 2019}\ \APACbVolEdTR{}{\BTR{}}.
+\newblock
+\APACaddressInstitution{Asunci{\'o}n, Paraguay}{Asociaci{\'o}n Alter Vida}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Masson-Delmotte%
+\ \protect \BOthers {.}}{%
+Masson-Delmotte%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2021}}%
+}]{%
+massondelmotte2021}
+\APACinsertmetastar {%
+massondelmotte2021}%
+\begin{APACrefauthors}%
+Masson-Delmotte, V.%
+\BCBT {}\ \BOthers {.}\end{APACrefauthors}%
+\ (\BEDS).
+\unskip\
+\newblock
+\APACrefYear{2021}.
+\newblock
+\APACrefbtitle {Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change} {Climate change 2021: The physical science basis. contribution of working group i to the sixth assessment report of the intergovernmental panel on climate change}.
+\newblock
+\APACaddressPublisher{Cambridge, United Kingdom and New York, NY, USA}{Cambridge University Press}.
+\newblock
+\begin{APACrefDOI} \doi{10.1017/9781009157896} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mishra%
+\ \BBA {} Singh%
+}{%
+Mishra%
+\ \BBA {} Singh%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+mishra2010}
+\APACinsertmetastar {%
+mishra2010}%
+\begin{APACrefauthors}%
+Mishra, A\BPBI K.%
+\BCBT {}\ \BBA {} Singh, V\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A review of drought concepts} {A review of drought concepts}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Hydrology}{391}{1-2}{202--216}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/j.jhydrol.2010.07.012} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Naumann%
+\ \protect \BOthers {.}}{%
+Naumann%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2023}}%
+}]{%
+naumann2023}
+\APACinsertmetastar {%
+naumann2023}%
+\begin{APACrefauthors}%
+Naumann, G.%
+, Podest{\'a}, G.%
+, Marengo, J.%
+, Luterbacher, J.%
+, Bavera, D.%
+, Acosta~Navarro, J.%
+\BDBL {}Vogt, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Extreme and long-term drought in the {La Plata Basin}: Event evolution and impact assessment until September 2022} {Extreme and long-term drought in the {La Plata Basin}: Event evolution and impact assessment until september 2022}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Natural Hazards and Earth System Sciences}{23}{12}{3849--3871}.
+\newblock
+\begin{APACrefDOI} \doi{10.5194/nhess-23-3849-2023} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{Secretar{\'i}a del Ambiente}%
+}{%
+{Secretar{\'i}a del Ambiente}%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+secretaria2017}
+\APACinsertmetastar {%
+secretaria2017}%
+\begin{APACrefauthors}%
+{Secretar{\'i}a del Ambiente}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+\APACrefbtitle {Tercera Comunicaci{\'o}n Nacional sobre Cambio Clim{\'a}tico de la Rep{\'u}blica del Paraguay} {Tercera comunicaci{\'o}n nacional sobre cambio clim{\'a}tico de la rep{\'u}blica del paraguay}\ \APACbVolEdTR{}{\BTR{}}.
+\newblock
+\APACaddressInstitution{Asunci{\'o}n, Paraguay}{Gobierno del Paraguay / Secretar{\'i}a del Ambiente}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tsegai%
+, Medel%
+, Augenstein%
+\BCBL {}\ \BBA {} Huang%
+}{%
+Tsegai%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2022}}%
+}]{%
+tsegai2022}
+\APACinsertmetastar {%
+tsegai2022}%
+\begin{APACrefauthors}%
+Tsegai, D.%
+, Medel, M.%
+, Augenstein, P.%
+\BCBL {}\ \BBA {} Huang, Z.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{}{}.
+\newblock
+\APACrefbtitle {Drought in Numbers, 2022: Restoration for readiness and resilience} {Drought in numbers, 2022: Restoration for readiness and resilience}\ \APACbVolEdTR{}{\BTR{}}.
+\newblock
+\APACaddressInstitution{Bonn, Germany}{United Nations Convention to Combat Desertification (UNCCD)}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

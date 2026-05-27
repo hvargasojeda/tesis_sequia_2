@@ -1,0 +1,193 @@
+\documentclass[12pt,a4paper,oneside]{book}
+
+% PAQUETES DE CONFIGURACIÓN BÁSICA
+\usepackage[spanish]{babel}
+\selectlanguage{spanish}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+\usepackage{mathptmx} % Fuente tipo Times
+\renewcommand{\baselinestretch}{1.3} % Interlineado
+\usepackage{hyperref}
+\usepackage{bookmark}
+
+% GEOMETRÍA Y MÁRGENES
+\usepackage{geometry}
+\geometry{left=4cm, right=2.5cm, top=3.5cm, bottom=2.5cm}
+
+% PAQUETES PARA CITAS (Estilo APA)
+\usepackage{apacite}
+\let\cite\shortcite 
+
+% PAQUETES PARA GRÁFICOS, TABLAS Y OTROS
+\usepackage{graphicx}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{url}
+\usepackage{ragged2e} % Para \begin {justify}
+\usepackage{booktabs}
+\usepackage{longtable}
+
+% ENCABEZADOS Y PIES DE PÁGINA
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{} % Limpia todo
+\fancyhead[R]{\thepage} % Número de página arriba a la derecha
+\renewcommand{\headrulewidth}{0pt} % Sin línea en el encabezado
+\setlength{\headheight}{14.5pt} % Soluciona advertencia de fancyhdr
+\addtolength{\topmargin}{-2.5pt} % Compensa el aumento de headheight
+
+% RENOMBRAR TÍTULOS
+\renewcommand{\chaptername}{Capítulo}
+\renewcommand{\contentsname}{Índice}
+\renewcommand{\listtablename}{Índice de Cuadros}
+\renewcommand{\listfigurename}{Índice de Figuras}
+
+% COMIENZA EL DOCUMENTO
+
+\begin{document}
+
+% PORTADA
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+    \includegraphics[width=4cm]{logofacen.jpg}\par % \par para un salto de línea
+    \vspace{1cm}
+    {\large UNIVERSIDAD NACIONAL DE ASUNCIÓN}\par
+    Facultad de Ciencias Exactas y Naturales\par
+    Departamento de Estadística\par
+    Maestría en Estadística\par
+    \vspace{2cm}
+    {\Large\bfseries Dinámicas de la sequía en Paraguay y su vínculo con el calentamiento global: Un análisis espacio-temporal (2000-2023)}\par % TÍTULO DE TESIS
+    \vspace{2cm}
+
+    {\large\bfseries Hernán J. Vargas Ojeda}\par
+    \vskip 0.5cm
+
+    \begin{tabular}{l}
+    \hskip 5cm    Orientador: Prf. Dr. Gonzalo Martin Vicente\\
+    \hskip 5cm   Co-Orientador: Prf. Dr. Gustavo Ignacio Rivas M.\\
+    \end{tabular}
+    
+    \vfill % Empuja el texto hacia abajo
+    Tesis presentada a la Facultad de Ciencias Exactas y Naturales,
+    Universidad Nacional de Asunción, como requisito para la 
+    obtención del Grado de Magíster en Estadística\par
+    \vspace{2cm}
+    SAN LORENZO - PARAGUAY\par
+    Marzo - 2026\par % AÑO DE DEFENSA
+\end{titlepage}
+
+% PÁGINA DE AUTORIDADES / FICHA 
+\newpage
+\thispagestyle{empty} % Esta página no tendrá número
+\pagenumbering{roman} % A partir de aquí, la numeración es en números romanos
+\setcounter{page}{2} % Empezamos a contar desde ii
+
+\textbf{Ficha Catalográfica del Trabajo de Tesis}
+\vspace{1cm}
+
+\begin{justify} 
+Datos Internacionales de Catalogación en la Publicación (CIP) \\
+DE LA BIBLIOTECA E INTERNET DE LA FACEN - UNA
+\end{justify}
+\vspace{2cm}
+
+\fbox{\parbox[b]{0.9\linewidth}{ 
+    \vspace{0.1cm}
+    \textit{Vargas Ojeda, Hernán Javier}\vspace{0.2cm}\\
+     Dinámicas de la sequía en Paraguay y su vínculo con el calentamiento global: Un Análisis Espacio-Temporal (2000-2023) / Hernán J. Vargas Ojeda. – San Lorenzo: Universidad Nacional de Asunción. Facultad de Ciencias Exactas y Naturales, 2026.\vspace{0.2cm}\\ 
+    % número de páginas final;
+    66 h.; 30 cm.\vspace{0.2cm}\\
+    Incluye referencias bibliográficas.\vspace{0.2cm}\\
+    Tesis (Magíster en Estadística). -- Universidad Nacional de Asunción. Facultad de Ciencias Exactas y Naturales, 2026.\vspace{0.2cm}\\ 
+    % Palabras clave relevantes de la tesis
+    1.Tesis de postgrado – UNA 2.sequía 3.SPEI 4.Series de tiempo\\
+    5.Datos de panel 6.Cambio climático 7.Paraguay\\
+    \vspace{0.2cm}
+    \begin{flushright}
+        % Clasificación de la biblioteca
+        519.5/V297a 
+    \end{flushright}
+}}
+\clearpage % Salto de página
+
+% PÁGINA DE APROBACIÓN / MESA EXAMINADORA
+% pendiente
+
+% DEDICATORIA
+\chapter*{Dedicatoria}
+\addcontentsline{toc}{chapter}{Dedicatoria} % Añade la dedicatoria al índice
+\vspace*{10cm} % espacio vertical 
+\begin{flushright}
+    \textit{A mi familia...} %dedicatoria aquí
+\end{flushright}
+\clearpage
+
+% AGRADECIMIENTOS
+\chapter*{Agradecimientos}
+\addcontentsline{toc}{chapter}{Agradecimientos} % Añade al índice
+En primer lugar, deseo expresar mi más profundo agradecimiento a mis orientadores, por su invaluable guía y paciencia infinita. Sus agudas observaciones y su constante apoyo fueron fundamentales para dar forma y dirección a esta investigación.
+
+Agradezco a los miembros de la mesa examinadora de Coordinación de Postgrado e Investigación en Estadística,
+Departamento de Estadística, FACEN - UNA, por aceptar evaluar este trabajo y por sus valiosas sugerencias que sin duda lo enriquecerán.
+
+Mi gratitud a la Facultad de Ciencias Exactas y Naturales de la Universidad Nacional de Asunción, y en especial al Departamento de Estadística, por brindarme el espacio y los recursos para mi formación de posgrado.
+
+Quisiera extender un agradecimiento especial a la Dirección de Meteorología e Hidrología (DMH) por facilitar el acceso a los datos crudos que constituyen la base de este estudio.
+
+A mis compañeros de la Maestría en Estadística, gracias por las largas jornadas de estudio, las discusiones enriquecedoras y el compañerismo que hicieron este camino más ameno.
+
+A mis padres, María Asunción de Rodriguez y Mario Rodríguez M., por su amor incondicional y por inculcarme el valor del esfuerzo y la educación. A mi pareja, Adriana Viveros González, por su paciencia infinita, su aliento en los momentos difíciles y por ser mi principal apoyo. Sin ustedes, este logro no habría sido posible.
+\clearpage
+
+% RESUMEN
+\chapter*{Resumen}
+\addcontentsline{toc}{chapter}{Resumen} % Añade al índice
+La sequía, intensificada por el cambio climático, representa un riesgo crítico para la seguridad hídrica y económica de Paraguay. Esta investigación cuantifica por primera vez la evolución espacio-temporal del balance hídrico en el país durante el período 2000-2023. Para ello, se utilizó un modelo de panel con efectos aleatorios sobre el Índice Estandarizado de Precipitación-Evapotranspiración (SPEI), calculado a partir de datos de 11 estaciones meteorológicas de alta calidad. El modelo revela tendencias complejas y estadísticamente significativas. El hallazgo principal es una clara tendencia hacia veranos más secos en todo el país, siendo esta aridificación estival particularmente pronunciada en la Región Oriental. En contraste, los inviernos en la Región Oriental exhiben una tendencia a volverse más húmedos, mientras que en la Región Occidental no muestran cambios significativos, evidenciando una divergencia climática entre macroregiones. Estos resultados proveen una base de evidencia cuantitativa crucial para el diseño de políticas de adaptación que sean regional y estacionalmente específicas.
+\vspace{1cm}
+
+\noindent\textbf{Palabras clave:} sequía, cambio climático, SPEI, datos de panel, series de tiempo.
+\clearpage
+
+% ABSTRACT (SUMMARY)
+\chapter*{Abstract} % Título en inglés
+\addcontentsline{toc}{chapter}{Abstract} % Añade al índice
+% pendiente resumen en inglés...
+\vspace{1cm}
+Drought, intensified by climate change, represents a critical risk to Paraguay's water and economic security. This research provides the first quantitative assessment of the spatio-temporal evolution of the country's water balance for the period 2000-2023. A random-effects panel model was applied to the Standardized Precipitation-Evapotranspiration Index (SPEI), calculated from data from 11 high-quality meteorological stations. The model reveals complex and statistically significant trends. The main finding is a clear trend towards drier summers across the entire country, with this summer aridification being particularly pronounced in the Eastern Region. In contrast, winters in the Eastern Region show a trend towards becoming wetter, while the Western Region shows no significant change, evidencing a climatic divergence between macro-regions. These results provide a crucial quantitative evidence base for designing adaptation policies that are regionally and seasonally specific.
+\vspace{1cm}
+
+\noindent\textbf{Keywords:} drought, climate change, SPEI, panel data, time series.
+\clearpage
+
+% ÍNDICES
+\renewcommand{\contentsname}{Índice}
+\tableofcontents
+\clearpage
+
+\listoftables
+\addcontentsline{toc}{chapter}{\listtablename} % Añade al índice principal
+\clearpage
+
+\listoffigures
+\addcontentsline{toc}{chapter}{\listfigurename} % Añade al índice principal
+\clearpage
+
+% CUERPO PRINCIPAL DE LA TESIS
+\pagenumbering{arabic} % Empieza la numeración arábiga
+
+\input{sections/1capitulo.tex}
+%\input{sections/2capitulo.tex}
+%\input{sections/3capitulo.tex}
+%\input{sections/4capitulo.tex}
+%\input{sections/5capitulo.tex}
+%\input{sections/10apendice.tex}
+
+% BIBLIOGRAFÍA
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Referencias} % Añade la entrada al Índice
+\hbadness=10000 % Ignora advertencias de espacios flojos hasta este nivel
+\sloppy
+\bibliographystyle{apacite}
+\bibliography{bibliography}
+
+\end{document}
