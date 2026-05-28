@@ -67,6 +67,30 @@ Grassi, B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Hausman%
+}{%
+Hausman%
+}{%
+{\protect \APACyear {1978}}%
+}]{%
+hausman1978}
+\APACinsertmetastar {%
+hausman1978}%
+\begin{APACrefauthors}%
+Hausman, J\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1978}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Specification tests in econometrics} {Specification tests in econometrics}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Econometrica: Journal of the Econometric Society}{46}{6}{1251--1271}.
+\newblock
+\begin{APACrefDOI} \doi{10.2307/1913827} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Masson-Delmotte%
 \ \protect \BOthers {.}}{%
 Masson-Delmotte%
@@ -89,6 +113,34 @@ Masson-Delmotte, V.%
 \APACaddressPublisher{Cambridge, United Kingdom and New York, NY, USA}{Cambridge University Press}.
 \newblock
 \begin{APACrefDOI} \doi{10.1017/9781009157896} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+McKee%
+, Doesken%
+\BCBL {}\ \BBA {} Kleist%
+}{%
+McKee%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1993}}%
+}]{%
+mckee1993}
+\APACinsertmetastar {%
+mckee1993}%
+\begin{APACrefauthors}%
+McKee, T\BPBI B.%
+, Doesken, N\BPBI J.%
+\BCBL {}\ \BBA {} Kleist, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1993}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The relationship of drought frequency and duration to time scales} {The relationship of drought frequency and duration to time scales}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 8th Conference on Applied Climatology} {Proceedings of the 8th conference on applied climatology}\ (\BVOL~17, \BPGS\ 179--183).
+\newblock
+\APACaddressPublisher{Anaheim, CA, USA}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -149,6 +201,28 @@ Naumann, G.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Pasten%
+}{%
+Pasten%
+}{%
+{\protect \APACyear {2007}}%
+}]{%
+pasten2007}
+\APACinsertmetastar {%
+pasten2007}%
+\begin{APACrefauthors}%
+Pasten, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+\APACrefbtitle {An{\'a}lisis de eventos meteorol{\'o}gicos extremos en el {Paraguay}} {An{\'a}lisis de eventos meteorol{\'o}gicos extremos en el {Paraguay}}\ \APACbVolEdTR{}{\BTR{}}.
+\newblock
+\APACaddressInstitution{Asunci{\'o}n, Paraguay}{Direcci{\'o}n de Meteorolog{\'i}a e Hidrolog{\'i}a, DINAC}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 {Secretar{\'i}a del Ambiente}%
 }{%
 {Secretar{\'i}a del Ambiente}%
@@ -196,6 +270,108 @@ Tsegai, D.%
 \APACrefbtitle {Drought in Numbers, 2022: Restoration for readiness and resilience} {Drought in numbers, 2022: Restoration for readiness and resilience}\ \APACbVolEdTR{}{\BTR{}}.
 \newblock
 \APACaddressInstitution{Bonn, Germany}{United Nations Convention to Combat Desertification (UNCCD)}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vera%
+\ \protect \BOthers {.}}{%
+Vera%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+vera2006}
+\APACinsertmetastar {%
+vera2006}%
+\begin{APACrefauthors}%
+Vera, C.%
+, Higgins, W.%
+, Amador, J.%
+, Ambrizzi, T.%
+, Garreaud, R.%
+, Gochis, D.%
+\BDBL {}Zhang, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Toward a unified view of the {American Monsoon Systems}} {Toward a unified view of the {American Monsoon Systems}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{19}{20}{4977--5000}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/JCLI3896.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vicente-Serrano%
+, Beguer{\'i}a%
+\BCBL {}\ \BBA {} L{\'o}pez-Moreno%
+}{%
+Vicente-Serrano%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+vicenteserrano2010}
+\APACinsertmetastar {%
+vicenteserrano2010}%
+\begin{APACrefauthors}%
+Vicente-Serrano, S\BPBI M.%
+, Beguer{\'i}a, S.%
+\BCBL {}\ \BBA {} L{\'o}pez-Moreno, J\BPBI I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A multiscalar drought index sensitive to global warming: The standardized precipitation evapotranspiration index} {A multiscalar drought index sensitive to global warming: The standardized precipitation evapotranspiration index}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{23}{7}{1696--1718}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/2009JCLI2909.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wooldridge%
+}{%
+Wooldridge%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+wooldridge2010}
+\APACinsertmetastar {%
+wooldridge2010}%
+\begin{APACrefauthors}%
+Wooldridge, J\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2010}.
+\newblock
+\APACrefbtitle {Econometric analysis of cross section and panel data} {Econometric analysis of cross section and panel data}.
+\newblock
+\APACaddressPublisher{Cambridge, MA, USA}{MIT Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+{World Meteorological Organization}%
+}{%
+{World Meteorological Organization}%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+wmo2017}
+\APACinsertmetastar {%
+wmo2017}%
+\begin{APACrefauthors}%
+{World Meteorological Organization}.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+\APACrefbtitle {{WMO} Guidelines on the Calculation of Climate Normals} {{WMO} guidelines on the calculation of climate normals}\ \APACbVolEdTR{}{\BTR{}\ \BNUM\ WMO-No. 1203}.
+\newblock
+\APACaddressInstitution{Geneva, Switzerland}{World Meteorological Organization}.
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

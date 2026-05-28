@@ -4,8 +4,8 @@
 \contentsline {chapter}{Agradecimientos}{\es@scroman {iv}}{chapter*.2}%
 \contentsline {chapter}{Resumen}{\es@scroman {v}}{chapter*.3}%
 \contentsline {chapter}{Abstract}{\es@scroman {vi}}{chapter*.4}%
-\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {viii}}{chapter*.6}%
-\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.7}%
+\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {ix}}{chapter*.6}%
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {x}}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Planteamiento del Problema}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Justificación de la Investigación}{3}{section.1.2}%
@@ -13,5 +13,21 @@
 \contentsline {section}{\numberline {1.4}Objetivos de la Investigación}{4}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Objetivo General}{4}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Objetivos Específicos}{4}{subsection.1.4.2}%
-\contentsline {chapter}{Referencias}{6}{Item.12}%
-\contentsline {section}{Referencias}{6}{section*.8}%
+\contentsline {chapter}{\numberline {2}Marco Teórico}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}La Sequía: Características}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Clasificación de la Sequía}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Causas y Consecuencias de la Sequía en Paraguay}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Consistencia y Completitud en Series Temporales Climatológicas}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Cuantificación de la Sequía Meteorológica: Los Índices SPI y SPEI}{9}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}El Índice de Precipitación Estandarizada (SPI)}{9}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}El Índice de Precipitación-Evapotranspiración Estandarizado (SPEI)}{10}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Antecedentes de Investigación sobre la Sequía en Paraguay}{11}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Fundamentos del Modelado Estadístico para Datos de Panel}{12}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Modelos de Efectos Fijos (FE) vs. Efectos Aleatorios (RE)}{12}{subsection.2.6.1}%
+\contentsline {subsubsection}{Modelo de Efectos Fijos (FE)}{12}{section*.8}%
+\contentsline {subsubsection}{Modelo de Efectos Aleatorios (RE)}{13}{section*.9}%
+\contentsline {subsection}{\numberline {2.6.2}Selección del Modelo: El Test de Especificación de Hausman}{13}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Supuestos y Limitaciones del Modelo de Panel}{14}{subsection.2.6.3}%
+\contentsline {subsubsection}{Cálculo teórico de los errores estándar agrupados}{14}{section*.10}%
+\contentsline {chapter}{Referencias}{17}{equation.2.6.13}%
+\contentsline {section}{Referencias}{17}{section*.11}%

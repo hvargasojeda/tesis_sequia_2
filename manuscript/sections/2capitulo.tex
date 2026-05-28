@@ -1,0 +1,184 @@
+\chapter{Marco Teórico}
+
+\section{La Sequía: Características}
+
+La sequía es un fenómeno de desarrollo lento y acumulativo. Sus efectos se manifiestan de manera gradual, lo que dificulta la determinación precisa de su inicio y final, pudiendo persistir durante años incluso después de que las condiciones meteorológicas hayan retornado a la normalidad \cite{mishra2010}.
+
+Es fundamental distinguir el concepto de sequía del de aridez. La aridez es una característica estructural, climatológica y permanente de una región, definida por niveles de precipitación sistemáticamente bajos. En contraste, la sequía representa una anomalía temporal; es decir, un déficit hídrico transitorio con respecto a las condiciones normales esperadas para esa región. Por lo tanto, un evento de sequía puede manifestarse tanto en regiones húmedas como en regiones áridas. 
+
+De acuerdo con la literatura especializada, las cuatro características fundamentales para el análisis de la sequía son la intensidad, la duración, la frecuencia y la extensión espacial \cite{mishra2010}. El análisis conjunto de estas cuatro dimensiones resulta esencial para una evaluación integral del riesgo, así como para el diseño de sistemas de alerta temprana y la formulación de estrategias de mitigación efectivas.
+
+\section{Clasificación de la Sequía}
+
+La comunidad científica ha desarrollado un marco conceptual estándar que clasifica la sequía en cuatro tipos principales, entendidos como una secuencia de propagación de impactos \cite{mishra2010}:
+\begin{enumerate}
+    \item \textbf{Sequía meteorológica:} Constituye el punto de partida del fenómeno y se define estrictamente por un déficit de precipitación durante un período prolongado en comparación con la media histórica registrada en una región.
+    \item \textbf{Sequía agrícola:} Se manifiesta cuando el déficit de lluvia se propaga induciendo un déficit de humedad en la zona radicular del suelo, afectando la germinación, el crecimiento y el rendimiento de los cultivos, así como la productividad de las pasturas destinadas a la ganadería.
+    \item \textbf{Sequía hidrológica:} Refiere a la disminución significativa de los niveles y caudales en las fuentes de agua superficiales y subterráneas, tales como ríos, lagos, embalses y acuíferos.
+    \item \textbf{Sequía socioeconómica:} Ocurre cuando la escasez física del recurso hídrico, derivada de las fases anteriores, afecta de manera directa la oferta y la demanda de bienes y servicios económicos.
+\end{enumerate}
+
+La presente investigación se centra en la caracterización y modelización de la \textit{sequía meteorológica}. Esta elección se fundamenta en que representa el indicador primario y precursor de todos los demás impactos hidrológicos, agrícolas y socioeconómicos, convirtiéndose en el componente crítico para cualquier sistema de detección temprana. Asimismo, desde una perspectiva instrumental, la sequía meteorológica se define de manera directa a partir de las variables físicas disponibles en la red de estaciones terrestres (precipitación y temperatura), evitando los requerimientos de datos biofísicos complejos y de difícil acceso que demandan las otras clasificaciones.
+
+\section{Causas y Consecuencias de la Sequía en Paraguay}
+
+Al igual que otros países de la región, el régimen pluviométrico de Paraguay se encuentra modulado por fenómenos climáticos de gran escala. El principal motor de la variabilidad interanual es El Niño-Oscilación del Sur (ENSO), un patrón de calentamiento y enfriamiento anómalo de las aguas superficiales del Océano Pacífico Ecuatorial. 
+
+Además del ENSO, otros patrones de variabilidad climática a nivel hemisférico, como la Oscilación Decadal del Pacífico (PDO) y la Oscilación Antártica (AAO), influyen en la regularidad de las precipitaciones, aunque sus dinámicas operan en escalas de tiempo más prolongadas y complejas \cite{vera2006}. Superpuesta a esta variabilidad climática natural, la tendencia de fondo del calentamiento global antropogénico actúa como un factor crítico de intensificación. El incremento sostenido de las temperaturas eleva la evapotranspiración potencial (ETP), exacerbando la severidad de las sequías bajo un mecanismo conocido en la literatura como "hotter droughts" \cite{massondelmotte2021}. Este proceso fue determinante en la reciente sequía extrema registrada en la Cuenca del Plata, donde las altas temperaturas extremaron el déficit hídrico preexistente provocado por la fase de La Niña \cite{naumann2023}.
+
+Dada la estructura productiva de su economía y su posición geográfica, Paraguay presenta una alta susceptibilidad ante las consecuencias de la sequía. Estos impactos se manifiestan de manera transversal en los siguientes sectores clave:
+\begin{itemize}
+    \item \textbf{Sector agropecuario:} La sequía agrícola reduce drásticamente el rendimiento de los cultivos de renta de mayor relevancia para el producto interno bruto (como la soja y el maíz), disminuye la receptividad de las pasturas y puede inducir tasas de mortandad ganadera significativas, traduciéndose en pérdidas económicas millonarias \cite{cepal2014}.
+    \item \textbf{Navegación fluvial:} El estiaje prolongado de los ríos Paraguay y Paraná, consecuencia directa de la sequía hidrológica, afecta la principal vía de importación y exportación comercial de la nación. La reducción del calado operativo de las barcazas incrementa sustancialmente los costos logísticos y debilita la competitividad del comercio exterior.
+    \item \textbf{Generación de energía hidroeléctrica:} Paraguay depende casi en su totalidad de la hidroelectricidad generada por las represas binacionales de Itaipú y Yacyretá. La sequía hidrológica reduce el caudal afluente, comprometiendo la capacidad de generación y disminuyendo los ingresos estatales percibidos por la exportación de excedentes energéticos.
+    \item \textbf{Aspectos sociales y ambientales:} La escasez de agua afecta de manera directa a las comunidades rurales y suburbanas vulnerables, limitando su acceso al agua potable y comprometiendo la agricultura de subsistencia. Adicionalmente, las condiciones prolongadas de sequedad y calor elevan exponencialmente el riesgo de propagación de incendios forestales, con la consecuente degradación de ecosistemas y pérdida de biodiversidad.
+\end{itemize}
+
+\section{Consistencia y Completitud en Series Temporales Climatológicas}
+
+Un desafío recurrente en la modelización climatológica es la presencia de registros faltantes. El tratamiento inapropiado de la falta de datos mediante la eliminación sistemática de periodos observacionales introduce un sesgo que disminuye sustancialmente el poder estadístico de los modelos y altera el cálculo de acumulaciones temporales consecutivas esenciales para los índices de sequía.
+
+De acuerdo con las directrices metodológicas de la Organización Meteorológica Mundial \cite{wmo2017}, la imputación de huecos cortos en series temporales es una práctica estandarizada y necesaria para asegurar la homogeneidad y consistencia de los datos. El tratamiento de registros faltantes en esta investigación se fundamenta teóricamente en la preservación de la estructura de autocorrelación de las series continuas. Para variables con una alta inercia térmica temporal, como la temperatura, se emplean interpolaciones lineales sobre ventanas temporales restringidas. En el caso de variables intermitentes y asimétricas, como la precipitación, la imputación se restringe a evaluaciones contextuales directas de vecindad temporal. Al limitar de manera estricta el proceso de imputación a huecos de duración ultra-corta (1 a 2 días), se evita la inserción de sesgo o variabilidad artificial, garantizando la consistencia analítica requerida para el posterior cálculo multiescalar de los índices de sequía.
+
+\section{Cuantificación de la Sequía Meteorológica: Los Índices SPI y SPEI}
+
+Dada la naturaleza compleja y de desarrollo acumulativo de la sequía, su monitoreo y modelización rigurosa requieren el uso de indicadores cuantitativos estandarizados. Estos índices sintetizan las fluctuaciones climáticas instrumentales en un único valor numérico, permitiendo comparar la severidad espacial y temporal de las anomalías independientemente de la climatología local.
+
+\subsection{El Índice de Precipitación Estandarizada (SPI)}
+
+El Índice de Precipitación Estandarizada (SPI), desarrollado por McKee, Doesken y Kleist \cite{mckee1993}, es uno de los indicadores más implementados globalmente. El SPI parte de la premisa matemática de que el déficit acumulativo de precipitación representa el principal factor detrás de las condiciones de sequía. 
+
+Su procedimiento metodológico consiste en ajustar los registros históricos de precipitación acumulada para una escala temporal seleccionada (por ejemplo, 3, 6 o 12 meses) a una función de distribución de probabilidad teórica, típicamente la distribución Gamma. Posteriormente, las probabilidades acumuladas resultantes se transforman mediante la inversa de la función de distribución normal estándar, produciendo un índice normalizado ($Z$-score) con media cero y varianza unitaria. Los valores negativos indican condiciones más secas de lo normal y los valores positivos condiciones húmedas. Su gran ventaja radica en su flexibilidad multiescalar y simplicidad operacional, al requerir únicamente registros de precipitación.
+
+A pesar de su utilidad regulatoria, el SPI exhibe una limitación conceptual crítica en escenarios de cambio climático: ignora sistemáticamente la influencia de las anomalías de temperatura. El calentamiento global altera no solo los regímenes de precipitación, sino que incrementa de forma directa la demanda evaporativa de la atmósfera, un factor físico determinante en el balance hídrico del suelo. La evapotranspiración potencial (ETP) define la pérdida máxima de agua que una superficie vegetal experimentaría si la disponibilidad hídrica fuera ilimitada. Temperaturas más elevadas conducen a una ETP incremental, acelerando la pérdida de humedad de los suelos y la vegetación. Por consiguiente, omitir la dinámica de la ETP puede resultar en una subestimación sustancial de la severidad de la sequía, especialmente durante eventos de olas de calor persistentes \cite{massondelmotte2021}.
+
+\subsection{El Índice de Precipitación-Evapotranspiración Estandarizado (SPEI)}
+
+Para resolver las limitaciones conceptuales del SPI ante el incremento térmico global, Vicente-Serrano, Beguería y López-Moreno \cite{vicenteserrano2010} diseñaron el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI). El SPEI preserva las propiedades matemáticas y la flexibilidad del SPI, pero fundamenta su cálculo en el balance hídrico climático mensual ($D_i$), definido como la diferencia simple entre la precipitación ($P_i$) y la evapotranspiración potencial estimada ($ETP_i$):
+\begin{equation}
+    D_i = P_i - ETP_i
+\end{equation}
+
+El cálculo del índice acumula estas diferencias mensuales en diferentes escalas de tiempo históricas. Debido a que el balance hídrico puede tomar valores negativos, se recurre a la distribución Log-Logística de tres parámetros para ajustar las series temporales, ofreciendo una flexibilidad superior a la distribución Gamma de dos parámetros del SPI. Finalmente, se realiza el proceso de estandarización normal clásico para obtener los valores del SPEI ($Z$-score), permitiendo una clasificación objetiva de la intensidad de las anomalías hídricas (Cuadro 2.1).
+
+\begin{table}[h!]
+\centering
+\caption{Clasificación de las condiciones de sequía y humedad según los valores del Índice SPEI.}
+\label{tab:clasificacion_spei}
+\begin{tabular}{ll}
+\hline
+\textbf{Valor del SPEI} & \textbf{Categoría} \\ \hline
+2.00 o más & Extremadamente Húmedo \\
+1.50 a 1.99 & Severamente Húmedo \\
+1.00 a 1.49 & Moderadamente Húmedo \\
+-0.99 a 0.99 & Condiciones Normales \\
+-1.00 a -1.49 & Sequía Moderada \\
+-1.50 a -1.99 & Sequía Severa \\
+-2.00 o menos & Sequía Extrema \\ \hline
+\end{tabular}
+\end{table}
+
+\subsection{Antecedentes de Investigación sobre la Sequía en Paraguay}
+
+Si bien el estudio de la sequía mediante índices de balance hídrico multivariados es un estándar internacional, su aplicación instrumental en Paraguay ha sido históricamente limitada. No obstante, las investigaciones nacionales previas proveen las bases científicas para examinar las dinámicas térmicas locales.
+
+Un aporte referencial es el de Chávez \cite{chavez2023}, quien mediante pruebas estadísticas no paramétricas aplicadas a series históricas de temperatura (periodo 1960--2018), confirmó tendencias de calentamiento sistemáticas y estadísticamente significativas en la mayor parte de las estaciones meteorológicas terrestres del país. De forma complementaria, Pasten \cite{pasten2007} identificó un incremento significativo en la frecuencia de días y noches cálidas a nivel nacional.
+
+Asimismo, Grassi \cite{grassi2020} determinó que la tasa de calentamiento observada en el Paraguay durante las últimas décadas supera el promedio mundial. Un hallazgo relevante de este autor es que, a pesar de registrarse incrementos leves en las medias de precipitación anual, la frecuencia y los impactos de las sequías extremas han aumentado significativamente durante el siglo XXI. Esto sugiere que las fluctuaciones térmicas positivas desempeñan un rol dominante en la intensificación del déficit hídrico por encima de la dinámica de las precipitaciones. Por último, las proyecciones de la Comisión Económica para América Latina y el Caribe \cite{cepal2014} confirman que la persistencia de estas dinámicas inducirá choques de oferta desfavorables en la estabilidad económica nacional.
+
+A pesar de la relevancia de estos aportes, la literatura climatológica local carece de investigaciones que examinen la evolución del balance hídrico integrado ($P - ETP$) empleando índices estandarizados de última generación como el SPEI bajo un enfoque de modelización de panel.
+
+\section{Fundamentos del Modelado Estadístico para Datos de Panel}
+
+El análisis de series temporales climatológicas observadas a través de redes terrestres de monitoreo presenta un desafío estadístico fundamental: la heterogeneidad espacial no observada. Cada estación meteorológica se halla condicionada por características físicas locales invariantes en el tiempo (como la altitud, la latitud, la topografía circundante o la geomorfología del suelo) que definen su nivel de base o intercepto climatológico.
+
+Si estas características intrínsecas no se controlan de manera adecuada, sus efectos se combinan con la tendencia temporal estimada, induciendo sesgos severos por variable omitida. El análisis de datos de panel, o datos longitudinales, proporciona el marco de inferencia estadístico adecuado para aislar y resolver este problema \cite{wooldridge2010}. Al observar de manera repetida las mismas estaciones meteorológicas a lo largo del tiempo, este enfoque metodológico permite descomponer la varianza observada en dos componentes analíticos fundamentales: la variación entre unidades (variación \textit{between}) y la variación a lo largo del tiempo para una misma unidad (variación \textit{within}).
+
+\subsection{Modelos de Efectos Fijos (FE) vs. Efectos Aleatorios (RE)}
+
+Existen dos aproximaciones teóricas alternativas para especificar estadísticamente la heterogeneidad no observada de las estaciones:
+
+\subsubsection{Modelo de Efectos Fijos (FE)}
+Asume que los interceptos de cada unidad de análisis son fijos y específicos para cada estación $i$, representados por el parámetro $\alpha_i$. El estimador de efectos fijos, también conocido como estimador "within", elimina las características invariantes en el tiempo mediante la transformación por diferencias respecto a la media temporal de cada variable para cada unidad. La ventaja principal de este enfoque es que no requiere imponer el supuesto de ortogonalidad entre los efectos fijos específicos y las variables explicativas del modelo, controlando de manera robusta cualquier factor espacial invariante.
+
+La especificación general del modelo FE se define como:
+\begin{equation}
+    y_{it} = \alpha_i + \beta x_{it} + \varepsilon_{it}
+\end{equation}
+Donde la transformación que elimina la heterogeneidad no observada opera como:
+\begin{equation}
+    (y_{it} - \bar{y}_i) = \beta(x_{it} - \bar{x}_i) + (u_{it} - \bar{u}_i)
+\end{equation}
+
+\subsubsection{Modelo de Efectos Aleatorios (RE)}
+Este modelo asume que las características específicas invariantes de cada estación meteorológica, $\alpha_i$, no actúan como parámetros fijos a estimar, sino como componentes aleatorios distribuidos de manera uniforme dentro del término de error compuesto del sistema. La hipótesis matemática fundamental del modelo de efectos aleatorios reside en la ortogonalidad o ausencia de correlación entre el componente aleatorio individual y los regresores del modelo. Si este supuesto de ortogonalidad se cumple, el estimador RE es estadísticamente más eficiente que el de efectos fijos, al utilizar de forma óptima tanto la variabilidad \textit{within} como la variabilidad \textit{between}.
+
+La ecuación general se plantea de la siguiente forma:
+\begin{equation}
+    y_{it} = \beta_0 + \beta x_{it} + (\alpha_i + \varepsilon_{it})
+\end{equation}
+Bajo la condición estricta de ortogonalidad:
+\begin{equation}
+    Cov(\alpha_i, x_{it}) = 0
+\end{equation}
+
+\subsection{Selección del Modelo: El Test de Especificación de Hausman}
+
+La elección metodológica entre la aproximación de efectos fijos y efectos aleatorios no se determina de forma discrecional, sino que se fundamenta en la consistencia estadística del modelo RE. El test de especificación de Hausman \cite{hausman1978} constituye la prueba estadística estándar para evaluar esta idoneidad.
+
+Esta prueba contrasta sistemáticamente el vector de coeficientes estimados por el modelo FE (consistente bajo cualquier supuesto de correlación de los efectos individuales) frente al vector de coeficientes del modelo RE (consistente y eficiente únicamente bajo el supuesto de ortogonalidad). La hipótesis nula del test establece que no existen diferencias sistemáticas significativas entre ambos estimadores:
+\begin{equation}
+    H_0: \hat{\beta}_{FE} = \hat{\beta}_{RE}
+\end{equation}
+
+Si el p-valor calculado para la estadística de prueba es inferior al nivel de significancia establecido (típicamente $\alpha = 0.05$), se rechaza la hipótesis nula, indicando la presencia de correlación y la obligatoriedad metodológica de implementar la aproximación de efectos fijos para garantizar la consistencia de las estimaciones. Por el contrario, un p-valor elevado sugiere que las estimaciones del modelo de efectos aleatorios son robustas y preferibles debido a su mayor eficiencia.
+
+\subsection{Supuestos y Limitaciones del Modelo de Panel}
+
+La validez metodológica del modelo de efectos aleatorios descansa sobre la verificación de los siguientes supuestos analíticos clave:
+\begin{enumerate}
+    \item \textbf{Exogeneidad estricta:} Se asume que el componente de error idiosincrático, $\varepsilon_{it}$, no se encuentra correlacionado con las variables explicativas para ningún periodo temporal observacional. La consistencia del efecto aleatorio individual $\alpha_i$ respecto a las variables explicativas se valida mediante el test de Hausman.
+    \item \textbf{Homocedasticidad y no autocorrelación del error:} Supone que los errores idiosincráticos presentan una varianza constante e independiente a través de las observaciones temporales para una misma entidad. Debido a que las series climatológicas suelen exhibir autocorrelación y heterocedasticidad, este estudio aborda preventivamente dicha potencial desviación mediante la estimación de errores estándar robustos agrupados (clustered robust standard errors) a nivel de estación meteorológica. Esta técnica estadístico-analítica parametriza las matrices de covarianza para tolerar patrones arbitrarios de correlación y heterocedasticidad dentro de cada clúster individual, derivando p-valores y límites de confianza robustos para la inferencia de tendencias.
+    \subsubsection{Cálculo teórico de los errores estándar agrupados}
+
+En el modelado de datos de panel, la presencia de correlación serial dentro de una misma estación meteorológica (autocorrelación) e idoneidades de varianza no constante (heterocedasticidad) invalida la inferencia basada en los errores estándar ordinarios, tendiendo a subestimar significativamente la verdadera variabilidad de los estimadores. Para corregir este problema, se implementa el estimador de matriz de covarianza robusta agrupada por clústeres (estaciones), el cual generaliza el estimador robusto de White para permitir correlación arbitraria entre las observaciones de una misma entidad \cite{wooldridge2010}.
+
+Considérese el modelo lineal agrupado por estaciones (clústeres):
+\begin{equation}
+    y_{i} = X_{i}\beta + u_{i}, \quad i = 1, 2, \dots, M
+\end{equation}
+Donde $M$ representa el número total de clústeres (estaciones meteorológicas seleccionadas), $y_i$ es un vector de dimensión $T_i \times 1$ de la variable dependiente para la estación $i$, $X_i$ es la matriz de regresores de dimensión $T_i \times K$, y $u_i$ representa el vector de perturbaciones idiosincráticas de dimensión $T_i \times 1$.
+
+El estimador de mínimos cuadrados ordinarios (o de efectos aleatorios tras la transformación de cuasi-diferenciación) se define como:
+\begin{equation}
+    \hat{\beta} = \left( \sum_{i=1}^{M} X_{i}' X_{i} \right)^{-1} \sum_{i=1}^{M} X_{i}' y_{i}
+\end{equation}
+
+La varianza asintótica de este estimador, condicionada en la matriz de regresores $X$, se modela bajo la estructura de varianza-covarianza tipo ``sándwich'':
+\begin{equation}
+    \text{Var}(\hat{\beta} | X) = \left( X'X \right)^{-1} B \left( X'X \right)^{-1}
+\end{equation}
+Donde el núcleo interno $B$ se define como la suma ponderada de las matrices de covarianza de los residuos para cada clúster independiente:
+\begin{equation}
+    B = \sum_{i=1}^{M} X_{i}' \Omega_{i} X_{i}
+\end{equation}
+En este esquema, $\Omega_i = E[u_i u_i' | X_i]$ es la matriz de varianza-covarianza de dimensión $T_i \times T_i$ específica para la estación $i$. El supuesto fundamental de este método es que las observaciones correspondientes a estaciones distintas son independientes entre sí ($E[u_i u_j' | X_i, X_j] = 0$ para todo $i \neq j$), permitiendo al mismo tiempo cualquier estructura de correlación y heterocedasticidad no paramétrica dentro de cada estación $i$.
+
+Dado que $\Omega_i$ es desconocida, el estimador robusto agrupado sustituye esta matriz por el producto cruzado de los vectores de residuos muestrales ajustados para cada estación, $\hat{u}_i = y_i - X_i \hat{\beta}$:
+\begin{equation}
+    \widehat{\Omega}_{i} = \hat{u}_{i} \hat{u}_{i}'
+\end{equation}
+
+De este modo, la estimación empírica de la matriz de varianza-covarianza de los coeficientes, $\widehat{\text{Var}}_{robust}(\hat{\beta})$, se calcula mediante la fórmula:
+\begin{equation}
+    \widehat{\text{Var}}_{robust}(\hat{\beta}) = \left( \sum_{i=1}^{M} X_{i}' X_{i} \right)^{-1} \left( \sum_{i=1}^{M} X_{i}' \hat{u}_{i} \hat{u}_{i}' X_{i} \right) \left( \sum_{i=1}^{M} X_{i}' X_{i} \right)^{-1}
+\end{equation}
+
+Para corregir los sesgos inherentes en muestras donde el número de clústeres $M$ es finito, se aplica un factor de corrección de escala multiplicativo en la matriz de varianza-covarianza:
+\begin{equation}
+    q = \left( \frac{M}{M - 1} \right) \left( \frac{N - 1}{N - K} \right)
+\end{equation}
+Donde $N = \sum_{i=1}^{M} T_i$ representa el número total de observaciones mensuales del panel, y $K$ es el número de parámetros estimados en el modelo. Los errores estándar agrupados por estación corresponden a la raíz cuadrada de los elementos de la diagonal principal de la matriz $q \cdot \widehat{\text{Var}}_{robust}(\hat{\beta})$.
+\end{enumerate}
+
+Finalmente, una limitación inherente al marco de modelización propuesto reside en su especificación de tendencia lineal. El estimador asume una tasa de cambio constante en la anomalía hídrica a lo largo del periodo temporal estudiado, constituyendo una primera aproximación de tendencia a largo plazo que no captura dinámicas no lineales de escala decadal o cambios abruptos de régimen climático.
