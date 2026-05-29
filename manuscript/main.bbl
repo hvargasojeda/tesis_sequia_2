@@ -273,6 +273,32 @@ Tsegai, D.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Velasco%
+, Ochoa%
+\BCBL {}\ \BBA {} Guti{\'e}rrez%
+}{%
+Velasco%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2005}}%
+}]{%
+velasco2005sequia}
+\APACinsertmetastar {%
+velasco2005sequia}%
+\begin{APACrefauthors}%
+Velasco, I.%
+, Ochoa, L.%
+\BCBL {}\ \BBA {} Guti{\'e}rrez, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2005}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Sequ{\'\i}a, un problema de perspectiva y gesti{\'o}n} {Sequ{\'\i}a, un problema de perspectiva y gesti{\'o}n}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Regi{\'o}n y sociedad}{17}{34}{35--71}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Vera%
 \ \protect \BOthers {.}}{%
 Vera%
