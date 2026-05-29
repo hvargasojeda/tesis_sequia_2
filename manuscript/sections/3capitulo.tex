@@ -34,7 +34,7 @@ El proceso de refinamiento de la muestra se rigió por dos criterios estrictos d
 
 Este procedimiento determinó la conformación de una muestra final de 11 estaciones meteorológicas de alta calidad sobre las cuales se llevó a cabo el modelado cuantitativo de la investigación. El Cuadro \ref{tab:seleccion_estaciones} resume los resultados de este proceso de depuración de la red original.
 
-\begin{table}[h!]
+\begin{table}[!ht]
 \centering
 \caption{Resumen del proceso de selección de estaciones meteorológicas terrestres.}
 \label{tab:seleccion_estaciones}
@@ -81,7 +81,7 @@ Una vez seleccionada la red final de 11 estaciones meteorológicas, se abordó e
 
 Los vacíos de datos con una duración continua igual o superior a tres días no fueron sujetos a ningún tipo de imputación y se preservaron como ``valores perdidos'' para salvaguardar la veracidad estadística de las series originales. Los impactos de este proceso sobre la completitud global de la base de datos se sintetizan en el Cuadro \ref{tab:resumen_limpieza}.
 
-\begin{table}[h!]
+\begin{table}[!ht]
 \centering
 \caption{Resumen cuantitativo del impacto del proceso de depuración e imputación.}
 \label{tab:resumen_limpieza}
@@ -305,6 +305,7 @@ Y las variables del modelo son:
 \end{itemize}
 
 La especificación completa del modelo estimado, incluyendo todas las variables e interacciones, fue la siguiente:
+\sloppy
 \begin{equation}
 \begin{split}
     \text{SPEI-6}_{it} = & \beta_0 + \beta_1 \text{tiempo}_t + \sum_{s=1}^{3} \gamma_s \text{estacion-climatica}_{s,t} + \delta_1 \text{region-geografica}_i \\
