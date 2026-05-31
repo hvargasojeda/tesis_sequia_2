@@ -58,5 +58,11 @@
 \contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{32}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{32}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Asignación de estaciones y validación de contigüidad geográfica}{33}{subsection.4.1.2}%
-\contentsline {chapter}{Referencias}{35}{figure.4.1}%
-\contentsline {section}{Referencias}{35}{section*.11}%
+\contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{34}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Patrones Estacionales del Balance Hídrico}{35}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{36}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Análisis de Intensidad del déficit hídrico}{36}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{37}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{38}{subsection.4.2.5}%
+\contentsline {chapter}{Referencias}{40}{figure.4.3}%
+\contentsline {section}{Referencias}{40}{section*.11}%

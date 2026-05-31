@@ -45,3 +45,57 @@ Esta partición de dos subregiones climáticas óptimas reemplazará de forma si
     \caption{Resultados de la regionalización climática de la sequía en Paraguay (periodo 2000--2023): (A) Dendrograma de agrupamiento jerárquico aglomerativo utilizando la distancia de disimilitud de Ward; (B) Optimización del número de clústeres ($k$) mediante el coeficiente de silueta promedio; (C) Distribución espacial resultante de las estaciones meteorológicas terrestres clasificadas por subregión climática.}
     \label{fig:regionalizacion}
 \end{figure}
+
+\section{Caracterización descriptiva de las dinámicas de sequía (2000--2023)}
+
+Para comprender la caracterización de la sequía en Paraguay, esta sección aborda cinco dimensiones analíticas fundamentales: estacionalidad anual, frecuencia de eventos, intensidad, duración temporal y extensión espacial de las anomalías de balance hídrico. Los resultados estadísticos se sintetizan de forma gráfica en la Figura \ref{fig:caracterizacion_descriptiva}.
+
+\subsection{Patrones Estacionales del Balance Hídrico}
+
+El análisis de la distribución mensual del SPEI-6, presentado mediante diagramas de caja en la Figura \ref{fig:distribucion_mensual}, revela la existencia de un ciclo estacional marcado en las condiciones hídricas del país. La variabilidad observada a lo largo de los meses muestra que Paraguay experimenta transiciones significativas entre periodos de superavit hídrico y periodos de déficit hídrico.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.85\textwidth]{/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png}
+    \caption{Distribución mensual del índice SPEI-6 para las 11 estaciones seleccionadas durante el período 2000--2023. La línea horizontal negra dentro de cada caja representa la mediana de la distribución; los valores atípicos se grafican como puntos grises fuera de los bigotes.}
+    \label{fig:distribucion_mensual}
+\end{figure}
+
+Como se ilustra en la Figura \ref{fig:distribucion_mensual}, el final del invierno y el inicio de la primavera (agosto y septiembre) constituyen climatológicamente los meses más secos a nivel de base. Durante estos meses, las medianas del SPEI-6 se posicionan de manera sistemática en valores negativos, siendo las únicas del ciclo anual claramente situadas por debajo de la línea de neutralidad hídrica (SPEI = 0). Este comportamiento físico se corresponde con la marcada disminución estacional de las precipitaciones en el territorio nacional durante el período frío, lo que reduce la humedad superficial disponible.
+
+En contraste, los meses correspondientes al final del verano y el otoño (de febrero a mayo) se perfilan consistentemente como los períodos con mayor superavit hídrico, exhibiendo medianas del SPEI-6 con desviaciones positivas. No obstante, un detalle de gran relevancia para la caracterización de las sequías en Paraguay radica en la distribución de los valores atípicos (extremos) durante los meses de verano, específicamente en diciembre y enero. 
+
+A pesar de que el verano se caracteriza en promedio por un balance hídrico neutral a ligeramente húmedo, los valores mínimos extremos del índice —aquellos que superan el umbral de sequía extrema (SPEI-6 $\leq -2.0$) y alcanzan anomalías severas inferiores a $-3.5$— se registran con frecuencia durante el período estival. Este comportamiento evidencia que, aunque las lluvias de verano suelen ser cuantitativamente abundantes en Paraguay, las anomalías de temperaturas extremas que ocurren de manera sincrónica en esta estación pueden disparar de tal forma la demanda evaporativa de la atmósfera (ETP) que superan el volumen de precipitaciones. De este modo, se configuran sequías estivales rápidas y severas que actúan como propulsoras del proceso de aridificación estacional.
+
+\subsection{Análisis de frecuencia de eventos extremos}
+
+Para cuantificar los cambios en la ocurrencia de la sequía, se evaluó la frecuencia anual de ``meses-estación met.'' que superaron los umbrales de sequía moderada ($SPEI-6 \leq -1.0$) y sequía severa/extrema ($SPEI-6 \leq -1.5$). Como se ilustra en la Figura \ref{fig:caracterizacion_descriptiva} (Panel A), existe una tendencia positiva y estadísticamente significativa en la frecuencia de estos eventos a lo largo de los 24 años analizados.
+
+Durante la primera década del estudio (2000--2009), la ocurrencia de meses en sequía se mantuvo dentro de los límites de variabilidad interanual normal del país. No obstante, a partir de 2019 se observa un quiebre estructural sin precedentes en la serie histórica. El pico máximo de frecuencia se registró en el año 2020, acumulando una cifra récord de 59 meses-estación met. bajo condiciones de sequía moderada o severa. Considerando que el total anual posible de meses-estación met. para la red de 11 estaciones es de 132 ($11 \times 12$), este resultado indica que aproximadamente el 44.7\% del territorio nacional monitoreado experimentó déficit hídrico de forma simultánea a lo largo del año 2020, consolidando la crisis hidroclimatológica más generalizada de las últimas dos décadas.
+
+\subsection{Análisis de Intensidad del déficit hídrico}
+
+La intensidad de la sequía se examinó mediante dos descriptores anuales: la intensidad promedio de los meses en sequía ($SPEI-6 \leq -1.0$) y el valor mínimo absoluto registrado en la red de estaciones. Como se expone en la Figura \ref{fig:caracterizacion_descriptiva} (Panel B), ambas métricas muestran una trayectoria de agravamiento del déficit.
+
+El promedio anual de la intensidad de las sequías ha transitado de valores estables cercanos a $-1.20$ a inicios del período estudiado, hacia promedios sistemáticamente inferiores a $-1.60$ en los últimos años del registro. El mínimo absoluto de toda la serie histórica se registró en diciembre de 2023 (2023-12), alcanzando un valor extremo de $-3.7217$ en la estación de Mariscal Estigarribia (MCAL), ubicada en el Chaco Central (Subregión Occidental). Este registro, que se sitúa a casi cuatro desviaciones estándar por debajo de la normal climatológica, supera ampliamente el umbral técnico de sequía extrema ($SPEI-6 \leq -2.0$). Este comportamiento ilustra la severidad que adquieren las sequías de Paraguay cuando las anomalías de temperatura potencian la demanda evaporativa en ausencia de precipitaciones, actuando como un impulsor físico del proceso de aridificación local.
+
+\subsection{Análisis de la duración temporal (persistencia)}
+
+La duración de los eventos de sequía (persistencia temporal) se evaluó mediante un análisis de rachas o \textit{run-length}, definiendo la duración de un evento como el número de meses consecutivos en que una estación meteorológica registra un valor de $SPEI-6 \leq -1.0$. Bajo este esquema metodológico, la duración promedio general de los eventos de sequía para el territorio nacional durante los 24 años analizados se ubicó en $2.90$ meses, alcanzando una racha máxima absoluta de $14$ meses continuos de déficit hídrico extremo, según se describe en la Figura \ref{fig:caracterizacion_descriptiva} (Panel C).
+
+Para examinar si el cambio climático ha alterado la persistencia temporal de estos fenómenos a mediano plazo, se contrastaron los resultados agregados del primer intervalo de estudio (Periodo 1: 2000--2011) frente al intervalo de calentamiento más pronunciado (Periodo 2: 2012--2023). 
+
+El análisis de distribución de frecuencias de las rachas de sequía evidencia un cambio estructural notable. Durante el Periodo 1, la duración promedio de las sequías fue de $2.59$ meses. En contraste, para el Periodo 2, este indicador de persistencia hídrica se incrementó a $3.20$ meses, lo que representa un aumento relativo del 23.55\% en la persistencia del fenómeno. El incremento en el promedio de las rachas consecutivas indica que, en las últimas dos décadas, los sistemas de balance hídrico terrestre en Paraguay han perdido capacidad de recuperación rápida. Esto prolonga los estados de estrés vegetativo y agota las reservas de humedad del suelo de manera acumulativa, lo que constituye un claro indicador físico del proceso de aridificación que experimenta la región.
+
+\subsection{Análisis de la extensión espacial de la sequía}
+
+La extensión espacial se cuantificó como el porcentaje de estaciones de la red que experimentaron condiciones de sequía simultáneamente ($SPEI-6 \leq -1.0$) en cada mes calendario. El promedio anual y su línea de tendencia lineal se presentan en la Figura \ref{fig:caracterizacion_descriptiva} (Panel D).
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=\textwidth]{/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png}
+    \caption{Caracterización analítico-descriptiva de las dinámicas de la sequía en Paraguay (2000--2023): (A) Frecuencia anual de meses-estación met. en sequía moderada y severa con línea de tendencia ajustada; (B) Evolución de la intensidad promedio y mínima anual del SPEI-6; (C) Distribución comparativa de la duración de eventos continuos entre el Periodo 1 (2000--2011) y el Periodo 2 (2012--2023); (D) Extensión espacial promedio anual (\% de estaciones afectadas de forma simultánea) con línea de tendencia.}
+    \label{fig:caracterizacion_descriptiva}
+\end{figure}
+
+Los resultados confirman que la sequía en Paraguay ha transitado de ser un fenómeno eminentemente local a principios del milenio, a convertirse en un fenómeno de escala nacional y altamente generalizado en la última década. La línea de tendencia muestra una pendiente positiva estadísticamente significativa. Durante los eventos críticos del ciclo 2020--2021, la extensión espacial del déficit hídrico alcanzó niveles históricos, afectando de forma simultánea a más del 90\% del territorio nacional (representado por las estaciones activas de ambos clústeres).
