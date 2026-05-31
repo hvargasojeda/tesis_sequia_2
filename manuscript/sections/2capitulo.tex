@@ -106,7 +106,7 @@ El déficit hídrico no genera impactos inmediatos homogéneos sobre los sistema
 
 \section{Fundamentos del agrupamiento no supervisado (clustering) para regionalización geográfica de la sequía}
 
-Para resolver el problema de la variabilidad espacial de la sequía de manera objetiva, es necesario superar la división regional clásica de Paraguay (Región Oriental y Región Occidental). Las divisiones político-administrativas o fisiográficas tradicionales no siempre se corresponden de manera exacta con los patrones meteorológicos y de balance hídrico dinámicos. 
+Las divisiones político-administrativas o fisiográficas tradicionales (Región Oriental y Región Occidental) no siempre se corresponden de manera exacta con los patrones meteorológicos y de balance hídrico dinámicos. Para resolver el problema de la variabilidad espacial de la sequía de manera objetiva vamos a utilizar los datos reales del SPEI-6 de cada estación meteorológica para agruparlas en regiones geográficas homogéneas, mediante un algoritmo de agrupamiento no supervisado. 
 
 Por consiguiente, el aprendizaje estadístico no supervisado (unsupervised learning) proporciona un marco analítico riguroso para agrupar las estaciones meteorológicas basándose exclusivamente en la variabilidad temporal y covarianza de sus series históricas de sequía.
 
@@ -114,7 +114,9 @@ Por consiguiente, el aprendizaje estadístico no supervisado (unsupervised learn
 
 El Agrupamiento Jerárquico Aglomerativo (HAC, por sus siglas en inglés) es una técnica de partición espacial iterativa que opera de forma ascendente. El algoritmo inicia asignando a cada estación meteorológica individual su propio grupo (clúster) y, de forma sucesiva, procede a fusionar los dos grupos más similares en cada iteración hasta que todas las entidades se integran en una estructura de árbol única conocida como dendrograma.
 
-Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementa el criterio de enlace de Ward (*Ward's minimum variance method*). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo.
+Este método de agrupamiento es optimo para datos climáticos que operan bajo estructuras anidadas y continuas. El dendrograma permite a los climatólogos inspeccionar la jerarquía y cercanía de las subparticiones a diferentes niveles de escala, una propiedad física que los métodos planos o no jerárquicos como K-Means omiten por completo \cite{gong1995}.
+
+Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementa el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de Ward \cite{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como el estimador más eficiente para la regionalización de variables continuas. Esto asegura que las estaciones dentro de cada clúster tengan series de sequía (SPEI-6) sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
 
 La disimilitud o distancia temporal entre dos entidades $X$ y $Y$ se cuantifica mediante la distancia euclídea clásica calculada sobre la totalidad de sus observaciones a lo largo de la serie histórica:
 \begin{equation}

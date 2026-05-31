@@ -1,0 +1,57 @@
+\chapter{Resultados}
+
+\section{Regionalización climatológica de la sequía en Paraguay}
+
+Antes de proceder a caracterizar los eventos de sequía y estimar tendencias temporales agregadas mediante el modelado econométrico de panel, resulta indispensable examinar la idoneidad de la división geográfica tradicional del país. Paraguay ha sido históricamente subdividido en dos grandes macroregiones geográficas y administrativas: la Región Oriental y la Región Occidental (Chaco). No obstante, desde una perspectiva climatológica y de balance hídrico (SPEI), esta delimitación dicotómica es puesta a prueba para capturar la variabilidad de los patrones físicos de sequía y los procesos de aridificación espacialmente heterogéneos.
+
+Con el propósito de establecer subregiones climáticas homogéneas de manera objetiva, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo utilizando la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward sobre la matriz de datos continuos mensuales del índice SPEI-6 para las 11 estaciones meteorológicas seleccionadas durante el período 2000--2023. El preprocesamiento de la base detectó 55 celdas con valores perdidos en las series temporales originales del SPEI-6, los cuales fueron resueltos mediante interpolación lineal temporal antes de proceder con el agrupamiento.
+
+\subsection{Optimización y selección del número de clústeres}
+
+La jerarquía de fusiones consecutivas calculada por el algoritmo de Ward se representa de manera gráfica en el dendrograma de disimilitud de la Figura \ref{fig:regionalizacion} (Panel A). Para evitar la discrecionalidad en el corte jerárquico de este dendrograma, se calculó el coeficiente de silueta promedio para un rango operativo de $k \in [2, 5]$ clústeres. El Cuadro \ref{tab:silueta} expone los resultados de esta optimización espacial, la cual se ilustra además en la curva de optimización de la Figura \ref{fig:regionalizacion} (Panel B).
+
+\begin{table}[h!]
+\centering
+\caption{Coeficiente de silueta promedio según el número de particiones (clústeres).}
+\label{tab:silueta}
+\begin{tabular}{cc}
+\hline
+\textbf{Número de clústeres ($k$)} & \textbf{Coeficiente de silueta promedio} \\ \hline
+$\mathbf{k = 2}$ & \textbf{0.1350} \\
+$k = 3$ & 0.1235 \\
+$k = 4$ & 0.1174 \\
+$k = 5$ & 0.0991 \\ \hline
+\end{tabular}
+\end{table}
+
+El coeficiente de silueta promedio alcanza su máximo global para una estructura de $k^* = 2$ clústeres ($s = 0.1350$), indicando que una partición de dos regiones climáticas proporciona la máxima cohesión intra-grupo y la mayor diferenciación inter-grupo. Las particiones alternativas de $3$, $4$ o $5$ grupos muestran un decaimiento progresivo en la calidad de la silueta, justificando estadísticamente la selección de dos subregiones hídricas óptimas a nivel nacional para el período bajo estudio.
+
+\subsection{Asignación de estaciones meteorológicas y Validación de contigüidad geográfica}
+
+Para validar la coherencia climática y física de la regionalización propuesta, se contrastó la asignación temporal derivada del clustering de SPEI-6 con la ubicación geográfica (latitud y longitud) de las estaciones terrestres. La evaluación cuantitativa de las distancias euclídeas de posicionamiento reveló que la distancia geográfica promedio entre estaciones asignadas al mismo clúster (distancia intra-clúster) es de $2.461^{\circ}$ decimales (aproximadamente $270$ km), mientras que la distancia promedio entre estaciones pertenecientes a clústeres distintos (distancia inter-clúster) asciende a los $3.362^{\circ}$ decimales (aproximadamente $370$ km).
+
+Esta diferencia confirma la existencia de una contigüidad geográfica compacta. Como se presenta visualmente en el mapa de la Figura \ref{fig:regionalizacion} (Panel C), la clasificación basada en la sincronía de la sequía a mediano plazo (SPEI-6) ha particionado el territorio nacional de manera limpia, delimitando dos subregiones climáticas claramente definidas:
+
+\begin{enumerate}
+    \item \textbf{Subregión subhúmeda sur-este (Clúster 1):} Integrada por las estaciones de Caazapá (CAAZ), Pilar (PILAR), Minga Guazú (MINGA), Coronel Oviedo (COVIE) y Capitán Meza (CMEZA). Este bloque representa el sur y este de la Región Oriental, la zona de mayor pluviometría de Paraguay, caracterizada históricamente por balances hídricos promedio superavitarios y una menor inercia a eventos de sequía extrema prolongada.
+    \item \textbf{Subregión semiárida centro-chaco (Clúster 2):} Conformada por las estaciones de Mariscal Estigarribia (MCAL), Gral. Bruguez (GBRU), Luque (LUQUE), Concepción (CONC), San Estanislao (SEST) y Pedro Juan Caballero (PJC). Esta franja geográfica continua se extiende desde el Chaco profundo y húmedo, cruzando el río Paraguay hacia el centro-norte y norte de la Región Oriental. Comparten un régimen de mayor inestabilidad climática, una estación seca invernal muy pronunciada y promedios térmicos elevados que incrementan de forma sistemática la demanda evaporativa.
+\end{enumerate}
+
+Esta partición de dos subregiones climáticas óptimas reemplazará de forma sistemática la regional clásica en todos los análisis descriptivos e inferenciales subsiguientes de la investigación, permitiendo examinar el proceso de aridificación con un mayor grado de precisión espacial.
+
+\begin{figure}[htbp]
+    \centering
+    % Include figure if present; fallback to PDF variant or a placeholder box if missing
+    % Use forward slashes for relative paths and avoid leading backslashes in the filename
+    \IfFileExists{../../output/figures/analisis_regionalizacion_sequia.png}{%
+        \includegraphics[width=\textwidth]{../../output/figures/analisis_regionalizacion_sequia.png}%
+    }{%
+        \IfFileExists{../../output/figures/analisis_regionalizacion_sequia.pdf}{%
+            \includegraphics[width=\textwidth]{../../output/figures/analisis_regionalizacion_sequia.pdf}%
+        }{%
+            \fbox{\parbox[b][0.3\textheight][c]{0.95\textwidth}{\centering Figura no disponible: ../../output/figures/analisis_regionalizacion_sequia.(png|pdf)}}%
+        }%
+    }
+    \caption{Resultados de la regionalización climática de la sequía en Paraguay (periodo 2000--2023): (A) Dendrograma de agrupamiento jerárquico aglomerativo utilizando la distancia de disimilitud de Ward; (B) Optimización del número de clústeres ($k$) mediante el coeficiente de silueta promedio; (C) Distribución espacial resultante de las estaciones meteorológicas terrestres clasificadas por subregión climática.}
+    \label{fig:regionalizacion}
+\end{figure}

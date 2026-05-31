@@ -200,9 +200,11 @@ Este estimador numérico robusto asegura que las observaciones del SPEI-6 result
 
 \section{Regionalización geográfica mediante agrupamiento no supervisado}
 
-Para resolver el problema planteado en la investigación respecto a la variabilidad espacial de la sequía, esta tesis propone superar la división geográfica clásica de Paraguay (Región Oriental y Región Occidental). La división administrativa e histórica de las macroregiones no necesariamente se corresponde con la dinámica física de los patrones climáticos reales de sequía.
+Para resolver el problema planteado en la investigación respecto a la variabilidad espacial de la sequía, esta tesis propone superar la división geográfica clásica de Paraguay (Región Oriental y Región Occidental). A priori, la división administrativa e histórica de las macroregiones no necesariamente se corresponde con la dinámica física de los patrones climáticos reales de sequía.
 
-Por consiguiente, se introduce un enfoque de aprendizaje estadístico no supervisado para agrupar las estaciones de monitoreo basándose estrictamente en el comportamiento dinámico y la covarianza de sus series temporales históricas mensuales de SPEI-6 a lo largo de los 24 años bajo estudio.
+Por consiguiente, se introduce un enfoque de aprendizaje estadístico no supervisado para agrupar las estaciones de monitoreo basándose estrictamente en el comportamiento dinámico y la covarianza de sus series temporales históricas mensuales de SPEI-6 a lo largo de los 24 años bajo estudio. El SPEI al ser una métrica estandarizada, permite comparar directamente la sincronicidad temporal de las fluctuaciones hídricas entre estaciones, independientemente de sus niveles absolutos de precipitación o temperatura.
+
+Dado que el objeto de estudio de esta tesis se centra en identificar tendencias de aridificación a largo plazo, resulta estadísticamente más consistente agrupar las estaciones meteorológicas por la sincronía de sus fluctuaciones hídricas temporales. Este enfoque remueve los efectos de nivel absoluto —los cuales ya han sido controlados matemáticamente en la construcción misma del SPEI-6— permitiendo que las subregiones resultantes del agrupamiento jerárquico representen la variabilidad hídrica y tendencias de aridificación homogéneas frente al calentamiento global.
 
 \subsection{Algoritmo de agrupamiento jerárquico aglomerativo}
 

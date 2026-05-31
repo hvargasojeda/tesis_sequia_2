@@ -45,6 +45,33 @@ cepal2014}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Gong%
+\ \BBA {} Richman%
+}{%
+Gong%
+\ \BBA {} Richman%
+}{%
+{\protect \APACyear {1995}}%
+}]{%
+gong1995}
+\APACinsertmetastar {%
+gong1995}%
+\begin{APACrefauthors}%
+Gong, X.%
+\BCBT {}\ \BBA {} Richman, M\BPBI B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1995}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {On the classification of {North American} climates} {On the classification of {North American} climates}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{8}{5}{1157--1188}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0442(1995)008<1157:OTCONA>2.0.CO;2} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Grassi%
 }{%
 Grassi%
@@ -223,6 +250,34 @@ Pasten, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Santos%
+, Pulido-Calvo%
+\BCBL {}\ \BBA {} Portela%
+}{%
+Santos%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+santos2010}
+\APACinsertmetastar {%
+santos2010}%
+\begin{APACrefauthors}%
+Santos, J\BPBI F.%
+, Pulido-Calvo, I.%
+\BCBL {}\ \BBA {} Portela, M\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Spatial grouping of {Portuguese} droughts} {Spatial grouping of {Portuguese} droughts}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Water Resources Management}{24}{14}{3737--3750}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s11269-010-9630-y} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 {Secretar{\'i}a del Ambiente}%
 }{%
 {Secretar{\'i}a del Ambiente}%
@@ -354,6 +409,30 @@ Vicente-Serrano, S\BPBI M.%
 \APACjournalVolNumPages{Journal of Climate}{23}{7}{1696--1718}.
 \newblock
 \begin{APACrefDOI} \doi{10.1175/2009JCLI2909.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ward%
+}{%
+Ward%
+}{%
+{\protect \APACyear {1963}}%
+}]{%
+ward1963}
+\APACinsertmetastar {%
+ward1963}%
+\begin{APACrefauthors}%
+Ward, J\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1963}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Hierarchical grouping to optimize an objective function} {Hierarchical grouping to optimize an objective function}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of the American Statistical Association}{58}{301}{236--244}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/01621459.1963.10500845} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

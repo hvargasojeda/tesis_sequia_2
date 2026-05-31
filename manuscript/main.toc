@@ -4,8 +4,8 @@
 \contentsline {chapter}{Agradecimientos}{\es@scroman {iv}}{chapter*.2}%
 \contentsline {chapter}{Resumen}{\es@scroman {v}}{chapter*.3}%
 \contentsline {chapter}{Abstract}{\es@scroman {vi}}{chapter*.4}%
-\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {ix}}{chapter*.6}%
-\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {x}}{chapter*.7}%
+\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {viii}}{chapter*.6}%
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {ix}}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Planteamiento del problema}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Justificación de la investigación}{3}{section.1.2}%
@@ -19,7 +19,7 @@
 \contentsline {section}{\numberline {2.3}Clasificación de la sequía}{7}{section.2.3}%
 \contentsline {section}{\numberline {2.4}Sequía en Paraguay: impulsores y consecuencias}{8}{section.2.4}%
 \contentsline {section}{\numberline {2.5}Sequía y el proceso de aridificación}{9}{section.2.5}%
-\contentsline {section}{\numberline {2.6}Consistencia y completitud en series temporales}{10}{section.2.6}%
+\contentsline {section}{\numberline {2.6}Consistencia y completitud en series temporales}{9}{section.2.6}%
 \contentsline {section}{\numberline {2.7}Cuantificación de la sequía meteorológica: Los índices SPI y SPEI}{10}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}El indice de precipitación estandarizada (SPI)}{10}{subsection.2.7.1}%
 \contentsline {subsection}{\numberline {2.7.2}El índice de precipitación-evapotranspiración estandarizado (SPEI)}{11}{subsection.2.7.2}%
@@ -53,6 +53,10 @@
 \contentsline {subsection}{\numberline {3.7.2}Determinación del número óptimo de grupos (clústeres)}{29}{subsection.3.7.2}%
 \contentsline {section}{\numberline {3.8}Modelo estadístico}{30}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}Elección del modelo}{30}{subsection.3.8.1}%
-\contentsline {subsection}{\numberline {3.8.2}Especificación del modelo}{30}{subsection.3.8.2}%
-\contentsline {chapter}{Referencias}{32}{equation.3.8.19}%
-\contentsline {section}{Referencias}{32}{section*.11}%
+\contentsline {subsection}{\numberline {3.8.2}Especificación del modelo}{31}{subsection.3.8.2}%
+\contentsline {chapter}{\numberline {4}Resultados}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{32}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{32}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Asignación de estaciones meteorológicas y Validación de contigüidad geográfica}{33}{subsection.4.1.2}%
+\contentsline {chapter}{Referencias}{35}{figure.4.1}%
+\contentsline {section}{Referencias}{35}{section*.11}%
