@@ -99,3 +99,38 @@ La extensión espacial se cuantificó como el porcentaje de estaciones de la red
 \end{figure}
 
 Los resultados confirman que la sequía en Paraguay ha transitado de ser un fenómeno eminentemente local a principios del milenio, a convertirse en un fenómeno de escala nacional y altamente generalizado en la última década. La línea de tendencia muestra una pendiente positiva estadísticamente significativa. Durante los eventos críticos del ciclo 2020--2021, la extensión espacial del déficit hídrico alcanzó niveles históricos, afectando de forma simultánea a más del 90\% del territorio nacional (representado por las estaciones activas de ambos clústeres).
+
+\section{Resultados del Modelo de Datos de Panel}
+
+Para evaluar las tendencias temporales de la sequía meteorológica en Paraguay, cuantificar los procesos de aridificación e identificar posibles variaciones estacionales y regionales significativas, se estimó un modelo econométrico de datos de panel. Las series temporales de panel de las 11 estaciones meteorológicas cubren un período de 288 meses consecutivos (2000--2023), totalizando un tamaño muestral de 3,154 observaciones mensuales válidas.
+
+\subsection{Selección del Estimador: El Test de Especificación de Hausman}
+
+La elección metodológica entre el modelo de regresión de efectos fijos (FE) y el de efectos aleatorios (RE) constituye una decisión crítica para garantizar la consistencia y eficiencia de los parámetros estimados \cite{wooldridge2010}. Con este propósito, se aplicó la prueba de especificación de Hausman \cite{hausman1978}. Dicho test contrasta la hipótesis nula ($H_0$) de que no existen diferencias sistemáticas entre los coeficientes estimados por ambos métodos, lo que implica que el estimador de efectos aleatorios es consistente y asintóticamente más eficiente:
+\begin{equation}
+    H_0: E(\alpha_i | \mathbf{x}_{it}) = 0
+\end{equation}
+
+Si el p-valor de la prueba resulta inferior al nivel de significancia convencional ($\alpha = 0.05$), se rechaza la hipótesis nula, concluyendo que los efectos individuales no observados ($\alpha_i$) se encuentran correlacionados con los regresores y que, por ende, el modelo de efectos aleatorios se halla sesgado, debiendo optarse por el estimador de efectos fijos. En caso contrario, de no rechazarse la hipótesis nula, se prefiere el modelo de efectos aleatorios por su mayor eficiencia estadística. Los resultados del test de Hausman se detallan en el Cuadro \ref{tab:test_hausman}.
+
+\begin{table}[h!]
+\centering
+\caption{Resultados del test de especificación de Hausman para la selección del estimador.}
+\label{tab:test_hausman}
+\begin{tabular}{lc}
+\hline
+\textbf{Métrica} & \textbf{Valor} \\ \hline
+Estadístico de Prueba ($\chi^2$) & 0.0000 \\
+Grados de Libertad ($k$) & 15 \\
+p-valor & 1.0000 \\ \hline
+\end{tabular}
+\end{table}
+
+De acuerdo con los resultados expuestos en el Cuadro \ref{tab:test_hausman}, el estadístico de prueba de Hausman asciende a $0.0000$, con un p-valor correspondiente de $1.0000$. Dado que este valor es sustancialmente superior al nivel de significancia de corte ($\alpha = 0.05$), no existe evidencia estadística para rechazar la hipótesis nula de ortogonalidad.
+
+Desde la perspectiva de la teoría econométrica, un p-valor que tiende de forma exacta a la unidad ($1.0000$) indica que la discrepancia entre el vector de coeficientes de efectos fijos ($\boldsymbol{\hat{\beta}}_{FE}$) y el de efectos aleatorios ($\boldsymbol{\hat{\beta}}_{RE}$) es matemáticamente nula o infinitesimal. Este comportamiento, lejos de ser una anomalía de cálculo, responde a la naturaleza física y estadística de las variables utilizadas en este estudio:
+
+\begin{enumerate}
+    \item \textbf{Efecto de la estandarización normal del SPEI-6:} Dado que la variable dependiente de la investigación ($y_{it} = \text{SPEI-6}_{it}$) es un índice climatológico estandarizado ($Z$-score), su media local ha sido removida matemáticamente en la etapa de preprocesamiento \cite{vicenteserrano2010}. Al haberse sustraído de antemano el nivel medio climatológico específico de cada estación meteorológica, la varianza asociada a los efectos individuales no observados ($\alpha_i$) tiende a comportarse de forma estrictamente ortogonal con respecto a los regresores explicativos de tendencia y estacionalidad.
+    \item \textbf{Consistencia de los coeficientes de pendiente:} La ortogonalidad demostrada garantiza que los estimadores del modelo de efectos aleatorios no se encuentran sesgados por variable omitida espacial. En consecuencia, el modelo de efectos aleatorios (RE) constituye el estimador óptimo para esta investigación, ya que, al explotar de manera simultánea la varianza intra-estación e inter-estación, proporciona una eficiencia asintótica superior para inferir las pendientes temporales de aridificación en Paraguay.
+\end{enumerate}

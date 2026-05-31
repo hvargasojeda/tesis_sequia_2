@@ -64,5 +64,7 @@
 \contentsline {subsection}{\numberline {4.2.3}Análisis de Intensidad del déficit hídrico}{36}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{37}{subsection.4.2.4}%
 \contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{38}{subsection.4.2.5}%
-\contentsline {chapter}{Referencias}{40}{figure.4.3}%
-\contentsline {section}{Referencias}{40}{section*.11}%
+\contentsline {section}{\numberline {4.3}Resultados del Modelo de Datos de Panel}{39}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Selección del Estimador: El Test de Especificación de Hausman}{39}{subsection.4.3.1}%
+\contentsline {chapter}{Referencias}{41}{Item.25}%
+\contentsline {section}{Referencias}{41}{section*.11}%
