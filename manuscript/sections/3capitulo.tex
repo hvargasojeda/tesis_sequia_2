@@ -113,7 +113,7 @@ Para garantizar la estabilidad y validez física de estas agregaciones climátic
 
 \section{Construcción de la variable dependiente: El índice SPEI}
 
-La variable dependiente del modelo de datos de panel es el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI). Su obtención sistemática para cada una de las 11 estaciones seleccionadas se programó e implementó en lenguaje Python utilizando algoritmos basados en la metodología estándar de Vicente-Serrano y cols. \cite{vicenteserrano2010} mediante la aplicación de las librerías científicas especializadas \texttt{scipy.stats} y \texttt{scipy.stats.pearson3}. El algoritmo operó secuencialmente bajo las siguientes etapas matemáticas:
+La variable dependiente del modelo de datos de panel es el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI). Su obtención sistemática para cada una de las 11 estaciones seleccionadas se programó e implementó en lenguaje Python utilizando algoritmos basados en la metodología estándar de Vicente-Serrano y cols. \cite{vicenteserrano2010} mediante la aplicación de las librerías científicas especializadas \textit{scipy.stats} y \textit{scipy.stats.pearson3}. El algoritmo operó secuencialmente bajo las siguientes etapas matemáticas:
 
 \subsection{Estimación de la evapotranspiración potencial (ETP)}
 
@@ -238,7 +238,7 @@ El valor del coeficiente $s(i)$ se halla acotado en el intervalo $[-1, 1]$. Un v
 \begin{equation}
     k^* = \arg\max_{k} \left( \frac{1}{M} \sum_{i=1}^{M} s(i) \right)
 \end{equation}
-Donde $M = 11$ representa el número de estaciones seleccionadas. El algoritmo de optimización se programa e implementa en Python mediante el uso de la librería de minería de datos \texttt{scikit-learn}. Las características de las regiones óptimas halladas mediante esta técnica reemplazarán el uso de la variable regional dicotómica clásica en el modelado estadístico subsiguiente de la investigación.
+Donde $M = 11$ representa el número de estaciones seleccionadas. El algoritmo de optimización se programa e implementa en Python mediante el uso de la librería de minería de datos \textit{scikit-learn}. Las características de las regiones óptimas halladas mediante esta técnica reemplazarán el uso de la variable regional dicotómica clásica en el modelado estadístico subsiguiente de la investigación.
 
 \section{Modelo estadístico}\label{sec:modelo_estadistico}
 

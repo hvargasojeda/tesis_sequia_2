@@ -1,16 +1,15 @@
 # Fdb version 4
-["bibtex main"] 1780186191.84367 "main.aux" "main.bbl" "main" 1780187507.5254 0
+["bibtex main"] 1780186191.84367 "main.aux" "main.bbl" "main" 1780191899.1924 0
   "./bibliography.bib" 1780070554.92241 6729 909c452c95a7d88679021b4b2c5266e0 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/apacite/apacite.bst" 1374530685 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "main.aux" 1780187507.32662 40196 ecac2a394c60ff4fc6c89d336f2ca693 "pdflatex"
+  "main.aux" 1780191898.89936 40196 ecac2a394c60ff4fc6c89d336f2ca693 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1780187506.14735 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" "main.pdf" "main" 1780187507.52603 0
+["pdflatex"] 1780191897.38685 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" "main.pdf" "main" 1780191899.19308 0
   "/etc/texmf/web2c/texmf.cnf" 1755191811.04725 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/hjvargaso/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk" 1755785993.37584 20008 458bef30124ab0b1c63655ebfbae88a3 ""
-  "/home/hjvargaso/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk" 1755193332.1749 24132 9760ce61b366788e776ff6e57b27a0bf ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" 1780187505.64073 7104 0f6dbcf858ee0644c35fa819e0e7261f ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -33,7 +32,6 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/times/zptmcm7y.tfm" 1136768653 1520 ad7b3c1a480a03b3e41b5fbb13d938f2 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1200.tfm" 1136768653 3584 f80ddd985bd00e29e9a6047ebd9d4781 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1136768653 1536 06717a2b50de47d4087ac0e6cd759455 ""
-  "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1200.tfm" 1136768653 1536 487c9b46984a816c7ed238d0674595c7 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm" 1246382020 916 f87d7c45f9c908e672703b83b72241a3 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm" 1246382020 908 2921f8a10601f252058503cc6570e581 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm" 1136768653 992 662f679a0b3d2d53c1b94050fdaa3f50 ""
@@ -139,15 +137,15 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755191821.77122 128067 403859e4d35fdff4c458758f0e5ea400 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755191845 7353677 dd6910b802aeac5551a5b8794ff44066 ""
   "logofacen.jpg" 1779883777.54106 11768 24d8bd1be38b882179b597166ffd267b ""
-  "main.aux" 1780187507.32662 40196 ecac2a394c60ff4fc6c89d336f2ca693 "pdflatex"
+  "main.aux" 1780191898.89936 40196 ecac2a394c60ff4fc6c89d336f2ca693 "pdflatex"
   "main.bbl" 1780186191.88425 11149 ca405cbd2f3620040d6765a24fac06c2 "bibtex main"
-  "main.lof" 1780187507.33838 120 a701b88f4a40430a4e4af256af5832c5 "pdflatex"
-  "main.lot" 1780187507.33838 579 5a1151236ec96ff801de1410bb7de884 "pdflatex"
+  "main.lof" 1780191898.91898 120 a701b88f4a40430a4e4af256af5832c5 "pdflatex"
+  "main.lot" 1780191898.91898 579 5a1151236ec96ff801de1410bb7de884 "pdflatex"
   "main.tex" 1780187505.64073 7104 0f6dbcf858ee0644c35fa819e0e7261f ""
-  "main.toc" 1780187507.33838 5721 3fc4c2b9f9dcfe2c7d8aaa230354c15a "pdflatex"
+  "main.toc" 1780191898.91898 5721 3fc4c2b9f9dcfe2c7d8aaa230354c15a "pdflatex"
   "sections/1capitulo.tex" 1780183565.98392 8873 4c39237a985e4046689d929032e3d157 ""
   "sections/2capitulo.tex" 1780186049.53793 30085 c859871ffae38ac8b0f5ec424cde023b ""
-  "sections/3capitulo.tex" 1780186243.26625 25269 7110a72986a400d7ea46850165681427 ""
+  "sections/3capitulo.tex" 1780191896.65078 25269 7c1dcf4e633fda2c485cd9a9f97d252b ""
   (generated)
   "main.aux"
   "main.lof"
