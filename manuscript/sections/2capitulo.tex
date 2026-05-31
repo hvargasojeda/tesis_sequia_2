@@ -2,49 +2,54 @@
 
 \section{Antecedentes de investigación sobre la sequía en Paraguay}
 
-Si bien el estudio de la sequía mediante índices de balance hídrico multivariados es un estándar internacional, su aplicación instrumental en Paraguay ha sido históricamente limitada. No obstante, las investigaciones nacionales previas proveen las bases científicas para examinar las dinámicas térmicas locales.
+El estudio de la sequía mediante índices de balance hídrico multivariados es un estándar internacional, su aplicación instrumental en Paraguay ha sido históricamente limitada. No obstante, las investigaciones nacionales previas proveen las bases científicas para examinar las dinámicas térmicas locales.
 
 Un aporte referencial es el de Chávez \cite{chavez2023}, quien mediante pruebas estadísticas no paramétricas aplicadas a series históricas de temperatura (periodo 1960--2018), confirmó tendencias de calentamiento sistemáticas y estadísticamente significativas en la mayor parte de las estaciones meteorológicas terrestres del país. De forma complementaria, Pasten \cite{pasten2007} identificó un incremento significativo en la frecuencia de días y noches cálidas a nivel nacional.
 
 Asimismo, Grassi \cite{grassi2020} determinó que la tasa de calentamiento observada en el Paraguay durante las últimas décadas supera el promedio mundial. Un hallazgo relevante de este autor es que, a pesar de registrarse incrementos leves en las medias de precipitación anual, la frecuencia y los impactos de las sequías extremas han aumentado significativamente durante el siglo XXI. Esto sugiere que las fluctuaciones térmicas positivas desempeñan un rol dominante en la intensificación del déficit hídrico por encima de la dinámica de las precipitaciones. Por último, las proyecciones de la Comisión Económica para América Latina y el Caribe \cite{cepal2014} confirman que la persistencia de estas dinámicas inducirá choques de oferta desfavorables en la estabilidad económica nacional.
 
-A pesar de la relevancia de estos aportes, la literatura climatológica local carece de investigaciones que examinen la evolución del 'balance hídrico' que integre la evapotranspiración potencial (ETP) empleando índices estandarizados de última generación como el Indice de Precipitación Estandarizada (SPEI) bajo un enfoque de modelización de panel (Panel data).
-
 \section{La Sequía: Características}
 
 La sequía es un fenómeno de desarrollo lento y acumulativo. Sus efectos se manifiestan de manera gradual, lo que dificulta la determinación precisa de su inicio y final, pudiendo persistir durante años incluso después de que las condiciones meteorológicas hayan retornado a la normalidad \cite{mishra2010}.
 
-De acuerdo con la literatura especializada, las cuatro características fundamentales para el análisis de la sequía son la intensidad, la duración, la frecuencia y la extensión espacial \cite{mishra2010}. El análisis conjunto de estas cuatro dimensiones resulta esencial para una evaluación integral del riesgo, así como para el diseño de sistemas de alerta temprana y la formulación de estrategias de mitigación efectivas.
+De acuerdo con la literatura especializada, las cuatro características fundamentales para el análisis de la sequía son: la intensidad, la duración, la frecuencia y la extensión espacial \cite{mishra2010}. 
+
+El análisis conjunto de estas cuatro dimensiones resulta esencial para una evaluación integral del riesgo y la formulación de estrategias de mitigación efectivas.
 
 \section{Clasificación de la sequía}
 
 La comunidad científica ha desarrollado un marco conceptual estándar que clasifica la sequía en cuatro tipos principales, entendidos como una secuencia de propagación de impactos \cite{mishra2010}:
 \begin{enumerate}
-    \item {Sequía meteorológica:} Constituye el punto de partida del fenómeno y se define estrictamente por un déficit de precipitación durante un período prolongado en comparación con la media histórica registrada en una región.
-    \item {Sequía agrícola:} Se manifiesta cuando el déficit de lluvia se propaga induciendo un déficit de humedad en la zona radicular del suelo, afectando la germinación, el crecimiento y el rendimiento de los cultivos, así como la productividad de las pasturas destinadas a la ganadería.
+    \item {Sequía meteorológica:} punto de partida del fenómeno y se define estrictamente por un déficit de precipitación durante un período prolongado en comparación con la media histórica registrada en una región.
+    \item {Sequía agrícola:} Se manifiesta cuando el déficit de lluvia se propaga induciendo un déficit de humedad en la zona radicular del suelo, afectando la germinación, el crecimiento y el rendimiento de los cultivos y pasturas.
     \item {Sequía hidrológica:} Refiere a la disminución significativa de los niveles y caudales en las fuentes de agua superficiales y subterráneas, tales como ríos, lagos, embalses y acuíferos.
     \item {Sequía socioeconómica:} Ocurre cuando la escasez física del recurso hídrico, derivada de las fases anteriores, afecta de manera directa la oferta y la demanda de bienes y servicios económicos.
 \end{enumerate}
 
-La presente investigación se centra en la caracterización y modelización de la \textit{sequía meteorológica}. Esta elección se fundamenta en que representa el indicador primario y precursor de todos los demás impactos hidrológicos, agrícolas y socioeconómicos, convirtiéndose en el componente crítico para cualquier sistema de detección temprana. Asimismo, desde una perspectiva instrumental, la sequía meteorológica se define de manera directa a partir de las variables físicas disponibles en la red de estaciones terrestres (precipitación y temperatura), evitando los requerimientos de datos biofísicos complejos en gran parte no disponibles en el contexto nacional que demandan las otras clasificaciones.
+La presente investigación se centra en la caracterización y modelización de la \textit{sequía meteorológica}. Esta elección se fundamenta en que representa el indicador primario y precursor de todos los demás impactos hidrológicos, agrícolas y socioeconómicos, convirtiéndose en el componente crítico para cualquier sistema de detección temprana.La sequía meteorológica se puede calcular a partir de datos disponibles en la red de estaciones terrestres, evitando los requerimientos de datos biofísicos complejos en gran parte no disponibles en el contexto nacional que demandan las otras clasificaciones.
 
 \section{Sequía en Paraguay: impulsores y consecuencias}
 
 Las causas de las sequías no se conocen con precisión absoluta, pero se han identificado una serie de factores naturales y otros productos de la actividad humana que contribuyen a su ocurrencia e intensidad.
 
 Al igual que otros países de la región, el régimen pluviométrico de Paraguay se encuentra modulado por fenómenos climáticos de gran escala. El principal motor de la variabilidad interanual es El Niño-Oscilación del Sur (ENSO), un patrón de calentamiento y enfriamiento anómalo de las aguas superficiales del Océano Pacífico Ecuatorial. 
+Otros patrones de variabilidad climática a nivel hemisférico, como la Oscilación Decadal del Pacífico (PDO) y la Oscilación Antártica (AAO), influyen en la regularidad de las precipitaciones, aunque sus dinámicas operan en escalas de tiempo más prolongadas y complejas \cite{vera2006}. 
 
-Además del ENSO, otros patrones de variabilidad climática a nivel hemisférico, como la Oscilación Decadal del Pacífico (PDO) y la Oscilación Antártica (AAO), influyen en la regularidad de las precipitaciones, aunque sus dinámicas operan en escalas de tiempo más prolongadas y complejas \cite{vera2006}. Superpuesta a esta variabilidad climática natural, la tendencia de fondo del calentamiento global antropogénico actúa como un factor crítico de intensificación. El incremento sostenido de las temperaturas eleva la evapotranspiración potencial (ETP), exacerbando la severidad de las sequías bajo un mecanismo conocido en la literatura como "hotter droughts" \cite{massondelmotte2021}. Este proceso fue determinante en la reciente sequía extrema registrada en la Cuenca del Plata, donde las altas temperaturas extremaron el déficit hídrico preexistente provocado por la fase de La Niña \cite{naumann2023}.
+El calentamiento global actúa como un factor crítico de intensificación. El incremento sostenido de las temperaturas eleva la evapotranspiración potencial (ETP), exacerbando la severidad de las sequías bajo un mecanismo conocido en la literatura como olas de calor o hotter droughts en inglés \cite{massondelmotte2021}. Según \citeA{naumann2023}Este proceso fue determinante en la reciente sequía extrema (2019-2022) registrada en la Cuenca del Plata, donde las altas temperaturas extremaron el déficit hídrico preexistente provocado por la fase de La Niña.
 
 La quema de combustible fósil, la deforestación, la explotación agrícola intensiva y la expansión urbana son algunas de las actividades humanas que impulsan las sequías \cite{velasco2005sequia}.
 
 Dada la estructura productiva de su economía y su posición geográfica, Paraguay presenta una alta susceptibilidad ante las consecuencias de la sequía. Estos impactos se manifiestan de manera transversal en los siguientes sectores clave:
 \begin{itemize}
-    \item {Sector agropecuario:} La sequía agrícola reduce drásticamente el rendimiento de los cultivos de renta de mayor relevancia para el producto interno bruto (como la soja y el maíz), disminuye la receptividad de las pasturas y puede inducir tasas de mortandad ganadera significativas, traduciéndose en pérdidas económicas millonarias \cite{cepal2014}.
+    \item {Sector agropecuario:} La sequía agrícola reduce drásticamente el rendimiento de los cultivos de renta (como la soja y el maíz), disminuye la receptividad de las pasturas y puede inducir tasas de mortandad ganadera significativas, traduciéndose en pérdidas económicas millonarias \cite{cepal2014}.
     \item {Navegación fluvial:} El estiaje prolongado de los ríos Paraguay y Paraná, consecuencia directa de la sequía hidrológica, afecta la principal vía de importación y exportación comercial de la nación. La reducción del calado operativo de las barcazas incrementa sustancialmente los costos logísticos y debilita la competitividad del comercio exterior.
     \item {Generación de energía hidroeléctrica:} Paraguay depende casi en su totalidad de la hidroelectricidad generada por las represas binacionales de Itaipú y Yacyretá. La sequía hidrológica reduce el caudal afluente, comprometiendo la capacidad de generación y disminuyendo los ingresos estatales percibidos por la exportación de excedentes energéticos.
     \item {Aspectos sociales y ambientales:} La escasez de agua afecta de manera directa a las comunidades rurales y suburbanas vulnerables, limitando su acceso al agua potable y comprometiendo la agricultura de subsistencia. Adicionalmente, las condiciones prolongadas de sequedad y calor elevan exponencialmente el riesgo de propagación de incendios forestales, con la consecuente degradación de ecosistemas y pérdida de biodiversidad.
 \end{itemize}
+
+\section{Sequía y el proceso de aridificación}
+
+La sequía puede actuar como un factor desencadenante o un acelerador crítico del proceso de aridificación, cuando una región sufre una sequía severa y prolongada la energía solar calienta directamente el suelo y el aire circundante, este aumento de temperatura local incrementa la demanda atmosférica de agua (la evapotranspiración potencial o PET que mide el SPEI). Una atmósfera más cálida y seca reduce la probabilidad de lluvias locales creando un círculo vicioso que estabiliza las condiciones secas y acelera la transición hacia un régimen climático estructuralmente más árido. Bajo las condiciones del calentamiento global, las sequías actúan hoy como la "punta de lanza" de la aridificación.
 
 \section[Consistencia y completitud en series temporales]{Consistencia y completitud en series temporales\\ climatológicas}
 \sloppy

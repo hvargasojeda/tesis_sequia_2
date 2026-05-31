@@ -255,30 +255,10 @@ La hipótesis nula ($H_0$) del test es que no existe una diferencia sistemática
 
 Si se rechaza $H_0$, se concluye que el modelo RE está sesgado y que el modelo FE es el estimador apropiado. Si no se rechaza $H_0$, se prefiere el modelo RE por su mayor eficiencia estadística.
 
-Los resultados de esta prueba (P-value = 1.000) no rechazaron la hipótesis nula de no correlación entre los efectos no observados y los regresores\footnote{Un P-value de 1.000 indica que la diferencia entre los coeficientes estimados por los modelos de efectos fijos y aleatorios fue extremadamente pequeña, prácticamente nula. Esto proporciona la evidencia más fuerte posible a favor de la consistencia del modelo de efectos aleatorios.}. Por consiguiente, se seleccionó el modelo de efectos aleatorios (RE), ya que es consistente y estadísticamente más eficiente en este contexto.
-
 El estadístico de prueba de Hausman (H) sigue una distribución Chi-cuadrado ($\chi^2$) con \textit{k} grados de libertad, donde \textit{k} es el número de regresores que varían en el tiempo. Se calcula como:
 \begin{equation}
     H = (\boldsymbol{\hat{\beta}}_{FE} - \boldsymbol{\hat{\beta}}_{RE})' [\text{Var}(\boldsymbol{\hat{\beta}}_{FE}) - \text{Var}(\boldsymbol{\hat{\beta}}_{RE})]^{-1} (\boldsymbol{\hat{\beta}}_{FE} - \boldsymbol{\hat{\beta}}_{RE})
 \end{equation}
-
-Para el modelo especificado en esta tesis, la aplicación del Test de Hausman arrojó los resultados presentados en la Tabla \ref{tab:resultados_hausman}.
-
-% TABLA DE RESULTADOS DEL TEST DE HAUSMAN
-\begin{table}[ht]
-    \centering
-    \caption{Resultados del test de especificación de Hausman.}
-    \label{tab:resultados_hausman}
-    \begin{tabular}{lc}
-    \toprule
-    \textbf{Métrica} & \textbf{Valor} \\
-    \midrule
-    Estadístico de Prueba (Chi-cuadrado) & 0.0000 \\
-    Grados de Libertad                   & 14     \\
-    P-value                              & 1.0000 \\
-    \bottomrule
-    \end{tabular}
-\end{table}
 
 \subsection{Especificación del modelo}
 
