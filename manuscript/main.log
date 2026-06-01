@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  1 JUN 2026 14:24
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  1 JUN 2026 14:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -613,19 +613,19 @@ Cap\'{\i }tulo 4.
 [34
 
 ] [35]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png, id=585, 1300.86pt x 397.485pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png, id=591, 1300.86pt x 397.485pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png  used on input line 44.
 (pdftex.def)             Requested size: 412.56497pt x 126.05754pt.
  [36 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png>]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png, id=595, 722.7pt x 397.485pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png, id=601, 722.7pt x 397.485pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png  used on input line 59.
 (pdftex.def)             Requested size: 350.68274pt x 192.87703pt.
  [37 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png>] [38] [39]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png, id=615, 1084.05pt x 794.97pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png, id=622, 1084.05pt x 794.97pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png  used on input line 96.
@@ -639,9 +639,9 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 Cap\'{\i }tulo 5.
 [47
 
-] [48]) [49] (./main.bbl [50
+] [48] [49] [50] [51]) [52] (./main.bbl [53
 
-]) [51] (./main.aux
+]) [54] (./main.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 LaTeX Info: Redefining \. on input line 13.
@@ -653,18 +653,18 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 13620 strings out of 476009
- 208354 string characters out of 5789406
+ 13635 strings out of 476009
+ 208478 string characters out of 5789406
  1943975 words of memory out of 5000000
- 35163 multiletter control sequences out of 15000+600000
+ 35166 multiletter control sequences out of 15000+600000
  642970 words of font info for 164 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
  75i,18n,79p,1281b,785s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/hjvargaso/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (62 pages, 1334097 bytes).
+Output written on main.pdf (65 pages, 1341489 bytes).
 PDF statistics:
- 1046 PDF objects out of 1200 (max. 8388607)
- 929 compressed objects within 10 object streams
- 246 named destinations out of 1000 (max. 500000)
- 605 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1083 PDF objects out of 1200 (max. 8388607)
+ 963 compressed objects within 10 object streams
+ 258 named destinations out of 1000 (max. 500000)
+ 629 words of extra memory for PDF output out of 10000 (max. 10000000)
 

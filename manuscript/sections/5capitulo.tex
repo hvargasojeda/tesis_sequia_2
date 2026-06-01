@@ -51,3 +51,38 @@ Los resultados del análisis comparativo entre el SPEI-6 y el SPI-6 (Cuadro \ref
 Físicamente, este desacoplamiento entre suministro (lluvia) y demanda (temperatura) se explica a través de la física de la atmósfera. El incremento sistemático de la temperatura anual documentado por \cite{chavez2023} eleva de manera no lineal la demanda de vapor de la atmósfera. Aun cuando los volúmenes totales de lluvia de primavera o verano se mantengan estables o muestren incrementos marginales, la evapotranspiración incremental del suelo y de la vegetación supera la tasa de recarga pluvial. Esta dinámica acelera los procesos de aridificación de los suelos. 
 
 Este hallazgo tiene implicaciones críticas para la planificación agropecuaria en Paraguay, puesto que la gestión de riesgos ya no debe enfocarse únicamente en esperar la ocurrencia de lluvias, sino en mitigar y adaptarse al severo déficit por evaporación inducido por el calentamiento de la temperatura global.
+
+\section{Conclusiones generales}
+
+De acuerdo con el diseño de la investigación y en consistencia con el marco lógico establecido en el Capítulo 1, esta sección expone las conclusiones de la tesis, dando respuestas a las interrogantes planteadas, el nivel de cumplimiento de los objetivos y el veredicto estadístico sobre las hipótesis formuladas.
+
+\subsection{Cumplimiento de los objetivos y respuestas a las interrogantes}
+
+El desarrollo empírico de esta investigación ha permitido dar respuesta sistemática a cada una de las interrogantes científicas formuladas:
+
+\begin{enumerate}
+    \item \textit{Disponibilidad y estructura de datos climáticos:} Se determinó que, tras un riguroso proceso de control de calidad bajo un umbral de tolerancia del 2.0\% de registros perdidos, Paraguay cuenta con una base de datos instrumental continua de 11 estaciones terrestres con representatividad regional para el período 2000--2023. La imputación lineal restringida a huecos de 1 a 2 días preservó la continuidad física de la serie diaria, permitiendo estructurar una base de panel de 3,113 observaciones mensuales altamente confiable.
+    \item \textit{Metodología de cuantificación de sequía:} Se validó que el Índice de precipitación y evapotranspiración estandarizado (SPEI), estimado con la distribución Pearson Tipo III y normalizado mediante el método asintótico de Abramowitz y Stegun, constituye una métrica adecuada y robusta para cuantificar la sequía en un clima con calentamiento global.
+    \item \textit{Caracterización temporal de la sequía:} La sequía en Paraguay ha experimentado un agravamiento severo durante las últimas dos décadas, caracterizado por:
+    \begin{itemize}
+        \item \textit{Frecuencia:} Un quiebre estructural y positivo a partir de 2019, alcanzando un pico máximo histórico de 59 meses-estación bajo condiciones de sequía en el año 2020 (afectando simultáneamente al 44.7\% de la red).
+        \item \textit{Intensidad:} Un desplazamiento de los promedios hacia valores más secos y el registro de un mínimo histórico absoluto extremo de $-3.7217$ en la estación meteorológicade Mariscal Estigarribia en diciembre de 2023.
+        \item \textit{Duración:} Un incremento del 23.55\% en la persistencia temporal de los eventos, cuya duración promedio transitó de $2.59$ meses (2000--2011) a $3.20$ meses (2012--2023), alcanzando una racha continua máxima de $14$ meses.
+        \item \textit{Extensión Espacial:} Una tendencia lineal positiva en la cobertura del déficit, con una sincronización de escala nacional durante la crisis del bienio 2020--2021.
+    \end{itemize}
+    \item \textit{Heterogeneidad espacial regional:} La aplicación de técnicas de aprendizaje no supervisado de clustering jerárquico aglomerativo demostró de forma objetiva que el territorio nacional no se comporta homogéneamente ante la sequía. La optimización del coeficiente de silueta particionó la red de monitoreo de forma limpia en dos grandes dominios hídricos de alta contigüidad geográfica: el Clúster 1 (Región Oriental Centro-Este y Sur) y el Clúster 2 (Noroeste-Centro-Chaco), registrando una distancia media intra-grupo de solo $2.461^{\circ}$ decimales.
+    \item \textit{Divergencias estacionales y regionales:} A través de la estimación del modelo de regresión de datos de panel con efectos aleatorios, se cuantificó que las tendencias de secado de largo plazo varían significativamente según la subregión y la época del año. Se hallaron tendencias netas altamente significativas hacia veranos más secos en todo el país (siendo el doble de rápido el ritmo de secado en la zona Oriental, con $-0.0023$ puntos mensuales, frente a la Occidental, con $-0.0011$), y una severa tendencia de secado en la primavera del Clúster 2 ($-0.0015$ puntos mensuales).
+    \item \textit{Significancia del efecto del calentamiento global:} Se demostró formalmente que el calentamiento global ejerce un efecto dominante y significativo sobre el balance hídrico en Paraguay. El contraste de modelos determinó diferencias estadísticamente significativas ($\Delta \beta$ de $-0.0025$ mensuales en verano en el Clúster 1) entre las tendencias decrecientes del SPEI-6 frente a la estabilidad temporal del SPI-6 (precipitación pura).
+\end{enumerate}
+
+A partir de la deconstrucción metodológica y el modelado sistemático descritos, se concluye el cumplimiento pleno del objetivo general de la investigación, al haberse ajustado y validado de manera consistente un modelo de regresión de panel de efectos aleatorios según la especificación de la ecuación \ref{eq:modelo_completo}.
+
+\subsection{Contraste y validación de las Hipótesis de investigación}
+
+Las estimaciones estadísticas y las pruebas de significancia bajo errores agrupadas por estación permiten dictaminar el estado de validación de las hipótesis planteadas:
+
+\begin{itemize}
+    \item \textit{Hipótesis 1 (Divergencia Estacional) --- ACEPTADA:} Se valida que la sequía en Paraguay presenta dinámicas divergentes a lo largo del año. Mientras que el verano y la primavera registran tendencias significativas hacia la aridificación (como el secado de $-0.0023$ y $-0.0015$ puntos mensuales en el Clúster 1 y Clúster 2, respectivamente), el invierno y el otoño (excepto el Clúster 1) exhiben estabilidad climatológica, confirmando que el impacto del cambio climático se concentra en las estaciones cálidas.
+    \item \textit{Hipótesis 2 (Heterogeneidad Espacial) --- ACEPTADA:} Se confirma que la dinámica temporal de la sequía no se manifiesta de manera uniforme a nivel nacional. La velocidad de la aridificación en los veranos de la subregión sur-este (Clúster 1) es el doble de rápida que la del centro-chaco (Clúster 2), mientras que la primavera exhibe una tendencia severa y estadísticamente significativa de secado únicamente en el Clúster 2 ($-0.0015$).
+    \item \textit{Hipótesis 3 (Footprint del Calentamiento Global) --- ACEPTADA:} Se comprueba formalmente que incorporar la temperatura en el balance hídrico revela dinámicas de secado que la precipitación univariada oculta. El contraste estadístico robusto de modelos demostró que, a pesar de que el régimen de lluvias (SPI-6) se mantiene estable a largo plazo, el calentamiento sistemático de las temperaturas terrestres en Paraguay incrementa la demanda evaporativa significativamente, operando como la fuerza motriz detrás del proceso de aridificación estival del país.
+\end{itemize}
