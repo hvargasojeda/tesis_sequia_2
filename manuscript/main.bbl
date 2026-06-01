@@ -300,6 +300,63 @@ secretaria2017}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Stocker%
+, Qin%
+\BCBL {}\ \BBA {} {etc.}%
+}{%
+Stocker%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+stocker_climate_2013}
+\APACinsertmetastar {%
+stocker_climate_2013}%
+\begin{APACrefauthors}%
+Stocker, T\BPBI F.%
+, Qin, D.%
+\BCBL {}\ \BBA {} {etc.}%
+\end{APACrefauthors}%
+\ (\BEDS).
+\unskip\
+\newblock
+\APACrefYear{2013}.
+\newblock
+\APACrefbtitle {Climate {Change} 2013: {The} {Physical} {Science} {Basis}. {Contribution} of {Working} {Group} {I} to the {Fifth} {Assessment} {Report} of the {Intergovernmental} {Panel} on {Climate} {Change}} {Climate {Change} 2013: {The} {Physical} {Science} {Basis}. {Contribution} of {Working} {Group} {I} to the {Fifth} {Assessment} {Report} of the {Intergovernmental} {Panel} on {Climate} {Change}}.
+\newblock
+\APACaddressPublisher{Cambridge, UK and New York, NY, USA}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Trenberth%
+\ \protect \BOthers {.}}{%
+Trenberth%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+trenberth_global_2014}
+\APACinsertmetastar {%
+trenberth_global_2014}%
+\begin{APACrefauthors}%
+Trenberth, K.%
+, Dai, A.%
+, \{van der Schrier\}, G.%
+, Jones, P.%
+, Barichivich, J.%
+, Briffa, K.%
+\BCBL {}\ \BBA {} Sheffield, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{{\APACmonth{01}}}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Global warming and changes in drought} {Global warming and changes in drought}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Nature Climate Change}{4}{}{17--22}.
+\newblock
+\begin{APACrefDOI} \doi{10.1038/nclimate2067} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Tsegai%
 , Medel%
 , Augenstein%

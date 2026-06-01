@@ -298,3 +298,15 @@ La especificación completa del modelo estimado, incluyendo todas las variables 
 \label{eq:modelo_completo}
 \end{equation}
 donde $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, y los términos $\text{estacion-climatica}_{s,t}$ y $\text{region-geografica}_i$ son variables dummy para las categorías estacionales climáticas (invierno, primavera, verano, otoño) y regionales geográficas (clusters), respectivamente.
+
+\subsection{Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}
+
+Para dar cumplimiento al objetivo específico 6 y contrastar de manera formal la hipótesis 3 (H3), se diseñó un marco experimental comparativo. El procedimiento consiste en estimar de forma paralela la ecuación del modelo de regresión de panel de efectos aleatorios (Ecuación \ref{eq:modelo_completo}) sobre dos variables dependientes distintas:
+\begin{align}
+    \text{SPEI-6}_{it} &= \mathbf{x}_{it}'\boldsymbol{\beta}_{SPEI} + u_{it} \label{eq:panel_spei} \\
+    \text{SPI-6}_{it} &= \mathbf{x}_{it}'\boldsymbol{\beta}_{SPI} + v_{it} \label{eq:panel_spi}
+\end{align}
+
+Donde $\boldsymbol{\beta}_{SPEI}$ y $\boldsymbol{\beta}_{SPI}$ representan los vectores de parámetros estimados para los modelos de balance hídrico y precipitación univariada, respectivamente. El efecto aislado del calentamiento global sobre la dinámica temporal de la sequía se define para cada estación del año y región como la diferencia entre sus respectivas tendencias netas mensuales calculadas ($\Delta \beta_{neto} = \beta_{neto, SPEI} - \beta_{neto, SPI}$). 
+
+La significancia estadística del efecto del calentamiento global ($H_0: \beta_{neto, SPEI} - \beta_{neto, SPI} = 0$) se evalúa mediante la estimación de intervalos de confianza del 95\% y pruebas de Wald para diferencias de coeficientes de pendiente comunes entre ambas regresiones de panel, aislando así el efecto puro de la temperatura por encima del régimen de precipitaciones.
