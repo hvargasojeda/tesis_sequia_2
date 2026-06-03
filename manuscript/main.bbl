@@ -411,36 +411,6 @@ Velasco, I.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Vera%
-\ \protect \BOthers {.}}{%
-Vera%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2006}}%
-}]{%
-vera2006}
-\APACinsertmetastar {%
-vera2006}%
-\begin{APACrefauthors}%
-Vera, C.%
-, Higgins, W.%
-, Amador, J.%
-, Ambrizzi, T.%
-, Garreaud, R.%
-, Gochis, D.%
-\BDBL {}Zhang, C.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2006}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Toward a unified view of the {American Monsoon Systems}} {Toward a unified view of the {American Monsoon Systems}}.{\BBCQ}
-\newblock
-\APACjournalVolNumPages{Journal of Climate}{19}{20}{4977--5000}.
-\newblock
-\begin{APACrefDOI} \doi{10.1175/JCLI3896.1} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
 Vicente-Serrano%
 , Beguer{\'i}a%
 \BCBL {}\ \BBA {} L{\'o}pez-Moreno%
