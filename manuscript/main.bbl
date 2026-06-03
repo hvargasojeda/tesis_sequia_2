@@ -1,6 +1,33 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Abramowitz%
+\ \BBA {} Stegun%
+}{%
+Abramowitz%
+\ \BBA {} Stegun%
+}{%
+{\protect \APACyear {1965}}%
+}]{%
+abramowitz_handbook_1965}
+\APACinsertmetastar {%
+abramowitz_handbook_1965}%
+\begin{APACrefauthors}%
+Abramowitz, M.%
+\BCBT {}\ \BBA {} Stegun, I.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1965}.
+\newblock
+\APACrefbtitle {Handbook of {Mathematical} {Functions}: {With} {Formulas}, {Graphs}, and {Mathematical} {Tables}} {Handbook of {Mathematical} {Functions}: {With} {Formulas}, {Graphs}, and {Mathematical} {Tables}}.
+\newblock
+\APACaddressPublisher{}{Dover Publications}.
+\newblock
+\begin{APACrefURL} \url{https://books.google.com.py/books?id=MtU8uP7XMvoC} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Ch{\'a}vez%
 }{%
 Ch{\'a}vez%

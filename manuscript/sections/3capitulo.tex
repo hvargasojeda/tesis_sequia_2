@@ -2,7 +2,7 @@
 
 \section{Diseño de la investigación}
 
-La presente investigación se enmarca en un enfoque cuantitativo de carácter longitudinal e inferencial. Es un estudio no experimental debido a que se basa en la observación e interpretación de datos históricos de variables climáticas tal como han ocurrido en su estado natural, sin manipulación deliberada por parte del investigador. Posee un carácter longitudinal debido a que la estructura de la base de datos sigue un diseño de panel, rastreando de forma sistemática el comportamiento de múltiples entidades (las estaciones meteorológicas) a lo largo de un período continuo de 24 años (2000--2023). Finalmente, es de carácter inferencial y analítico, ya que busca estimar parámetros de manera precisa para contrastar formalmente hipótesis respecto a las tendencias y variaciones espacio-temporales de la sequía en Paraguay, y no se limita a la mera descripción de patrones históricos.
+La presente investigación se enmarca en un enfoque cuantitativo de carácter longitudinal, debido a que la estructura de la base de datos sigue un diseño de panel rastreando de forma sistemática el comportamiento de múltiples entidades (las estaciones meteorológicas) a lo largo de un período continuo de 24 años (2000--2023); e inferencial y analítico, ya que busca estimar parámetros de manera precisa para contrastar formalmente hipótesis respecto a las tendencias y variaciones espacio-temporales de la sequía en Paraguay, y no se limita a la mera descripción de patrones históricos.
 
 \section{Fuentes de datos y variables}
 
@@ -64,7 +64,7 @@ Oriental & VILL & 1.35 & Descartada \\ \hline
 
 \section{Tratamiento de datos faltantes (imputación)}
 
-Una vez seleccionada la red final de 11 estaciones meteorológicas, se abordó el tratamiento de los vacíos de información restantes, los cuales correspondían en su mayoría a fallas de transmisión puntuales de corta duración (1 a 2 días). Con el fin de preservar la continuidad física de las observaciones diarias y el cálculo de agregaciones posteriores, se aplicó un método de imputación por capas diferenciado según las propiedades físicas de las variables:
+Una vez seleccionada la red final de 11 estaciones meteorológicas, se abordó el tratamiento de los vacíos de información restantes, fallas de transmisión puntual de corta duración (1 a 2 días). Con el fin de preservar la continuidad física de las observaciones diarias y el cálculo de agregaciones posteriores, se aplicó un método de imputación por capas diferenciado según las propiedades físicas de las variables:
 
 \begin{itemize}
     \item {Variables térmicas (Media, Máxima y Mínima):} Debido a la alta autocorrelación temporal intrínseca que caracteriza a las temperaturas diarias, se utilizó la interpolación lineal como estimador del valor faltante:
@@ -109,11 +109,11 @@ Debido a que el modelado climático del balance hídrico y la dinámica de sequ�
     \item {temp\_min:} Promedio aritmético de las observaciones de temperatura mínima diaria (°C).
 \end{itemize}
 
-Para garantizar la estabilidad y validez física de estas agregaciones climáticas, se aplicó el criterio estándar de tolerancia de datos faltantes recomendado por la Organización Meteorológica Mundial \cite{wmo2017}. Se estableció de manera estricta que un mes solo se considera válido para el cálculo de sus variables agregadas si cuenta con un mínimo de 25 días con registros diarios completos. Aquellos meses que no cumplieron con este umbral de consistencia temporal, producto de vacíos largos no imputables, fueron tratados estadísticamente como valores perdidos en el conjunto final de datos de panel. La aplicación de esta regla dio lugar a la exclusión de únicamente 14 observaciones mensuales de un universo total de 3,168 observaciones potenciales de panel, logrando una tasa de completitud estructural en la base de datos de panel final del 99.56\%.
+Para garantizar la estabilidad y validez física de estas agregaciones climáticas, se aplicó el criterio estándar de tolerancia de datos faltantes recomendado por la \citeA{wmo2017}. Se estableció de manera estricta que un mes solo se considera válido para el cálculo de sus variables agregadas si cuenta con un mínimo de 25 días con registros diarios completos. Aquellos meses que no cumplieron con este umbral de consistencia temporal, producto de vacíos largos no imputables, fueron tratados estadísticamente como valores perdidos en el conjunto final de datos de panel. La aplicación de esta regla dio lugar a la exclusión de únicamente 14 observaciones mensuales de un universo total de 3,168 observaciones potenciales de panel, logrando una tasa de completitud estructural en la base de datos de panel final del 99.56\%.
 
 \section{Construcción de la variable dependiente: El índice SPEI}
 
-La variable dependiente del modelo de datos de panel es el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI). Su obtención sistemática para cada una de las 11 estaciones seleccionadas se programó e implementó en lenguaje Python utilizando algoritmos basados en la metodología estándar de Vicente-Serrano y cols. \cite{vicenteserrano2010} mediante la aplicación de las librerías científicas especializadas \textit{scipy.stats} y \textit{scipy.stats.pearson3}. El algoritmo operó secuencialmente bajo las siguientes etapas matemáticas:
+La variable dependiente del modelo de datos de panel es el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI). Su obtención sistemática para cada una de las 11 estaciones seleccionadas se codificó en lenguaje Python utilizando algoritmos basados en la metodología estándar de Vicente-Serrano y cols. \cite{vicenteserrano2010} mediante la aplicación de las librerías científicas especializadas \textit{scipy.stats} y \textit{scipy.stats.pearson3}. El algoritmo operó secuencialmente bajo las siguientes etapas matemáticas:
 
 \subsection{Estimación de la evapotranspiración potencial (ETP)}
 
@@ -147,7 +147,7 @@ A partir de la serie mensual agregada de precipitación total ($P_i$) y de la se
 \end{equation}
 Si el balance resulta positivo ($D_i > 0$), la estación exhibe un superávit hídrico climatológico; si el balance resulta negativo ($D_i < 0$), denota un estado de déficit hídrico.
 
-\subsection{Balance hídrico en multiples escalas: Cálculo}
+\subsection{Balance hídrico en múltiples escalas: Cálculo}
 
 Matemáticamente, para una escala de acumulación $k$, la sumatoria acumulada del balance hídrico $D^k_i$ para el mes $i$ se define de la siguiente manera:
 \begin{equation}
@@ -177,7 +177,7 @@ La función de distribución acumulada (CDF), $P = F(x)$, se calcula a partir de
 
 \subsection{Estandarización clásica normal}
 
-El paso final consiste en transformar las probabilidades acumuladas $P = F(x)$ a valores de desviación normal estándar ($Z$-scores) con media cero y desviación estándar unitaria. Para lograr una alta precisión numérica en el entorno computacional, se programó la aproximación racional analítica de Abramowitz y Stegun, la cual se ha convertido en un estándar de facto para la conversión de probabilidades acumuladas a valores $Z$ en el ámbito de la estadística computacional.:
+El paso final consiste en transformar las probabilidades acumuladas $P = F(x)$ a valores de desviación normal estándar ($Z$-scores) con media cero y desviación estándar unitaria. Para lograr una alta precisión numérica en el entorno computacional, se programó la aproximación racional analítica de \citeA{abramowitz_handbook_1965}, la cual se ha convertido en un estándar de facto para la conversión de probabilidades acumuladas a valores $Z$ en el ámbito de la estadística computacional.:
 
 Para una probabilidad calculada de sequía $P$, donde $0 < P \leq 0.5$:
 \begin{equation}
@@ -200,62 +200,31 @@ Este estimador numérico robusto asegura que las observaciones del SPEI-6 result
 
 \section{Regionalización geográfica mediante agrupamiento no supervisado}
 
-Para resolver el problema planteado en la investigación respecto a la variabilidad espacial de la sequía, esta tesis propone superar la división geográfica clásica de Paraguay (Región Oriental y Región Occidental). A priori, la división administrativa e histórica de las macroregiones no necesariamente se corresponde con la dinámica física de los patrones climáticos reales de sequía.
+Para resolver el problema planteado en la investigación respecto a la variabilidad espacial de la sequía, esta tesis propone a priori que, la división administrativa e histórica de las macrorregiones no necesariamente se corresponde con la dinámica física de los patrones climáticos reales de sequía.
 
 Por consiguiente, se introduce un enfoque de aprendizaje estadístico no supervisado para agrupar las estaciones de monitoreo basándose estrictamente en el comportamiento dinámico y la covarianza de sus series temporales históricas mensuales de SPEI-6 a lo largo de los 24 años bajo estudio. El SPEI al ser una métrica estandarizada, permite comparar directamente la sincronicidad temporal de las fluctuaciones hídricas entre estaciones, independientemente de sus niveles absolutos de precipitación o temperatura.
 
-Dado que el objeto de estudio de esta tesis se centra en identificar tendencias de aridificación a largo plazo, resulta estadísticamente más consistente agrupar las estaciones meteorológicas por la sincronía de sus fluctuaciones hídricas temporales. Este enfoque remueve los efectos de nivel absoluto —los cuales ya han sido controlados matemáticamente en la construcción misma del SPEI-6— permitiendo que las subregiones resultantes del agrupamiento jerárquico representen la variabilidad hídrica y tendencias de aridificación homogéneas frente al calentamiento global.
+Dado que el objeto de estudio de esta tesis se centra en identificar tendencias de aridificación a largo plazo, este enfoque remueve los efectos de nivel absoluto —los cuales ya han sido controlados matemáticamente en la construcción misma del SPEI-6— permitiendo que las subregiones resultantes del agrupamiento jerárquico representen la variabilidad hídrica y tendencias de aridificación homogéneas frente al calentamiento global.
 
 \subsection{Algoritmo de agrupamiento jerárquico aglomerativo}
 
-Se implementa la técnica de Agrupamiento Jerárquico Aglomerativo (HAC, por sus siglas en inglés). El algoritmo opera de abajo hacia arriba de forma iterativa: se parte de un estado inicial donde cada estación meteorológica individual constituye su propio grupo (clúster) y se procede a fusionar recursivamente los dos grupos más similares hasta que todos se consolidan en una única estructura de árbol jerárquica o dendrograma.
-
-Para guiar la fusión óptima de grupos y preservar la homogeneidad interna de las agrupaciones resultantes, se implementa el criterio de enlace de Ward (Ward's minimum variance method). Este estimador busca minimizar de manera recursiva el incremento en la suma de los cuadrados de las distancias intra-grupo en cada fase de agrupación.
-
-La distancia de disimilitud temporal entre dos estaciones meteorológicas $X$ y $Y$ se calcula a partir de la distancia euclídea simple aplicada sobre sus series completas de observaciones mensuales de SPEI-6:
-\begin{equation}
-    d(X, Y) = \sqrt{\sum_{t=1}^{T} (X_t - Y_t)^2}
-\end{equation}
-Donde $T = 288$ representa los meses de registro del panel. Dado que el SPEI es una métrica de desviación normal que ya se encuentra estandarizada a nivel de cada estación ($Z$-score), existe un fuerte correlato teórico que justifica esta distancia: la distancia euclídea al cuadrado es inversamente proporcional al coeficiente de correlación de Pearson ($r_{xy}$) que mide la sincronicidad temporal de la sequía entre ambas estaciones:
-\begin{equation}
-    d^2(X, Y) = 2T(1 - r_{xy})
-\end{equation}
-Consecuentemente, agrupar las estaciones minimizando la distancia euclídea equivale matemáticamente a consolidar agrupaciones geográficas que exhiben una alta sincronicidad temporal en la ocurrencia, evolución y término de los eventos de sequía.
+Se implementa la técnica de Agrupamiento Jerárquico Aglomerativo (HAC, por sus siglas en inglés). Para guiar la fusión óptima de grupos y preservar la homogeneidad interna de las agrupaciones resultantes, se implementa el criterio de enlace de Ward (Ward's minimum variance method). La distancia de disimilitud temporal entre dos estaciones meteorológicas $X$ y $Y$ se calcula a partir de la distancia euclídea simple (ecuación \ref{eq:euclidea}) aplicada sobre sus series completas de observaciones mensuales de SPEI-6. Donde $T = 288$ representa los meses de registro del panel.  Agrupar las estaciones minimizando la distancia euclídea equivale matemáticamente a consolidar agrupaciones geográficas que exhiben una alta sincronicidad temporal en la ocurrencia, evolución y término de los eventos de sequía.
 
 \subsection{Determinación del número óptimo de grupos (clústeres)}
 
-A fin de evitar la discrecionalidad en la partición jerárquica del dendrograma y determinar una estructura espacial óptima de regiones de sequía a nivel nacional, se implementa el criterio formal del Ancho de Silueta Promedio (Average Silhouette Width). El análisis de silueta evalúa qué tan bien se encuentra agrupada cada estación evaluando de forma simultánea su distancia interna con los miembros de su propio grupo frente a su distancia externa con el clúster vecino más cercano.
+El análisis de silueta evalúa qué tan bien se encuentra agrupada cada estación evaluando de forma simultánea su distancia interna con los miembros de su propio grupo frente a su distancia externa con el clúster vecino más cercano. Para cada estación $i$, se calcula su valor de silueta individual $s(i)$ mediante la ecuacion \ref{eq:silueta}.
 
-Para cada estación $i$, se calcula su valor de silueta individual $s(i)$:
-\begin{equation}
-    s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}
-\end{equation}
-Donde:
-\begin{itemize}
-    \item $a(i)$ es el promedio de las distancias euclídeas de la estación $i$ con todas las demás estaciones de su mismo grupo.
-    \item $b(i)$ es el promedio de las distancias de la estación $i$ con todas las estaciones del grupo vecino más cercano (el grupo que minimiza dicha distancia promedio).
-\end{itemize}
-
-El valor del coeficiente $s(i)$ se halla acotado en el intervalo $[-1, 1]$. Un valor cercano a $1$ denota que la estación se encuentra perfectamente asignada a su región climática y alejada de clústeres adyacentes; un valor cercano a $0$ sugiere una zona de transición de baja diferenciación; y un valor negativo denota un error en el agrupamiento. El número óptimo de regiones climatológicas ($k^*$) se selecciona maximizando el Ancho de Silueta Promedio de toda la red de estaciones:
-\begin{equation}
-    k^* = \arg\max_{k} \left( \frac{1}{M} \sum_{i=1}^{M} s(i) \right)
-\end{equation}
-Donde $M = 11$ representa el número de estaciones seleccionadas. El algoritmo de optimización se programa e implementa en Python mediante el uso de la librería de minería de datos \textit{scikit-learn}. Las características de las regiones óptimas halladas mediante esta técnica reemplazarán el uso de la variable regional dicotómica clásica en el modelado estadístico subsiguiente de la investigación.
+El número óptimo de regiones climatológicas ($k^*$) se selecciona maximizando el Ancho de Silueta Promedio de toda la red de estaciones mediante la ecuación \ref{eq:siluetamax}. Donde $M = 11$ representa el número de estaciones seleccionadas. El algoritmo de optimización se codifica e implementa en Python mediante el uso de la librería de minería de datos \textit{scikit-learn}. Las características de las regiones óptimas halladas mediante esta técnica reemplazarán el uso de la variable regional dicotómica clásica en el modelado estadístico subsiguiente de la investigación.
 
 \section{Modelo estadístico}\label{sec:modelo_estadistico}
 
-Para cuantificar las tendencias temporales de la sequía e identificar procesos de aridificación y variaciones estructurales, se utilizó un modelo de regresión de datos de panel, estimado mediante la librería linearmodels de Python. 
+Para cuantificar las tendencias temporales del balance hídrico e identificar procesos de aridificación y variaciones estructurales, se utilizó un modelo de regresión de datos de panel, estimado mediante la librería linearmodels de Python. 
 
 \subsection{Elección del modelo}\label{subsec:ecuacion_modelo}
 
-La elección entre el modelo de efectos fijos (FE) y el de efectos aleatorios (RE) es una decisión metodológica crucial en el análisis de datos de panel. Para realizar esta selección de manera objetiva, se utilizó el test de tspecificación de Hausman.
+La elección entre el modelo de efectos fijos (FE) y el de efectos aleatorios (RE) es una decisión metodológica crucial en el análisis de datos de panel. Para realizar esta selección de manera objetiva, se utilizó el test de especificación de Hausman.
 
-La hipótesis nula ($H_0$) del test es que no existe una diferencia sistemática entre los coeficientes de ambos modelos, lo que implica que la suposición de no correlación del modelo RE es válida:
-\begin{equation}
-    H_0: E(\alpha_i | \mathbf{x}_{it}) = 0
-\end{equation}
-
-Si se rechaza $H_0$, se concluye que el modelo RE está sesgado y que el modelo FE es el estimador apropiado. Si no se rechaza $H_0$, se prefiere el modelo RE por su mayor eficiencia estadística.
+La hipótesis nula ($H_0$) del test es que no existe una diferencia sistemática entre los coeficientes de ambos modelos, lo que implica que la suposición de no correlación del modelo RE es válida. Si se rechaza $H_0$, se concluye que el modelo RE está sesgado y que el modelo FE es el estimador apropiado. Si no se rechaza $H_0$, se prefiere el modelo RE por su mayor eficiencia estadística.
 
 El estadístico de prueba de Hausman (H) sigue una distribución Chi-cuadrado ($\chi^2$) con \textit{k} grados de libertad, donde \textit{k} es el número de regresores que varían en el tiempo. Se calcula como:
 \begin{equation}
@@ -301,12 +270,12 @@ donde $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, 
 
 \subsection{Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}
 
-Para dar cumplimiento al objetivo específico 6 y contrastar de manera formal la hipótesis 3 (H3), se diseñó un marco experimental comparativo. El procedimiento consiste en estimar de forma paralela la ecuación del modelo de regresión de panel de efectos aleatorios (Ecuación \ref{eq:modelo_completo}) sobre dos variables dependientes distintas:
+Para dar cumplimiento a nuestro objetivo específico y contrastar de manera formal la hipótesis 3 (H3), se diseñó un marco experimental comparativo. El procedimiento consiste en estimar de forma paralela la ecuación del modelo de regresión de panel de efectos aleatorios (Ecuación \ref{eq:modelo_completo}) sobre dos variables dependientes distintas:
 \begin{align}
     \text{SPEI-6}_{it} &= \mathbf{x}_{it}'\boldsymbol{\beta}_{SPEI} + u_{it} \label{eq:panel_spei} \\
     \text{SPI-6}_{it} &= \mathbf{x}_{it}'\boldsymbol{\beta}_{SPI} + v_{it} \label{eq:panel_spi}
 \end{align}
 
-Donde $\boldsymbol{\beta}_{SPEI}$ y $\boldsymbol{\beta}_{SPI}$ representan los vectores de parámetros estimados para los modelos de balance hídrico y precipitación univariada, respectivamente. El efecto aislado del calentamiento global sobre la dinámica temporal de la sequía se define para cada estación del año y región como la diferencia entre sus respectivas tendencias netas mensuales calculadas ($\Delta \beta_{neto} = \beta_{neto, SPEI} - \beta_{neto, SPI}$). 
+Donde $\boldsymbol{\beta}_{SPEI}$ y $\boldsymbol{\beta}_{SPI}$ representan los vectores de parámetros estimados para los modelos de balance hídrico y precipitación univariada, respectivamente. El efecto aislado del calentamiento global sobre la dinámica temporal del balance hídrico se define para cada estación del año y región como la diferencia entre sus respectivas tendencias netas mensuales calculadas ($\Delta \beta_{neto} = \beta_{neto, SPEI} - \beta_{neto, SPI}$). 
 
 La significancia estadística del efecto del calentamiento global ($H_0: \beta_{neto, SPEI} - \beta_{neto, SPI} = 0$) se evalúa mediante la estimación de intervalos de confianza del 95\% y pruebas de Wald para diferencias de coeficientes de pendiente comunes entre ambas regresiones de panel, aislando así el efecto puro de la temperatura por encima del régimen de precipitaciones.

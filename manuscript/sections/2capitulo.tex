@@ -8,17 +8,19 @@ Un aporte referencial es el de \citeA{chavez2023}, quien mediante pruebas estad�
 
 Un hallazgo relevante de \citeA{grassi2020} es que, a pesar de registrarse incrementos leves en las medias de precipitación anual, la frecuencia y los impactos de las sequías extremas han aumentado significativamente durante el siglo XXI. Esto sugiere que las fluctuaciones térmicas positivas desempeñan un rol dominante en la intensificación del déficit hídrico por encima de la dinámica de las precipitaciones. Por último, las proyecciones de la \citeA{cepal2014} confirman que la persistencia de estas dinámicas inducirá choques de oferta desfavorables en la estabilidad económica nacional.
 
-\section{Características de la sequía}
+\section{La sequía}
+
+\subsection{Características}
 
 La sequía es un fenómeno de desarrollo lento y acumulativo. Sus efectos se manifiestan de manera gradual, lo que dificulta la determinación precisa de su inicio y final, pudiendo persistir durante años incluso después de que las condiciones meteorológicas hayan retornado a la normalidad \cite{mishra2010}.
 
 De acuerdo con \citeA{mishra2010}, las cuatro características fundamentales para el análisis de la sequía son: la intensidad, la duración, la frecuencia y la extensión espacial. El análisis conjunto de estas cuatro dimensiones resulta esencial para una evaluación integral del riesgo y la formulación de estrategias de mitigación efectivas.
 
-\section{Clasificación de la sequía}
+\subsection{Clasificación}
 
 \citeA{mishra2010} ha desarrollado un marco conceptual estándar que clasifica la sequía en cuatro tipos principales, entendidos como una secuencia de propagación de impactos: sequía meteorológica, sequía agrícola, sequía hidrológica y sequía socioeconómica. La presente investigación se centra en la caracterización y modelización de la \textit{sequía meteorológica}. Esta elección se fundamenta en que representa el indicador primario y precursor de todos los demás impactos hidrológicos, agrícolas y socioeconómicos, convirtiéndose en el componente crítico para cualquier sistema de detección temprana. La sequía meteorológica se puede calcular a partir de datos disponibles en la red de estaciones terrestres, evitando los requerimientos de datos biofísicos complejos en gran parte no disponibles en el contexto nacional que demandan las otras clasificaciones.
-\
-\section{Sequía en Paraguay: impulsores y consecuencias}
+
+\subsection{Impulsores}
 
 Las causas de las sequías no se conocen con precisión absoluta, pero se han identificado una serie de factores naturales y otros productos de la actividad humana que contribuyen a su ocurrencia e intensidad.
 
@@ -28,6 +30,8 @@ El calentamiento global actúa como un factor crítico de intensificación. El i
 
 La quema de combustible fósil, la deforestación, la explotación agrícola intensiva y la expansión urbana son algunas de las actividades humanas que impulsan las sequías \cite{velasco2005sequia}.
 
+\subsection{Consecuencias}
+
 Paraguay presenta una alta susceptibilidad ante las consecuencias de la sequía. Estos impactos se manifiestan de manera transversal en los siguientes sectores clave:
 \begin{itemize}
     \item {Sector agropecuario:} La sequía agrícola reduce drásticamente el rendimiento de los cultivos de renta (como la soja y el maíz), disminuye la receptividad de las pasturas y puede aumentar las tasas de mortalidad ganadera \cite{cepal2014}.
@@ -36,7 +40,7 @@ Paraguay presenta una alta susceptibilidad ante las consecuencias de la sequía.
     \item {Aspectos sociales y ambientales:} La escasez de agua afecta de manera directa a las comunidades rurales y suburbanas vulnerables, limitando su acceso al agua potable y comprometiendo la agricultura de subsistencia. Adicionalmente, las condiciones prolongadas de sequedad y calor elevan exponencialmente el riesgo de propagación de incendios forestales, con la consecuente degradación de ecosistemas y pérdida de biodiversidad.
 \end{itemize}
 
-\section{Sequía y aridificación}
+\section{Aridificación y sequía}
 
 La sequía puede actuar como un factor desencadenante o un acelerador crítico del proceso de aridificación, cuando una región sufre una sequía severa y prolongada la energía solar calienta directamente el suelo y el aire circundante, este aumento de temperatura local incrementa la demanda atmosférica de agua (la evapotranspiración potencial o PET que mide el SPEI). Una atmósfera más cálida y seca reduce la probabilidad de lluvias locales creando un círculo vicioso que estabiliza las condiciones secas y acelera la transición hacia un régimen climático estructuralmente más árido. Bajo las condiciones del calentamiento global, las sequías actúan hoy como la "punta de lanza" de la aridificación.
 
@@ -54,7 +58,7 @@ Los índices cuantitativos estandarizados sintetizan las fluctuaciones climátic
 
 El Índice de Precipitación Estandarizada (SPI), desarrollado por \citeA{mckee1993}, es uno de los indicadores más implementados. Parte de la premisa matemática de que el déficit acumulativo de precipitación representa el principal factor detrás de las condiciones de sequía. Consiste en ajustar los registros históricos de precipitación acumulada para una escala temporal seleccionada (por ejemplo, 3, 6 o 12 meses) a una función de distribución de probabilidad teórica, típicamente la distribución Gamma. Posteriormente, las probabilidades acumuladas resultantes se transforman mediante la inversa de la función de distribución normal estándar, produciendo un índice normalizado ($Z$-score) con media cero y varianza unitaria. Los valores negativos indican condiciones más secas de lo normal y los valores positivos condiciones húmedas. Su gran ventaja radica en su flexibilidad multiescalar y simplicidad operacional, al requerir únicamente registros de precipitación.
 
-A pesar de su utilidad regulatoria, el SPI exhibe una limitación conceptual crítica en escenarios de cambio climático: ignora sistemáticamente la influencia de las anomalías de temperatura. El calentamiento global altera no solo los regímenes de precipitación, sino que incrementa de forma directa la demanda evaporativa de la atmósfera, un factor físico determinante en el balance hídrico del suelo. Por consiguiente, omitir la dinámica de la ETP puede resultar en una subestimación sustancial de la severidad de la sequía, especialmente durante eventos de "olas de calor" persistentes \cite{massondelmotte2021}.
+A pesar de su utilidad regulatoria, el SPI exhibe una limitación conceptual crítica en escenarios de cambio climático: ignora sistemáticamente la influencia de las anomalías de temperatura. El calentamiento global altera no solo los regímenes de precipitación, sino que incrementa de forma directa la demanda evaporativa de la atmósfera, un factor físico determinante en el balance hídrico del suelo. Por consiguiente, omitir la dinámica de la ETP puede resultar en una subestimación sustancial de la severidad de la sequía \cite{massondelmotte2021}.
 
 \subsection{El índice de precipitación-evapotranspiración estandarizado (SPEI)}
 
@@ -82,34 +86,33 @@ El cálculo del índice acumula estas diferencias mensuales en diferentes escala
 \end{tabular}
 \end{table}
 
-\section{Acumulación del balance hídrico en múltiples escalas}
+\subsection{Acumulación del balance hídrico en múltiples escalas}
 
-El déficit hídrico no genera impactos inmediatos homogéneos sobre los sistemas biofísicos y socioeconómicos, sino que actúa bajo dinámicas temporales multiescalares. En consecuencia, la serie temporal del balance hídrico mensual se acumuló en diferentes escalas de tiempo temporales $k$ \cite{mckee1993}:
+El déficit hídrico no genera impactos inmediatos, sino que actúa bajo dinámicas temporales multiescalares. En consecuencia, la serie temporal del balance hídrico mensual se acumula en diferentes escalas de tiempo temporales $k$ \cite{mckee1993}:
 \begin{itemize}
     \item {SPEI a 3 meses (SPEI-3):} Representa condiciones de balance a corto plazo, útil para caracterizar anomalías de humedad en la capa superficial del suelo.
     \item {SPEI a 6 meses (SPEI-6):} Actúa como una escala intermedia y puente entre las anomalías meteorológicas rápidas y los impactos de escala hidrológica en caudales menores. 
     \item {SPEI a 12 meses (SPEI-12):} Mide variaciones a largo plazo asociadas a las reservas en acuíferos, embalses y sistemas fluviales de mayor envergadura.
 \end{itemize}
 
-Por su relevancia integral para capturar impactos de corto y mediano plazo de la sequía, se seleccionó al SPEI-6 como la variable dependiente de este análisis.
+Por su relevancia integral para capturar impactos de corto y mediano plazo de la sequía, se seleccionó al SPEI-6 como métrica para el análisis de la sequía, además siendo la variable dependiente del modelo ajustado.
 
 \section{Fundamentos del agrupamiento no supervisado (clustering) para regionalización geográfica de la sequía}
 
-Las divisiones político-administrativas o fisiográficas tradicionales (Región Oriental y Región Occidental) no siempre se corresponden de manera exacta con los patrones meteorológicos y de balance hídrico dinámicos. Para resolver el problema de la variabilidad espacial de la sequía de manera objetiva vamos a utilizar los datos reales del SPEI-6 de cada estación meteorológica para agruparlas en regiones geográficas homogéneas, mediante un algoritmo de agrupamiento no supervisado. 
-
-Por consiguiente, el aprendizaje estadístico no supervisado (unsupervised learning) proporciona un marco analítico riguroso para agrupar las estaciones meteorológicas basándose exclusivamente en la variabilidad temporal y covarianza de sus series históricas de sequía.
+Las divisiones político-administrativas o fisiográficas tradicionales de Paraguay (Región Oriental y Región Occidental) pueden no corresponder de manera exacta con los patrones meteorológicos y de balance hídrico dinámicos. Para resolver el problema de la variabilidad espacial de la sequía de manera objetiva vamos a utilizar los datos reales del SPEI-6 de cada estación meteorológica para agruparlas en regiones geográficas homogéneas, mediante un algoritmo de agrupamiento no supervisado, proporcionando un marco analítico riguroso para agrupar las estaciones meteorológicas basándose exclusivamente en la variabilidad temporal y covarianza de sus series históricas de balance hídrico.
 
 \subsection{Algoritmo de agrupamiento jerárquico aglomerativo}
 
 El Agrupamiento Jerárquico Aglomerativo (HAC, por sus siglas en inglés) es una técnica de partición espacial iterativa que opera de forma ascendente. El algoritmo inicia asignando a cada estación meteorológica individual su propio grupo (clúster) y, de forma sucesiva, procede a fusionar los dos grupos más similares en cada iteración hasta que todas las entidades se integran en una estructura de árbol única conocida como dendrograma.
 
-Este método de agrupamiento es optimo para datos climáticos que operan bajo estructuras anidadas y continuas. El dendrograma permite a los climatólogos inspeccionar la jerarquía y cercanía de las subparticiones a diferentes niveles de escala, una propiedad física que los métodos planos o no jerárquicos como K-Means omiten por completo \cite{gong1995}.
+Este método de agrupamiento es óptimo para datos climáticos que operan bajo estructuras anidadas y continuas. El dendrograma permite a los climatólogos inspeccionar la jerarquía y cercanía de las sub particiones a diferentes niveles de escala, una propiedad física que los métodos planos o no jerárquicos como K-Means omiten por completo \cite{gong1995}.
 
-Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementa el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de Ward \cite{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como el estimador más eficiente para la regionalización de variables continuas. Esto asegura que las estaciones dentro de cada clúster tengan series de sequía (SPEI-6) sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
+Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementa el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de Ward \cite{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como el estimador más eficiente para la regionalización de variables continuas. Esto asegura que las estaciones dentro de cada clúster tengan series de SPEI-6 sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
 
 La disimilitud o distancia temporal entre dos entidades $X$ y $Y$ se cuantifica mediante la distancia euclídea clásica calculada sobre la totalidad de sus observaciones a lo largo de la serie histórica:
 \begin{equation}
     d(X, Y) = \sqrt{\sum_{t=1}^{T} (X_t - Y_t)^2}
+    \label{eq:euclidea}
 \end{equation}
 Donde $T$ es el número de periodos analizados en el panel. Dado que el SPEI es un índice normalizado con media cero y desviación estándar unitaria ($Z$-score) en cada estación, la distancia euclídea al cuadrado guarda una relación directa con el coeficiente de correlación de Pearson ($r_{xy}$) entre ambas series:
 \begin{equation}
@@ -125,6 +128,7 @@ A fin de evitar la discrecionalidad en el corte jerárquico del dendrograma y de
 Para cada estación individual $i$, se calcula su respectivo coeficiente de silueta $s(i)$ mediante la relación:
 \begin{equation}
     s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}
+    \label{eq:silueta}
 \end{equation}
 Donde:
 \begin{itemize}
@@ -135,6 +139,7 @@ Donde:
 El valor de $s(i)$ se halla estrictamente acotado en el intervalo $[-1, 1]$. Un valor cercano a $1$ indica que la estación se encuentra correctamente asignada a su región y adecuadamente separada de las demás; un valor de $0$ sugiere una zona de transición de baja diferenciación; y un valor negativo denota una clasificación incorrecta. El número óptimo de clústeres ($k^*$) se determina maximizando el ancho de silueta promedio de toda la red de estaciones $M$:
 \begin{equation}
     k^* = \arg\max_{k} \left( \frac{1}{M} \sum_{i=1}^{M} s(i) \right)
+    \label{eq:siluetamax}
 \end{equation}
 
 \section{Fundamentos del modelado estadístico para datos de panel}
@@ -188,9 +193,10 @@ La validez metodológica del modelo de efectos aleatorios descansa sobre la veri
 \begin{enumerate}
     \item \textbf{Exogeneidad estricta:} Se asume que el componente de error idiosincrático, $\varepsilon_{it}$, no se encuentra correlacionado con las variables explicativas para ningún periodo temporal observacional. La consistencia del efecto aleatorio individual $\alpha_i$ respecto a las variables explicativas se valida mediante el test de Hausman.
     \item \textbf{Homocedasticidad y no autocorrelación del error:} Supone que los errores idiosincráticos presentan una varianza constante e independiente a través de las observaciones temporales para una misma entidad. Debido a que las series climatológicas suelen exhibir autocorrelación y heterocedasticidad, este estudio aborda preventivamente dicha potencial desviación mediante la estimación de errores estándar robustos agrupados (clustered robust standard errors) a nivel de estación meteorológica. Esta técnica estadístico-analítica parametriza las matrices de covarianza para tolerar patrones arbitrarios de correlación y heterocedasticidad dentro de cada clúster individual, derivando p-valores y límites de confianza robustos para la inferencia de tendencias.
-    \subsubsection{Cálculo teórico de los errores estándar agrupados}
+    
+\subsubsection{Cálculo teórico de los errores estándar agrupados}
 
-En el modelado de datos de panel, la presencia de correlación serial dentro de una misma estación meteorológica (autocorrelación) e idoneidades de varianza no constante (heterocedasticidad) invalida la inferencia basada en los errores estándar ordinarios, tendiendo a subestimar significativamente la verdadera variabilidad de los estimadores. Para corregir este problema, se implementa el estimador de matriz de covarianza robusta agrupada por clústeres (estaciones), el cual generaliza el estimador robusto de White para permitir correlación arbitraria entre las observaciones de una misma entidad \cite{wooldridge2010}.
+En el modelado de datos de panel, la presencia de correlación serial dentro de una misma estación meteorológica (autocorrelación) e idoneidades de varianza no constante (heterocedasticidad) invalida la inferencia basada en los errores estándares ordinarios, tendiendo a subestimar significativamente la verdadera variabilidad de los estimadores. Para corregir este problema, se implementa el estimador de matriz de covarianza robusta agrupada por clústeres (estaciones), el cual generaliza el estimador robusto de White para permitir correlación arbitraria entre las observaciones de una misma entidad \cite{wooldridge2010}.
 
 Considérese el modelo lineal agrupado por estaciones (clústeres):
 \begin{equation}
@@ -230,12 +236,12 @@ Para corregir los sesgos inherentes en muestras donde el número de clústeres $
 Donde $N = \sum_{i=1}^{M} T_i$ representa el número total de observaciones mensuales del panel, y $K$ es el número de parámetros estimados en el modelo. Los errores estándar agrupados por estación corresponden a la raíz cuadrada de los elementos de la diagonal principal de la matriz $q \cdot \widehat{\text{Var}}_{robust}(\hat{\beta})$.
 \end{enumerate}
 
-Finalmente, una limitación inherente al marco de modelización propuesto reside en su especificación de tendencia lineal. El estimador asume una tasa de cambio constante en la anomalía hídrica a lo largo del periodo temporal estudiado, constituyendo una primera aproximación de tendencia a largo plazo que no captura dinámicas no lineales de escala decadal o cambios abruptos de régimen climático.
+Finalmente, una limitación inherente al marco de modelización propuesto reside en su especificación de tendencia lineal. El estimador asume una tasa de cambio constante en la anomalía hídrica a lo largo del periodo temporal estudiado, constituyendo una primera aproximación de tendencia a largo plazo que no captura dinámicas no lineales o cambios abruptos de régimen climático.
 
 \section{El rol del calentamiento global en las sequías}
 
 En el contexto del cambio climático, el concepto clásico de sequía como un fenómeno impulsado exclusivamente por el déficit de precipitación ha quedado obsoleto. Las investigaciones de \citeA{trenberth_global_2014} introducen el concepto de "sequías más cálidas" (\textit{hotter droughts}), caracterizadas por un acoplamiento estrecho entre el déficit de suministro de agua (lluvias) y el incremento desproporcionado de la demanda atmosférica (evapotranspiración potencial o ETP), impulsada de forma directa por el calentamiento global.
 
-Para aislar y demostrar científicamente el efecto del calentamiento global sobre el balance de agua, la literatura metodológica recurre al contraste sistemático de dos índices complementarios de sequía: el Índice de Precipitación Estandarizada (SPI), que mide de forma univariada las anomalías de suministro de lluvia \cite{mckee1993}, y el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI), que incorpora la sensibilidad a la temperatura mediante la deconstrucción de la ETP \cite{vicenteserrano2010}. 
+Para aislar el efecto del calentamiento global sobre el balance hídrico, recurrimos al contraste sistemático de dos índices: el Índice de Precipitación Estandarizada (SPI), que mide de forma univariada las anomalías de suministro de lluvia \cite{mckee1993}, y el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI), que incorpora la sensibilidad a la temperatura mediante la deconstrucción de la ETP \cite{vicenteserrano2010}. 
 
-Desde una perspectiva física, dado que ambos índices se calculan utilizando idéntica escala temporal y normalización normal estándar, la divergencia estadística y temporal entre sus respectivas tendencias ($Trend_{SPEI} - Trend_{SPI}$) representa el residuo térmico aislado. Este residuo constituye la huella o huella dactilar (\textit{fingerprint}) del calentamiento global sobre el ciclo hidrológico. Si el SPI muestra estabilidad a largo plazo (ausencia de tendencias significativas en las lluvias), pero el SPEI revela tendencias decrecientes significativas hacia la sequedad, queda demostrado teóricamente que el calentamiento global es el factor dominante detrás de los procesos de aridificación de una región.
+Desde una perspectiva física, dado que ambos índices se calculan utilizando idéntica escala temporal y normalización normal estándar, la divergencia estadística y temporal entre sus respectivas tendencias ($Trend_{SPEI} - Trend_{SPI}$) representa el residuo térmico aislado. Este residuo constituye la huella del calentamiento global sobre el ciclo hidrológico. Si el SPI muestra estabilidad a largo plazo (ausencia de tendencias significativas en las lluvias), pero el SPEI revela tendencias decrecientes significativas hacia la sequedad, queda demostrado teóricamente que el calentamiento global es el factor dominante detrás de los procesos de aridificación de una región.
