@@ -63,25 +63,25 @@
 \contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{31}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Asignación de estaciones y validación de contigüidad geográfica}{32}{subsection.4.1.2}%
 \contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{33}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Patrones Estacionales del Balance Hídrico}{34}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.1}Patrones estacionales del balance hídrico}{34}{subsection.4.2.1}%
 \contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{35}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Análisis de Intensidad del déficit hídrico}{35}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.3}Análisis de intensidad del déficit hídrico}{35}{subsection.4.2.3}%
 \contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{36}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{37}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{36}{subsection.4.2.5}%
 \contentsline {section}{\numberline {4.3}Resultados del modelo de datos de panel}{38}{section.4.3}%
 \contentsline {subsection}{\numberline {4.3.1}Selección del estimador: El test de especificación de Hausman}{38}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Estimación del modelo final}{39}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Mecánica del modelo explicativo e integración de efectos}{40}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.3}Mecánica del modelo explicativo e integración de efectos}{41}{subsection.4.3.3}%
 \contentsline {section}{\numberline {4.4}Evaluación de la significancia del calentamiento global (Contraste SPEI vs. SPI)}{42}{section.4.4}%
 \contentsline {chapter}{\numberline {5}Discusión y conclusiones}{44}{chapter.5}%
 \contentsline {section}{\numberline {5.1}Discusión de los hallazgos climatológicos principales}{44}{section.5.1}%
-\contentsline {subsubsection}{1. Aridificación estival acelerada en la subregión sur-este}{44}{section*.11}%
-\contentsline {subsubsection}{2. Secado severo en la transición estacional de la primavera (Clúster 2)}{45}{section*.12}%
+\contentsline {subsubsection}{1. Aridificación estival acelerada en la subregión sur-este (Clúster 1)}{44}{section*.11}%
+\contentsline {subsubsection}{2. Aridificación en la transición estacional de la primavera (Clúster 2)}{45}{section*.12}%
 \contentsline {subsubsection}{3. Aridificación estival de subregión centro-chaco (Clúster 2)}{45}{section*.13}%
 \contentsline {subsubsection}{4. Desviación negativa marginal en el otoño sur-este (Clúster 1)}{45}{section*.14}%
 \contentsline {subsection}{\numberline {5.1.1}El calentamiento global como motor de la aridificación en Paraguay}{46}{subsection.5.1.1}%
 \contentsline {section}{\numberline {5.2}Conclusiones generales}{46}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Cumplimiento de los objetivos y respuestas a las interrogantes}{47}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Contraste y validación de las Hipótesis de investigación}{48}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.2}Contraste y validación de las hipótesis de investigación}{48}{subsection.5.2.2}%
 \contentsline {chapter}{Referencias}{50}{subsection.5.2.2}%
 \contentsline {section}{Referencias}{50}{section*.15}%
