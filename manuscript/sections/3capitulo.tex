@@ -6,7 +6,7 @@ La presente investigación se enmarca en un enfoque cuantitativo de carácter lo
 
 \section{Fuentes de datos y variables}
 
-Los datos primarios corresponden a los registros meteorológicos diarios provistos por la Dirección de Meteorología e Hidrología (DMH) de la Dirección Nacional de Aeronáutica Civil (DINAC)\footnote{Consultado en el portal de Estaciones Meteorológicas Automáticas (EMAs): \url{https://www.meteorologia.gov.py/emas/} (último acceso: marzo, 2026).}. Para cada estación meteorológica, se recopilaron las siguientes variables críticas diarias:
+Los datos primarios (apéndice \ref{apendice:fuente_datos}) corresponden a los registros meteorológicos diarios provistos por la Dirección de Meteorología e Hidrología (DMH) de la Dirección Nacional de Aeronáutica Civil (DINAC)\footnote{Consultado en el portal de Estaciones Meteorológicas Automáticas (EMA): \url{https://www.meteorologia.gov.py/emas/} (último acceso: marzo, 2026).}. Para cada estación meteorológica, se recopilaron las siguientes variables críticas diarias:
 \begin{itemize}
     \item Precipitación total diaria (en mm).
     \item Temperatura media diaria (en °C).
@@ -22,7 +22,7 @@ Los registros instrumentales diarios originales presentaban diversos grados de c
 
 \subsection{Evaluación de datos faltantes}
 
-El análisis partió de una red inicial de 19 estaciones meteorológicas distribuidas a nivel nacional (detalladas en el Apéndice E). Para cada estación se cuantificó de forma sistemática la tasa de pérdida de datos diarios en el vector de variables críticas (precipitación y temperaturas) a lo largo de los 24 años de estudio.
+El análisis partió de una red inicial de 19 estaciones meteorológicas distribuidas a nivel nacional (detalladas en el apéndice \ref{apendice:estaciones}). Para cada estación se cuantificó de forma sistemática la tasa de pérdida de datos diarios en el vector de variables críticas (precipitación y temperaturas) a lo largo de los 24 años de estudio.
 
 \subsection{Criterios de exclusión y selección muestra final}
 
@@ -218,7 +218,7 @@ El número óptimo de regiones climatológicas ($k^*$) se selecciona maximizando
 
 \section{Modelo estadístico}\label{sec:modelo_estadistico}
 
-Para cuantificar las tendencias temporales del balance hídrico e identificar procesos de aridificación y variaciones estructurales, se utilizó un modelo de regresión de datos de panel, estimado mediante la librería linearmodels de Python. 
+Para cuantificar las tendencias temporales del balance hídrico e identificar procesos de aridificación y variaciones estructurales, se utilizó un modelo de regresión de datos de panel, estimado mediante la librería \textit{linearmodels} de Python. 
 
 \subsection{Elección del modelo}\label{subsec:ecuacion_modelo}
 
@@ -251,7 +251,7 @@ Y las variables del modelo son:
     \item $y_{it}$: la variable dependiente, el valor del SPEI-6.
     \item $\mathbf{x}_{it}$: el vector de variables explicativas (regresores).
     \item $\boldsymbol{\beta}$: el vector (columna) de coeficientes a estimar.
-    \item $\alpha_i$: el efecto no observado, específico de cada estación metereológica \textit{i}.
+    \item $\alpha_i$: el efecto no observado, específico de cada estación meteorológica \textit{i}.
     \item $\varepsilon_{it}$: el término de error idiosincrático.
 \end{itemize}
 
@@ -266,7 +266,7 @@ La especificación completa del modelo estimado, incluyendo todas las variables 
 \end{split}
 \label{eq:modelo_completo}
 \end{equation}
-donde $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, y los términos $\text{estacion-climatica}_{s,t}$ y $\text{region-geografica}_i$ son variables dummy para las categorías estacionales climáticas (invierno, primavera, verano, otoño) y regionales geográficas (clusters), respectivamente.
+donde $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, y los términos $\text{estacion-climatica}_{s,t}$ y $\text{region-geografica}_i$ son variables dummys para las categorías estacionales climáticas (invierno, primavera, verano, otoño) y regionales geográficas (clusters), respectivamente.
 
 \subsection{Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}
 

@@ -1,0 +1,78 @@
+% INICIO DE LOS APÉNDICES
+\appendix 
+
+
+\chapter{Listado de estaciones meteorológicas utilizadas}\label{apendice:estaciones}
+
+En la Tabla \ref{tab:lista_estaciones_completa} se detalla el listado completo de las 19 estaciones meteorológicas iniciales utilizadas en este estudio. Se presenta el identificador de cada estación, su nombre completo, sus coordenadas geográficas y la macroregión a la que pertenece.
+
+
+\begin{table}[htbp] 
+    \centering
+    \small % Tamaño de fuente un poco más pequeño
+    \caption{Listado completo de las 19 estaciones meteorológicas originales.}
+    \label{tab:lista_estaciones_completa}
+    \resizebox{\textwidth}{!}{%
+\begin{tabular}{llrrl}
+    \toprule
+    \textbf{ID Estación} & \textbf{Nombre Completo} & \textbf{Latitud} & \textbf{Longitud} & \textbf{Región} \\
+    \midrule
+    MCAL     & Aeropuerto de Mariscal Estigarribia         & -22.03 & -60.62 & Occidental \\
+    PTOC     & Puerto Casado                               & -22.16 & -57.94 & Occidental \\
+    PJC      & Aeródromo de Pedro Juan Caballero           & -22.64 & -55.83 & Oriental \\
+    PCOL     & Pozo Colorado                               & -23.50 & -58.79 & Occidental \\
+    CONC     & Aeródromo de Concepción                     & -23.44 & -57.43 & Oriental \\
+    GBRU     & Gral. José María Bruguez                    & -24.74 & -58.84 & Occidental \\
+    SPED     & Aeródromo de San Pedro del Ycuamandyyú      & -24.03 & -57.02 & Oriental \\
+    SEST     & San Estanislao                              & -24.67 & -56.46 & Oriental \\
+    SGUA     & Aeródromo de Salto del Guairá               & -24.03 & -54.35 & Oriental \\
+    LUQUE    & Aeropuerto Internacional Silvio Pettirossi  & -25.24 & -57.51 & Oriental \\
+    PARA     & Paraguarí                                   & -25.60 & -57.15 & Oriental \\
+    VILL     & Villarrica del Espíritu Santo               & -25.75 & -56.44 & Oriental \\
+    COVIE    & Coronel Oviedo                              & -25.52 & -56.41 & Oriental \\
+    MINGA    & Aeropuerto Internacional Guaraní Minga Guazú& -25.50 & -54.77 & Oriental \\
+    PILAR    & Aeródromo de Pilar                          & -26.88 & -58.32 & Oriental \\
+    SJBA     & San Juan Bautista                           & -26.67 & -57.13 & Oriental \\
+    CAAZ     & Caazapá                                     & -26.17 & -56.36 & Oriental \\
+    CMEZA    & Base Aérea de Capitán Meza                  & -26.83 & -55.33 & Oriental \\
+    ENCAR    & Encarnación                                 & -27.34 & -55.87 & Oriental \\
+    \bottomrule
+    \end{tabular}
+    }
+\end{table}
+
+\chapter{Entorno computacional}\label{apendice:entorno}
+
+La depuración y análisis de datos, la modelización estadística final y la generación de todas las figuras se realizó utilizando el lenguaje de programación Python (versión 3.12). Para garantizar la reproducibilidad, el análisis se llevó a cabo en un entorno virtual aislado.
+
+A continuación, se listan las principales librerías científicas y de visualización de datos empleadas en el estudio, junto con las versiones específicas utilizadas:
+
+\begin{itemize}
+    \item Pandas (versión 2.3.1): Para la manipulación y limpieza de datos tabulares.
+    \item NumPy (versión 1.26.0): Para operaciones numéricas y algebraicas.
+    \item SciPy (versión 1.16.0): Utilizada para el ajuste de distribuciones de probabilidad en el cálculo del SPEI.
+    \item Linearmodels (versión 6.1): Para la estimación de los modelos de panel de efectos fijos y aleatorios.
+    \item Statsmodels (versión 0.14.5): Utilizada para pruebas estadísticas complementarias.
+    \item Scikit-learn (versión 1.7.1): Para la implementación del algoritmo de agrupamiento K-Means.
+    \item GeoPandas (versión 1.1.1): Para la manipulación de datos geoespaciales (shapefiles).
+    \item Plotly (versión 6.2.0): Para la creación de visualizaciones interactivas, incluyendo los mapas.
+    \item Matplotlib (versión 3.10.3): Para la generación de gráficos estáticos.
+    \item Seaborn (versión 0.13.2): Para la creación de visualizaciones estadísticas.
+    \item Tabulate (versión 0.9.0): Para la exportación de tablas a formato LaTeX.
+    \item SPEI (versión 0.8.0) y Climate-Indices (versión 1.0.12): Librerías utilizadas y evaluadas para el cálculo de índices de sequía.
+\end{itemize}
+
+El conjunto de datos y el código fuente utilizado para el análisis se encuentra disponible para su consulta, garantizando la total transparencia y replicabilidad de los resultados de esta tesis, en un repositorio de GitHub de acceso abierto, cuyo enlace se proporciona:
+\url{https://github.com/hvargasojeda/tesis_sequia_2.git}
+
+\chapter{Fuente oficial de los datos}\label{apendice:fuente_datos}
+
+Los datos fueron solicitados a la Dirección de Meteorología e Hidrología (DMH) del Paraguay, a través de un pedido formal por intermedio de la Facultad de Ciencias Exactas y Naturales de la Universidad Nacional de Asunción, vía correo electrónico. La solicitud se realizó el 24 de abril de 2024, y se obtuvo una respuesta oficial el 9 de mayo de 2024, proporcionando los datos en formato digital (xlsx).
+
+\clearpage % salto de página 
+
+% Inserción del correo de solicitud (Primera hoja)
+\includepdf[pages=1, scale=0.85, pagecommand={\thispagestyle{plain}}]{/home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf}
+
+% Inserción de la constancia de datos proveídos (Segunda hoja)
+\includepdf[pages=1, scale=0.85, pagecommand={\thispagestyle{plain}}]{/home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf}
