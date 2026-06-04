@@ -18,10 +18,10 @@ Este ritmo dinámico de pérdida de humedad implica que, al término de la serie
 \begin{tabular}{llcccl}
 \hline
 \textbf{Región Climática} & \textbf{Estación} & \textbf{Nivel Base ($t=0$)} & \textbf{Tendencia (mes)} & \textbf{SPEI Esperado ($t=283$)} & \textbf{Hallazgo climatológico principal} \\ \hline
-\textbf{Subregión sur-este} & Verano & 0.4359 & -0.0023** & -0.2150 & Aridificación estival acelerada (fuerte demanda térmica). \\
-(Clúster 1) & Otoño & 0.0419 & -0.0001** & 0.0278 & Desviación negativa marginal en el balance hídrico. \\ \hline
-\textbf{Subregión} & Primavera & -0.0745 & -0.0015*** & -0.4990 & Secado severo en transición (retraso estacional de lluvias). \\
-\textbf{centro-chaco} & Verano & 0.1389 & -0.0011*** & -0.1724 & Aridificación estival regional (incremento de la ETP). \\ 
+\textbf{Subregión sur-este} & verano & 0.4359 & -0.0023** & -0.2150 & Aridificación estival acelerada (fuerte demanda térmica). \\
+(Clúster 1) & otoño & 0.0419 & -0.0001** & 0.0278 & Desviación negativa marginal en el balance hídrico. \\ \hline
+\textbf{Subregión} & primavera & -0.0745 & -0.0015*** & -0.4990 & Secado severo en transición (retraso estacional de lluvias). \\
+\textbf{centro-chaco} & verano & 0.1389 & -0.0011*** & -0.1724 & Aridificación estival regional (incremento de la ETP). \\ 
 (Clúster 2) & & & & & \\ \hline
 \multicolumn{6}{l}{\small Nota: *** $p < 0.01$, ** $p < 0.05$. Categorías de referencia del modelo: Invierno y Clúster 2.} \\
 \end{tabular}%
@@ -44,7 +44,7 @@ Aunque el ritmo de aridificación estival en este clúster es aproximadamente la
 
 Finalmente, el modelo identificó una tendencia neta de secado estadísticamente significativa pero de baja magnitud en los otoños de la subregión sur-este (Clúster 1), con una pendiente de ${-0.0001}$ puntos mensuales ($p < 0.05$). Si bien esta tasa de cambio es marginal, representa un indicador de que el proceso de aridificación estival del verano muestra cierta persistencia temporal hacia los meses de otoño, ralentizando los procesos normales de recarga hídrica otoñal que caracterizan a esta región.
 
-\subsection{El calentamiento global como motor de la aridificación en Paraguay}
+\subsection{El calentamiento global como impulsor de la aridificación en Paraguay}
 
 Los resultados del análisis comparativo entre el SPEI-6 y el SPI-6 (Cuadro \ref{tab:contraste_spei_spi}) permiten validar plenamente la hipótesis \textit{H3} de la investigación. El hecho de que el modelo de precipitación (SPI-6) muestre una estabilidad a largo plazo en las lluvias estivales, pero el modelo de balance hídrico (SPEI-6) identifique un proceso de aridificación significativo, constituye la prueba empírica de que el cambio climático y el calentamiento de las temperaturas medias globales están modificando las dinámicas de sequía en Paraguay \cite{naumann2023}.
 
@@ -66,12 +66,12 @@ El desarrollo empírico de esta investigación ha permitido dar respuesta sistem
     \item \textit{Caracterización temporal de la sequía:} La sequía en Paraguay ha experimentado un agravamiento severo durante las últimas dos décadas, caracterizado por:
     \begin{itemize}
         \item \textit{Frecuencia:} Un quiebre estructural y positivo a partir de 2019, alcanzando un pico máximo histórico de 59 meses-estación bajo condiciones de sequía en el año 2020 (afectando simultáneamente al 44.7\% de la red).
-        \item \textit{Intensidad:} Un desplazamiento de los promedios hacia valores más secos y el registro de un mínimo histórico absoluto extremo de $-3.7217$ en la estación meteorológicade Mariscal Estigarribia en diciembre de 2023.
+        \item \textit{Intensidad:} Un desplazamiento de los promedios hacia valores más secos y el registro de un mínimo histórico absoluto extremo de $-3.7217$ en la estación meteorológica de Mariscal Estigarribia en diciembre de 2023.
         \item \textit{Duración:} Un incremento del 23.55\% en la persistencia temporal de los eventos, cuya duración promedio transitó de $2.59$ meses (2000--2011) a $3.20$ meses (2012--2023), alcanzando una racha continua máxima de $14$ meses.
         \item \textit{Extensión Espacial:} Una tendencia lineal positiva en la cobertura del déficit, con una sincronización de escala nacional durante la crisis del bienio 2020--2021.
     \end{itemize}
     \item \textit{Heterogeneidad espacial regional:} La aplicación de técnicas de aprendizaje no supervisado de clustering jerárquico aglomerativo demostró de forma objetiva que el territorio nacional no se comporta homogéneamente ante la sequía. La optimización del coeficiente de silueta particionó la red de monitoreo de forma limpia en dos grandes dominios hídricos de alta contigüidad geográfica: el Clúster 1 (subregión sur-este) y el Clúster 2 (subregión centro-chaco), registrando una distancia media intra-grupo de solo $2.461^{\circ}$ decimales.
-    \item \textit{Divergencias estacionales y regionales:} A través de la estimación del modelo de regresión de datos de panel con efectos aleatorios, se cuantificó que las tendencias de secado de largo plazo varían significativamente según la subregión y la época del año. Se hallaron tendencias netas altamente significativas hacia veranos más secos en todo el país (siendo el doble de rápido el ritmo de secado en la subregión sur-este (Clúster 1), con $-0.0023$ puntos mensuales, frente a la subregión centro-chaco (Clúster 2), con $-0.0011$), y una severa tendencia de secado en la primavera del Clúster 2 ($-0.0015$ puntos mensuales).
+    \item \textit{Divergencias estacionales y regionales:} A través de la estimación del modelo de regresión de datos de panel con efectos aleatorios, se cuantificó que las tendencias de secado de largo plazo varían significativamente según la subregión y la época del año. Se hallaron tendencias netas altamente significativas hacia veranos más secos en todo el país siendo el doble de rápido el ritmo de secado en la subregión sur-este (Clúster 1), con $-0.0023$ puntos mensuales, frente a la subregión centro-chaco (Clúster 2), con $-0.0011$), y una severa tendencia de secado en la primavera del Clúster 2 ($-0.0015$ puntos mensuales).
     \item \textit{Significancia del efecto del calentamiento global:} Se demostró formalmente que el calentamiento global ejerce un efecto dominante y significativo sobre el balance hídrico en Paraguay. El contraste de modelos determinó diferencias estadísticamente significativas ($\Delta \beta$ de $-0.0025$ mensuales en verano en el Clúster 1) entre las tendencias decrecientes del SPEI-6 frente a la estabilidad temporal del SPI-6 (precipitación pura).
 \end{enumerate}
 

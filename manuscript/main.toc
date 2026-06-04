@@ -79,7 +79,7 @@
 \contentsline {subsubsection}{2. Aridificación en la transición estacional de la primavera (Clúster 2)}{45}{section*.12}%
 \contentsline {subsubsection}{3. Aridificación estival de subregión centro-chaco (Clúster 2)}{45}{section*.13}%
 \contentsline {subsubsection}{4. Desviación negativa marginal en el otoño sur-este (Clúster 1)}{45}{section*.14}%
-\contentsline {subsection}{\numberline {5.1.1}El calentamiento global como motor de la aridificación en Paraguay}{46}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.1}El calentamiento global como impulsor de la aridificación en Paraguay}{46}{subsection.5.1.1}%
 \contentsline {section}{\numberline {5.2}Conclusiones generales}{46}{section.5.2}%
 \contentsline {subsection}{\numberline {5.2.1}Cumplimiento de los objetivos y respuestas a las interrogantes}{47}{subsection.5.2.1}%
 \contentsline {subsection}{\numberline {5.2.2}Contraste y validación de las hipótesis de investigación}{48}{subsection.5.2.2}%
