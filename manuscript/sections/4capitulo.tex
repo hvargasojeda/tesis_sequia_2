@@ -2,9 +2,9 @@
 
 \section{Regionalización climatológica de la sequía en Paraguay}
 
-Antes de proceder a caracterizar los eventos de sequía y estimar tendencias temporales agregadas mediante el modelado econométrico de panel, examinamos desde una perspectiva empírica y de balance hídrico, la variabilidad espacial de la sequía en Paraguay.
+Antes de proceder a caracterizar los eventos de sequía y estimar tendencias dinámicas mediante el modelado de datos de panel, examinamos desde una perspectiva empírica y de balance hídrico, la variabilidad espacial de la sequía en Paraguay.
 
-Con el propósito de establecer subregiones climáticas homogéneas de manera objetiva, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo utilizando la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward sobre la matriz de datos continuos mensuales del índice SPEI-6 para las 11 estaciones meteorológicas seleccionadas durante el período 2000--2023. El preprocesamiento de la base detectó 55 celdas con valores perdidos en las series temporales originales del SPEI-6, los cuales fueron resueltos mediante interpolación lineal temporal antes de proceder con el agrupamiento.
+Con el propósito de establecer subregiones climáticas homogéneas de manera objetiva, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo sobre la matriz de datos continuos mensuales del índice SPEI-6 para las 18 estaciones meteorológicas seleccionadas durante el período 2000--2023. El preprocesamiento de la base detectó 90 celdas con valores perdidos en las series temporales originales del SPEI-6, los cuales fueron resueltos mediante interpolación lineal temporal antes de proceder con el agrupamiento.
 
 \subsection{Optimización y selección del número de clústeres}
 
@@ -17,24 +17,24 @@ La jerarquía de fusiones consecutivas calculada por el algoritmo de Ward se rep
 \begin{tabular}{cc}
 \hline
 \textbf{Número de clústeres ($k$)} & \textbf{Coeficiente de silueta promedio} \\ \hline
-$\mathbf{k = 2}$ & \textbf{0.1350} \\
-$k = 3$ & 0.1235 \\
-$k = 4$ & 0.1174 \\
-$k = 5$ & 0.0991 \\ \hline
+$\mathbf{k = 2}$ & \textbf{0.1758} \\
+$k = 3$ & 0.1682 \\
+$k = 4$ & 0.1548 \\
+$k = 5$ & 0.1592 \\ \hline
 \end{tabular}
 \end{table}
 
-El coeficiente de silueta promedio alcanza su máximo global para una estructura de $k^* = 2$ clústeres ($s = 0.1350$), indicando que una partición de dos regiones climáticas proporciona la máxima cohesión intra-grupo y la mayor diferenciación inter-grupo. Las particiones alternativas de $3$, $4$ o $5$ grupos muestran un decaimiento progresivo en la calidad de la silueta, justificando estadísticamente la selección de dos subregiones hídricas óptimas a nivel nacional para el período bajo estudio.
+El coeficiente de silueta promedio alcanza su máximo global para una estructura de $k^* = 2$ clústeres ($s = 0.1758$), indicando que una partición de dos regiones climáticas proporciona la máxima cohesión intra-grupo y la mayor diferenciación inter-grupo. Las particiones alternativas de $3$, $4$ o $5$ grupos muestran un decaimiento progresivo en la calidad de la silueta, justificando estadísticamente la selección de dos subregiones hídricas óptimas a nivel nacional para el período bajo estudio.
 
 \subsection{Asignación de estaciones y validación de contigüidad geográfica}
 
-Para validar la coherencia climática y física de la regionalización propuesta, se contrastó la asignación temporal derivada del clustering de SPEI-6 con la ubicación geográfica (latitud y longitud) de las estaciones terrestres. La evaluación cuantitativa de las distancias euclídeas de posicionamiento reveló que la distancia geográfica promedio entre estaciones asignadas al mismo clúster (distancia intra-clúster) es de $2.461^{\circ}$ decimales (aproximadamente $270$ km), mientras que la distancia promedio entre estaciones pertenecientes a clústeres distintos (distancia inter-clúster) asciende a los $3.362^{\circ}$ decimales (aproximadamente $370$ km).
+Para validar la coherencia climática y física de la regionalización propuesta, se contrastó la asignación temporal derivada del clustering de SPEI-6 con la ubicación geográfica (latitud y longitud) de las estaciones terrestres. La evaluación cuantitativa de las distancias euclídeas de posicionamiento reveló que la distancia geográfica promedio entre estaciones asignadas al mismo clúster (distancia intra-clúster) es de $2.438^{\circ}$ decimales (aproximadamente $260$ km), mientras que la distancia promedio entre estaciones pertenecientes a clústeres distintos (distancia inter-clúster) asciende a los $3.322^{\circ}$ decimales (aproximadamente $360$ km).
 
 Esta diferencia confirma la existencia de una contigüidad geográfica compacta. Como se presenta visualmente en el mapa de la Figura \ref{fig:regionalizacion} (Panel C), la clasificación basada en el SPEI-6 ha particionado el territorio nacional de manera limpia, delimitando dos subregiones climáticas claramente definidas:
 
 \begin{enumerate}
-    \item \textit{Subregión sur-este (Clúster 1):} Integrada por las estaciones de Caazapá (CAAZ), Pilar (PILAR), Minga Guazú (MINGA), Coronel Oviedo (COVIE) y Capitán Meza (CMEZA). Este bloque representa el sur y este de la Región Oriental, la zona de mayor pluviometría de Paraguay, caracterizada históricamente por balances hídricos promedio superavitarios y una menor inercia a eventos de sequía extrema prolongada.
-    \item \textit{Subregión centro-chaco (Clúster 2):} Conformada por las estaciones de Mariscal Estigarribia (MCAL), Gral. Bruguez (GBRU), Luque (LUQUE), Concepción (CONC), San Estanislao (SEST) y Pedro Juan Caballero (PJC). Esta franja geográfica continua se extiende desde el Chaco profundo y húmedo, cruzando el río Paraguay hacia el centro-norte y norte de la Región Oriental. Comparten un régimen de mayor inestabilidad climática, una estación seca invernal muy pronunciada y promedios térmicos elevados que incrementan de forma sistemática la demanda evaporativa.
+    \item \textit{Subregión sur-este (Clúster 2):} Integrada por las estaciones de Caazapá (CAAZ), Villarrica (VILL), Coronel Oviedo (COVIE), San Juan Bautista (SJBA), Minga Guazú (MINGA), Capitán Meza (CMEZA) y Encarnación (ENCAR). Este bloque representa el sur y este de la Región Oriental, la zona de mayor pluviometría de Paraguay, caracterizada históricamente por balances hídricos promedio superavitarios y una menor inercia a eventos de sequía extrema prolongada.
+    \item \textit{Subregión centro-chaco (Clúster 1):} Conformada por las estaciones de Mariscal Estigarribia (MCAL), Puerto Casado (PTOC), Pozo Colorado (PCOL), Gral. José María Bruguez (GBRU), Concepción (CONC), San Pedro (SPED), San Estanislao (SEST), Salto del Guairá (SGUA), Luque (LUQUE). Esta franja geográfica continua se extiende desde el Chaco profundo y húmedo, cruzando el río Paraguay hacia el centro-norte y norte de la Región Oriental. Comparten un régimen de mayor inestabilidad climática, una estación seca invernal muy pronunciada y promedios térmicos elevados que incrementan de forma sistemática la demanda evaporativa.
 \end{enumerate}
 
 Esta partición de dos subregiones climáticas óptimas reemplazará la división regional clásica en todos los análisis descriptivos e inferenciales subsiguientes de la investigación, permitiendo examinar el proceso de aridificación con un mayor grado de precisión espacial.
@@ -57,7 +57,7 @@ El análisis de la distribución mensual del SPEI-6, presentado mediante diagram
 \begin{figure}[htbp]
     \centering
     \includegraphics[width=0.85\textwidth]{/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png}
-    \caption{Distribución mensual del índice SPEI-6 para las 11 estaciones seleccionadas durante el período 2000--2023. La línea horizontal negra dentro de cada caja representa la mediana de la distribución; los valores atípicos se grafican como puntos grises fuera de los bigotes.}
+    \caption{Distribución mensual del índice SPEI-6 para las 18 estaciones seleccionadas durante el período 2000--2023. La línea horizontal negra dentro de cada caja representa la mediana de la distribución; los valores atípicos se grafican como puntos grises fuera de los bigotes.}
     \label{fig:distribucion_mensual}
 \end{figure}
 
@@ -71,21 +71,21 @@ A pesar de que el verano se caracteriza en promedio por un balance hídrico neut
 
 Para cuantificar los cambios en la ocurrencia de la sequía, se evaluó la frecuencia anual de ``meses-estación met.'' que superaron los umbrales de sequía moderada ($SPEI-6 \leq -1.0$) y sequía severa/extrema ($SPEI-6 \leq -1.5$). Como se ilustra en la Figura \ref{fig:caracterizacion_descriptiva} (Panel A), existe una tendencia positiva en la frecuencia de estos eventos a lo largo de los 24 años analizados.
 
-Durante la primera década del estudio (2000--2009), la ocurrencia de meses en sequía se mantuvo dentro de los límites de variabilidad interanual normal del país. No obstante, a partir de 2019 se observa un quiebre estructural sin precedentes en la serie histórica. El pico máximo de frecuencia se registró en el año 2020, acumulando una cifra récord de 59 meses-estación met. bajo condiciones de sequía moderada o severa. Considerando que el total anual posible de meses-estación met. para la red de 11 estaciones es de 132 ($11 \times 12$), este resultado indica que aproximadamente el 44.7\% del territorio nacional monitoreado experimentó déficit hídrico de forma simultánea a lo largo del año 2020, consolidando la crisis más generalizada de las últimas dos décadas.
+Durante la primera década del estudio (2000--2009), la ocurrencia de meses en sequía se mantuvo dentro de los límites de variabilidad interanual normal del país. No obstante, a partir de 2019 se observa un quiebre estructural sin precedentes en la serie histórica. El pico máximo de frecuencia se registró en el año 2020, acumulando una cifra récord de 80 meses-estación met. bajo condiciones de sequía moderada o severa. Considerando que el total anual posible de meses-estación met. para la red de 18 estaciones es de 216 ($18 \times 12$), este resultado indica que aproximadamente el 37\% del territorio nacional monitoreado experimentó déficit hídrico de forma simultánea a lo largo del año 2020, consolidando la crisis más generalizada de las últimas dos décadas.
 
 \subsection{Análisis de intensidad del déficit hídrico}
 
 La intensidad de la sequía se examinó mediante dos descriptores anuales: la intensidad promedio de los meses en sequía ($SPEI-6 \leq -1.0$) y el valor mínimo absoluto registrado en la red de estaciones. Como se expone en la Figura \ref{fig:caracterizacion_descriptiva} (Panel B), ambas métricas muestran una trayectoria de agravamiento del déficit.
 
-El promedio anual de la intensidad de las sequías ha transitado de valores estables cercanos a $-1.20$ a inicios del período estudiado, hacia promedios sistemáticamente inferiores a $-1.60$ en los últimos años del registro. El mínimo absoluto de toda la serie histórica se registró en diciembre de 2023 (2023-12), alcanzando un valor extremo de $-3.7217$ en la estación de Mariscal Estigarribia (MCAL), ubicada en el Chaco Central (Subregión Occidental). Este registro, que se sitúa a casi cuatro desviaciones estándar por debajo de la normal climatológica, supera ampliamente el umbral técnico de sequía extrema ($SPEI-6 \leq -2.0$). Este comportamiento ilustra la severidad que adquieren las sequías de Paraguay cuando las anomalías de temperatura potencian la demanda evaporativa en ausencia de precipitaciones, actuando como un impulsor físico del proceso de aridificación local.
+El promedio anual de la intensidad de las sequías ha transitado de valores estables cercanos a $-1.20$ a inicios del período estudiado, hacia promedios sistemáticamente inferiores a $-1.60$ en los últimos años del registro. El mínimo absoluto de toda la serie histórica se registró en diciembre de 2023 (2023-12), alcanzando un valor extremo de $-3.7103$ en la estación de Mariscal Estigarribia (MCAL), ubicada en el chaco central (Región Occidental). Este registro, que se sitúa a casi cuatro desviaciones estándar por debajo de la normal climatológica, supera ampliamente el umbral técnico de sequía extrema ($SPEI-6 \leq -2.0$). Este comportamiento ilustra la severidad que adquieren las sequías de Paraguay cuando las anomalías de temperatura potencian la demanda evaporativa en ausencia de precipitaciones, actuando como un impulsor físico del proceso de aridificación local.
 
 \subsection{Análisis de la duración temporal (persistencia)}
 
-La duración de los eventos de sequía (persistencia temporal) se evaluó mediante un análisis de rachas o \textit{run-length}, definiendo la duración de un evento como el número de meses consecutivos en que una estación meteorológica registra un valor de $SPEI-6 \leq -1.0$. Bajo este esquema metodológico, la duración promedio general de los eventos de sequía para el territorio nacional durante los 24 años analizados se ubicó en $2.90$ meses, alcanzando una racha máxima absoluta de $14$ meses continuos de déficit hídrico extremo, según se describe en la Figura \ref{fig:caracterizacion_descriptiva} (Panel C).
+La duración de los eventos de sequía (persistencia temporal) se evaluó mediante un análisis de rachas, definiendo la duración de un evento como el número de meses consecutivos en que una estación meteorológica registra un valor de $SPEI-6 \leq -1.0$. Bajo este esquema metodológico, la duración promedio general de los eventos de sequía para el territorio nacional durante los 24 años analizados se ubicó en $2.96$ meses, alcanzando una racha máxima absoluta de $14$ meses continuos de déficit hídrico extremo, según se describe en la Figura \ref{fig:caracterizacion_descriptiva} (Panel C).
 
 Para examinar si el cambio climático ha alterado la persistencia temporal de estos fenómenos a mediano plazo, se contrastaron los resultados agregados del primer intervalo de estudio (Periodo 1: 2000--2011) frente al intervalo de calentamiento más pronunciado (Periodo 2: 2012--2023). 
 
-El análisis de distribución de frecuencias de las rachas de sequía evidencia un cambio estructural notable. Durante el Periodo 1, la duración promedio de las sequías fue de $2.59$ meses. En contraste, para el Periodo 2, este indicador de persistencia hídrica se incrementó a $3.20$ meses, lo que representa un aumento relativo del 23.55\% en la persistencia del fenómeno. El incremento en el promedio de las rachas consecutivas indica que, en las últimas dos décadas, los sistemas de balance hídrico terrestre en Paraguay han perdido capacidad de recuperación rápida. Esto prolonga los estados de estrés vegetativo y agota las reservas de humedad del suelo de manera acumulativa, lo que constituye un claro indicador físico del proceso de aridificación que experimenta la región.
+El análisis de distribución de frecuencias de las rachas de sequía evidencia un cambio estructural notable. Durante el Periodo 1, la duración promedio de las sequías fue de $2.80$ meses. En contraste, para el Periodo 2, este indicador de persistencia hídrica se incrementó a $3.12$ meses, lo que representa un aumento relativo del 12\% en la persistencia del fenómeno. El incremento en el promedio de las rachas consecutivas indica que, en las últimas dos décadas, los sistemas de balance hídrico terrestre en Paraguay han perdido capacidad de recuperación rápida. Esto prolonga los estados de estrés vegetativo y agota las reservas de humedad del suelo de manera acumulativa, lo que constituye un claro indicador físico del proceso de aridificación que experimenta la región.
 
 \subsection{Análisis de la extensión espacial de la sequía}
 
@@ -98,20 +98,15 @@ La extensión espacial se cuantificó como el porcentaje de estaciones de la red
     \label{fig:caracterizacion_descriptiva}
 \end{figure}
 
-Los resultados confirman que la sequía en Paraguay ha transitado de ser un fenómeno eminentemente local a principios del milenio, a convertirse en un fenómeno de escala nacional y altamente generalizado en la última década. La línea de tendencia muestra una pendiente positiva. Durante los eventos críticos del ciclo 2020--2021, la extensión espacial del déficit hídrico alcanzó niveles históricos, afectando de forma simultánea a más del 90\% del territorio nacional (representado por las estaciones activas de ambos clústeres).
+Los resultados confirman que la sequía en Paraguay ha transitado de ser un fenómeno eminentemente local a principios del milenio, a convertirse en un fenómeno de escala nacional y altamente generalizado en la última década. La línea de tendencia muestra una pendiente positiva. Durante los eventos críticos del ciclo 2020--2021, la extensión espacial del déficit hídrico alcanzó niveles históricos, afectando de forma simultánea a un número triplicado de estaciones meteorológicas.
 
 \section{Resultados del modelo de datos de panel}
 
-Para evaluar las tendencias temporales de la sequía meteorológica en Paraguay, cuantificar los procesos de aridificación e identificar posibles variaciones estacionales y regionales significativas, se estimó un modelo econométrico de datos de panel. Las series temporales de panel de las 11 estaciones meteorológicas cubren un período de 288 meses consecutivos (2000--2023), totalizando un tamaño muestral de 3,154 observaciones mensuales válidas.
+Para cuantificar y evaluar las tendencias temporales del balance hídrico en Paraguay, se estimó un modelo lineal de datos de panel. Las series temporales de las 18 estaciones meteorológicas cubren un período de $288$ meses consecutivos (2000--2023), totalizando un tamaño muestral de $5184$ observaciones mensuales.
 
 \subsection{Selección del estimador: El test de especificación de Hausman}
 
-La elección metodológica entre el modelo de regresión de efectos fijos (FE) y el de efectos aleatorios (RE) constituye una decisión crítica para garantizar la consistencia y eficiencia de los parámetros estimados \cite{wooldridge2010}. Con este propósito, se aplicó la prueba de especificación de Hausman \cite{hausman1978}. Dicho test contrasta la hipótesis nula ($H_0$) de que no existen diferencias sistemáticas entre los coeficientes estimados por ambos métodos, lo que implica que el estimador de efectos aleatorios es consistente y asintóticamente más eficiente:
-\begin{equation}
-    H_0: E(\alpha_i | \mathbf{x}_{it}) = 0
-\end{equation}
-
-Si el p-valor de la prueba resulta inferior al nivel de significancia convencional ($\alpha = 0.05$), se rechaza la hipótesis nula, concluyendo que los efectos individuales no observados ($\alpha_i$) se encuentran correlacionados con los regresores y que, por ende, el modelo de efectos aleatorios se halla sesgado, debiendo optarse por el estimador de efectos fijos. En caso contrario, de no rechazarse la hipótesis nula, se prefiere el modelo de efectos aleatorios por su mayor eficiencia estadística. Los resultados del test de Hausman se detallan en el Cuadro \ref{tab:test_hausman}.
+La elección metodológica entre el modelo de regresión de efectos fijos (FE) y el de efectos aleatorios (RE) constituye una decisión crítica para garantizar la consistencia y eficiencia de los parámetros estimados \cite{wooldridge2010}. Los resultados del test de Hausman se detallan en el Cuadro \ref{tab:test_hausman}.
 
 \begin{table}[htbp]
 \centering
@@ -120,13 +115,13 @@ Si el p-valor de la prueba resulta inferior al nivel de significancia convencion
 \begin{tabular}{lc}
 \hline
 \textbf{Métrica} & \textbf{Valor} \\ \hline
-Estadístico de Prueba ($\chi^2$) & 0.0000 \\
+Estadístico de Prueba ($\chi^2$) & -0.0035 \\
 Grados de Libertad ($k$) & 15 \\
 p-valor & 1.0000 \\ \hline
 \end{tabular}
 \end{table}
 
-De acuerdo con los resultados expuestos en el Cuadro \ref{tab:test_hausman}, el estadístico de prueba de Hausman asciende a $0.0000$, con un p-valor correspondiente de $1.0000$. Dado que este valor es sustancialmente superior al nivel de significancia de corte ($\alpha = 0.05$), no existe evidencia estadística para rechazar la hipótesis nula de ortogonalidad.
+De acuerdo con los resultados expuestos en el Cuadro \ref{tab:test_hausman}, el estadístico de prueba de Hausman asciende a $-0.0035$, con un p-valor correspondiente de $1.0000$. Dado que este valor es sustancialmente superior al nivel de significancia de corte ($\alpha = 0.05$), no existe evidencia estadística para rechazar la hipótesis nula de ortogonalidad.
 
 Un p-valor que tiende de forma exacta a la unidad ($1.0000$) indica que la discrepancia entre el vector de coeficientes de efectos fijos ($\boldsymbol{\hat{\beta}}_{FE}$) y el de efectos aleatorios ($\boldsymbol{\hat{\beta}}_{RE}$) es matemáticamente nula o infinitesimal. Este comportamiento, lejos de ser una anomalía de cálculo, responde a la naturaleza física y estadística de las variables utilizadas en este estudio:
 
@@ -135,54 +130,60 @@ Un p-valor que tiende de forma exacta a la unidad ($1.0000$) indica que la discr
     \item {Consistencia de los coeficientes de pendiente:} La ortogonalidad demostrada garantiza que los estimadores del modelo de efectos aleatorios no se encuentran sesgados por variable omitida espacial. En consecuencia, el modelo de efectos aleatorios (RE) constituye el estimador óptimo para esta investigación, ya que, al explotar de manera simultánea la varianza intra-estación e inter-estación, proporciona una eficiencia asintótica superior para inferir las pendientes temporales de aridificación en Paraguay.
 \end{enumerate}
 
+\subsection{Verificación de la dependencia de sección cruzada (correlación espacial)}
+
+Para verificar empíricamente la presencia de este fenómeno, se extrajeron los residuos de la estimación preliminar del modelo de efectos aleatorios y se aplicó la prueba de Dependencia de Sección Cruzada (CD) de Pesaran. El test evalúa la hipótesis nula ($H_0$) de independencia espacial o ausencia de correlación de sección cruzada entre las 18 estaciones meteorológicas del panel. 
+
+La prueba de Pesaran arrojó un estadístico CD de $70.5878$ con un p-valor correspondiente de $0.0000e+00$. Al ser el p-valor sustancialmente inferior al nivel de significancia convencional ($\alpha = 0.05$), se rechaza categóricamente la hipótesis nula de independencia de sección cruzada. Este resultado demuestra la existencia de una fuerte correlación espacial/sincrónica entre los residuos de la red de estaciones meteorológicas, lo cual exige metodológicamente la aplicación de un estimador de covarianza robusto como el de Driscoll y Kraay \cite{driscoll1998} para garantizar la validez de la inferencia de las tendencias de largo plazo.
+
 \subsection{Estimación del modelo final}
 
-Una vez confirmada la idoneidad del estimador de efectos aleatorios mediante el test de Hausman, se procedió a estimar la especificación completa del modelo de regresión (Ecuación \ref{eq:modelo_completo}). Para corregir de forma preventiva la presencia de autocorrelación serial intragrupo y heterocedasticidad, el modelo se estimó utilizando errores estándar robustos agrupados (\textit{clustered}) a nivel de estación meteorológica terrestre. El Cuadro \ref{tab:estadisticas_modelo} resume las estadísticas generales de ajuste de la regresión.
+Una vez confirmada la idoneidad del estimador de efectos aleatorios mediante el test de Hausman, se procedió a estimar la especificación completa del modelo de regresión (Ecuación 3.14). Para corregir de forma preventiva la presencia de autocorrelación serial intragrupo y heterocedasticidad, y controlando la fuerte dependencia espacial contemporánea demostrada por el test de \citeA{pesaran2004}, el modelo se estimó utilizando errores estándar de Driscoll y Kraay (1998) robustos a la correlación espacial. El Cuadro 4.3 resume las estadísticas generales de ajuste de la regresión.
 
 \begin{table}[ht!]
 \centering
-\caption{Estadísticas de ajuste del modelo de efectos aleatorios estimado.}
+\caption{Estadísticas de ajuste del modelo de efectos aleatorios estimado con errores de Driscoll-Kraay.}
 \label{tab:estadisticas_modelo}
 \begin{tabular}{lc}
 \hline
 \textbf{Métrica de Ajuste} & \textbf{Valor del Estimador} \\ \hline
-Número de Observaciones ($N \times T$) & 3,113 \\
-R-cuadrado global ($R^2$ overall) & 0.0369 \\
-R-cuadrado dentro ($R^2$ within) & 0.0369 \\
-R-cuadrado entre ($R^2$ between) & 0.4116 \\
-Estadístico Wald ($\chi^2$) & 7.9070 \\
+Número de Observaciones ($N \times T$) & 5,094 \\
+R-cuadrado global ($R^2$ overall) & 0.0356 \\
+R-cuadrado dentro ($R^2$ within) & 0.0356 \\
+R-cuadrado entre ($R^2$ between) & 0.1903 \\
+Estadístico Wald ($\chi^2$) & 12.4890 \\
 p-valor de la regresión & 0.0000 \\ \hline
 \end{tabular}
 \end{table}
 
-El modelo en su conjunto es altamente significativo, con un p-valor del estadístico de Wald de $0.0000$. Aunque el coeficiente de determinación global y dentro es modesto ($R^2 = 0.0369$), este comportamiento es consistente y esperado en modelos climáticos basados en anomalías de alta frecuencia, donde el componente de variabilidad a corto plazo introduce un volumen significativo de ruido blanco que no disminuye la consistencia de los estimadores de pendiente de largo plazo \cite{stocker_climate_2013}. No obstante, cabe destacar el elevado poder explicativo inter-estación ($R^2 \text{between} = 0.4116$), el cual denota que el modelo captura de forma robusta las diferencias sistemáticas en el balance hídrico promedio entre los clústeres geográficos de Paraguay.
+El modelo en su conjunto es altamente significativo, con un p-valor del estadístico de Wald de $0.0000$. Aunque el coeficiente de determinación global y dentro es modesto ($R^2 = 0.0356$), este comportamiento es consistente y esperado en modelos climáticos basados en anomalías de alta frecuencia, donde el componente de variabilidad a corto plazo introduce un volumen significativo de ruido blanco que no disminuye la consistencia de los estimadores de pendiente de largo plazo \cite{stocker_climate_2013}. No obstante, cabe destacar el poder explicativo inter-estación ($R^2 \text{ between} = 0.1903$), el cual denota que el modelo captura de forma consistente las diferencias sistemáticas en el balance hídrico promedio entre los clústeres geográficos de Paraguay.
 
-El Cuadro \ref{tab:resultados_re} expone los coeficientes estimados para cada regresor, sus errores estándar y su significancia estadística.
+El Cuadro 4.4 expone los coeficientes estimados para cada regresor, sus errores estándar y su significancia estadística.
 
 \begin{table}[ht!]
 \centering
-\caption{Resultados del modelo de panel con efectos aleatorios para la variable dependiente SPEI-6. Errores estándar agrupados por estación.}
+\caption{Resultados del modelo de panel con efectos aleatorios para la variable dependiente SPEI-6. Errores estándar de Driscoll y Kraay (1998) robustos a la correlación espacial.}
 \label{tab:resultados_re}
-\resizebox{\textwidth}{!}{%  <--- Forzar escala proporcional al ancho del texto
+\resizebox{\textwidth}{!}{%
 \begin{tabular}{lcccc}
 \hline
 \textbf{Regresor} & \textbf{Coeficiente} & \textbf{Error Est.} & \textbf{Estadístico t} & \textbf{p-valor} \\ \hline
-Intercepto ($\beta_0$) & -0.0432 & 0.1346 & -0.32 & 0.7484 \\
-Otoño ($\gamma_1$) & 0.2736** & 0.1218 & 2.25 & 0.0248 \\
-Primavera ($\gamma_2$) & -0.0313 & 0.1891 & -0.17 & 0.8683 \\
-Verano ($\gamma_3$) & 0.1821 & 0.2058 & 0.89 & 0.3762 \\
-Región Oriental / Clúster 1 ($\delta_1$) & -0.2376 & 0.1717 & -1.38 & 0.1665 \\
-Otoño $\times$ R. Oriental ($\psi_1$) & 0.0491 & 0.1648 & 0.30 & 0.7655 \\
-Primavera $\times$ R. Oriental ($\psi_2$) & 0.3829* & 0.2024 & 1.89 & 0.0586 \\
-Verano $\times$ R. Oriental ($\psi_3$) & 0.5346** & 0.2388 & 2.24 & 0.0252 \\
-Tiempo ($\beta_1$) & 0.0006 & 0.0005 & 1.05 & 0.2920 \\
-Tiempo $\times$ Otoño ($\theta_1$) & -0.0000 & 0.0003 & -0.16 & 0.8711 \\
-Tiempo $\times$ Primavera ($\theta_2$) & -0.0021*** & 0.0005 & -3.86 & 0.0001 \\
-Tiempo $\times$ Verano ($\theta_3$) & -0.0017*** & 0.0004 & -4.70 & 0.0000 \\
-Tiempo $\times$ R. Oriental ($\phi_1$) & 0.0007 & 0.0009 & 0.80 & 0.4222 \\
-Tiempo $\times$ Otoño $\times$ R. Oriental ($\omega_1$) & -0.0013** & 0.0006 & -2.33 & 0.0199 \\
-Tiempo $\times$ Primavera $\times$ R. Oriental ($\omega_2$) & 0.0003 & 0.0006 & 0.43 & 0.6668 \\
-Tiempo $\times$ Verano $\times$ R. Oriental ($\omega_3$) & -0.0019** & 0.0008 & -2.44 & 0.0146 \\ \hline
+Intercepto ($\beta_0$) & -0.1844 & 0.1513 & -1.22 & 0.2232 \\
+Otoño ($\gamma_1$) & 0.3050 & 0.1892 & 1.61 & 0.1070 \\
+Primavera ($\gamma_2$) & 0.0892 & 0.2071 & 0.43 & 0.6665 \\
+Verano ($\gamma_3$) & 0.3447 & 0.2265 & 1.52 & 0.1282 \\
+Región Oriental / Clúster 1 ($\delta_1$) & -0.0640 & 0.2174 & -0.29 & 0.7684 \\
+Otoño $\times$ Clúster 1 ($\psi_1$) & 0.0158 & 0.2522 & 0.06 & 0.9502 \\
+Primavera $\times$ Clúster 1 ($\psi_2$) & 0.3467 & 0.2860 & 1.21 & 0.2254 \\
+Verano $\times$ Clúster 1 ($\psi_3$) & 0.4448 & 0.3620 & 1.23 & 0.2191 \\
+Tiempo ($\beta_1$) & 0.0012 & 0.0012 & 1.00 & 0.3150 \\
+Tiempo $\times$ Otoño ($\theta_1$) & -0.0002 & 0.0015 & -0.15 & 0.8833 \\
+Tiempo $\times$ Primavera ($\theta_2$) & -0.0023 & 0.0015 & -1.54 & 0.1244 \\
+Tiempo $\times$ Verano ($\theta_3$) & -0.0022 & 0.0017 & -1.27 & 0.2056 \\
+Tiempo $\times$ Clúster 1 ($\phi_1$) & -0.0002 & 0.0017 & -0.12 & 0.9008 \\
+Tiempo $\times$ Otoño $\times$ Clúster 1 ($\omega_1$) & -0.0015 & 0.0017 & -0.86 & 0.3890 \\
+Tiempo $\times$ Primavera $\times$ Clúster 1 ($\omega_2$) & 0.0003 & 0.0023 & 0.15 & 0.8846 \\
+Tiempo $\times$ Verano $\times$ Clúster 1 ($\omega_3$) & -0.0018 & 0.0025 & -0.74 & 0.4587 \\ \hline
 \multicolumn{5}{l}{\small Nota: *** $p < 0.01$, ** $p < 0.05$, * $p < 0.1$. Categorías de referencia: Invierno y Clúster 2.} \\
 \end{tabular}%
 }
@@ -190,45 +191,44 @@ Tiempo $\times$ Verano $\times$ R. Oriental ($\omega_3$) & -0.0019** & 0.0008 & 
 
 \subsection{Mecánica del modelo explicativo e integración de efectos}
 
-Debido a que el modelo de regresión especifica interacciones multiplicativas triples (Tiempo $\times$ Estación $\times$ Región), los coeficientes individuales expuestos en el Cuadro \ref{tab:resultados_re} no representan los efectos marginales directos. Para decodificar e interpretar el comportamiento del SPEI-6, es necesario operar el modelo integrando de manera conjunta los \textit{Efectos de nivel} (parámetros de posición espacial y estacional que actúan como interceptos netos de partida) y los \textit{Efectos de pendiente} (tasas dinámicas de cambio temporal o pendientes netas).
+Debido a que el modelo de regresión especifica interacciones multiplicativas triples (Tiempo $\times$ Estación $\times$ Región), los coeficientes individuales expuestos en el Cuadro 4.4 no representan los efectos marginales directos. Para decodificar e interpretar el comportamiento del SPEI-6, es necesario operar el modelo integrando de manera conjunta los \textit{Efectos de nivel} (parámetros de posición espacial y estacional que actúan como interceptos netos de partida) y los \textit{Efectos de pendiente} (tasas dinámicas de cambio temporal o pendientes netas).
 
-Para ilustrar este mecanismo de aplicación integral, considérese la estimación esperada del índice SPEI-6 para la \textit{Región sur-este (Clúster 1) en verano} al término del período efectivo de estudio ($t = 283$ meses):
+Para ilustrar este mecanismo de aplicación integral, considérese la estimación esperada del índice SPEI-6 para la subregión sur-este (Clúster 1) en verano al término del período efectivo de estudio ($t = 283$ meses):
 
 \begin{enumerate}
-    \item \textit{Cálculo del efecto de nivel base (Intercepto neto):} 
-    Es la suma de los coeficientes asociados a las variables dummy de posición que definen la condición espacial y estacional de la categoría analizada en el origen de la serie ($t = 0$):
+    \item \textit{Cálculo del efecto de nivel base (Intercepto neto):} Es la suma de los coeficientes asociados a las variables dummy de posición que definen la condición espacial y estacional de la categoría analizada en el origen de la serie ($t = 0$):
     \begin{equation}
     \begin{split}
-        \text{Nivel base} & = \beta_0 \text{ (Base)} + \gamma_3 \text{ (Verano)} + \delta_1 \text{ (Region)} + \\ & \psi_3 \text{ (Interacción verano} \times \text{Región)} \\
-        & = -0.0432 + 0.1821 - 0.2376 + 0.5346 \\
-        & = {0.4359}
+        \text{Nivel base} & = \beta_0 \text{ (Base)} + \gamma_3 \text{ (Verano)} + \delta_1 \text{ (Región)} + \psi_3 \text{ (Interacción verano} \times \text{Región)} \\
+        & = -0.1844 + 0.3447 - 0.0640 + 0.4448 \\
+        & = \mathbf{0.5411}
     \end{split}
+    \label{eq:nivel_base}
     \end{equation}
-    Este valor positivo ($0.4359$) indica que al inicio de la serie temporal (enero de 2000), las condiciones estivales en la Región sur-este eran climatológicamente húmedas en promedio.
+    Este valor positivo ($0.5411$) indica que al inicio de la serie temporal (enero de 2000), las condiciones estivales en la subregión sur-este eran climatológicamente húmedas en promedio.
 
-    \item \textit{Cálculo del efecto de pendiente (Tendencia neta):}
-    Representa la tasa dinámica de cambio mensual de la sequía y se obtiene consolidando todos los coeficientes del modelo que interactúan directamente con la variable temporal:
+    \item \textit{Cálculo del efecto de pendiente (Tendencia neta):} Representa la tasa dinámica de cambio mensual de la sequía y se obtiene consolidando todos los coeficientes del modelo que interactúan directamente con la variable temporal:
     \begin{equation}
     \begin{split}
-        \text{Tendencia neta} & = \beta_1 \text{ (Tiempo)} + \theta_3 \text{ (Tiempo} \times \text{Verano)} + \\ & \phi_1 \text{ (Tiempo} \times \text{Región)} + \omega_3 \text{ (Triple Interacción)} \\
-        & = 0.0006 - 0.0017 + 0.0007 - 0.0019 \\
-        & = {-0.0023 \text{ puntos de SPEI-6 / mes}}
+        \text{Tendencia neta} & = \beta_1 \text{ (Tiempo)} + \theta_3 \text{ (Tiempo} \times \text{Verano)} + \phi_1 \text{ (Tiempo} \times \text{Región)} + \omega_3 \text{ (Triple Interacción)} \\
+        & = 0.0012 - 0.0022 - 0.0002 - 0.0018 \\
+        & = \mathbf{-0.0030 \text{ puntos de SPEI-6 / mes}}
     \end{split}
+    \label{eq:tendencia_neta}
     \end{equation}
-    Esta tendencia neta negativa de $-0.0023$ puntos mensuales (aproximadamente $-0.0276$ puntos por año) representa una trayectoria sistemática y estadísticamente significativa hacia condiciones más secas.
+    Esta tendencia neta de $-0.0030$ puntos de SPEI-6 mensuales (aproximadamente $-0.0360$ puntos por año) representa una trayectoria sistemática hacia condiciones estructuralmente más secas.
 
-    \item \textit{Evaluación de la ecuación final al mes $t = 283$:}
-    Combinando el nivel base y la acumulación de la tendencia de cambio temporal a lo largo de los 24 años, se obtiene la estimación puntual esperada del balance hídrico:
+    \item \textit{Evaluación de la ecuación final al mes $t = 283$:} Combinando el nivel base y la acumulación de la tendencia de cambio temporal a lo largo de los 24 años, se obtiene la estimación puntual esperada del balance hídrico:
     \begin{equation}
-        SPEI_{t=283} = 0.4359 + (-0.0023 \times 283) = 0.4359 - 0.6509 = {-0.2150}
+        SPEI_{t=283} = 0.5411 + (-0.0030 \times 283) = 0.5411 - 0.8490 = \mathbf{-0.3079}
     \end{equation}
 \end{enumerate}
 
-Este resultado puntual esperado de $-0.2150$ al final de la serie histórica evidencia que, bajo los efectos del calentamiento global, los veranos de la Subregión Oriental (el motor de la agricultura de secano nacional) han transitado de un estado húmedo inicial hacia un balance de agua que se ubica en el espectro de sequedad moderada-neutral, confirmando una trayectoria sostenida de aridificación estival.
+Este resultado puntual esperado de $-0.3079$ al final de la serie histórica evidencia que, bajo los efectos del aumento de la demanda evaporativa, los veranos de la subregión sur-este (el motor de la agricultura nacional) han transitado de un estado húmedo inicial hacia un balance de agua que se ubica en el espectro de sequedad moderada, confirmando una trayectoria sostenida de aridificación estival.
 
-\section{Evaluación de la significancia del calentamiento global (Contraste SPEI vs. SPI)}
+\section{Evaluación de la significancia del incremento de las temperaturas (Contraste SPEI vs. SPI)}
 
-Para determinar de forma empírica si el calentamiento global ejerce un efecto estadísticamente significativo sobre las sequías en Paraguay, se contrastaron los resultados de la estimación del modelo de panel del SPEI-6 frente a las del modelo análogo estimado para el SPI-6 (precipitación univariada). El Cuadro \ref{tab:contraste_spei_spi} expone la comparación de las tendencias mensuales netas calculadas para ambas variables hídricas.
+Para determinar de forma empírica si el incremento de las temperaturas impulsadas por el calentamiento global ejerce un efecto estadísticamente significativo sobre las sequías en Paraguay, se contrastaron los resultados de la estimación del modelo de panel del SPEI-6 frente a las del modelo análogo estimado para el SPI-6 (precipitación univariada). El Cuadro \ref{tab:contraste_spei_spi} expone la comparación de las tendencias mensuales netas calculadas para ambas variables hídricas.
 
 \begin{table}[ht!]
 \centering
@@ -238,16 +238,16 @@ Para determinar de forma empírica si el calentamiento global ejerce un efecto e
 \begin{tabular}{llcccl}
 \hline
 \textbf{Región Climática} & \textbf{Estación del Año} & \textbf{Tendencia SPEI-6} & \textbf{Tendencia SPI-6} & \textbf{Diferencia ($\Delta \beta$)} & \textbf{Efecto del Calentamiento Global} \\ \hline
-\textbf{Subregión sur-este} & Verano & -0.0023** & +0.0002 & -0.0025** & Significativo (Secado inducido por ETP). \\
-(Clúster 1) & Otoño & -0.0001** & +0.0005 & -0.0006* & Significativo (Persistencia de secado). \\ \hline
-\textbf{Subregión} & Primavera & -0.0015*** & -0.0003 & -0.0012*** & Significativo (Extensión de sequedad). \\
-\textbf{centro-chaco} & Verano & -0.0011*** & +0.0003 & -0.0014*** & Significativo (Déficit evaporativo severo). \\ 
+\textbf{Subregión sur-este} & Verano & -0.0033** & -0.0028 & -0.0005** & Significativo (Secado inducido por ETP). \\
+(Clúster 1) & Otoño & -0.0007** & -0.0005 & -0.0002* & Significativo (Persistencia de secado). \\ \hline
+\textbf{Subregión} & Primavera & -0.0013*** & -0.0005 & -0.0009*** & Significativo (Extensión de sequedad). \\
+\textbf{centro-chaco} & Verano & -0.0013*** & -0.0002 & -0.0010*** & Significativo (Déficit evaporativo severo). \\ 
 (Clúster 2) & & & & & \\ \hline
 \multicolumn{6}{l}{\small Nota: *** $p < 0.01$, ** $p < 0.05$, * $p < 0.1$. Los valores del SPI-6 corresponden a la modelación univariada de lluvia.} \\
 \end{tabular}%
 }
 \end{table}
 
-Los resultados del contraste expuestos en el Cuadro \ref{tab:contraste_spei_spi} aportan evidencia científica contundente. Para todas las estaciones y regiones analizadas donde el modelo de balance hídrico (SPEI-6) identificó dinámicas significativas de secado, el modelo basado de forma exclusiva en la lluvia (SPI-6) reportó coeficientes de tendencia temporal estadísticamente iguales a cero o incluso con signo positivo (como en el verano del Clúster 1, con $+0.0002$ mensuales).
+Los resultados del contraste expuestos en el Cuadro \ref{tab:contraste_spei_spi} aportan evidencia científica de gran trascendencia. Para todas las estaciones y regiones analizadas donde el modelo de balance hídrico (SPEI-6) identificó dinámicas significativas de secado, el modelo basado de forma exclusiva en la lluvia (SPI-6) reportó coeficientes de tendencia temporal estadísticamente no significativos a un nivel convencional del 5\%. 
 
-La diferencia neta calculada ($\Delta \beta$) resulta estadísticamente significativa en todos los casos evaluados. Por ejemplo, en los veranos de la subregión sur-este (Clúster 1), la diferencia es de $-0.0025$ puntos del índice por mes ($p < 0.05$). Este comportamiento demuestra formalmente que las sequías que experimenta Paraguay no son consecuencia de una disminución de las lluvias a largo plazo, sino que son sequías dinámicas inducidas térmicamente ($hotter\ droughts$), donde el incremento de la temperatura (calentamiento global) opera como la fuerza física dominante y significativa de la aridificación.
+La diferencia neta calculada ($\Delta \beta$), estimada de forma robusta mediante la regresión lineal de diferencias de panel con errores de Driscoll-Kraay (1998), resulta estadísticamente significativa en todos los casos evaluados. En los veranos de la subregión sur-este (Clúster 1), la diferencia es de $-0.0005$ puntos del índice por mes ($p < 0.05$), mientras que en las primaveras y veranos de la subregión centro-chaco (Clúster 2) la diferencia se acentúa a $-0.0009$ ($p < 0.01$) y $-0.0010$ ($p < 0.01$) puntos mensuales, respectivamente. Este comportamiento demuestra formalmente que las sequías que experimenta Paraguay no son consecuencia de una disminución estadísticamente significativa de las lluvias a largo plazo, sino que constituyen sequías dinámicas inducidas térmicamente (\textit{hotter droughts}), donde el incremento de la temperatura (calentamiento global) opera como la fuerza física dominante y significativa de la aridificación.

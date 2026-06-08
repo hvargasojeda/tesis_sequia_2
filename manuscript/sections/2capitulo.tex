@@ -60,7 +60,7 @@ El Índice de Precipitación Estandarizada (SPI), desarrollado por \citeA{mckee1
 
 A pesar de su utilidad regulatoria, el SPI exhibe una limitación conceptual crítica en escenarios de cambio climático: ignora sistemáticamente la influencia de las anomalías de temperatura. El calentamiento global altera no solo los regímenes de precipitación, sino que incrementa de forma directa la demanda evaporativa de la atmósfera, un factor físico determinante en el balance hídrico del suelo. Por consiguiente, omitir la dinámica de la ETP puede resultar en una subestimación sustancial de la severidad de la sequía \cite{massondelmotte2021}.
 
-\subsection{El índice de precipitación-evapotranspiración estandarizado (SPEI)}
+\subsection{Balance hídrico y el índice de precipitación-evapotranspiración estandarizado (SPEI)}
 
 Para resolver las limitaciones conceptuales del SPI ante el incremento térmico global, \citeA{vicenteserrano2010} diseñaron el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI). El SPEI preserva las propiedades matemáticas y la flexibilidad del SPI, pero fundamenta su cálculo en el \textit{balance hídrico} climático mensual ($D_i$), definido como la diferencia simple entre la precipitación ($P_i$) y la evapotranspiración potencial estimada ($ETP_i$):
 \begin{equation}
@@ -191,49 +191,41 @@ Si el p-valor calculado para la estadística de prueba es inferior al nivel de s
 
 La validez metodológica del modelo de efectos aleatorios descansa sobre la verificación de los siguientes supuestos analíticos clave:
 \begin{enumerate}
-    \item \textbf{Exogeneidad estricta:} Se asume que el componente de error idiosincrático, $\varepsilon_{it}$, no se encuentra correlacionado con las variables explicativas para ningún periodo temporal observacional. La consistencia del efecto aleatorio individual $\alpha_i$ respecto a las variables explicativas se valida mediante el test de Hausman.
-    \item \textbf{Homocedasticidad y no autocorrelación del error:} Supone que los errores idiosincráticos presentan una varianza constante e independiente a través de las observaciones temporales para una misma entidad. Debido a que las series climatológicas suelen exhibir autocorrelación y heterocedasticidad, este estudio aborda preventivamente dicha potencial desviación mediante la estimación de errores estándar robustos agrupados (clustered robust standard errors) a nivel de estación meteorológica. Esta técnica estadístico-analítica parametriza las matrices de covarianza para tolerar patrones arbitrarios de correlación y heterocedasticidad dentro de cada clúster individual, derivando p-valores y límites de confianza robustos para la inferencia de tendencias.
+    \item \textit{Exogeneidad estricta:} Se asume que el componente de error idiosincrático, $\varepsilon_{it}$, no se encuentra correlacionado con las variables explicativas para ningún periodo temporal observacional. La consistencia del efecto aleatorio individual $\alpha_i$ respecto a las variables explicativas se valida mediante el test de Hausman.
+    \item \textit{Homocedasticidad y no autocorrelación del error:} Supone que los errores idiosincráticos presentan una varianza constante e independiente a través de las observaciones temporales para una misma entidad. Debido a que las series climatológicas suelen exhibir autocorrelación y heterocedasticidad, este estudio aborda preventivamente dicha potencial desviación mediante la estimación de errores estándar robustos agrupados (clustered robust standard errors) a nivel de estación meteorológica. Esta técnica estadístico-analítica parametriza las matrices de covarianza para tolerar patrones arbitrarios de correlación y heterocedasticidad dentro de cada clúster individual, derivando p-valores y límites de confianza robustos para la inferencia de tendencias.
     
 \subsubsection{Cálculo teórico de los errores estándar agrupados}
 
-En el modelado de datos de panel, la presencia de correlación serial dentro de una misma estación meteorológica (autocorrelación) e idoneidades de varianza no constante (heterocedasticidad) invalida la inferencia basada en los errores estándares ordinarios, tendiendo a subestimar significativamente la verdadera variabilidad de los estimadores. Para corregir este problema, se implementa el estimador de matriz de covarianza robusta agrupada por clústeres (estaciones), el cual generaliza el estimador robusto de White para permitir correlación arbitraria entre las observaciones de una misma entidad \cite{wooldridge2010}.
+En el modelado de datos de panel, la presencia de heterocedasticidad y autocorrelación serial intra-grupo invalida la inferencia estadística basada en los errores estándares ordinarios, tendiendo a subestimar su verdadera variabilidad. Para corregir esta desviación, se implementa el estimador de matriz de covarianza robusta agrupada por clústeres (estaciones), el cual generaliza la formulación de White para permitir patrones arbitrarios de correlación entre las observaciones temporales de una misma entidad \cite{wooldridge2010}.
 
-Considérese el modelo lineal agrupado por estaciones (clústeres):
+Considérese el modelo lineal agrupado por estaciones meteorológicas en su representación matricial para cada unidad $i$:
 \begin{equation}
     y_{i} = X_{i}\beta + u_{i}, \quad i = 1, 2, \dots, M
 \end{equation}
-Donde $M$ representa el número total de clústeres (estaciones meteorológicas seleccionadas), $y_i$ es un vector de dimensión $T_i \times 1$ de la variable dependiente para la estación $i$, $X_i$ es la matriz de regresores de dimensión $T_i \times K$, y $u_i$ representa el vector de perturbaciones idiosincráticas de dimensión $T_i \times 1$.
+Donde $M = 18$ representa el número total de estaciones, $y_i$ es el vector de observaciones del SPEI-6 de dimensión $T_i \times 1$, $X_i$ es la matriz de regresores de dimensión $T_i \times K$, y $u_i$ es el vector de perturbaciones idiosincráticas de dimensión $T_i \times 1$. 
 
-El estimador de mínimos cuadrados ordinarios (o de efectos aleatorios tras la transformación de cuasi-diferenciación) se define como:
+Bajo este esquema, se asume independencia mutua entre estaciones distintas ($Cov(u_i, u_j | X_i, X_j) = 0$ para todo $i \neq j$), pero se tolera una estructura de varianza-covarianza desconocida y no paramétrica dentro de cada clúster $i$ (denotada por $\Omega_i = E[u_i u_i' | X_i]$). El estimador robusto agrupado sustituye esta matriz por el producto cruzado de los residuos muestrales del modelo ($\hat{u}_i = y_i - X_i \hat{\beta}$).
+
+De este modo, la estimación empírica de la matriz de varianza-covarianza de los coeficientes, $\widehat{\text{Var}}_{robust}(\hat{\beta})$, se calcula de manera compacta mediante la estructura de tipo "sándwich":
 \begin{equation}
-    \hat{\beta} = \left( \sum_{i=1}^{M} X_{i}' X_{i} \right)^{-1} \sum_{i=1}^{M} X_{i}' y_{i}
+    \widehat{\text{Var}}_{robust}(\hat{\beta}) = q \cdot \left( \sum_{i=1}^{M} X_{i}' X_{i} \right)^{-1} \left( \sum_{i=1}^{M} X_{i}' \hat{u}_{i} \hat{u}_{i}' X_{i} \right) \left( \sum_{i=1}^{M} X_{i}' X_{i} \right)^{-1}
 \end{equation}
 
-La varianza asintótica de este estimador, condicionada en la matriz de regresores $X$, se modela bajo la estructura de varianza-covarianza tipo ``sándwich'':
-\begin{equation}
-    \text{Var}(\hat{\beta} | X) = \left( X'X \right)^{-1} B \left( X'X \right)^{-1}
-\end{equation}
-Donde el núcleo interno $B$ se define como la suma ponderada de las matrices de covarianza de los residuos para cada clúster independiente:
-\begin{equation}
-    B = \sum_{i=1}^{M} X_{i}' \Omega_{i} X_{i}
-\end{equation}
-En este esquema, $\Omega_i = E[u_i u_i' | X_i]$ es la matriz de varianza-covarianza de dimensión $T_i \times T_i$ específica para la estación $i$. El supuesto fundamental de este método es que las observaciones correspondientes a estaciones distintas son independientes entre sí ($E[u_i u_j' | X_i, X_j] = 0$ para todo $i \neq j$), permitiendo al mismo tiempo cualquier estructura de correlación y heterocedasticidad no paramétrica dentro de cada estación $i$.
-
-Dado que $\Omega_i$ es desconocida, el estimador robusto agrupado sustituye esta matriz por el producto cruzado de los vectores de residuos muestrales ajustados para cada estación, $\hat{u}_i = y_i - X_i \hat{\beta}$:
-\begin{equation}
-    \widehat{\Omega}_{i} = \hat{u}_{i} \hat{u}_{i}'
-\end{equation}
-
-De este modo, la estimación empírica de la matriz de varianza-covarianza de los coeficientes, $\widehat{\text{Var}}_{robust}(\hat{\beta})$, se calcula mediante la fórmula:
-\begin{equation}
-    \widehat{\text{Var}}_{robust}(\hat{\beta}) = \left( \sum_{i=1}^{M} X_{i}' X_{i} \right)^{-1} \left( \sum_{i=1}^{M} X_{i}' \hat{u}_{i} \hat{u}_{i}' X_{i} \right) \left( \sum_{i=1}^{M} X_{i}' X_{i} \right)^{-1}
-\end{equation}
-
-Para corregir los sesgos inherentes en muestras donde el número de clústeres $M$ es finito, se aplica un factor de corrección de escala multiplicativo en la matriz de varianza-covarianza:
+Donde $q$ es el factor de corrección multiplicativo por tamaño muestral finito, diseñado para reducir el sesgo de subestimación en paneles donde el número de clústeres $M$ es limitado:
 \begin{equation}
     q = \left( \frac{M}{M - 1} \right) \left( \frac{N - 1}{N - K} \right)
 \end{equation}
-Donde $N = \sum_{i=1}^{M} T_i$ representa el número total de observaciones mensuales del panel, y $K$ es el número de parámetros estimados en el modelo. Los errores estándar agrupados por estación corresponden a la raíz cuadrada de los elementos de la diagonal principal de la matriz $q \cdot \widehat{\text{Var}}_{robust}(\hat{\beta})$.
+Siendo $N = \sum T_i$ el número total de observaciones mensuales del panel ($5,094$) y $K$ el número de parámetros estimados. Los errores estándar agrupados por estación corresponden a la raíz cuadrada de los elementos de la diagonal principal de esta matriz resultante.
+
+\item \textit{Independencia de sección cruzada:} Se asume que las perturbaciones idiosincráticas de diferentes unidades (estaciones) son independientes entre sí. Sin embargo, en el contexto climatológico, esta suposición es frecuentemente violada debido a la presencia de choques macroclimáticos comunes que afectan simultáneamente a múltiples estaciones (como el ENSO o el calentamiento global). Este acoplamiento físico induce una violación al supuesto clásico de independencia distributiva de las perturbaciones idiosincráticas entre las unidades transversales:
+\begin{equation}
+    Cov(\varepsilon_{it}, \varepsilon_{jt}) \neq 0 \quad \text{para } i \neq j
+\end{equation}
+La presencia de esta correlación, denominada en la literatura estadística como dependencia de sección cruzada o correlación espacial, no sesga los coeficientes de pendiente estimados, pero invalida la inferencia estadística clásica al subestimar severamente la magnitud de los errores estándar \cite{wooldridge2010}. Para abordar esta limitación, se implementará el test de dependencia de sección cruzada desarrollado por \citeA{pesaran2004}, el cual contrasta la hipótesis nula de independencia espacial mutua a partir del promedio de las correlaciones lineales de los residuos de sección cruzada:
+\begin{equation}
+    CD = \sqrt{\frac{2T}{N(N-1)}} \left( \sum_{i=1}^{N-1} \sum_{j=i+1}^{N} \hat{\rho}_{ij} \right)
+\end{equation}
+Donde $\hat{\rho}_{ij}$ representa el coeficiente de correlación muestral de Pearson entre los residuos de la unidad $i$ y la unidad $j$. Bajo la hipótesis nula, el estadístico se distribuye de forma asintótica como una normal estándar ($CD \xrightarrow{d} N(0, 1)$).
 \end{enumerate}
 
 Finalmente, una limitación inherente al marco de modelización propuesto reside en su especificación de tendencia lineal. El estimador asume una tasa de cambio constante en la anomalía hídrica a lo largo del periodo temporal estudiado, constituyendo una primera aproximación de tendencia a largo plazo que no captura dinámicas no lineales o cambios abruptos de régimen climático.
@@ -242,6 +234,6 @@ Finalmente, una limitación inherente al marco de modelización propuesto reside
 
 En el contexto del cambio climático, el concepto clásico de sequía como un fenómeno impulsado exclusivamente por el déficit de precipitación ha quedado obsoleto. Las investigaciones de \citeA{trenberth_global_2014} introducen el concepto de "sequías más cálidas" (\textit{hotter droughts}), caracterizadas por un acoplamiento estrecho entre el déficit de suministro de agua (lluvias) y el incremento desproporcionado de la demanda atmosférica (evapotranspiración potencial o ETP), impulsada de forma directa por el calentamiento global.
 
-Para aislar el efecto del calentamiento global sobre el balance hídrico, recurrimos al contraste sistemático de dos índices: el Índice de Precipitación Estandarizada (SPI), que mide de forma univariada las anomalías de suministro de lluvia \cite{mckee1993}, y el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI), que incorpora la sensibilidad a la temperatura mediante la deconstrucción de la ETP \cite{vicenteserrano2010}. 
+Para aislar el efecto de la ETP sobre el balance hídrico, recurrimos al contraste sistemático de dos índices: el Índice de Precipitación Estandarizada (SPI), que mide de forma univariada las anomalías de suministro de lluvia \cite{mckee1993}, y el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI), que incorpora la sensibilidad a la temperatura mediante la deconstrucción de la ETP \cite{vicenteserrano2010}. 
 
-Desde una perspectiva física, dado que ambos índices se calculan utilizando idéntica escala temporal y normalización normal estándar, la divergencia estadística y temporal entre sus respectivas tendencias ($Trend_{SPEI} - Trend_{SPI}$) representa el residuo térmico aislado. Este residuo constituye la huella del calentamiento global sobre el ciclo hidrológico. Si el SPI muestra estabilidad a largo plazo (ausencia de tendencias significativas en las lluvias), pero el SPEI revela tendencias decrecientes significativas hacia la sequedad, queda demostrado teóricamente que el calentamiento global es el factor dominante detrás de los procesos de aridificación de una región.
+Desde una perspectiva física, dado que ambos índices se calculan utilizando idéntica escala temporal y normalización normal estándar, la divergencia estadística y temporal entre sus respectivas tendencias ($Trend_{SPEI} - Trend_{SPI}$) representa el residuo térmico aislado. Este residuo constituye la huella del calentamiento global sobre el ciclo hidrológico. Si el SPI muestra estabilidad a largo plazo (ausencia de tendencias significativas en las lluvias), pero el SPEI revela tendencias decrecientes significativas hacia la sequedad, proporciona evidencia empírica de que el incremento de las temperaturas impulsadas por el calentamiento global está exacerbando el balance hídrico.

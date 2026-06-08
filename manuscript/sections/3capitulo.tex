@@ -2,258 +2,89 @@
 
 \section{Diseño de la investigación}
 
-La presente investigación se enmarca en un enfoque cuantitativo de carácter longitudinal, debido a que la estructura de la base de datos sigue un diseño de panel rastreando de forma sistemática el comportamiento de múltiples entidades (las estaciones meteorológicas) a lo largo de un período continuo de 24 años (2000--2023); e inferencial y analítico, ya que busca estimar parámetros de manera precisa para contrastar formalmente hipótesis respecto a las tendencias y variaciones espacio-temporales de la sequía en Paraguay, y no se limita a la mera descripción de patrones históricos.
+La presente investigación se inscribe en un enfoque cuantitativo, con un diseño no experimental, observacional, retrospectivo, longitudinal y explicativo. Es de carácter observacional y no experimental debido a que las variables climáticas se analizan de forma pasiva, tal como ocurrieron de manera natural en el entorno, sin manipulación deliberada. Posee un enfoque retrospectivo, puesto que se examinan registros históricos de un período extendido de 24 años (2000--2023). Asimismo, su diseño es longitudinal y explicativo mediante el uso de una estructura de datos de panel, orientada a estimar parámetros de tendencia de largo plazo para explicar y contrastar formalmente las hipótesis sobre las dinámicas de la sequía y el proceso de aridificación en Paraguay.
 
 \section{Fuentes de datos y variables}
 
-Los datos primarios (apéndice \ref{apendice:fuente_datos}) corresponden a los registros meteorológicos diarios provistos por la Dirección de Meteorología e Hidrología (DMH) de la Dirección Nacional de Aeronáutica Civil (DINAC)\footnote{Consultado en el portal de Estaciones Meteorológicas Automáticas (EMA): \url{https://www.meteorologia.gov.py/emas/} (último acceso: marzo, 2026).}. Para cada estación meteorológica, se recopilaron las siguientes variables críticas diarias:
-\begin{itemize}
-    \item Precipitación total diaria (en mm).
-    \item Temperatura media diaria (en °C).
-    \item Temperatura máxima diaria (en °C).
-    \item Temperatura mínima diaria (en °C).
-\end{itemize}
+Los datos primarios corresponden a los registros meteorológicos diarios provistos por la Dirección de Meteorología e Hidrología (DMH) de la Dirección Nacional de Aeronáutica Civil (DINAC) del Paraguay. 
+
+\subsection{Procedimiento de extracción y validación de Datos}
+
+La serie temporal diaria analizada comprende el período desde el 1 de enero de 2000 hasta el 31 de diciembre de 2023. La fecha de extracción y recepción oficial de la base de datos fue el 9 de mayo de 2024 (Expediente N.º 213.042/2024; ver Apéndice \ref{apendice:fuente_datos}), tras una solicitud formal gestionada a través de la Facultad de Ciencias Exactas y Naturales (FACEN) de la Universidad Nacional de Asunción.
 
 De forma complementaria, se recopilaron los metadatos de las estaciones terrestres, incluyendo su nombre oficial, identificador (ID Estación), coordenadas geográficas de posicionamiento (latitud y longitud decimal) y su macroregión geográfica correspondiente (Región Oriental o Región Occidental).
 
-\section{Procedimiento de selección de muestra y limpieza de datos}
+\subsection{Definición de variables climáticas}
 
-Los registros instrumentales diarios originales presentaban diversos grados de completitud y calidad. Ciertas estaciones contaban con series prácticamente ininterrumpidas, mientras que otras exhibían pérdidas de información o vacíos temporales significativos. Con el propósito de construir una base de datos homogénea, consistente y estadísticamente representativa, se implementó un procedimiento de depuración y selección de muestra en dos fases.
-
-\subsection{Evaluación de datos faltantes}
-
-El análisis partió de una red inicial de 19 estaciones meteorológicas distribuidas a nivel nacional (detalladas en el apéndice \ref{apendice:estaciones}). Para cada estación se cuantificó de forma sistemática la tasa de pérdida de datos diarios en el vector de variables críticas (precipitación y temperaturas) a lo largo de los 24 años de estudio.
-
-\subsection{Criterios de exclusión y selección muestra final}
-
-El proceso de refinamiento de la muestra se rigió por dos criterios estrictos de exclusión:
-\begin{enumerate}
-    \item {Criterio de continuidad temporal (Exclusión de vacíos largos):} Se evaluaron los tramos continuos de datos faltantes. Bajo este criterio se decidió excluir la estación de Villarrica (VILL) debido a que, además de resultar geográficamente redundante con estaciones aledañas, presentaba anomalías instrumentales críticas caracterizadas por pérdidas continuas de datos superiores a los 30 días consecutivos, interrumpiendo la continuidad física de la serie.
-    \item {Criterio de umbral de tolerancia cuantitativa:} Sobre las 18 estaciones restantes, se aplicó un límite máximo admisible del 2.0\% de datos faltantes acumulados a nivel diario sobre el total de registros posibles del período 2000--2023. Aquellas estaciones que superaron este límite fueron descartadas.
-\end{enumerate}
-
-Este procedimiento determinó la conformación de una muestra final de 11 estaciones meteorológicas de alta calidad sobre las cuales se llevó a cabo el modelado cuantitativo de la investigación. El Cuadro \ref{tab:seleccion_estaciones} resume los resultados de este proceso de depuración de la red original.
-
-\begin{table}[!ht]
-\centering
-\caption{Resumen del proceso de selección de estaciones meteorológicas terrestres.}
-\label{tab:seleccion_estaciones}
-\begin{tabular}{llcl}
-\hline
-\textbf{Región} & \textbf{Estación} & \textbf{\% Faltante} & \textbf{Estado} \\ \hline
-Occidental & MCAL & 0.78 & Seleccionada \\
-Occidental & PTOC & 3.61 & Descartada \\
-Occidental & GBRU & 0.73 & Seleccionada \\
-Occidental & PCOL & 2.43 & Descartada \\
-Oriental & LUQUE & 0.07 & Seleccionada \\
-Oriental & PILAR & 0.82 & Seleccionada \\
-Oriental & MINGA & 0.09 & Seleccionada \\
-Oriental & SGUA & 2.86 & Descartada \\
-Oriental & CONC & 0.07 & Seleccionada \\
-Oriental & PJC & 0.32 & Seleccionada \\
-Oriental & SEST & 1.67 & Seleccionada \\
-Oriental & SPED & 3.59 & Descartada \\
-Oriental & CAAZ & 0.59 & Seleccionada \\
-Oriental & CMEZA & 1.44 & Seleccionada \\
-Oriental & COVIE & 1.17 & Seleccionada \\
-Oriental & ENCAR & 2.05 & Descartada \\
-Oriental & SJBA & 4.44 & Descartada \\
-Oriental & VILL & 1.35 & Descartada \\ \hline
-\end{tabular}
-\end{table}
-
-\section{Tratamiento de datos faltantes (imputación)}
-
-Una vez seleccionada la red final de 11 estaciones meteorológicas, se abordó el tratamiento de los vacíos de información restantes, fallas de transmisión puntual de corta duración (1 a 2 días). Con el fin de preservar la continuidad física de las observaciones diarias y el cálculo de agregaciones posteriores, se aplicó un método de imputación por capas diferenciado según las propiedades físicas de las variables:
-
+El análisis de datos de panel se centra de manera exclusiva en las variables de precipitación diaria (lluvia) y temperatura media diaria como factores determinantes del balance hídrico. Las variables críticas recopiladas con frecuencia diaria para cada estación meteorológica fueron:
 \begin{itemize}
-    \item {Variables térmicas (Media, Máxima y Mínima):} Debido a la alta autocorrelación temporal intrínseca que caracteriza a las temperaturas diarias, se utilizó la interpolación lineal como estimador del valor faltante:
-    \begin{equation}
-        T_{\text{imputada}, t} = T_{t-1} + \frac{T_{t+1} - T_{t-1}}{2}
-    \end{equation}
-    Para mantener la rigurosidad científica de la interpolación y no inducir variabilidad artificial especulativa, se estableció un límite máximo de dos días consecutivos para la aplicación del estimador lineal.
-    \item {Variable pluviométrica (Precipitación):} Dada la naturaleza física asimétrica, intermitente e intermitente de las lluvias, no es posible aplicar una interpolación temporal directa. Se utilizó un enfoque analítico condicional basado en la vecindad de los días adyacentes ($t-1$ y $t+1$):
-    \begin{enumerate}
-        \item Si ambos días adyacentes registraron precipitación nula ($P_{t-1} = 0$ y $P_{t+1} = 0$), el día faltante fue imputado con valor de cero ($P_t = 0$).
-        \item Si al menos uno de los días adyacentes presentó registro de lluvia, el valor faltante fue estimado mediante interpolación lineal simple para capturar la posible persistencia temporal del evento hidrometeorológico.
-    \end{enumerate}
+    \item \textit{Precipitación diaria ($P_t$):} medida en milímetros ($mm$).
+    \item \textit{Temperatura media diaria ($T_{\text{med}, t}$):} medida en grados Celsius ($^{\circ}\text{C}$).
+    \item \textit{Temperatura máxima diaria ($T_{\text{máx}, t}$):} usada como variable de apoyo para la imputación térmica ($^{\circ}\text{C}$).
+    \item \textit{Temperatura mínima diaria ($T_{\text{mín}, t}$):} usada como variable de apoyo para la imputación térmica ($^{\circ}\text{C}$).
 \end{itemize}
 
-Los vacíos de datos con una duración continua igual o superior a tres días no fueron sujetos a ningún tipo de imputación y se preservaron como ``valores perdidos'' para salvaguardar la veracidad estadística de las series originales. Los impactos de este proceso sobre la completitud global de la base de datos se sintetizan en el Cuadro \ref{tab:resumen_limpieza}.
+\section{Procedimiento, depuración e imputación de datos}
 
-\begin{table}[!ht]
-\centering
-\caption{Resumen cuantitativo del impacto del proceso de depuración e imputación.}
-\label{tab:resumen_limpieza}
-\begin{tabular}{lc}
-\hline
-\textbf{Métrica} & \textbf{Valor} \\ \hline
-Número de Estaciones & 19 $\rightarrow$ 11 \\
-Número de Registros Diarios Iniciales (Base original) & 157,275 \\
-Celdas Faltantes (Variables Críticas Iniciales) & 7,788 \\
-Porcentaje de Datos Faltantes Iniciales (\%) & 1.23\% \\
-Celdas Faltantes (Post-Selección de Estaciones) & 3,061 \\
-Porcentaje de Faltantes (Post-Selección) (\%) & 0.73\% \\
-Celdas Faltantes (Post-Imputación) & 599 \\
-Porcentaje de Faltantes (Post-Imputación) (\%) & 0.14\% \\ \hline
-\end{tabular}
-\end{table}
+Se examinó la cobertura histórica de cada una de las 19 estaciones terrestres respecto al rango teórico esperado de 8,766 días (24 años). El análisis de completitud determinó que la estación de Paraguarí (PARA) presentaba un truncamiento temporal crítico: sus registros inician únicamente a partir del 1 de abril de 2006, registrando una pérdida masiva superior al 26\% de la serie temporal bajo estudio (2,282 días faltantes). 
+
+Con el fin de evitar un sesgo por truncamiento sistemático de la serie temporal nacional, se decidió excluir de manera definitiva la estación de Paraguarí (PARA). Las 18 estaciones restantes exhibieron tasas de completitud de fechas superiores al 97.9\%, conformando la muestra final del estudio. Sobre esta red de 18 estaciones se construyó un panel balanceado inicial de 157,788 registros diarios (18 estaciones $\times$ 8,766 días). Las filas correspondientes a fechas faltantes originalmente en cada estación fueron insertadas e inicializadas con valores nulos (\textit{NaN}).
+
+\subsection{Algoritmo de imputación de temperatura por capas}
+
+Para asegurar la continuidad temporal de la temperatura media diaria ($T {\text{med}}$) y evitar la pérdida de observaciones mensuales, se diseñó e implementó un algoritmo de imputación estructurado en tres capas jerárquicas:
+
+\begin{enumerate}
+    \item \textit{Capa 1: Imputación por relación térmica.} Para aquellos días donde se registró la ausencia de la temperatura media ($T {\text{med}}$) pero se disponía de los registros válidos de temperatura máxima ($T {\text{máx}}$) y mínima ($T {\text{mín}}$), se estimó el valor faltante como el promedio aritmético de las temperaturas extremas diarias:
+    \begin{equation}
+        T_{\text{med}, t} = \frac{T_{\text{mín}, t} + T_{\text{máx}, t}}{2}
+    \end{equation}
+    Este procedimiento permitió recuperar con precisión física un total de 342 días del panel.
+    \item \textit{Capa 2: Interpolación lineal para vacíos cortos ($\le 3$ días).} Para los registros nulos persistentes de temperatura media, se analizó la longitud de los vacíos consecutivos. Para brechas de duración corta, definidas estrictamente entre 1 y 3 días consecutivos (que representan el 37.1\% del total de datos térmicos faltantes en la red), se aplicó una interpolación lineal temporal basada en la inercia térmica de los días adyacentes válidos. Esta capa recuperó un total de 655 días de registro.
+    \item \textit{Capa 3: Imputación espacial por estación vecina ($\geq 4$ días).} Para vacíos de información térmica igual o mayor a cuatro días consecutivos, la interpolación temporal directa pierde validez física al ignorar la variabilidad sinóptica de mediano plazo. En consecuencia, se aplicó un método de transferencia espacial basado en la cercanía geográfica. 
+
+Utilizando las coordenadas geográficas de las 18 estaciones meteorológicas seleccionadas, se calculó una matriz de distancias mutuas (ortodrómicas) que permitió identificar de forma unívoca a la estación vecina más cercana para cada punto de la red (por ejemplo, la menor distancia registrada correspondió al par Coronel Oviedo-Villarrica con solo $25.75\text{ km}$, mientras que la mayor distancia de vecindad se registró en el Chaco Profundo entre Mariscal Estigarribia y Pozo Colorado con $248.84\text{ km}$). 
+
+Para cada fecha que presentaba vacíos térmicos prolongados en la estación objetiva, se transfirió directamente el registro diario de temperatura media depurada ($T_{\text{med\_imputada}}$) correspondiente a su vecina más cercana en ese mismo día. Este procedimiento de interpolación espacial permitió recuperar con precisión climatológica un total de 1,114 observaciones diarias. Al término de esta tercera capa jerárquica de imputación, se logró una tasa de completitud global en las series de temperatura media diaria del 99.99\%, registrando únicamente 9 datos nulos residuales en toda la base de datos de panel maestro para las 18 estaciones a lo largo de los 24 años de estudio.
+\end{enumerate}
+
+\subsection{Criterio de no Imputación para la variable precipitación}
+
+A diferencia de la temperatura, la precipitación diaria es una variable altamente asimétrica, intermitente y no continua. Debido a que las fallas instrumentales y los vacíos de transmisión de la red meteorológica ocurren por factores técnicos o administrativos totalmente independientes del estado del tiempo, no existe relación causal entre la omisión del dato y el evento físico de lluvia. Bajo esta premisa, como lo afirma \citeA{wooldridge2010}, el sesgo no depende de la cantidad o el patrón de los datos faltantes, sino de la naturaleza del mecanismo de selección que genera esos nulos. Si la falta de datos es aleatoria o técnica, el estimador de efectos fijos manejará correctamente el desbalance del panel sin introducir sesgos de truncamiento temporal.
+
+Consecuentemente, se adoptó la decisión metodológica de no aplicar ningún método de imputación sobre la variable precipitación. Forzar estimaciones (ya sean interpolaciones lineales o vecindades) sobre la lluvia introduciría sesgos artificiales severos, alterando la frecuencia real de días lluviosos y la magnitud acumulada de los eventos.
 
 \section{Agregación de datos y creación de la base mensual}
 
-Debido a que el modelado climático del balance hídrico y la dinámica de sequías se examina de forma estándar a escala mensual, el conjunto de datos diarios interpolados fue agregado a una frecuencia mensual para cada estación y año del período de estudio (24 años $\times$ 12 meses = 288 observaciones potenciales por estación). Los descriptores mensuales se calcularon bajo los siguientes criterios de agregación física:
+Dado que el balance hídrico y el cálculo del SPEI se analizan a nivel mensual, el panel diario depurado de 18 estaciones fue agregado a una frecuencia mensual de 288 meses consecutivos por estación (5,184 observaciones mensuales potenciales). 
+
+Para garantizar la fiabilidad física de los agregados mensuales, se implementó la regla de exclusión recomendada por la Organización Meteorológica Mundial \cite{wmo2017}:
 \begin{itemize}
-    \item {lluvia\_total}: Sumatoria de precipitación diaria acumulada en el mes (mm/mes).
-    \item {temp\_media:} Promedio aritmético de las observaciones diarias de temperatura media (°C).
-    \item {temp\_max:} Promedio aritmético de las observaciones de temperatura máxima diaria (°C).
-    \item {temp\_min:} Promedio aritmético de las observaciones de temperatura mínima diaria (°C).
+    \item \textit{lluvia\_total:} suma mensual de la precipitación diaria. Se define como nula (\textit{NaN}) si el mes correspondiente registra menos de 25 días con observaciones de lluvia completas.
+    \item \textit{temp\_media:} promedio mensual de la temperatura media diaria imputada. Se define como nula si el mes registra menos de 25 días con datos térmicos válidos.
 \end{itemize}
 
-Para garantizar la estabilidad y validez física de estas agregaciones climáticas, se aplicó el criterio estándar de tolerancia de datos faltantes recomendado por la \citeA{wmo2017}. Se estableció de manera estricta que un mes solo se considera válido para el cálculo de sus variables agregadas si cuenta con un mínimo de 25 días con registros diarios completos. Aquellos meses que no cumplieron con este umbral de consistencia temporal, producto de vacíos largos no imputables, fueron tratados estadísticamente como valores perdidos en el conjunto final de datos de panel. La aplicación de esta regla dio lugar a la exclusión de únicamente 14 observaciones mensuales de un universo total de 3,168 observaciones potenciales de panel, logrando una tasa de completitud estructural en la base de datos de panel final del 99.56\%.
+Este procedimiento determinó un panel mensual final caracterizado por una alta completitud: la serie de temperatura media mensual reportó un único dato nulo ($0.01\%$), mientras que la serie de precipitación mensual acumulada presentó únicamente 82 registros nulos ($1.58\%$) de un total de 5,184 observaciones.
 
-\section{Construcción de la variable dependiente: El índice SPEI}
+\section{Construcción de la variable dependiente: el índice SPEI-6}
 
-La variable dependiente del modelo de datos de panel es el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI). Su obtención sistemática para cada una de las 11 estaciones seleccionadas se codificó en lenguaje Python utilizando algoritmos basados en la metodología estándar de Vicente-Serrano y cols. \cite{vicenteserrano2010} mediante la aplicación de las librerías científicas especializadas \textit{scipy.stats} y \textit{scipy.stats.pearson3}. El algoritmo operó secuencialmente bajo las siguientes etapas matemáticas:
+Para el cálculo del Índice de Precipitación-Evapotranspiración Estandarizado a escala de 6 meses (SPEI-6) sobre las 18 estaciones finales, se ejecutó secuencialmente la siguiente formulación matemática:
 
-\subsection{Estimación de la evapotranspiración potencial (ETP)}
-
-Para estimar la demanda atmosférica de agua mensual sin requerir variables instrumentales de radiación o viento de difícil acceso, se programó el método empírico de Thornthwaite. La evapotranspiración potencial sin ajustar (en $mm/\text{mes}$) para un mes determinado se calcula mediante la fórmula:
-\begin{equation}
-    ETP_{\text{sin ajustar}} = 16 \left( \frac{10 \cdot T_{\text{avg}}}{I} \right)^{a}
-\end{equation}
-Donde $T_{\text{avg}}$ representa la temperatura media agregada del mes en grados Celsius ($^{\circ}\text{C}$). Si la temperatura media del mes resulta inferior a $0^{\circ}\text{C}$, se le asigna de manera determinística un valor de $0$. 
-
-El término $I$ es el índice térmico de calor anual de la estación, el cual se deriva como la sumatoria de los 12 índices de calor mensuales ($i_m$) de un año promedio climatológico normal:
-\begin{equation}
-    I = \sum_{m=1}^{12} i_m = \sum_{m=1}^{12} \left( \frac{T_{\text{avg}, m}}{5} \right)^{1.514}
-\end{equation}
-
-El exponente $a$ es un coeficiente empírico no lineal que se parametriza matemáticamente en función del índice térmico de calor anual de la estación $I$, mediante el siguiente polinomio de tercer grado:
-\begin{equation}
-    a = (6.75 \times 10^{-7})I^3 - (7.71 \times 10^{-5})I^2 + (1.792 \times 10^{-2})I + 0.49239
-\end{equation}
-
-{\sloppy Finalmente, la evapotranspiración potencial ajustada ($ETP_{\text{ajustada}}$) incorpora el efecto de la duración real de las horas de luz solar diarias según la latitud geográfica de cada estación y el mes calendario:\par}\fussy
-\begin{equation}
-    ETP_{\text{ajustada}} = ETP_{\text{sin ajustar}} \cdot K
-\end{equation}
-Donde $K$ representa el factor de corrección latitudinal mensual, tabulado estándar para el hemisferio sur en función de la latitud decimal y el número de días del mes.
-
-\subsection{Cálculo del balance hídrico climático}
-
-A partir de la serie mensual agregada de precipitación total ($P_i$) y de la serie mensual estimada de evapotranspiración potencial ($ETP_i$) para la estación en el mes $i$, se derivó la serie del balance hídrico simple ($D_i$), la cual representa la disponibilidad neta del recurso hídrico:
-\begin{equation}
-    D_i = P_i - ETP_i
-\end{equation}
-Si el balance resulta positivo ($D_i > 0$), la estación exhibe un superávit hídrico climatológico; si el balance resulta negativo ($D_i < 0$), denota un estado de déficit hídrico.
-
-\subsection{Balance hídrico en múltiples escalas: Cálculo}
-
-Matemáticamente, para una escala de acumulación $k$, la sumatoria acumulada del balance hídrico $D^k_i$ para el mes $i$ se define de la siguiente manera:
-\begin{equation}
-    D^k_i = \sum_{j=0}^{k-1} D_{i-j}
-\end{equation}
-
-\subsection{Ajuste a una distribución de probabilidad Pearson Tipo III}
-
-A diferencia del SPI clásico, que utiliza la distribución Gamma de dos parámetros, el balance hídrico acumulado $D^k_i$ puede tomar valores negativos derivados del exceso de evapotranspiración sobre la lluvia, impidiendo el ajuste directo de distribuciones de probabilidad acotadas en cero. En consistencia con el entorno de cálculo de librerías en Python, se implementó el ajuste no paramétrico de las series acumuladas a la función de distribución teórica Pearson Tipo III (distribución Gamma de tres parámetros) por su alta estabilidad analítica frente a la asimetría y el comportamiento de colas gruesas en las colas de la distribución de balance de agua en Paraguay.
-
-La función de densidad de probabilidad (PDF) para la distribución Pearson Tipo III se modela como:
-\begin{equation}
-    f(x) = \frac{1}{|\beta| \Gamma(\alpha)} \left( \frac{x - \gamma}{\beta} \right)^{\alpha - 1} e^{-\left( \frac{x - \gamma}{\beta} \right)}
-\end{equation}
-Para un rango operativo de variables definido por $\beta > 0$ si $x > \gamma$, y $\beta < 0$ si $x < \gamma$. En esta ecuación:
-\begin{itemize}
-    \item $\alpha > 0$ representa el parámetro de forma de la distribución (asociado a la asimetría).
-    \item $\beta \neq 0$ representa el parámetro de escala física.
-    \item $\gamma$ representa el parámetro de localización que desplaza el origen de la distribución de probabilidad en el eje real.
-    \item $\Gamma(\alpha)$ representa la función matemática Gamma.
-\end{itemize}
-
-La función de distribución acumulada (CDF), $P = F(x)$, se calcula a partir del ajuste de estos parámetros:
-\begin{equation}
-    F(x) = \int_{\gamma}^{x} f(t) \, dt
-\end{equation}
-
-\subsection{Estandarización clásica normal}
-
-El paso final consiste en transformar las probabilidades acumuladas $P = F(x)$ a valores de desviación normal estándar ($Z$-scores) con media cero y desviación estándar unitaria. Para lograr una alta precisión numérica en el entorno computacional, se programó la aproximación racional analítica de \citeA{abramowitz_handbook_1965}, la cual se ha convertido en un estándar de facto para la conversión de probabilidades acumuladas a valores $Z$ en el ámbito de la estadística computacional.:
-
-Para una probabilidad calculada de sequía $P$, donde $0 < P \leq 0.5$:
-\begin{equation}
-    Z = W - \frac{c_0 + c_1 W + c_2 W^2}{1 + d_1 W + d_2 W^2 + d_3 W^3}
-\end{equation}
-Donde la variable intermedia de escala $W$ se calcula como:
-\begin{equation}
-    W = \sqrt{-2 \ln(P)}
-\end{equation}
-
-Si la probabilidad original acumulada resulta superior a un estado neutro ($P > 0.5$), se utiliza su complemento $1 - P$ en lugar de $P$ para el cálculo del estimador intermedio $W$, y se invierte el signo algebraico del valor del índice de sequía resultante ($SPEI = -Z$).
-
-Las constantes numéricas estándar de aproximación racional empleadas son:
-\begin{align*}
-    c_0 &= 2.515517 & c_1 &= 0.802853 & c_2 &= 0.010328 \\
-    d_1 &= 1.432788 & d_2 &= 0.189269 & d_3 &= 0.001308
-\end{align*}
-
-Este estimador numérico robusto asegura que las observaciones del SPEI-6 resultante de cada estación meteorológica sean comparables de manera directa a través de su evolución temporal y espacial.
+\begin{enumerate}
+    \item \textit{Cálculo de la ETP mensual (Thornthwaite):} Estimación de la demanda evaporativa potencial mediante el método empírico de \citeA{thornthwaite_approach_1948}, utilizando la temperatura media mensual ($T_{\text{avg}}$) y la latitud geográfica de cada estación para derivar el exponente empírico $a$ y el factor de corrección latitudinal mensual $K$.
+    \item \textit{Cálculo del balance hídrico mensual ($D_i$):} Definido como la diferencia simple entre la precipitación total mensual ($P_i$) y la ETP ajustada ($ETP_i$) para cada mes $i$: $D_i = P_i - ETP_i$.
+    \item \textit{Acumulación multiescalar ($D^k_i$):} Para capturar los efectos de mediano plazo se acumuló el balance hídrico mensual en una ventana temporal de $k=6$ meses de forma consecutiva \cite{mckee1993}.
+    \item \textit{Ajuste paramétrico Pearson Tipo III:} Los valores acumulados de balance hídrico ($D^6_i$) fueron ajustados a una distribución teórica Pearson Tipo III (Gamma de tres parámetros) para estimar la probabilidad acumulada $P = F(x)$, lo cual resulta óptimo para tolerar asimetrías y valores negativos de balance.
+    \item \textit{Estandarización Normal estándar:} La probabilidad acumulada $P$ se transformó en anomalías estandarizadas normales ($Z$-scores) mediante la aproximación racional analítica de \citeA{abramowitz_handbook_1965}. El valor final resultante constituye la variable dependiente de panel, SPEI-6.
+\end{enumerate}
 
 \section{Regionalización geográfica mediante agrupamiento no supervisado}
 
-Para resolver el problema planteado en la investigación respecto a la variabilidad espacial de la sequía, esta tesis propone a priori que, la división administrativa e histórica de las macrorregiones no necesariamente se corresponde con la dinámica física de los patrones climáticos reales de sequía.
+Para analizar la distribución espacial de la sequía y evitar límites políticos arbitrarios, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo (HAC) sobre las series de SPEI-6 de las 18 estaciones. Se implementó la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward. El número óptimo de subregiones climáticas ($k^*$) se determinó mediante la maximización del Coeficiente de Silueta Promedio de Rousseeuw \cite{rousseeuw1987}.
 
-Por consiguiente, se introduce un enfoque de aprendizaje estadístico no supervisado para agrupar las estaciones de monitoreo basándose estrictamente en el comportamiento dinámico y la covarianza de sus series temporales históricas mensuales de SPEI-6 a lo largo de los 24 años bajo estudio. El SPEI al ser una métrica estandarizada, permite comparar directamente la sincronicidad temporal de las fluctuaciones hídricas entre estaciones, independientemente de sus niveles absolutos de precipitación o temperatura.
+\section{Especificación del modelo de panel y test de Hausman}\label{sec:modelo_estadistico}
 
-Dado que el objeto de estudio de esta tesis se centra en identificar tendencias de aridificación a largo plazo, este enfoque remueve los efectos de nivel absoluto —los cuales ya han sido controlados matemáticamente en la construcción misma del SPEI-6— permitiendo que las subregiones resultantes del agrupamiento jerárquico representen la variabilidad hídrica y tendencias de aridificación homogéneas frente al calentamiento global.
-
-\subsection{Algoritmo de agrupamiento jerárquico aglomerativo}
-
-Se implementa la técnica de Agrupamiento Jerárquico Aglomerativo (HAC, por sus siglas en inglés). Para guiar la fusión óptima de grupos y preservar la homogeneidad interna de las agrupaciones resultantes, se implementa el criterio de enlace de Ward (Ward's minimum variance method). La distancia de disimilitud temporal entre dos estaciones meteorológicas $X$ y $Y$ se calcula a partir de la distancia euclídea simple (ecuación \ref{eq:euclidea}) aplicada sobre sus series completas de observaciones mensuales de SPEI-6. Donde $T = 288$ representa los meses de registro del panel.  Agrupar las estaciones minimizando la distancia euclídea equivale matemáticamente a consolidar agrupaciones geográficas que exhiben una alta sincronicidad temporal en la ocurrencia, evolución y término de los eventos de sequía.
-
-\subsection{Determinación del número óptimo de grupos (clústeres)}
-
-El análisis de silueta evalúa qué tan bien se encuentra agrupada cada estación evaluando de forma simultánea su distancia interna con los miembros de su propio grupo frente a su distancia externa con el clúster vecino más cercano. Para cada estación $i$, se calcula su valor de silueta individual $s(i)$ mediante la ecuacion \ref{eq:silueta}.
-
-El número óptimo de regiones climatológicas ($k^*$) se selecciona maximizando el Ancho de Silueta Promedio de toda la red de estaciones mediante la ecuación \ref{eq:siluetamax}. Donde $M = 11$ representa el número de estaciones seleccionadas. El algoritmo de optimización se codifica e implementa en Python mediante el uso de la librería de minería de datos \textit{scikit-learn}. Las características de las regiones óptimas halladas mediante esta técnica reemplazarán el uso de la variable regional dicotómica clásica en el modelado estadístico subsiguiente de la investigación.
-
-\section{Modelo estadístico}\label{sec:modelo_estadistico}
-
-Para cuantificar las tendencias temporales del balance hídrico e identificar procesos de aridificación y variaciones estructurales, se utilizó un modelo de regresión de datos de panel, estimado mediante la librería \textit{linearmodels} de Python. 
-
-\subsection{Elección del modelo}\label{subsec:ecuacion_modelo}
-
-La elección entre el modelo de efectos fijos (FE) y el de efectos aleatorios (RE) es una decisión metodológica crucial en el análisis de datos de panel. Para realizar esta selección de manera objetiva, se utilizó el test de especificación de Hausman.
-
-La hipótesis nula ($H_0$) del test es que no existe una diferencia sistemática entre los coeficientes de ambos modelos, lo que implica que la suposición de no correlación del modelo RE es válida. Si se rechaza $H_0$, se concluye que el modelo RE está sesgado y que el modelo FE es el estimador apropiado. Si no se rechaza $H_0$, se prefiere el modelo RE por su mayor eficiencia estadística.
-
-El estadístico de prueba de Hausman (H) sigue una distribución Chi-cuadrado ($\chi^2$) con \textit{k} grados de libertad, donde \textit{k} es el número de regresores que varían en el tiempo. Se calcula como:
-\begin{equation}
-    H = (\boldsymbol{\hat{\beta}}_{FE} - \boldsymbol{\hat{\beta}}_{RE})' [\text{Var}(\boldsymbol{\hat{\beta}}_{FE}) - \text{Var}(\boldsymbol{\hat{\beta}}_{RE})]^{-1} (\boldsymbol{\hat{\beta}}_{FE} - \boldsymbol{\hat{\beta}}_{RE})
-\end{equation}
-
-\subsection{Especificación del modelo}
-
-El modelo general de panel busca explicar el valor del SPEI-6 para una estación meteorológica \textit{i} en un tiempo \textit{t}.
-
-La ecuación general del modelo de efectos aleatorios es:
-\begin{equation}
-    y_{it} = \mathbf{x}_{it}'\boldsymbol{\beta} + \alpha_i + \varepsilon_{it}
-    \label{eq:panel_general}
-\end{equation}
-donde los subíndices representan:
-\begin{itemize}
-    \item \textit{i}: la entidad individual, en este caso, cada una de las 11 estaciones meteorológicas seleccionadas ($i = 1, \dots, 11$).
-    \item \textit{t}: el período de tiempo, en este caso, cada uno de los 288 meses del estudio ($t = 1, \dots, 288$).
-\end{itemize}
-
-Y las variables del modelo son:
-\begin{itemize}
-    \item $y_{it}$: la variable dependiente, el valor del SPEI-6.
-    \item $\mathbf{x}_{it}$: el vector de variables explicativas (regresores).
-    \item $\boldsymbol{\beta}$: el vector (columna) de coeficientes a estimar.
-    \item $\alpha_i$: el efecto no observado, específico de cada estación meteorológica \textit{i}.
-    \item $\varepsilon_{it}$: el término de error idiosincrático.
-\end{itemize}
+Para cuantificar las tendencias temporales del balance hídrico se ajustó el modelo de regresión lineal de panel especificado en la ecuación \ref{eq:modelo_completo} y la selección entre la estimación por efectos fijos (FE) y efectos aleatorios (RE) se fundamentó en el test de especificación de \citeA{hausman1978}, evaluando formalmente la consistencia del estimador RE frente a la ortogonalidad de los efectos individuales no observados de las 18 estaciones meteorológicas. Para esto se utilizó la librería \textit{linearmodels} de Python.
 
 La especificación completa del modelo estimado, incluyendo todas las variables e interacciones, fue la siguiente:
 \sloppy
@@ -268,7 +99,13 @@ La especificación completa del modelo estimado, incluyendo todas las variables 
 \end{equation}
 donde $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, y los términos $\text{estacion-climatica}_{s,t}$ y $\text{region-geografica}_i$ son variables dummys para las categorías estacionales climáticas (invierno, primavera, verano, otoño) y regionales geográficas (clusters), respectivamente.
 
-\subsection{Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}
+\subsection{Corrección de la dependencia espacial: el estimador de Driscoll y Kraay}
+
+Para controlar y corregir de manera simultánea la presencia de autocorrelación serial temporal y de correlación espacial o de sección cruzada identificada en la red de monitoreo, se prescinde de los errores estándar de clúster convencionales y se adopta el estimador de matriz de covarianza robusto desarrollado por \cite{driscoll1998}. 
+
+El método de Driscoll-Kraay es un estimador no paramétrico de matriz de covarianza consistente ante la presencia de heterocedasticidad, autocorrelación y cualquier forma de dependencia espacial o de sección cruzada. Su ventaja metodológica radica en que estima la estructura de covarianza de las medias temporales de los momentos transversales mediante un estimador tipo Newey-West con un kernel espectral de Bartlett, asegurando la consistencia de los errores estándar y garantizando intervalos de confianza robustos para la inferencia de las tendencias dinámicas de sequía a nivel nacional \cite{wooldridge2010}.
+
+\section{Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}
 
 Para dar cumplimiento a nuestro objetivo específico y contrastar de manera formal la hipótesis 3 (H3), se diseñó un marco experimental comparativo. El procedimiento consiste en estimar de forma paralela la ecuación del modelo de regresión de panel de efectos aleatorios (Ecuación \ref{eq:modelo_completo}) sobre dos variables dependientes distintas:
 \begin{align}
@@ -276,6 +113,6 @@ Para dar cumplimiento a nuestro objetivo específico y contrastar de manera form
     \text{SPI-6}_{it} &= \mathbf{x}_{it}'\boldsymbol{\beta}_{SPI} + v_{it} \label{eq:panel_spi}
 \end{align}
 
-Donde $\boldsymbol{\beta}_{SPEI}$ y $\boldsymbol{\beta}_{SPI}$ representan los vectores de parámetros estimados para los modelos de balance hídrico y precipitación univariada, respectivamente. El efecto aislado del calentamiento global sobre la dinámica temporal del balance hídrico se define para cada estación del año y región como la diferencia entre sus respectivas tendencias netas mensuales calculadas ($\Delta \beta_{neto} = \beta_{neto, SPEI} - \beta_{neto, SPI}$). 
+Donde $\boldsymbol{\beta}_{SPEI}$ y $\boldsymbol{\beta}_{SPI}$ representan los vectores de parámetros estimados para los modelos de balance hídrico y precipitación univariada, respectivamente. El efecto aislado de la ETP sobre la dinámica temporal del balance hídrico se define para cada estación del año y región como la diferencia entre sus respectivas tendencias netas mensuales calculadas ($\Delta \beta_{neto} = \beta_{neto, SPEI} - \beta_{neto, SPI}$). 
 
-La significancia estadística del efecto del calentamiento global ($H_0: \beta_{neto, SPEI} - \beta_{neto, SPI} = 0$) se evalúa mediante la estimación de intervalos de confianza del 95\% y pruebas de Wald para diferencias de coeficientes de pendiente comunes entre ambas regresiones de panel, aislando así el efecto puro de la temperatura por encima del régimen de precipitaciones.
+La significancia estadística del efecto del aumento de la demanda evaporativa impulsada por el aumento de las temperaturas (calentamiento global) ($H_0: \beta_{neto, SPEI} - \beta_{neto, SPI} = 0$) se evalúa mediante la estimación de intervalos de confianza del 95\% y pruebas de Wald para diferencias de coeficientes de pendiente comunes entre ambas regresiones de panel, aislando así el efecto puro de la temperatura por encima del régimen de precipitaciones.

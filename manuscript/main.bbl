@@ -72,6 +72,33 @@ cepal2014}%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Driscoll%
+\ \BBA {} Kraay%
+}{%
+Driscoll%
+\ \BBA {} Kraay%
+}{%
+{\protect \APACyear {1998}}%
+}]{%
+driscoll1998}
+\APACinsertmetastar {%
+driscoll1998}%
+\begin{APACrefauthors}%
+Driscoll, J\BPBI C.%
+\BCBT {}\ \BBA {} Kraay, A\BPBI C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Consistent covariance matrix estimation with spatially correlated data} {Consistent covariance matrix estimation with spatially correlated data}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Review of Economics and Statistics}{80}{4}{549--560}.
+\newblock
+\begin{APACrefDOI} \doi{10.1162/003465398557825} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Gong%
 \ \BBA {} Richman%
 }{%
@@ -277,6 +304,52 @@ Pasten, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Pesaran%
+}{%
+Pesaran%
+}{%
+{\protect \APACyear {2004}}%
+}]{%
+pesaran2004}
+\APACinsertmetastar {%
+pesaran2004}%
+\begin{APACrefauthors}%
+Pesaran, M\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+\APACrefbtitle {General diagnostic tests for cross-section dependence in panels} {General diagnostic tests for cross-section dependence in panels}\ \APACbVolEdTR{}{\BTR{}\ \BNUM\ 0435}.
+\newblock
+\APACaddressInstitution{Cambridge, United Kingdom}{University of Cambridge, Department of Applied Economics}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rousseeuw%
+}{%
+Rousseeuw%
+}{%
+{\protect \APACyear {1987}}%
+}]{%
+rousseeuw1987}
+\APACinsertmetastar {%
+rousseeuw1987}%
+\begin{APACrefauthors}%
+Rousseeuw, P\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1987}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Silhouettes: a graphical aid to the interpretation and validation of cluster analysis} {Silhouettes: a graphical aid to the interpretation and validation of cluster analysis}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Computational and Applied Mathematics}{20}{}{53--65}.
+\newblock
+\begin{APACrefDOI} \doi{10.1016/0377-0427(87)90125-7} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Santos%
 , Pulido-Calvo%
 \BCBL {}\ \BBA {} Portela%
@@ -351,6 +424,30 @@ Stocker, T\BPBI F.%
 \APACrefbtitle {Climate {Change} 2013: {The} {Physical} {Science} {Basis}. {Contribution} of {Working} {Group} {I} to the {Fifth} {Assessment} {Report} of the {Intergovernmental} {Panel} on {Climate} {Change}} {Climate {Change} 2013: {The} {Physical} {Science} {Basis}. {Contribution} of {Working} {Group} {I} to the {Fifth} {Assessment} {Report} of the {Intergovernmental} {Panel} on {Climate} {Change}}.
 \newblock
 \APACaddressPublisher{Cambridge, UK and New York, NY, USA}{Cambridge University Press}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Thornthwaite%
+}{%
+Thornthwaite%
+}{%
+{\protect \APACyear {1948}}%
+}]{%
+thornthwaite_approach_1948}
+\APACinsertmetastar {%
+thornthwaite_approach_1948}%
+\begin{APACrefauthors}%
+Thornthwaite, C\BPBI W.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1948}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {An approach toward a rational classification of climate} {An approach toward a rational classification of climate}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geographical review}{38}{1}{55--94}.
+\newblock
+\APACrefnote{Publisher: JSTOR}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
