@@ -22,12 +22,11 @@ Esta tesis tiene en cuenta la temperatura no solo desde la perspectiva del calen
 
 A partir de esta brecha de conocimiento para Paraguay, se formulan las siguientes preguntas de investigación considerando el período de estudio 2000--2023:
 \begin{enumerate}
-    \item ¿Cuál es la disponibilidad y estructura de los datos oficiales considerando las precipitaciones y las temperaturas?
-    \item ¿Cómo medir las sequías y la aridificación en un contexto de calentamiento global?
+    \item ¿Qué métrica utilizar para medir las sequías y la aridificación en un contexto de calentamiento global?
     \item ¿Qué características tuvo la sequía? 
-    \item ¿Esta evolución del balance hídrico fue homogénea en todo el territorio nacional?
-    \item ¿Anualmente hubo divergencias dinámicas entre regiones climáticas considerando las estaciones climáticas anuales?
-    \item Considerando el balance hídrico, ¿el estudio de las sequías proporciona evidencia consistente de la influencia creciente del calentamiento global?
+    \item ¿La evolución temporal de la sequía fue homogéneo en todo el territorio nacional?
+    \item ¿Hubo procesos de aridificación?, ¿La aridificación fue homogénea en cada estación climática del año? 
+    \item ¿Tener en cuenta no solo las lluvias sino también la temperatura prodújo una dinámica significativamente más negativa, evidenciando un efecto térmico asociado al calentamiento global?
 \end{enumerate}
 
 \section{Justificación de la investigación}
@@ -43,22 +42,24 @@ El desarrollo de este trabajo se justifica bajo tres dimensiones analíticas:
 
 Para guiar el análisis empírico, se plantean las siguientes hipótesis de investigación:
 \begin{description}
-    \item[H1:] El balance hídrico en Paraguay presenta una tendencia temporal durante el período 2000--2023 que no es uniforme a lo largo del año, sino que muestra dinámicas divergentes entre las distintas estaciones climáticas.
-    \item[H2:] Esta tendencia temporal exhibe un comportamiento espacialmente heterogéneo, no se manifiesta de manera uniforme en todo el territorio nacional, durante el período 2000--2023.
-    \item[H3:] El estudio de las sequías por medio del balance hídrico proporciona evidencia consistente de la influencia del calentamiento global.
+    \item[H1:] Las sequías en Paraguay durante el período 2000--2023, potenciado por el aumento de las temperaturas asociadas al calentamiento global, han aumentado en frecuencia, intensidad y duración.
+    \item[H2:] Durante el período 2000--2023, hubo procesos de aridificación que presentan dinámicas divergentes entre distintas regiones geográficas del país.
+    \item[H3:] Esta aridificación no fue uniforme a lo largo del año, sino que muestra dinámicas heterogéneas entre las distintas estaciones climáticas.
+    \item[H4:] Incorporar la temperatura en la evaluación de las sequías produce una dinámica significativamente más negativa, evidenciando un efecto térmico asociado al calentamiento global.
 \end{description}
 
 \section{Objetivos de la investigación}
 
 \subsection{Objetivo general}
-Ajustar un modelo de datos de panel (panel data model) que integre variables sensibles al calentamiento global para conocer la evolución temporal del balance hídrico en Paraguay durante el período 2000--2023, considerando simultáneamente sus variaciones entre regiones geográficas y estaciones climáticas.
+
+Analizar la evolución temporal y espacial del balance hídrico en Paraguay durante el período 2000–2023 mediante un modelo de datos de panel sensible al calentamiento global.
 
 \subsection{Objetivos específicos}
 \begin{enumerate}
     \item Recopilar, depurar y estructurar una base de datos en formato de panel que integre los registros de precipitación y temperatura de las estaciones meteorológicas oficiales del Paraguay, aplicando criterios rigurosos de control de calidad y selección muestral.
     \item Calcular las series mensuales de un índice estandarizado del balance hídrico (SPEI) que permitan medir la sequía en un contexto de calentamiento global durante el período bajo estudio.
     \item Presentar un análisis descriptivo de la sequía para caracterizar sus patrones, frecuencia, intensidad, duración y extensión espacial de la sequía a nivel nacional.
-    \item Evaluar la distribución espacial del balance hídrico, identificando regiones climáticas homogéneas.
-    \item Estimar e interpretar los parámetros de un modelo de datos de panel ajustado sobre el SPEI para cuantificar las tendencias del balance hídrico y evaluar su heterogeneidad espacial y temporal entre estaciones climáticas.
-    \item Probar que el calentamiento global durante el período 2000--2023 en Paraguay tuvo un impacto estadísticamente significativo en el balance hídrico.
+    \item Identificar patrones homogéneos del balance hídrico que nos permitan clasificar el territorio nacional en regiones climáticas homogéneas.
+    \item Cuantificar las tendencias del SPEI para evaluar la aridificación tanto espacial como entre estaciones climáticas.
+    \item Contrastar el índice SPEI con un índice de sequía basado exclusivamente en las precipitaciones (SPI) para evaluar el efecto térmico asociado al calentamiento global.
 \end{enumerate}

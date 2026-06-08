@@ -13,72 +13,72 @@
 \contentsline {section}{\numberline {1.4}Objetivos de la investigación}{4}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Objetivo general}{4}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Objetivos específicos}{4}{subsection.1.4.2}%
-\contentsline {chapter}{\numberline {2}Marco Teórico}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Antecedentes de investigación en Paraguay}{5}{section.2.1}%
-\contentsline {section}{\numberline {2.2}La sequía}{6}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Características}{6}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Clasificación}{6}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Impulsores}{6}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Consecuencias}{7}{subsection.2.2.4}%
-\contentsline {section}{\numberline {2.3}Aridificación y sequía}{8}{section.2.3}%
-\contentsline {section}{\numberline {2.4}Consistencia y completitud en series temporales}{8}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Cuantificación de la sequía meteorológica: Los índices SPI y SPEI}{9}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}El indice de precipitación estandarizada (SPI)}{9}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Balance hídrico y el índice de precipitación-evapotranspiración estandarizado (SPEI)}{9}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Acumulación del balance hídrico en múltiples escalas}{10}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Fundamentos del agrupamiento no supervisado (clustering) para regionalización geográfica de la sequía}{11}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Algoritmo de agrupamiento jerárquico aglomerativo}{11}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Determinación de la partición óptima mediante el coeficiente de silueta}{12}{subsection.2.6.2}%
-\contentsline {section}{\numberline {2.7}Fundamentos del modelado estadístico para datos de panel}{13}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Modelos de efectos fijos (FE) vs. efectos aleatorios (RE)}{13}{subsection.2.7.1}%
-\contentsline {subsubsection}{Modelo de efectos fijos (FE)}{14}{section*.8}%
-\contentsline {subsubsection}{Modelo de efectos aleatorios (RE)}{14}{section*.9}%
-\contentsline {subsection}{\numberline {2.7.2}Selección del modelo: El test de especificación de Hausman}{14}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Supuestos y limitaciones del modelo de panel}{15}{subsection.2.7.3}%
-\contentsline {subsubsection}{Cálculo teórico de los errores estándar agrupados}{16}{section*.10}%
-\contentsline {section}{\numberline {2.8}El rol del calentamiento global en las sequías}{17}{section.2.8}%
-\contentsline {chapter}{\numberline {3}Materiales y Métodos}{19}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Diseño de la investigación}{19}{section.3.1}%
-\contentsline {section}{\numberline {3.2}Fuentes de datos y variables}{19}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Procedimiento de extracción y validación de Datos}{19}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Definición de variables climáticas}{20}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Procedimiento, depuración e imputación de datos}{20}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Algoritmo de imputación de temperatura por capas}{21}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Criterio de no Imputación para la variable precipitación}{22}{subsection.3.3.2}%
-\contentsline {section}{\numberline {3.4}Agregación de datos y creación de la base mensual}{22}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Construcción de la variable dependiente: el índice SPEI-6}{23}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Regionalización geográfica mediante agrupamiento no supervisado}{24}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Especificación del modelo de panel y test de Hausman}{24}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Corrección de la dependencia espacial: el estimador de Driscoll y Kraay}{25}{subsection.3.7.1}%
-\contentsline {section}{\numberline {3.8}Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}{25}{section.3.8}%
-\contentsline {chapter}{\numberline {4}Resultados}{27}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{27}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{27}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Asignación de estaciones y validación de contigüidad geográfica}{28}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{29}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Patrones estacionales del balance hídrico}{30}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{31}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Análisis de intensidad del déficit hídrico}{31}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{32}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{32}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Resultados del modelo de datos de panel}{34}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Selección del estimador: El test de especificación de Hausman}{34}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Verificación de la dependencia de sección cruzada (correlación espacial)}{35}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Estimación del modelo final}{35}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{36}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Evaluación de la significancia del incremento de las temperaturas (Contraste SPEI vs. SPI)}{38}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Discusión y conclusiones}{40}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Discusión de los hallazgos climatológicos principales}{40}{section.5.1}%
-\contentsline {subsubsection}{1. Aridificación estival acelerada en la subregión sur-este (Clúster 1)}{40}{section*.11}%
-\contentsline {subsubsection}{2. Aridificación en la transición estacional de la primavera (Clúster 2)}{41}{section*.12}%
-\contentsline {subsubsection}{3. Aridificación estival de subregión centro-chaco (Clúster 2)}{41}{section*.13}%
-\contentsline {subsubsection}{4. Desviación negativa marginal en el otoño sur-este (Clúster 1)}{41}{section*.14}%
-\contentsline {subsection}{\numberline {5.1.1}El calentamiento global como impulsor de la aridificación en Paraguay}{42}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Conclusiones generales}{42}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Cumplimiento de los objetivos y respuestas a las interrogantes}{43}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Contraste y validación de las hipótesis de investigación}{44}{subsection.5.2.2}%
-\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{46}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Entorno computacional}{47}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{49}{appendix.Alph3}%
-\contentsline {chapter}{Referencias}{52}{appendix.Alph3}%
-\contentsline {section}{Referencias}{52}{section*.15}%
+\contentsline {chapter}{\numberline {2}Marco Teórico}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Antecedentes de investigación en Paraguay}{6}{section.2.1}%
+\contentsline {section}{\numberline {2.2}La sequía}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Características}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Clasificación}{7}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Impulsores}{7}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}Consecuencias}{8}{subsection.2.2.4}%
+\contentsline {section}{\numberline {2.3}Aridificación y sequía}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Consistencia y completitud en series temporales}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Cuantificación de la sequía meteorológica: Los índices SPI y SPEI}{10}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}El indice de precipitación estandarizada (SPI)}{10}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Balance hídrico y el índice de precipitación-evapotranspiración estandarizado (SPEI)}{10}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Acumulación del balance hídrico en múltiples escalas}{11}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Fundamentos del agrupamiento no supervisado (clustering) para regionalización geográfica de la sequía}{12}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Algoritmo de agrupamiento jerárquico aglomerativo}{12}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Determinación de la partición óptima mediante el coeficiente de silueta}{13}{subsection.2.6.2}%
+\contentsline {section}{\numberline {2.7}Fundamentos del modelado estadístico para datos de panel}{14}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Modelos de efectos fijos (FE) vs. efectos aleatorios (RE)}{14}{subsection.2.7.1}%
+\contentsline {subsubsection}{Modelo de efectos fijos (FE)}{15}{section*.8}%
+\contentsline {subsubsection}{Modelo de efectos aleatorios (RE)}{15}{section*.9}%
+\contentsline {subsection}{\numberline {2.7.2}Selección del modelo: El test de especificación de Hausman}{15}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.3}Supuestos y limitaciones del modelo de panel}{16}{subsection.2.7.3}%
+\contentsline {subsubsection}{Cálculo teórico de los errores estándar agrupados}{17}{section*.10}%
+\contentsline {section}{\numberline {2.8}El rol del calentamiento global en las sequías}{18}{section.2.8}%
+\contentsline {chapter}{\numberline {3}Materiales y Métodos}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Diseño de la investigación}{20}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Fuentes de datos y variables}{20}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Procedimiento de extracción y validación de Datos}{20}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Definición de variables climáticas}{21}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Procedimiento, depuración e imputación de datos}{21}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Algoritmo de imputación de temperatura por capas}{22}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Criterio de no Imputación para la variable precipitación}{23}{subsection.3.3.2}%
+\contentsline {section}{\numberline {3.4}Agregación de datos y creación de la base mensual}{23}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Construcción de la variable dependiente: el índice SPEI-6}{24}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Regionalización geográfica mediante agrupamiento no supervisado}{25}{section.3.6}%
+\contentsline {section}{\numberline {3.7}Especificación del modelo de panel y test de Hausman}{25}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Corrección de la dependencia espacial: el estimador de Driscoll y Kraay}{26}{subsection.3.7.1}%
+\contentsline {section}{\numberline {3.8}Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}{26}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Resultados}{28}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{28}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{28}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Asignación de estaciones y validación de contigüidad geográfica}{29}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{30}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Patrones estacionales del balance hídrico}{31}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{32}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Análisis de intensidad del déficit hídrico}{32}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{33}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{33}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Resultados del modelo de datos de panel}{35}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Selección del estimador: El test de especificación de Hausman}{35}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Verificación de la dependencia de sección cruzada (correlación espacial)}{36}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Estimación del modelo final}{36}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{37}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Evaluación de la significancia del incremento de las temperaturas (Contraste SPEI vs. SPI)}{39}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Discusión y conclusiones}{41}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Discusión de los hallazgos climatológicos principales}{41}{section.5.1}%
+\contentsline {subsubsection}{1. Aridificación estival acelerada en la subregión sur-este (Clúster 1)}{41}{section*.11}%
+\contentsline {subsubsection}{2. Aridificación en la transición estacional de la primavera (Clúster 2)}{42}{section*.12}%
+\contentsline {subsubsection}{3. Aridificación estival de subregión centro-chaco (Clúster 2)}{42}{section*.13}%
+\contentsline {subsubsection}{4. Desviación negativa marginal en el otoño sur-este (Clúster 1)}{42}{section*.14}%
+\contentsline {subsection}{\numberline {5.1.1}El calentamiento global como impulsor de la aridificación en Paraguay}{43}{subsection.5.1.1}%
+\contentsline {section}{\numberline {5.2}Conclusiones generales}{43}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Cumplimiento de los objetivos y respuestas a las interrogantes}{44}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Contraste y validación de las hipótesis de investigación}{45}{subsection.5.2.2}%
+\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{47}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Entorno computacional}{48}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{50}{appendix.Alph3}%
+\contentsline {chapter}{Referencias}{53}{appendix.Alph3}%
+\contentsline {section}{Referencias}{53}{section*.15}%
