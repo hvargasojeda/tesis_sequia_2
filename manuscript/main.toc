@@ -74,18 +74,8 @@
 \contentsline {subsection}{\numberline {4.3.3}Estimación del modelo final}{36}{subsection.4.3.3}%
 \contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{37}{subsection.4.3.4}%
 \contentsline {section}{\numberline {4.4}Evaluación de la significancia del incremento de las temperaturas (contraste SPEI vs. SPI)}{39}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Discusión y conclusiones}{41}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Discusión de los hallazgos climatológicos principales}{41}{section.5.1}%
-\contentsline {subsubsection}{1. Aridificación estival acelerada en la subregión sur-este (Clúster 1)}{41}{section*.10}%
-\contentsline {subsubsection}{2. Aridificación en la transición estacional de la primavera (Clúster 2)}{42}{section*.11}%
-\contentsline {subsubsection}{3. Aridificación estival de subregión centro-chaco (Clúster 2)}{42}{section*.12}%
-\contentsline {subsubsection}{4. Desviación negativa marginal en el otoño sur-este (Clúster 1)}{42}{section*.13}%
-\contentsline {subsection}{\numberline {5.1.1}El calentamiento global como impulsor de la aridificación en Paraguay}{43}{subsection.5.1.1}%
-\contentsline {section}{\numberline {5.2}Conclusiones generales}{43}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Cumplimiento de los objetivos y respuestas a las interrogantes}{44}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Contraste y validación de las hipótesis de investigación}{45}{subsection.5.2.2}%
-\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{47}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Entorno computacional}{48}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{50}{appendix.Alph3}%
-\contentsline {chapter}{Referencias}{53}{appendix.Alph3}%
-\contentsline {section}{Referencias}{53}{section*.14}%
+\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{41}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Entorno computacional}{42}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{44}{appendix.Alph3}%
+\contentsline {chapter}{Referencias}{47}{appendix.Alph3}%
+\contentsline {section}{Referencias}{47}{section*.10}%
