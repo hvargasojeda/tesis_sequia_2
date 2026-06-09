@@ -3,10 +3,6 @@
  
 
 
-
-
-
-
  
 
 \section{Planteamiento del problema}
@@ -17,15 +13,13 @@ Si bien, a nivel nacional, literaturas recientes han documentado tendencias asce
 
 El principal vacío metodológico radica en la limitada aplicación de métricas de estrés hídrico sensibles al aumento de las temperaturas vinculadas al calentamiento global y de modelos cuantitativos capaces de estimar trayectorias temporales de largo plazo de la sequía para detectar procesos de aridificación en Paraguay. 
 
-Esta tesis tiene en cuenta la temperatura, en dos dimensiones o efectos, por una parte, su vínculo con el aumento de la demanda evaporativa por el incremento de las temperaturas,  por otra, su naturaleza intrinseca a las fluctuaciones anuales que propician las estaciones (verano, invierno, primavera, otoño). Históricamente, el régimen climático de Paraguay se ha caracterizado por veranos húmedos e inviernos relativamente más secos; sin embargo, esta configuración estacional anual podría estar experimentando modificaciones estructurales como consecuencia de variaciones en las frecuencias, intensidad, duración y extensiónde las sequías.
+Esta investigación aborda la influencia de la temperatura bajo dos dimensiones: por un lado, su vinculación directa con el aumento de la demanda evaporativa de la atmósfera; por otro, su comportamiento estacional intrínseco. Históricamente, el régimen climático de Paraguay se ha caracterizado por veranos húmedos e inviernos relativamente más secos; no obstante, esta configuración estacional podría estar experimentando modificaciones estructurales en la frecuencia, intensidad, duración y extensión de los eventos de sequía.
 
 A partir de esta brecha de conocimiento en Paraguay, se formulan las siguientes preguntas de investigación considerando el período de estudio 2000--2023:
 \begin{enumerate}
-    \item ¿En qué medida el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI) resulta superior al Índice de Precipitación Estandarizado (SPI) para capturar la severidad de las sequías bajo condiciones de aumento térmico en Paraguay?
-    \item ¿Cuáles son los patrones carácterísticos de las sequías en Paraguay (2000--2023) en términos de frecuencia, intensidad, duración y extensión? 
-    \item ¿La evolución temporal de la sequía fue homogéneo en todo el territorio nacional?
+    \item ¿Cuáles son las características de las sequías en Paraguay en términos de su frecuencia, intensidad, duración y extensión espacial? 
     \item ¿Existen evidencias significativas de procesos de aridificación en Paraguay y cómo varía su intensidad entre las diferentes estaciones climáticas y regiones geográficas? 
-    \item ¿Tener en cuenta no solo las lluvias sino también la temperatura prodújo una dinámica significativamente más negativa, evidenciando un efecto térmico asociado al calentamiento global?
+    \item ¿En qué medida la incorporación de la temperatura, junto con las precipitaciones, genera una dinámica de balance hídrico significativamente más negativa, evidenciando el efecto del estrés térmico asociado al calentamiento global?
 \end{enumerate}
 
 \section{Justificación de la investigación}
@@ -34,15 +28,15 @@ El desarrollo de este trabajo se justifica bajo tres dimensiones analíticas:
 \begin{itemize}
     \item \textit{Dimensión Socioeconómica:} contar con una métrica precisa de un balance hídrico que incorpore la temperatura y sus  dinámicas provee evidencia empírica clave para el diseño de políticas de adaptación sectorial, optimizando la gestión de riesgos en sectores altamente vulnerables como el agropecuario \cite{cepal2014, secretaria2017}.
     \item \textit{Dimensión Científica:} supera las limitaciones de análisis climáticos previos al proveer una cuantificación que permita una caracterización sistemática de la sequía en Paraguay incorporando un enfoque multivariado que integra la temperatura como un factor condicionante, mejorando su comprensión en el marco del calentamiento global.
-    \item \textit{Dimensión Metodológica:} introduce el cálculo de un índice integrado sensible al calentamiento global y un modelado cuantitativo no explorado para caso nacional, proporcionando un marco de análisis replicable y adaptable para futuras investigaciones sobre sequía y aridificación en la región.
+    \item \textit{Dimensión Metodológica:} introduce el cálculo de un índice integrado sensible al calentamiento global y un modelado de datos de panel no explorado para caso nacional, proporcionando un marco de análisis replicable y adaptable para futuras investigaciones sobre sequía y aridificación en la región.
 \end{itemize}
 
 \section{Hipótesis}
 
 Para guiar el análisis empírico, se plantean las siguientes hipótesis de investigación:
 \begin{itemize}
-    \item H1: El incremento de las temperaturas medias en Paraguay durante el periodo 2000–2023 se ha traducido en un aumento de la frecuencia, severidad, duración y extensión de los eventos de sequía.
-    \item H2: El período 2000--2023 se caracterizó por procesos de aridificación en Paraguay que presentan dinámicas espacialmente divergentes y una marcada estacionalidad, concentrando su mayor intensidad y persistencia en estaciones climáticas específicas.
+    \item H1: El incremento de las temperaturas medias en Paraguay durante el período 2000–2023 se ha traducido en un aumento de la demanda evaporativa que altera el balance hídrico, propiciando un incremento en la frecuencia, severidad, duración y extensión de los eventos de sequía.
+    \item H2: El período 2000--2023 se caracterizó por procesos de aridificación en Paraguay con dinámicas espacialmente divergentes y una marcada estacionalidad, concentrando su mayor intensidad y persistencia en estaciones climáticas específicas.
     \item H3: La incorporación del factor térmico en la evaluación de las sequías en Paraguay (2000--2023) revela que el aumento de las temperaturas intensifica de forma significativa la severidad y persistencia de las sequías, evidenciando el peso del estrés térmico asociado al calentamiento global.
 \end{itemize}
 
@@ -54,10 +48,9 @@ Evaluar la evolución temporal y espacial de las sequías y los procesos de arid
 
 \subsection{Objetivos específicos}
 \begin{enumerate}
-    \item Recopilar, depurar y estructurar una base de datos en formato de panel que integre los registros de precipitación y temperatura de las estaciones meteorológicas oficiales del Paraguay, aplicando criterios rigurosos de control de calidad y selección muestral.
-    \item Estimar las series mensuales del SPEI en Paraguay (2000--2023) a diferentes escalas temporales para capturar respuestas hidrológicas y agrícolas diferenciadas.
-    \item Presentar un análisis descriptivo de la sequía para caracterizar sus patrones, frecuencia, intensidad, duración y extensión espacial de la sequía a nivel nacional.
+    \item Estimar las series mensuales del Índice de Precipitación-Evapotranspiración Estandarizado (SPEI) en Paraguay (2000–2023) a múltiples escalas temporales, mediante la estructuración previa de una base de datos en formato de panel que integre registros oficiales filtrados por controles de consistencia climática.
+    \item Realizar un análisis descriptivo para caracterizar los patrones de frecuencia, intensidad, duración y extensión espacial de las sequías a nivel nacional.
     \item Regionalizar el territorio paraguayo a partir de la variabilidad común del balance hídrico, utilizando técnicas de agrupamiento espacial para identificar zonas climáticas homogéneas.
-    \item Cuantificar las tendencias del SPEI mediante el análisis de regresión para evaluar la aridificación tanto espacial como entre estaciones climáticas.
-    \item Determinar la contribución del estrés térmico en la intensificación de las sequías mediante el análisis comparativo de las anomalías del SPEI frente al SPI.
+    \item Cuantificar las tendencias temporales del SPEI mediante un modelo de datos de panel, para identificar y evaluar los procesos de aridificación a nivel espacial y estacional.
+    \item Evaluar la contribución del estrés térmico en la intensificación de las sequías a través de un análisis comparativo y estadístico de las dinámicas del SPEI frente al SPI.
 \end{enumerate}
