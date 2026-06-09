@@ -24,7 +24,7 @@ El análisis de datos de panel se centra de manera exclusiva en las variables de
     \item \textit{Temperatura mínima diaria ($T_{\text{mín}, t}$):} usada como variable de apoyo para la imputación térmica ($^{\circ}\text{C}$).
 \end{itemize}
 
-\section{Procedimiento, depuración e imputación de datos}
+\section{Procesamiento, depuración e imputación de datos}
 
 Se examinó la cobertura histórica de cada una de las 19 estaciones terrestres respecto al rango teórico esperado de 8,766 días (24 años). El análisis de completitud determinó que la estación de Paraguarí (PARA) presentaba un truncamiento temporal crítico: sus registros inician únicamente a partir del 1 de abril de 2006, registrando una pérdida masiva superior al 26\% de la serie temporal bajo estudio (2,282 días faltantes). 
 
@@ -82,9 +82,61 @@ Para el cálculo del Índice de Precipitación-Evapotranspiración Estandarizado
 
 Para analizar la distribución espacial de la sequía y evitar límites políticos arbitrarios, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo (HAC) sobre las series de SPEI-6 de las 18 estaciones. Se implementó la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward. El número óptimo de subregiones climáticas ($k^*$) se determinó mediante la maximización del Coeficiente de Silueta Promedio de Rousseeuw \cite{rousseeuw1987}.
 
-\section{Especificación del modelo de panel y test de Hausman}\label{sec:modelo_estadistico}
+Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementa el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de Ward \cite{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como el estimador más eficiente para la regionalización de variables continuas. Esto asegura que las estaciones dentro de cada clúster tengan series de SPEI-6 sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
 
-Para cuantificar las tendencias temporales del balance hídrico se ajustó el modelo de regresión lineal de panel especificado en la ecuación \ref{eq:modelo_completo} y la selección entre la estimación por efectos fijos (FE) y efectos aleatorios (RE) se fundamentó en el test de especificación de \citeA{hausman1978}, evaluando formalmente la consistencia del estimador RE frente a la ortogonalidad de los efectos individuales no observados de las 18 estaciones meteorológicas. Para esto se utilizó la librería \textit{linearmodels} de Python.
+La disimilitud o distancia temporal entre dos entidades $X$ y $Y$ se cuantifica mediante la distancia euclídea clásica calculada sobre la totalidad de sus observaciones a lo largo de la serie histórica:
+\begin{equation}
+    d(X, Y) = \sqrt{\sum_{t=1}^{T} (X_t - Y_t)^2}
+    \label{eq:euclidea}
+\end{equation}
+Donde $T$ es el número de periodos analizados en el panel. Dado que el SPEI es un índice normalizado con media cero y desviación estándar unitaria ($Z$-score) en cada estación, la distancia euclídea al cuadrado guarda una relación directa con el coeficiente de correlación de Pearson ($r_{xy}$) entre ambas series:
+\begin{equation}
+    d^2(X, Y) = 2T(1 - r_{xy})
+\end{equation}
+
+Esta equivalencia matemática demuestra que agrupar estaciones meteorológicas minimizando la distancia euclídea equivale a maximizar la sincronía temporal de sus anomalías hídricas. De este modo, las estaciones pertenecientes a un mismo grupo ingresarán, persistirán y saldrán de los eventos de sequía de manera homogénea a lo largo del tiempo.
+
+\subsection{El coeficiente de silueta}
+
+Para cada estación individual $i$, se calcula su respectivo coeficiente de silueta $s(i)$ mediante la relación:
+\begin{equation}
+    s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}
+    \label{eq:silueta}
+\end{equation}
+Donde:
+\begin{itemize}
+    \item $a(i)$ representa la distancia euclídea promedio entre la estación $i$ y todos los demás miembros de su propio clúster.
+    \item $b(i)$ representa la distancia promedio mínima entre la estación $i$ y todos los miembros del clúster vecino más cercano.
+\end{itemize}
+
+El valor de $s(i)$ se halla estrictamente acotado en el intervalo $[-1, 1]$. Un valor cercano a $1$ indica que la estación se encuentra correctamente asignada a su región y adecuadamente separada de las demás; un valor de $0$ sugiere una zona de transición de baja diferenciación; y un valor negativo denota una clasificación incorrecta. El número óptimo de clústeres ($k^*$) se determina maximizando el ancho de silueta promedio de toda la red de estaciones $M$:
+\begin{equation}
+    k^* = \arg\max_{k} \left( \frac{1}{M} \sum_{i=1}^{M} s(i) \right)
+    \label{eq:siluetamax}
+\end{equation}
+
+\section{Test de Hausman}\label{sec:modelo_estadistico}
+
+La elección metodológica entre la aproximación de efectos fijos y efectos aleatorios no se determina de forma discrecional, sino que se fundamenta en la consistencia estadística del modelo RE. El test de especificación de Hausman \cite{hausman1978} constituye la prueba estadística estándar para evaluar esta idoneidad, evaluando formalmente la consistencia del estimador RE frente a la ortogonalidad de los efectos individuales no observados de las 18 estaciones meteorológicas. Para esto se utilizó la librería \textit{linearmodels} de Python.
+
+La hipótesis nula del test establece que no existen diferencias sistemáticas significativas entre ambos estimadores:
+\begin{equation}
+    H_0: \hat{\beta}_{FE} = \hat{\beta}_{RE}
+\end{equation}
+
+Si el p-valor calculado para la estadística de prueba es inferior al nivel de significancia establecido (típicamente $\alpha = 0.05$), se rechaza la hipótesis nula, indicando la presencia de correlación y la obligatoriedad metodológica de implementar la aproximación de efectos fijos para garantizar la consistencia de las estimaciones. Por el contrario, un p-valor elevado sugiere que las estimaciones del modelo de efectos aleatorios son robustas y preferibles debido a su mayor eficiencia.
+
+\section{Corrección de la dependencia espacial: el estimador de Driscoll y Kraay}
+
+Para probar la depencia espacial utilizamos el test de Pesaran \cite{pesaran2004}, el cual contrasta la hipótesis nula de independencia espacial mutua a partir del promedio de las correlaciones lineales de los residuos de sección cruzada:
+\begin{equation}
+    CD = \sqrt{\frac{2T}{N(N-1)}} \left( \sum_{i=1}^{N-1} \sum_{j=i+1}^{N} \hat{\rho}_{ij} \right)
+\end{equation}
+Donde $\hat{\rho}_{ij}$ representa el coeficiente de correlación muestral de Pearson entre los residuos de la unidad $i$ y la unidad $j$. Bajo la hipótesis nula, el estadístico se distribuye de forma asintótica como una normal estándar ($CD \xrightarrow{d} N(0, 1)$).
+
+Para controlar y corregir de manera simultánea la presencia de autocorrelación serial temporal y de correlación espacial o de sección cruzada identificada en la red de monitoreo, se prescinde de los errores estándar de clúster convencionales y se adopta el estimador de matriz de covarianza robusto desarrollado por Driscoll y Kraay (1998).
+
+\section{Modelo de regresión de panel de efectos aleatorios}
 
 La especificación completa del modelo estimado, incluyendo todas las variables e interacciones, fue la siguiente:
 \sloppy
@@ -99,11 +151,7 @@ La especificación completa del modelo estimado, incluyendo todas las variables 
 \end{equation}
 donde $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, y los términos $\text{estacion-climatica}_{s,t}$ y $\text{region-geografica}_i$ son variables dummys para las categorías estacionales climáticas (invierno, primavera, verano, otoño) y regionales geográficas (clusters), respectivamente.
 
-\subsection{Corrección de la dependencia espacial: el estimador de Driscoll y Kraay}
 
-Para controlar y corregir de manera simultánea la presencia de autocorrelación serial temporal y de correlación espacial o de sección cruzada identificada en la red de monitoreo, se prescinde de los errores estándar de clúster convencionales y se adopta el estimador de matriz de covarianza robusto desarrollado por \cite{driscoll1998}. 
-
-El método de Driscoll-Kraay es un estimador no paramétrico de matriz de covarianza consistente ante la presencia de heterocedasticidad, autocorrelación y cualquier forma de dependencia espacial o de sección cruzada. Su ventaja metodológica radica en que estima la estructura de covarianza de las medias temporales de los momentos transversales mediante un estimador tipo Newey-West con un kernel espectral de Bartlett, asegurando la consistencia de los errores estándar y garantizando intervalos de confianza robustos para la inferencia de las tendencias dinámicas de sequía a nivel nacional \cite{wooldridge2010}.
 
 \section{Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}
 

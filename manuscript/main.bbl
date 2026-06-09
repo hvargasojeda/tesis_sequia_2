@@ -28,6 +28,29 @@ Abramowitz, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Blanco%
+\ \BBA {} Doyle%
+}{%
+Blanco%
+\ \BBA {} Doyle%
+}{%
+{\protect \APACyear {2023}}%
+}]{%
+inproceedings}
+\APACinsertmetastar {%
+inproceedings}%
+\begin{APACrefauthors}%
+Blanco, P.%
+\BCBT {}\ \BBA {} Doyle, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2023}{10}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Análisis de la aridificación en la República Argentina a través de índices climáticos de aridez durante el período 1961-2018} {Análisis de la aridificación en la república argentina a través de índices climáticos de aridez durante el período 1961-2018}.{\BBCQ}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Ch{\'a}vez%
 }{%
 Ch{\'a}vez%
@@ -172,6 +195,33 @@ Hausman, J\BPBI A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Huarahuara~Toma%
+\ \BBA {} Silva~Borda%
+}{%
+Huarahuara~Toma%
+\ \BBA {} Silva~Borda%
+}{%
+{\protect \APACyear {2024}}%
+}]{%
+huarahuara_silva_2024}
+\APACinsertmetastar {%
+huarahuara_silva_2024}%
+\begin{APACrefauthors}%
+Huarahuara~Toma, R\BPBI V.%
+\BCBT {}\ \BBA {} Silva~Borda, A\BPBI N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2024}.
+\unskip\
+\newblock
+\APACrefbtitle {Uso de SPI, SPEI y VCI para caracterizar sequías históricas y sus proyecciones futuras en Candarave, Tacna} {Uso de spi, spei y vci para caracterizar sequías históricas y sus proyecciones futuras en candarave, tacna}\ \APACtypeAddressSchool {Tesis de pregrado}{Tacna, Perú}{Universidad Nacional Jorge Basadre Grohmann}.
+\unskip\
+\newblock
+\begin{APACrefURL} \url{https://repositorio.unjbg.edu.pe/items/ff0f7ae5-6621-4a1f-a578-e6d409ef191f} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Masson-Delmotte%
 \ \protect \BOthers {.}}{%
 Masson-Delmotte%
@@ -249,6 +299,33 @@ Mishra, A\BPBI K.%
 \APACjournalVolNumPages{Journal of Hydrology}{391}{1-2}{202--216}.
 \newblock
 \begin{APACrefDOI} \doi{10.1016/j.jhydrol.2010.07.012} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mungul%
+\ \BBA {} Nowbuth%
+}{%
+Mungul%
+\ \BBA {} Nowbuth%
+}{%
+{\protect \APACyear {2025}}%
+}]{%
+mungul2025comparative}
+\APACinsertmetastar {%
+mungul2025comparative}%
+\begin{APACrefauthors}%
+Mungul, V.%
+\BCBT {}\ \BBA {} Nowbuth, M\BPBI D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{}{}.
+\newblock
+\APACrefbtitle {Comparative study of SPI and SPEI drought indices for meteorological drought assessment in Mauritius} {Comparative study of spi and spei drought indices for meteorological drought assessment in mauritius}\ (\BVOL~17)\ (\BNUM~2).
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.4102/jamba.v17i2.1748} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.4102/jamba.v17i2.1748} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -560,6 +637,34 @@ Vicente-Serrano, S\BPBI M.%
 \APACjournalVolNumPages{Journal of Climate}{23}{7}{1696--1718}.
 \newblock
 \begin{APACrefDOI} \doi{10.1175/2009JCLI2909.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Vicente-Serrano%
+, Tomas-Burguera%
+, Peña-Angulo%
+\BCBL {}\ \BBA {} Domínguez-Castro%
+}{%
+Vicente-Serrano%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2025}}%
+}]{%
+theconversation_aridificacion_2025}
+\APACinsertmetastar {%
+theconversation_aridificacion_2025}%
+\begin{APACrefauthors}%
+Vicente-Serrano, S\BPBI M.%
+, Tomas-Burguera, M.%
+, Peña-Angulo, D.%
+\BCBL {}\ \BBA {} Domínguez-Castro, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2025}{apr}{8}.
+\newblock
+\APACrefbtitle {La aridificación del clima, una silenciosa pero implacable amenaza global.} {La aridificación del clima, una silenciosa pero implacable amenaza global.}
+\newblock
+\begin{APACrefURL} \url{https://theconversation.com/la-aridificacion-del-clima-una-silenciosa-pero-implacable-amenaza-global-250969} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
