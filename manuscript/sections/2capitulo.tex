@@ -59,7 +59,7 @@ Tradicionalmente, la sequía se ha estudiado mediante índices como el Índice E
 
 Un aporte referencial abordó fundamentalmente la aplicación de índices de sequía para caracterizar tanto las históricas como también sus proyecciones futuras, se trabajó con la data observada (precipitación, temperatura máxima y temperatura mínima) por el Servicio Nacional de Meteorología e Hidrología del Perú en el periodo de 1980 hasta 2022. Se utilizaron tres índices de evaluación de sequías ampliamente reconocidos: el Índice de Precipitación Estandarizado (SPI), el Índice Estandarizado de Precipitación y Evapotranspiración (SPEI) y el Índice de Condición de Vegetación (VCI) \cite{huarahuara_silva_2024}.
 
-De manera similar, el estudio de la aridificación también se ha abordado mediante índices de aridéz y balances hídricos como la investigación de \citeA{inproceedings} analizando la aridificación en la república de la Argentina, los resultados indicaron que algunas regiones de Argentina tuvieron una disminución del índice de UNEP y su clima cambió a favor de condiciones más áridas.
+De manera similar, el estudio de la aridificación también se ha abordado mediante índices de aridéz y balances hídricos como la investigación de \cite{blanco2023}, analizando la aridificación en la república de la Argentina, los resultados indicaron que algunas regiones de Argentina tuvieron una disminución del índice de UNEP y su clima cambió a favor de condiciones más áridas.
 
 \subsection{Contexto nacional}
 
@@ -72,8 +72,6 @@ Un hallazgo relevante de \citeA{grassi2020} es que, a pesar de registrarse incre
 \section[Consistencia y completitud en series temporales]{Consistencia y completitud en series temporales\\ climatológicas}
 \sloppy
 Un desafío recurrente en la modelización climatológica es la presencia de registros faltantes, el tratamiento inapropiado de la falta de datos mediante la eliminación sistemática de periodos observacionales introduce un sesgo que disminuye sustancialmente el poder estadístico de los modelos y altera el cálculo de acumulaciones temporales consecutivas esenciales para los índices de sequía. De acuerdo con las directrices metodológicas de la Organización Meteorológica Mundial \cite{wmo2017}, la imputación de huecos cortos en series temporales es una práctica estandarizada y necesaria para asegurar la homogeneidad y consistencia de los datos. 
-
-El tratamiento de registros faltantes en esta investigación se fundamenta teóricamente en la preservación de la estructura de autocorrelación de las series continuas. Para variables con una alta inercia temporal, como la temperatura, se emplean interpolaciones lineales sobre ventanas temporales restringidas. En el caso de variables intermitentes y asimétricas, como la precipitación, se evita la imputación garantizando la consistencia analítica requerida para el posterior cálculo multiescalar de los índices de sequía.
 
 \section{Cuantificación de la sequía meteorológica: Los índices SPI y SPEI}
 
@@ -92,7 +90,13 @@ Para resolver las limitaciones conceptuales del SPI ante el incremento térmico 
     D_i = P_i - ETP_i
 \end{equation}
 
-El cálculo del índice acumula estas diferencias mensuales en diferentes escalas de tiempo históricas. Debido a que el balance hídrico puede tomar valores negativos, se recurre a la distribución Log-Logística de tres parámetros para ajustar las series temporales, ofreciendo una flexibilidad superior a la distribución Gamma de dos parámetros del SPI. Finalmente, se realiza el proceso de estandarización normal clásico para obtener los valores del SPEI ($Z$-score), permitiendo una clasificación objetiva de la intensidad de las anomalías hídricas (Cuadro 2.1).
+El cálculo del índice acumula estas diferencias mensuales en diferentes escalas de tiempo históricas. Debido a que el balance hídrico puede tomar valores negativos, se recurre a la distribución Log-Logística de tres parámetros para ajustar las series temporales expresada como:
+\begin{equation}
+    f(x) = \frac{\beta}{\alpha} \left( \frac{x - \gamma}{\alpha} \right)^{\beta - 1} \left[ 1 + \left( \frac{x - \gamma}{\alpha} \right)^{\beta} \right]^{-2}
+\end{equation}
+
+Donde $\alpha$, $\beta$ y $\gamma$ representan los parámetros de escala, forma y localización, respectivamente, estimados mediante el método de momentos ponderados de probabilidad (L-moments). La distribución acumulada $F(x)$ se transforma posteriormente en la variable normal estandarizada $Z(\mathrm{SPEI})$ con media cero y varianza unitaria, permitiendo una clasificación objetiva de la intensidad de las anomalías hídricas (Cuadro \ref{tab:clasificacion_spei}).
+
 
 \begin{table}[ht!]
 \centering
@@ -113,14 +117,12 @@ El cálculo del índice acumula estas diferencias mensuales en diferentes escala
 
 \subsection{Acumulación del balance hídrico en múltiples escalas}
 
-El déficit hídrico no genera impactos inmediatos, sino que actúa bajo dinámicas temporales multiescalares. En consecuencia, la serie temporal del balance hídrico mensual se acumula en diferentes escalas de tiempo temporales $k$ \cite{mckee1993}:
+El déficit hídrico no genera impactos inmediatos, sino que actúa bajo dinámicas temporales multiescalares. En consecuencia, la serie temporal del balance hídrico mensual se acumula en diferentes escalas de tiempo $k$ \cite{mckee1993}:
 \begin{itemize}
     \item {SPEI a 3 meses (SPEI-3):} Representa condiciones de balance a corto plazo, útil para caracterizar anomalías de humedad en la capa superficial del suelo.
     \item {SPEI a 6 meses (SPEI-6):} Actúa como una escala intermedia y puente entre las anomalías meteorológicas rápidas y los impactos de escala hidrológica en caudales menores. 
     \item {SPEI a 12 meses (SPEI-12):} Mide variaciones a largo plazo asociadas a las reservas en acuíferos, embalses y sistemas fluviales de mayor envergadura.
 \end{itemize}
-
-Por su relevancia integral para capturar impactos de corto y mediano plazo de la sequía, se seleccionó al SPEI-6 como métrica para el análisis de la sequía, además siendo la variable dependiente del modelo ajustado.
 
 \subsection{Limitaciones del índice SPEI}
 
@@ -134,7 +136,7 @@ El índice SPEI, aunque es una herramienta avanzada para el monitoreo de sequía
 
 \section{Fundamentos del agrupamiento no supervisado (clustering) para regionalización geográfica de la sequía}
 
-Las divisiones político-administrativas o fisiográficas tradicionales de Paraguay (Región Oriental y Región Occidental) pueden no corresponder de manera exacta con los patrones meteorológicos y de balance hídrico dinámicos. Para resolver el problema de la variabilidad espacial de la sequía de manera objetiva vamos a utilizar los datos reales del SPEI-6 de cada estación meteorológica para agruparlas en regiones geográficas homogéneas, mediante un algoritmo de agrupamiento no supervisado, proporcionando un marco analítico riguroso para agrupar las estaciones meteorológicas basándose exclusivamente en la variabilidad temporal y covarianza de sus series históricas de balance hídrico.
+Las divisiones político-administrativas o fisiográficas tradicionales de Paraguay (Región Oriental y Región Occidental) pueden no corresponder de manera exacta con los patrones meteorológicos y de balance hídrico dinámicos. Con el propósito de abordar la variabilidad espacial de la sequía de manera objetiva, el análisis emplea la información histórica del SPEI-6 de cada estación meteorológica con el fin de agruparlas en regiones geográficas homogéneas, mediante un algoritmo de agrupamiento no supervisado, proporcionando un marco analítico riguroso para agrupar las estaciones meteorológicas basándose exclusivamente en la variabilidad temporal y covarianza de sus series históricas de balance hídrico.
 
 \subsection{Algoritmo de agrupamiento jerárquico aglomerativo}
 
@@ -197,7 +199,7 @@ La validez metodológica del modelo de efectos aleatorios descansa sobre la veri
     Debido a que las series climatológicas suelen exhibir autocorrelación y heterocedasticidad, este estudio aborda preventivamente dicha potencial desviación mediante la estimación de la regresión de Driscoll-Kraay.
 \end{enumerate}
 
-\subsection{Test de Pesaran (dependencia espacial) y regresión de Driscoll-Kraay (HAC/CSD)}
+\subsection{Test de Pesaran (dependencia espacial) y regresión de Driscoll - Kraay (HAC/CSD)}
 
 La presencia de esta correlación, denominada en la literatura estadística como dependencia de sección cruzada o correlación espacial, no sesga los coeficientes de pendiente estimados, pero invalida la inferencia estadística clásica al subestimar severamente la magnitud de los errores estándar \cite{wooldridge2010}. Para abordar esta limitación, se implementará el test de dependencia de sección cruzada desarrollado por \citeA{pesaran2004}.
 
@@ -220,6 +222,6 @@ Finalmente, una limitación inherente al marco de modelización propuesto reside
 
 En el contexto del cambio climático, el concepto clásico de sequía como un fenómeno impulsado exclusivamente por el déficit de precipitación ha quedado obsoleto. Las investigaciones de \citeA{trenberth_global_2014} introducen el concepto de "sequías más cálidas" (\textit{hotter droughts}), caracterizadas por un acoplamiento estrecho entre el déficit de suministro de agua (lluvias) y el incremento desproporcionado de la demanda atmosférica (evapotranspiración potencial o ETP), impulsada de forma directa por el calentamiento global.
 
-Para aislar el efecto de la ETP sobre el balance hídrico, recurrimos al contraste sistemático de dos índices: el Índice de Precipitación Estandarizada (SPI), que mide de forma univariada las anomalías de suministro de lluvia \cite{mckee1993}, y el Índice de Precipitación-Evapotranspiración Estandarizado (SPEI), que incorpora la sensibilidad a la temperatura mediante la deconstrucción de la ETP \cite{vicenteserrano2010}. 
+Para aislar el efecto de la ETP sobre el balance hídrico, el análisi recurre al contraste sistemático de dos índices: el Índice de Precipitación Estandarizada (SPI), que mide de forma univariada las anomalías de suministro de lluvia \cite{mckee1993}, y el Índice de Precipitación - Evapotranspiración Estandarizado (SPEI), que incorpora la sensibilidad a la temperatura mediante la deconstrucción de la ETP \cite{vicenteserrano2010}. 
 
 Desde una perspectiva física, dado que ambos índices se calculan utilizando idéntica escala temporal y normalización normal estándar, la divergencia estadística y temporal entre sus respectivas tendencias ($Trend_{SPEI} - Trend_{SPI}$) representa el residuo térmico aislado. Este residuo constituye la huella del calentamiento global sobre el ciclo hidrológico. Si el SPI muestra estabilidad a largo plazo (ausencia de tendencias significativas en las lluvias), pero el SPEI revela tendencias decrecientes significativas hacia la sequedad, proporciona evidencia empírica de que el incremento de las temperaturas impulsadas por el calentamiento global está exacerbando el balance hídrico.

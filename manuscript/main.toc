@@ -35,11 +35,11 @@
 \contentsline {subsection}{\numberline {2.6.2}Determinación de la partición óptima mediante el coeficiente de silueta}{14}{subsection.2.6.2}%
 \contentsline {section}{\numberline {2.7}Fundamentos del modelado estadístico para datos de panel}{14}{section.2.7}%
 \contentsline {subsection}{\numberline {2.7.1}Modelos de efectos fijos (FE) vs. efectos aleatorios (RE)}{14}{subsection.2.7.1}%
-\contentsline {subsubsection}{Modelo de efectos fijos (FE)}{15}{section*.8}%
+\contentsline {subsubsection}{Modelo de efectos fijos (FE)}{14}{section*.8}%
 \contentsline {subsubsection}{Modelo de efectos aleatorios (RE)}{15}{section*.9}%
 \contentsline {subsection}{\numberline {2.7.2}Selección del modelo: El test de especificación de Hausman}{15}{subsection.2.7.2}%
 \contentsline {subsection}{\numberline {2.7.3}Supuestos del modelo de panel}{16}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}Test de Pesaran (dependencia espacial) y regresión de Driscoll-Kraay (HAC/CSD)}{16}{subsection.2.7.4}%
+\contentsline {subsection}{\numberline {2.7.4}Test de Pesaran (dependencia espacial) y regresión de Driscoll - Kraay (HAC/CSD)}{16}{subsection.2.7.4}%
 \contentsline {subsection}{\numberline {2.7.5}Limitaciones del modelo de panel}{17}{subsection.2.7.5}%
 \contentsline {section}{\numberline {2.8}El rol del calentamiento global en las sequías}{18}{section.2.8}%
 \contentsline {chapter}{\numberline {3}Materiales y Métodos}{19}{chapter.3}%
@@ -56,26 +56,26 @@
 \contentsline {subsection}{\numberline {3.6.1}El coeficiente de silueta}{25}{subsection.3.6.1}%
 \contentsline {section}{\numberline {3.7}Test de Hausman}{25}{section.3.7}%
 \contentsline {section}{\numberline {3.8}Corrección de la dependencia espacial: el estimador de Driscoll y Kraay}{26}{section.3.8}%
-\contentsline {section}{\numberline {3.9}Modelo de regresión de panel de efectos aleatorios}{26}{section.3.9}%
+\contentsline {section}{\numberline {3.9}Modelo de regresión de panel de efectos aleatorios}{27}{section.3.9}%
 \contentsline {section}{\numberline {3.10}Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}{27}{section.3.10}%
-\contentsline {chapter}{\numberline {4}Resultados}{28}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{28}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{28}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Asignación de estaciones y validación de contigüidad geográfica}{29}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{30}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Patrones estacionales del balance hídrico}{31}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{32}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Análisis de intensidad del déficit hídrico}{32}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{33}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{33}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Resultados del modelo de datos de panel}{35}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Selección del estimador: El test de especificación de Hausman}{35}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Verificación de la dependencia de sección cruzada (correlación espacial)}{36}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Estimación del modelo final}{36}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{37}{subsection.4.3.4}%
-\contentsline {section}{\numberline {4.4}Evaluación de la significancia del incremento de las temperaturas (contraste SPEI vs. SPI)}{39}{section.4.4}%
-\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{41}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Entorno computacional}{42}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{44}{appendix.Alph3}%
-\contentsline {chapter}{Referencias}{47}{appendix.Alph3}%
-\contentsline {section}{Referencias}{47}{section*.10}%
+\contentsline {chapter}{\numberline {4}Resultados}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{29}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{29}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Asignación de estaciones y validación de contigüidad geográfica}{30}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{31}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Patrones estacionales del balance hídrico}{32}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{33}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Análisis de intensidad del déficit hídrico}{33}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{34}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{34}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Resultados del modelo de datos de panel}{36}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Selección del estimador: El test de especificación de Hausman}{36}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Verificación de la dependencia de sección cruzada (correlación espacial)}{37}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Estimación del modelo final}{37}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{38}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Evaluación de la significancia del incremento de las temperaturas (contraste SPEI vs. SPI)}{40}{section.4.4}%
+\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{42}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Entorno computacional}{43}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{45}{appendix.Alph3}%
+\contentsline {chapter}{Referencias}{48}{appendix.Alph3}%
+\contentsline {section}{Referencias}{48}{section*.10}%
