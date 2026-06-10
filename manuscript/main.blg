@@ -12,48 +12,45 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibliography.bib
-Warning--entry type for "mungul2025comparative" isn't style-file defined
---line 290 of file bibliography.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-You've used 29 entries,
+You've used 30 entries,
             6951 wiz_defined-function locations,
-            1464 strings with 17355 characters,
-and the built_in function-call counts, 57831 in all, are:
-= -- 7149
-> -- 468
-< -- 2936
-+ -- 2939
-- -- 66
-* -- 3804
-:= -- 10924
-add.period$ -- 124
-call.type$ -- 29
-change.case$ -- 502
+            1473 strings with 17366 characters,
+and the built_in function-call counts, 58808 in all, are:
+= -- 7244
+> -- 475
+< -- 2961
++ -- 2976
+- -- 68
+* -- 3880
+:= -- 11074
+add.period$ -- 128
+call.type$ -- 30
+change.case$ -- 519
 chr.to.int$ -- 0
-cite$ -- 58
-duplicate$ -- 1407
-empty$ -- 2188
-format.name$ -- 728
-if$ -- 10860
+cite$ -- 60
+duplicate$ -- 1452
+empty$ -- 2258
+format.name$ -- 742
+if$ -- 11057
 int.to.chr$ -- 0
-int.to.str$ -- 87
+int.to.str$ -- 90
 missing$ -- 0
-newline$ -- 738
-num.names$ -- 234
-pop$ -- 1086
+newline$ -- 764
+num.names$ -- 242
+pop$ -- 1113
 preamble$ -- 1
-purify$ -- 124
+purify$ -- 128
 quote$ -- 0
-skip$ -- 3508
+skip$ -- 3559
 stack$ -- 0
-substring$ -- 3200
-swap$ -- 833
-text.length$ -- 102
+substring$ -- 3245
+swap$ -- 868
+text.length$ -- 99
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2584
+type$ -- 2592
 warning$ -- 0
-while$ -- 255
+while$ -- 258
 width$ -- 0
-write$ -- 896
-(There was 1 warning)
+write$ -- 924

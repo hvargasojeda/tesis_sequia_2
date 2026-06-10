@@ -90,13 +90,13 @@ Para resolver las limitaciones conceptuales del SPI ante el incremento térmico 
     D_i = P_i - ETP_i
 \end{equation}
 
-El cálculo del índice acumula estas diferencias mensuales en diferentes escalas de tiempo históricas. Debido a que el balance hídrico puede tomar valores negativos, se recurre a la distribución Log-Logística de tres parámetros para ajustar las series temporales expresada como:
+El cálculo del índice acumula estas diferencias mensuales en diferentes escalas de tiempo históricas. Aunque la formulación original del SPEI sugerida por \citeA{vicenteserrano2010} propone el uso de la distribución Log-Logística de tres parámetros, su implementación computacional directa sobre balances hídricos que contienen valores negativos y ceros presenta serias limitaciones de convergencia en las librerías estadísticas estándar. Para resolver esta restricción y garantizar la estabilidad numérica de las estimaciones sin perder consistencia física, la literatura climatológica moderna y esta investigación adoptan la distribución teórica Pearson Tipo III. Esta distribución se define por tres parámetros: forma o asimetría ($\gamma$), localización o media ($\xi$), y escala o desviación estándar ($\beta$). Su función de densidad de probabilidad se expresa como:
+
 \begin{equation}
-    f(x) = \frac{\beta}{\alpha} \left( \frac{x - \gamma}{\alpha} \right)^{\beta - 1} \left[ 1 + \left( \frac{x - \gamma}{\alpha} \right)^{\beta} \right]^{-2}
+    f(x) = \frac{1}{\beta \Gamma(p)} \left( \frac{x - \dots}{\beta} \right)^{p-1} e^{-\left(\frac{x - \xi}{\beta}\right)}
 \end{equation}
 
-Donde $\alpha$, $\beta$ y $\gamma$ representan los parámetros de escala, forma y localización, respectivamente, estimados mediante el método de momentos ponderados de probabilidad (L-moments). La distribución acumulada $F(x)$ se transforma posteriormente en la variable normal estandarizada $Z(\mathrm{SPEI})$ con media cero y varianza unitaria, permitiendo una clasificación objetiva de la intensidad de las anomalías hídricas (Cuadro \ref{tab:clasificacion_spei}).
-
+Donde $\Gamma(p)$ es la función Gamma, y $p = 4/\gamma^2$. Una vez obtenida la probabilidad acumulada teórica $P = F(x)$, esta se normaliza para obtener el índice estandarizado final mediante la inversa de la función de distribución normal estándar, permitiendo una clasificación objetiva de la intensidad de las anomalías hídricas (Cuadro \ref{tab:clasificacion_spei}).
 
 \begin{table}[ht!]
 \centering

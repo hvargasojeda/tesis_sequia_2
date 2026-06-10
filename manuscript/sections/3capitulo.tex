@@ -16,7 +16,7 @@ De forma complementaria, se recopilaron los metadatos de las estaciones terrestr
 
 \subsection{Definición de variables climáticas}
 
-El análisis de datos de panel se centra de manera exclusiva en las variables de precipitación diaria (lluvia) y temperatura media diaria como factores determinantes del balance hídrico. Las variables críticas recopiladas con frecuencia diaria para cada estación meteorológica fueron:
+El análisis de datos de panel se centra de manera exclusiva en las variables de precipitación diaria (lluvia) y temperatura media diaria como factores determinantes del balance hídrico. Las variables críticas recopiladas con frecuencia diarias para cada estación meteorológica fueron:
 \begin{itemize}
     \item \textit{Precipitación diaria ($P_t$):} medida en milímetros ($mm$).
     \item \textit{Temperatura media diaria ($T_{\text{med}, t}$):} medida en grados Celsius ($^{\circ}\text{C}$).
@@ -32,10 +32,10 @@ Con el fin de evitar un sesgo por truncamiento sistemático de la serie temporal
 
 \subsection{Algoritmo de imputación de temperatura por capas}
 
-Para asegurar la continuidad temporal de la temperatura media diaria ($T {\text{med}}$) y evitar la pérdida de observaciones mensuales, se diseñó e implementó un algoritmo de imputación estructurado en tres capas jerárquicas:
+Para asegurar la continuidad temporal de la temperatura media diaria ($T_{\text{med}}$) y evitar la pérdida de observaciones mensuales, se diseñó e implementó un algoritmo de imputación estructurado en tres capas jerárquicas:
 
 \begin{enumerate}
-    \item \textit{Capa 1: Imputación por relación térmica.} Para aquellos días donde se registró la ausencia de la temperatura media ($T {\text{med}}$) pero se disponía de los registros válidos de temperatura máxima ($T {\text{máx}}$) y mínima ($T {\text{mín}}$), se estimó el valor faltante como el promedio aritmético de las temperaturas extremas diarias:
+    \item \textit{Capa 1: Imputación por relación térmica.} Para aquellos días donde se registró la ausencia de la temperatura media ($T_{\text{med}}$) pero se disponía de los registros válidos de temperatura máxima ($T_{\text{máx}}$) y mínima ($T_{\text{mín}}$), se estimó el valor faltante como el promedio aritmético de las temperaturas extremas diarias:
     \begin{equation}
         T_{\text{med}, t} = \frac{T_{\text{mín}, t} + T_{\text{máx}, t}}{2}
     \end{equation}
@@ -76,15 +76,22 @@ Para el cálculo del Índice de Precipitación - Evapotranspiración Estandariza
     \item \textit{Cálculo de la ETP mensual (Thornthwaite):} Estimación de la demanda evaporativa potencial mediante el método empírico de \citeA{thornthwaite_approach_1948}, utilizando la temperatura media mensual ($T_{\text{avg}}$) y la latitud geográfica de cada estación para derivar el exponente empírico $a$ y el factor de corrección latitudinal mensual $K$.
     \item \textit{Cálculo del balance hídrico mensual ($D_i$):} Definido como la diferencia simple entre la precipitación total mensual ($P_i$) y la ETP ajustada ($ETP_i$) para cada mes $i$: $D_i = P_i - ETP_i$.
     \item \textit{Acumulación multiescalar ($D^k_i$):} Para capturar los efectos de mediano plazo se acumuló el balance hídrico mensual en una ventana temporal de $k=6$ meses de forma consecutiva \cite{mckee1993}.
-    \item \textit{Ajuste paramétrico Pearson Tipo III:} Los valores acumulados de balance hídrico ($D^6_i$) fueron ajustados a una distribución teórica Pearson Tipo III (Gamma de tres parámetros) para estimar la probabilidad acumulada $P = F(x)$, lo cual resulta óptimo para tolerar asimetrías y valores negativos de balance.
-    \item \textit{Estandarización Normal estándar:} La probabilidad acumulada $P$ se transformó en anomalías estandarizadas normales ($Z$-scores) mediante la aproximación racional analítica de \citeA{abramowitz_handbook_1965}. El valor final resultante constituye la variable dependiente de panel, SPEI-6.
+    \item \textit{Ajuste paramétrico Pearson Tipo III:} Los valores acumulados de balance hídrico ($D^6_i$) fueron ajustados a una distribución teórica Pearson Tipo III utilizando la librería \textit{SciPy} en Python. Esto permitió estimar la probabilidad acumulada $P = F(x)$, tolerando asimetrías y la presencia de balances negativos en el panel.
+    \item \textit{Estabilización numérica (Recorte de CDF):} Con el fin de evitar la generación de valores infinitos ($\pm\infty$) al transformar probabilidades acumuladas extremas de $0.0$ o $1.0$, se aplicó un algoritmo de recorte (\textit{clipping}) sobre la CDF calculado como:
+    
+    \begin{equation}
+        P_{\text{ajustada}} = \max\left(\epsilon, \min\left(1 - \epsilon, F(x)\right)\right)
+    \end{equation}
+
+    Donde se estableció un límite de tolerancia $\epsilon = 10^{-6}$.
+    \item \textit{Estandarización Normal estándar:} La probabilidad acumulada ajustada $P_{\text{ajustada}}$ se transformó finalmente en anomalías estandarizadas normales ($Z$-scores) mediante la función cuantil normal estándar (\textit{norm.ppf}), resultando en la variable dependiente final acotada, SPEI-6.
 \end{enumerate}
 
 \section{Regionalización geográfica mediante agrupamiento no supervisado}
 
-Para analizar la distribución espacial de la sequía y evitar límites políticos arbitrarios, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo (HAC) sobre las series de SPEI-6 de las 18 estaciones. Se implementó la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward. El número óptimo de subregiones climáticas ($k^*$) se determinó mediante la maximización del Coeficiente de Silueta Promedio de Rousseeuw \cite{rousseeuw1987}.
+Para analizar la distribución espacial de la sequía y evitar límites políticos arbitrarios, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo (HAC) sobre las series de SPEI-6 de las 18 estaciones. Se implementó la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward. El número óptimo de subregiones climáticas ($k^*$) se determinó mediante la maximización del Coeficiente de Silueta Promedio de \citeA{rousseeuw1987}.
 
-Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementa el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de Ward \cite{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como el estimador más eficiente para la regionalización de variables continuas. Esto asegura que las estaciones dentro de cada clúster tengan series de SPEI-6 sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
+Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementó el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de \citeA{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como una de las técnicas más eficientes para la regionalización de variables continuas. Esto asegura que las estaciones dentro de cada clúster tengan series de SPEI-6 sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
 
 La disimilitud o distancia temporal entre dos entidades $X$ y $Y$ se cuantifica mediante la distancia euclídea clásica calculada sobre la totalidad de sus observaciones a lo largo de la serie histórica:
 \begin{equation}
@@ -136,28 +143,35 @@ Para probar la depencia espacial utilizamos el test de Pesaran \cite{pesaran2004
 \end{equation}
 Donde $\hat{\rho}_{ij}$ representa el coeficiente de correlación muestral de Pearson entre los residuos de la unidad $i$ y la unidad $j$. Bajo la hipótesis nula, el estadístico se distribuye de forma asintótica como una normal estándar ($CD \xrightarrow{d} N(0, 1)$).
 
-Para controlar y corregir de manera simultánea la presencia de autocorrelación serial temporal y de correlación espacial o de sección cruzada identificada en la red de monitoreo, se prescinde de los errores estándar de clúster convencionales y se adopta el estimador de matriz de covarianza robusto desarrollado por Driscoll y Kraay (1998).
+Para controlar y corregir de manera simultánea la presencia de autocorrelación serial temporal y de correlación espacial o de sección cruzada identificada en la red de monitoreo, se prescinde de los errores estándar de clúster convencionales y se adopta el estimador de matriz de covarianza robusto desarrollado por \citeA{driscoll1998}.
 
 \section{Modelo de regresión de panel de efectos aleatorios}
 
-La especificación completa del modelo estimado, incluyendo todas las variables e interacciones, fue la siguiente:
-\sloppy
+Para cuantificar las tendencias de largo plazo de la sequía y evaluar si estas varían según la región geográfica y la estación climática, se especifica un modelo de regresión para datos de panel con interacciones múltiples. El uso de la aproximación de Efectos Aleatorios (RE) resulta metodológicamente idóneo para este propósito, ya que permite estimar los coeficientes de variables categóricas que son invariantes en el tiempo para cada unidad de sección cruzada (como la pertenencia de una estación meteorológica a una región geográfica determinada), los cuales se omitirían bajo una especificación de Efectos Fijos.
+
+La especificación formal del modelo se define como:
+
 \begin{equation}
 \begin{split}
-    \text{SPEI-6}_{it} = & \beta_0 + \beta_1 \text{tiempo}_t + \sum_{s=1}^{3} \gamma_s \text{estacion-climatica}_{s,t} + \delta_1 \text{region-geografica}_i \\
-    & + \sum_{s=1}^{3} \theta_s (\text{tiempo}_t \times \text{estacion-climatica}_{s,t}) + \phi_1 (\text{tiempo}_t \times \text{region-geografica}_i) \\
-    & + \sum_{s=1}^{3} \psi_s (\text{estacion-climatica}_{s,t} \times \text{region-geografica}_i) \\
-    & + \sum_{s=1}^{3} \omega_s (\text{tiempo}_t \times \text{estacion-climatica}_{s,t} \times \text{region-geografica}_i) + u_{it}
+    Y_{it} = & \beta_0 + \beta_1 T_t + \sum_{s=1}^{3} \gamma_s E_{s,t} + \delta_1 R_i \\
+    & + \sum_{s=1}^{3} \theta_s (T_t \times E_{s,t}) + \phi_1 (T_t \times R_i) + \sum_{s=1}^{3} \psi_s (E_{s,t} \times R_i) \\
+    & + \sum_{s=1}^{3} \omega_s (T_t \times E_{s,t} \times R_i) + u_{it}
 \end{split}
-\label{eq:modelo_completo}
+\label{eq:modelocompleto}
 \end{equation}
-donde $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, y los términos $\text{estacion-climatica}_{s,t}$ y $\text{region-geografica}_i$ son variables dummys para las categorías estacionales climáticas (invierno, primavera, verano, otoño) y regionales geográficas (clusters), respectivamente.
 
-
+Donde:
+\begin{itemize}
+    \item $Y_{it}$ representa el valor del índice de sequía (SPEI-6 o SPI-6) para la estación $i$ en el mes $t$.
+    \item $T_t$ es la variable de tendencia temporal continua (medida en meses, donde $t = 1, 2, \dots, 288$).
+    \item $E_{s,t}$ es un conjunto de variables dicotómicas (\textit{dummies}) que representan las estaciones climáticas del año $s$ (invierno, primavera, verano, tomando el otoño como categoría de referencia).
+    \item $R_i$ es la variable dicotómica que identifica la región geográfica o clúster al que pertenece la estación $i$.
+    \item $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, donde $\alpha_i$ representa el efecto específico individual no observado de la estación $i$ y $\varepsilon_{it}$ representa el error idiosincrático.
+\end{itemize}
 
 \section{Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}
 
-Para dar cumplimiento a nuestro objetivo específico y contrastar de manera formal la hipótesis 3 (H3), se diseñó un marco experimental comparativo. El procedimiento consiste en estimar de forma paralela la ecuación del modelo de regresión de panel de efectos aleatorios (Ecuación \ref{eq:modelo_completo}) sobre dos variables dependientes distintas:
+Para dar cumplimiento a nuestro objetivo específico y contrastar de manera formal la hipótesis 3 (H3), se diseñó un marco experimental comparativo. El procedimiento consiste en estimar de forma paralela la ecuación del modelo de regresión de panel de efectos aleatorios (Ecuación \ref{eq:modelocompleto}) sobre dos variables dependientes distintas:
 \begin{align}
     \text{SPEI-6}_{it} &= \mathbf{x}_{it}'\boldsymbol{\beta}_{SPEI} + u_{it} \label{eq:panel_spei} \\
     \text{SPI-6}_{it} &= \mathbf{x}_{it}'\boldsymbol{\beta}_{SPI} + v_{it} \label{eq:panel_spi}

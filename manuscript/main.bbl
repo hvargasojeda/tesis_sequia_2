@@ -1,30 +1,27 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
-Abramowitz%
-\ \BBA {} Stegun%
+Baltagi%
 }{%
-Abramowitz%
-\ \BBA {} Stegun%
+Baltagi%
 }{%
-{\protect \APACyear {1965}}%
+{\protect \APACyear {2021}}%
 }]{%
-abramowitz_handbook_1965}
+baltagi2021}
 \APACinsertmetastar {%
-abramowitz_handbook_1965}%
+baltagi2021}%
 \begin{APACrefauthors}%
-Abramowitz, M.%
-\BCBT {}\ \BBA {} Stegun, I.%
+Baltagi, B\BPBI H.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYear{1965}.
+\APACrefYear{2021}.
 \newblock
-\APACrefbtitle {Handbook of {Mathematical} {Functions}: {With} {Formulas}, {Graphs}, and {Mathematical} {Tables}} {Handbook of {Mathematical} {Functions}: {With} {Formulas}, {Graphs}, and {Mathematical} {Tables}}.
+\APACrefbtitle {Econometric Analysis of Panel Data} {Econometric analysis of panel data}\ (\PrintOrdinal{6th}\ \BEd).
 \newblock
-\APACaddressPublisher{}{Dover Publications}.
+\APACaddressPublisher{Cham, Switzerland}{Springer}.
 \newblock
-\begin{APACrefURL} \url{https://books.google.com.py/books?id=MtU8uP7XMvoC} \end{APACrefURL}
+\begin{APACrefDOI} \doi{10.1007/978-3-030-53953-5} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -195,6 +192,33 @@ Hausman, J\BPBI A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Hausman%
+\ \BBA {} Taylor%
+}{%
+Hausman%
+\ \BBA {} Taylor%
+}{%
+{\protect \APACyear {1981}}%
+}]{%
+hausman1981}
+\APACinsertmetastar {%
+hausman1981}%
+\begin{APACrefauthors}%
+Hausman, J\BPBI A.%
+\BCBT {}\ \BBA {} Taylor, W\BPBI E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1981}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Panel Data and Unobservable Individual Effects} {Panel data and unobservable individual effects}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Econometrica}{49}{6}{1377--1398}.
+\newblock
+\begin{APACrefDOI} \doi{10.2307/1911406} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Huarahuara~Toma%
 \ \BBA {} Silva~Borda%
 }{%
@@ -321,7 +345,9 @@ Mungul, V.%
 \newblock
 \APACrefYearMonthDay{2025}{}{}.
 \newblock
-\APACrefbtitle {Comparative study of SPI and SPEI drought indices for meteorological drought assessment in Mauritius} {Comparative study of spi and spei drought indices for meteorological drought assessment in mauritius}\ (\BVOL~17)\ (\BNUM~2).
+{\BBOQ}\APACrefatitle {Comparative study of SPI and SPEI drought indices for meteorological drought assessment in Mauritius} {Comparative study of spi and spei drought indices for meteorological drought assessment in mauritius}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{J{\`a}mb{\'a}: Journal of Disaster Risk Studies}{17}{2}{a1748}.
 \newblock
 \begin{APACrefURL} \url{https://doi.org/10.4102/jamba.v17i2.1748} \end{APACrefURL}
 \newblock
