@@ -119,6 +119,30 @@ Driscoll, J\BPBI C.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Enciso%
+}{%
+Enciso%
+}{%
+{\protect \APACyear {2022}}%
+}]{%
+enciso2022soja}
+\APACinsertmetastar {%
+enciso2022soja}%
+\begin{APACrefauthors}%
+Enciso, V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2022}{jul}{}.
+\newblock
+\APACrefbtitle {SOJA: De cara a la nueva campa{\~n}a agr{\'\i}cola 2022/2023} {Soja: De cara a la nueva campa{\~n}a agr{\'\i}cola 2022/2023}\ \APACbVolEdTR{}{\BTR{}}.
+\newblock
+\APACaddressInstitution{San Lorenzo, Paraguay}{Facultad de Ciencias Agrarias, Universidad Nacional de Asu{\~n}cion}.
+\newblock
+\begin{APACrefURL} \url{https://www.agr.una.py/ecorural/otras_publicaciones/de_cara_a_la_nueva_zafra_de_soja.pdf} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Gong%
 \ \BBA {} Richman%
 }{%

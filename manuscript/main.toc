@@ -4,8 +4,8 @@
 \contentsline {chapter}{Agradecimientos}{\es@scroman {iv}}{chapter*.2}%
 \contentsline {chapter}{Resumen}{\es@scroman {v}}{chapter*.3}%
 \contentsline {chapter}{Abstract}{\es@scroman {vi}}{chapter*.4}%
-\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {x}}{chapter*.6}%
-\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {xi}}{chapter*.7}%
+\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {xi}}{chapter*.6}%
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {xii}}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Planteamiento del problema}{1}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Justificación de la investigación}{2}{section.1.2}%
@@ -75,8 +75,15 @@
 \contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{39}{subsection.4.3.4}%
 \contentsline {subsection}{\numberline {4.3.5}Análisis de las tendencias de largo plazo (pendientes netas)}{41}{subsection.4.3.5}%
 \contentsline {section}{\numberline {4.4}Aislamiento del efecto térmico: Análisis comparativo entre SPEI-6 y SPI-6}{43}{section.4.4}%
-\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{46}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Entorno computacional}{47}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{49}{appendix.Alph3}%
-\contentsline {chapter}{Referencias}{52}{appendix.Alph3}%
-\contentsline {section}{Referencias}{52}{section*.10}%
+\contentsline {chapter}{\numberline {5}Discusión, conclusiones y recomendaciones}{46}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Discusión de resultados}{46}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Interpretación física de las dinámicas hídricas y contraste geográfico (regional)}{46}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}El impacto del ruido interanual (ENSO) sobre el ajuste del modelo lineal}{47}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Implicaciones de la robustez de Driscoll-Kraay en la inferencia climática}{48}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Respuesta a las preguntas de investigación}{48}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Evaluación y contraste de las hipótesis}{50}{section.5.3}%
+\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{52}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Entorno computacional}{53}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{55}{appendix.Alph3}%
+\contentsline {chapter}{Referencias}{58}{appendix.Alph3}%
+\contentsline {section}{Referencias}{58}{section*.10}%
