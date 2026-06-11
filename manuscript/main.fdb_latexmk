@@ -1,16 +1,16 @@
 # Fdb version 4
-["bibtex main"] 1781139565.86093 "main.aux" "main.bbl" "main" 1781139570.9671 0
+["bibtex main"] 1781139565.86093 "main.aux" "main.bbl" "main" 1781139893.39222 0
   "./bibliography.bib" 1781100096.31115 13383 8e699e4d429df514a60935bc65257239 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/apacite/apacite.bst" 1374530685 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "main.aux" 1781139570.80255 75917 70bd3f0b0bd951f48fb3a9f61449794b "pdflatex"
+  "main.aux" 1781139893.17308 75917 70bd3f0b0bd951f48fb3a9f61449794b "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1781139565.91458 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" "main.pdf" "main" 1781139570.96763 0
+["pdflatex"] 1781139887.65478 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" "main.pdf" "main" 1781139893.39278 0
   "/etc/texmf/web2c/texmf.cnf" 1755191811.04725 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/hjvargaso/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk" 1755193332.1749 24132 9760ce61b366788e776ff6e57b27a0bf ""
-  "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" 1781139559.5425 12509 8bd98b6c279f66e8e35faa3b0708a41d ""
+  "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" 1781139887.29704 12507 4308f834caf1bff7f686c35ba7091ec1 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png" 1780889760.62032 495403 6277b175ec52370f4df833435e01319e ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png" 1780845638.70624 708072 c300f1eac22ecfe0880a619b0921a6c8 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png" 1780885512.71908 94852 ef5b9d7b21ae205e0f8466fe4783aa0d ""
@@ -155,12 +155,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755191821.77122 128067 403859e4d35fdff4c458758f0e5ea400 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755191845 7353677 dd6910b802aeac5551a5b8794ff44066 ""
   "logofacen.jpg" 1779883777.54106 11768 24d8bd1be38b882179b597166ffd267b ""
-  "main.aux" 1781139570.80255 75917 70bd3f0b0bd951f48fb3a9f61449794b "pdflatex"
+  "main.aux" 1781139893.17308 75917 70bd3f0b0bd951f48fb3a9f61449794b "pdflatex"
   "main.bbl" 1781139565.9025 22011 796421529d596338947225dc8208277d "bibtex main"
-  "main.lof" 1781139570.81855 1782 4b976ae61184c53d5b9e3688a67c00e1 "pdflatex"
-  "main.lot" 1781139570.81855 1864 fbb1a85471ace304f4ce5857fd52330d "pdflatex"
-  "main.tex" 1781139559.5425 12509 8bd98b6c279f66e8e35faa3b0708a41d ""
-  "main.toc" 1781139570.81855 9398 5c26c6f6b7d7bbc77271fdbce50d820b "pdflatex"
+  "main.lof" 1781139893.20108 1782 4b976ae61184c53d5b9e3688a67c00e1 "pdflatex"
+  "main.lot" 1781139893.20108 1864 fbb1a85471ace304f4ce5857fd52330d "pdflatex"
+  "main.tex" 1781139887.29704 12507 4308f834caf1bff7f686c35ba7091ec1 ""
+  "main.toc" 1781139893.20108 9398 5c26c6f6b7d7bbc77271fdbce50d820b "pdflatex"
   "sections/10_apendice.tex" 1780547004.34669 5624 88e3ea40914d7ee32dbfca566884e106 ""
   "sections/1capitulo.tex" 1781027876.86539 6387 693a0d4e8cc23ac59bb4dbeb0cde8120 ""
   "sections/2capitulo.tex" 1781057788.7305 31734 b66077bef8edc733ca458568131e7150 ""
