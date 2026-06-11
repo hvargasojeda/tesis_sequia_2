@@ -57,35 +57,36 @@
 \contentsline {section}{\numberline {3.7}Test de Hausman}{25}{section.3.7}%
 \contentsline {section}{\numberline {3.8}Corrección de la dependencia espacial: el estimador de Driscoll y Kraay}{26}{section.3.8}%
 \contentsline {section}{\numberline {3.9}Modelo de regresión de panel de efectos aleatorios}{27}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}Estimación de tendencias netas mediante combinaciones lineales}{28}{subsection.3.9.1}%
 \contentsline {section}{\numberline {3.10}Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}{28}{section.3.10}%
-\contentsline {chapter}{\numberline {4}Resultados}{29}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{29}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{29}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Asignación de estaciones y validación de contigüidad geográfica}{30}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{31}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Patrones estacionales del balance hídrico}{32}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{33}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Análisis de intensidad del déficit hídrico}{33}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{34}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{35}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Resultados del modelo de datos de panel}{35}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Selección del estimador: El test de especificación de Hausman}{35}{subsection.4.3.1}%
+\contentsline {chapter}{\numberline {4}Resultados}{30}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{30}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{30}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Asignación de bases meteorológicas y validación de contigüidad geográfica}{31}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{32}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Patrones estacionales del balance hídrico}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{34}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Análisis de intensidad del déficit hídrico}{34}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{35}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{36}{subsection.4.2.5}%
+\contentsline {section}{\numberline {4.3}Resultados del modelo de datos de panel}{37}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Selección del estimador: El test de especificación de Hausman}{37}{subsection.4.3.1}%
 \contentsline {subsection}{\numberline {4.3.2}Verificación de la dependencia de sección cruzada (correlación espacial)}{38}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Estimación del modelo final}{38}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{39}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Análisis de las tendencias de largo plazo (pendientes netas)}{41}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Aislamiento del efecto térmico: Análisis comparativo entre SPEI-6 y SPI-6}{43}{section.4.4}%
-\contentsline {chapter}{\numberline {5}Discusión, conclusiones y recomendaciones}{46}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Discusión de resultados}{46}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Interpretación física de las dinámicas hídricas y contraste geográfico (regional)}{46}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}El impacto del ruido interanual (ENSO) sobre el ajuste del modelo lineal}{47}{subsection.5.1.2}%
-\contentsline {subsection}{\numberline {5.1.3}Implicaciones de la robustez de Driscoll-Kraay en la inferencia climática}{48}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Respuesta a las preguntas de investigación}{48}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Evaluación y contraste de las hipótesis}{50}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Conclusiones generales}{51}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Recomendaciones y futuras líneas de investigación}{53}{section.5.5}%
-\contentsline {chapter}{\numberline {A}Listado de estaciones meteorológicas utilizadas}{55}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Entorno computacional}{56}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{58}{appendix.Alph3}%
-\contentsline {chapter}{Referencias}{61}{appendix.Alph3}%
-\contentsline {section}{Referencias}{61}{section*.10}%
+\contentsline {subsection}{\numberline {4.3.3}Estimación del modelo final}{39}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{41}{subsection.4.3.4}%
+\contentsline {subsection}{\numberline {4.3.5}Análisis de las tendencias de largo plazo (pendientes netas)}{42}{subsection.4.3.5}%
+\contentsline {section}{\numberline {4.4}Aislamiento del efecto térmico: Análisis comparativo entre SPEI-6 y SPI-6}{44}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Discusión, conclusiones y recomendaciones}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Discusión de resultados}{47}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Interpretación física de las dinámicas hídricas y contraste geográfico (regional)}{47}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}El impacto del ruido interanual (ENSO) sobre el ajuste del modelo lineal}{48}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}Implicaciones de la robustez de Driscoll-Kraay en la inferencia climática}{49}{subsection.5.1.3}%
+\contentsline {section}{\numberline {5.2}Respuesta a las preguntas de investigación}{49}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Evaluación y contraste de las hipótesis}{51}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Conclusiones generales}{52}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Recomendaciones y futuras líneas de investigación}{54}{section.5.5}%
+\contentsline {chapter}{\numberline {A}Listado de bases meteorológicas}{56}{appendix.Alph1}%
+\contentsline {chapter}{\numberline {B}Entorno computacional}{57}{appendix.Alph2}%
+\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{59}{appendix.Alph3}%
+\contentsline {chapter}{Referencias}{62}{appendix.Alph3}%
+\contentsline {section}{Referencias}{62}{section*.10}%

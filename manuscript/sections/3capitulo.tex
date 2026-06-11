@@ -12,11 +12,11 @@ Los datos primarios corresponden a los registros meteorológicos diarios provist
 
 La serie temporal diaria analizada comprende el período desde el 1 de enero de 2000 hasta el 31 de diciembre de 2023. La fecha de extracción y recepción oficial de la base de datos fue el 9 de mayo de 2024 (Expediente N.º 213.042/2024; ver Apéndice \ref{apendice:fuente_datos}), tras una solicitud formal gestionada a través de la Facultad de Ciencias Exactas y Naturales (FACEN) de la Universidad Nacional de Asunción.
 
-De forma complementaria, se recopilaron los metadatos de las estaciones terrestres, incluyendo su nombre oficial, identificador (ID Estación), coordenadas geográficas de posicionamiento (latitud y longitud decimal) y su macroregión geográfica correspondiente (Región Oriental o Región Occidental).
+De forma complementaria, se recopilaron los metadatos de las bases terrestres, incluyendo su nombre oficial, identificador (ID Base), coordenadas geográficas de posicionamiento (latitud y longitud decimal) y su macroregión geográfica correspondiente (Región Oriental o Región Occidental).
 
 \subsection{Definición de variables climáticas}
 
-El análisis de datos de panel se centra de manera exclusiva en las variables de precipitación diaria (lluvia) y temperatura media diaria como factores determinantes del balance hídrico. Las variables críticas recopiladas con frecuencia diarias para cada estación meteorológica fueron:
+El análisis de datos de panel se centra de manera exclusiva en las variables de precipitación diaria (lluvia) y temperatura media diaria como factores determinantes del balance hídrico. Las variables críticas recopiladas con frecuencia diarias para cada base meteorológica fueron:
 \begin{itemize}
     \item \textit{Precipitación diaria ($P_t$):} medida en milímetros ($mm$).
     \item \textit{Temperatura media diaria ($T_{\text{med}, t}$):} medida en grados Celsius ($^{\circ}\text{C}$).
@@ -26,9 +26,9 @@ El análisis de datos de panel se centra de manera exclusiva en las variables de
 
 \section{Procesamiento, depuración e imputación de datos}
 
-Se examinó la cobertura histórica de cada una de las 19 estaciones terrestres respecto al rango teórico esperado de 8,766 días (24 años). El análisis de completitud determinó que la estación de Paraguarí (PARA) presentaba un truncamiento temporal crítico: sus registros inician únicamente a partir del 1 de abril de 2006, registrando una pérdida masiva superior al 26\% de la serie temporal bajo estudio (2,282 días faltantes). 
+Se examinó la cobertura histórica de cada una de las 19 bases terrestres respecto al rango teórico esperado de 8,766 días (24 años). El análisis de completitud determinó que la base de Paraguarí (PARA) presentaba un truncamiento temporal crítico: sus registros inician únicamente a partir del 1 de abril de 2006, registrando una pérdida masiva superior al 26\% de la serie temporal bajo estudio (2,282 días faltantes). 
 
-Con el fin de evitar un sesgo por truncamiento sistemático de la serie temporal nacional, se decidió excluir de manera definitiva la estación de Paraguarí (PARA). Las 18 estaciones restantes exhibieron tasas de completitud de fechas superiores al 97.9\%, conformando la muestra final del estudio. Sobre esta red de 18 estaciones se construyó un panel balanceado inicial de 157,788 registros diarios (18 estaciones $\times$ 8,766 días). Las filas correspondientes a fechas faltantes originalmente en cada estación fueron insertadas e inicializadas con valores nulos (\textit{NaN}).
+Con el fin de evitar un sesgo por truncamiento sistemático de la serie temporal nacional, se decidió excluir de manera definitiva la base de Paraguarí (PARA). Las 18 bases restantes exhibieron tasas de completitud de fechas superiores al 97.9\%, conformando la muestra final del estudio. Sobre esta red de 18 bases se construyó un panel balanceado inicial de 157,788 registros diarios (18 bases $\times$ 8,766 días). Las filas correspondientes a fechas faltantes originalmente en cada base fueron insertadas e inicializadas con valores nulos (\textit{NaN}).
 
 \subsection{Algoritmo de imputación de temperatura por capas}
 
@@ -41,11 +41,11 @@ Para asegurar la continuidad temporal de la temperatura media diaria ($T_{\text{
     \end{equation}
     Este procedimiento permitió recuperar con precisión física un total de 342 días del panel.
     \item \textit{Capa 2: Interpolación lineal para vacíos cortos ($\le 3$ días).} Para los registros nulos persistentes de temperatura media, se analizó la longitud de los vacíos consecutivos. Para brechas de duración corta, definidas estrictamente entre 1 y 3 días consecutivos (que representan el 37.1\% del total de datos térmicos faltantes en la red), se aplicó una interpolación lineal temporal basada en la inercia térmica de los días adyacentes válidos. Esta capa recuperó un total de 655 días de registro.
-    \item \textit{Capa 3: Imputación espacial por estación vecina ($\geq 4$ días).} Para vacíos de información térmica igual o mayor a cuatro días consecutivos, la interpolación temporal directa pierde validez física al ignorar la variabilidad sinóptica de mediano plazo. En consecuencia, se aplicó un método de transferencia espacial basado en la cercanía geográfica. 
+    \item \textit{Capa 3: Imputación espacial por base vecina ($\geq 4$ días).} Para vacíos de información térmica igual o mayor a cuatro días consecutivos, la interpolación temporal directa pierde validez física al ignorar la variabilidad sinóptica de mediano plazo. En consecuencia, se aplicó un método de transferencia espacial basado en la cercanía geográfica. 
 
-Utilizando las coordenadas geográficas de las 18 estaciones meteorológicas seleccionadas, se calculó una matriz de distancias mutuas (ortodrómicas) que permitió identificar de forma unívoca a la estación vecina más cercana para cada punto de la red (por ejemplo, la menor distancia registrada correspondió al par Coronel Oviedo-Villarrica con solo $25.75\text{ km}$, mientras que la mayor distancia de vecindad se registró en el Chaco Profundo entre Mariscal Estigarribia y Pozo Colorado con $248.84\text{ km}$). 
+Utilizando las coordenadas geográficas de las 18 bases meteorológicas seleccionadas, se calculó una matriz de distancias mutuas (ortodrómicas) que permitió identificar de forma unívoca a la base vecina más cercana para cada punto de la red (por ejemplo, la menor distancia registrada correspondió al par Coronel Oviedo-Villarrica con solo $25.75\text{ km}$, mientras que la mayor distancia de vecindad se registró en el Chaco Profundo entre Mariscal Estigarribia y Pozo Colorado con $248.84\text{ km}$). 
 
-Para cada fecha que presentaba vacíos térmicos prolongados en la estación objetiva, se transfirió directamente el registro diario de temperatura media depurada ($T_{\text{med\_imputada}}$) correspondiente a su vecina más cercana en ese mismo día. Este procedimiento de interpolación espacial permitió recuperar con precisión climatológica un total de 1,114 observaciones diarias. Al término de esta tercera capa jerárquica de imputación, se logró una tasa de completitud global en las series de temperatura media diaria del 99.99\%, registrando únicamente 9 datos nulos residuales en toda la base de datos de panel maestro para las 18 estaciones a lo largo de los 24 años de estudio.
+Para cada fecha que presentaba vacíos térmicos prolongados en la base objetiva, se transfirió directamente el registro diario de temperatura media depurada ($T_{\text{med\_imputada}}$) correspondiente a su vecina más cercana en ese mismo día. Este procedimiento de interpolación espacial permitió recuperar con precisión climatológica un total de 1,114 observaciones diarias. Al término de esta tercera capa jerárquica de imputación, se logró una tasa de completitud global en las series de temperatura media diaria del 99.99\%, registrando únicamente 9 datos nulos residuales en toda la base de datos de panel maestro para las 18 bases a lo largo de los 24 años de estudio.
 \end{enumerate}
 
 \subsection{Criterio de no Imputación para la variable precipitación}
@@ -56,7 +56,7 @@ Consecuentemente, se adoptó la decisión metodológica de no aplicar ningún m�
 
 \section{Agregación de datos y creación de la base mensual}
 
-Dado que el balance hídrico y el cálculo del SPEI se analizan a nivel mensual, el panel diario depurado de 18 estaciones fue agregado a una frecuencia mensual de 288 meses consecutivos por estación (5,184 observaciones mensuales potenciales). 
+Dado que el balance hídrico y el cálculo del SPEI se analizan a nivel mensual, el panel diario depurado de 18 bases fue agregado a una frecuencia mensual de 288 meses consecutivos por base (5,184 observaciones mensuales potenciales). 
 
 Para garantizar la fiabilidad física de los agregados mensuales, se implementó la regla de exclusión recomendada por la Organización Meteorológica Mundial \cite{wmo2017}:
 \begin{itemize}
@@ -70,10 +70,10 @@ Este procedimiento determinó un panel mensual final caracterizado por una alta 
 
 Por su relevancia integral para capturar impactos de corto y mediano plazo de la sequía, se seleccionó al SPEI-6 como métrica para el análisis de la sequía, además siendo la variable dependiente del modelo ajustado.
 
-Para el cálculo del Índice de Precipitación - Evapotranspiración Estandarizado a escala de 6 meses (SPEI-6) sobre las 18 estaciones finales, se ejecutó secuencialmente la siguiente formulación matemática:
+Para el cálculo del Índice de Precipitación - Evapotranspiración Estandarizado a escala de 6 meses (SPEI-6) sobre las 18 bases finales, se ejecutó secuencialmente la siguiente formulación matemática:
 
 \begin{enumerate}
-    \item \textit{Cálculo de la ETP mensual (Thornthwaite):} Estimación de la demanda evaporativa potencial mediante el método empírico de \citeA{thornthwaite_approach_1948}, utilizando la temperatura media mensual ($T_{\text{avg}}$) y la latitud geográfica de cada estación para derivar el exponente empírico $a$ y el factor de corrección latitudinal mensual $K$.
+    \item \textit{Cálculo de la ETP mensual (Thornthwaite):} Estimación de la demanda evaporativa potencial mediante el método empírico de \citeA{thornthwaite_approach_1948}, utilizando la temperatura media mensual ($T_{\text{avg}}$) y la latitud geográfica de base para derivar el exponente empírico $a$ y el factor de corrección latitudinal mensual $K$.
     \item \textit{Cálculo del balance hídrico mensual ($D_i$):} Definido como la diferencia simple entre la precipitación total mensual ($P_i$) y la ETP ajustada ($ETP_i$) para cada mes $i$: $D_i = P_i - ETP_i$.
     \item \textit{Acumulación multiescalar ($D^k_i$):} Para capturar los efectos de mediano plazo se acumuló el balance hídrico mensual en una ventana temporal de $k=6$ meses de forma consecutiva \cite{mckee1993}.
     \item \textit{Ajuste paramétrico Pearson Tipo III:} Los valores acumulados de balance hídrico ($D^6_i$) fueron ajustados a una distribución teórica Pearson Tipo III utilizando la librería \textit{SciPy} en Python. Esto permitió estimar la probabilidad acumulada $P = F(x)$, tolerando asimetrías y la presencia de balances negativos en el panel.
@@ -89,36 +89,36 @@ Para el cálculo del Índice de Precipitación - Evapotranspiración Estandariza
 
 \section{Regionalización geográfica mediante agrupamiento no supervisado}
 
-Para analizar la distribución espacial de la sequía y evitar límites políticos arbitrarios, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo (HAC) sobre las series de SPEI-6 de las 18 estaciones. Se implementó la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward. El número óptimo de subregiones climáticas ($k^*$) se determinó mediante la maximización del Coeficiente de Silueta Promedio de \citeA{rousseeuw1987}.
+Para analizar la distribución espacial de la sequía y evitar límites políticos arbitrarios, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo (HAC) sobre las series de SPEI-6 de las 18 bases. Se implementó la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward. El número óptimo de subregiones climáticas ($k^*$) se determinó mediante la maximización del Coeficiente de Silueta Promedio de \citeA{rousseeuw1987}.
 
-Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementó el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de \citeA{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como una de las técnicas más eficientes para la regionalización de variables continuas. Esto asegura que las estaciones dentro de cada clúster tengan series de SPEI-6 sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
+Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementó el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de \citeA{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como una de las técnicas más eficientes para la regionalización de variables continuas. Esto asegura que las bases dentro de cada clúster tengan series de SPEI-6 sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
 
 La disimilitud o distancia temporal entre dos entidades $X$ y $Y$ se cuantifica mediante la distancia euclídea clásica calculada sobre la totalidad de sus observaciones a lo largo de la serie histórica:
 \begin{equation}
     d(X, Y) = \sqrt{\sum_{t=1}^{T} (X_t - Y_t)^2}
     \label{eq:euclidea}
 \end{equation}
-Donde $T$ es el número de periodos analizados en el panel. Dado que el SPEI es un índice normalizado con media cero y desviación estándar unitaria ($Z$-score) en cada estación, la distancia euclídea al cuadrado guarda una relación directa con el coeficiente de correlación de Pearson ($r_{xy}$) entre ambas series:
+Donde $T$ es el número de periodos analizados en el panel. Dado que el SPEI es un índice normalizado con media cero y desviación estándar unitaria ($Z$-score) en cada base, la distancia euclídea al cuadrado guarda una relación directa con el coeficiente de correlación de Pearson ($r_{xy}$) entre ambas series:
 \begin{equation}
     d^2(X, Y) = 2T(1 - r_{xy})
 \end{equation}
 
-Esta equivalencia matemática demuestra que agrupar estaciones meteorológicas minimizando la distancia euclídea equivale a maximizar la sincronía temporal de sus anomalías hídricas. De este modo, las estaciones pertenecientes a un mismo grupo ingresarán, persistirán y saldrán de los eventos de sequía de manera homogénea a lo largo del tiempo.
+Esta equivalencia matemática demuestra que agrupar bases meteorológicas minimizando la distancia euclídea equivale a maximizar la sincronía temporal de sus anomalías hídricas. De este modo, las bases pertenecientes a un mismo grupo ingresarán, persistirán y saldrán de los eventos de sequía de manera homogénea a lo largo del tiempo.
 
 \subsection{El coeficiente de silueta}
 
-Para cada estación individual $i$, se calcula su respectivo coeficiente de silueta $s(i)$ mediante la relación:
+Para cada base individual $i$, se calcula su respectivo coeficiente de silueta $s(i)$ mediante la relación:
 \begin{equation}
     s(i) = \frac{b(i) - a(i)}{\max\{a(i), b(i)\}}
     \label{eq:silueta}
 \end{equation}
 Donde:
 \begin{itemize}
-    \item $a(i)$ representa la distancia euclídea promedio entre la estación $i$ y todos los demás miembros de su propio clúster.
-    \item $b(i)$ representa la distancia promedio mínima entre la estación $i$ y todos los miembros del clúster vecino más cercano.
+    \item $a(i)$ representa la distancia euclídea promedio entre la base $i$ y todos los demás miembros de su propio clúster.
+    \item $b(i)$ representa la distancia promedio mínima entre la base $i$ y todos los miembros del clúster vecino más cercano.
 \end{itemize}
 
-El valor de $s(i)$ se halla estrictamente acotado en el intervalo $[-1, 1]$. Un valor cercano a $1$ indica que la estación se encuentra correctamente asignada a su región y adecuadamente separada de las demás; un valor de $0$ sugiere una zona de transición de baja diferenciación; y un valor negativo denota una clasificación incorrecta. El número óptimo de clústeres ($k^*$) se determina maximizando el ancho de silueta promedio de toda la red de estaciones $M$:
+El valor de $s(i)$ se halla estrictamente acotado en el intervalo $[-1, 1]$. Un valor cercano a $1$ indica que la base se encuentra correctamente asignada a su región y adecuadamente separada de las demás; un valor de $0$ sugiere una zona de transición de baja diferenciación; y un valor negativo denota una clasificación incorrecta. El número óptimo de clústeres ($k^*$) se determina maximizando el ancho de silueta promedio de toda la red de bases $M$:
 \begin{equation}
     k^* = \arg\max_{k} \left( \frac{1}{M} \sum_{i=1}^{M} s(i) \right)
     \label{eq:siluetamax}
@@ -126,7 +126,7 @@ El valor de $s(i)$ se halla estrictamente acotado en el intervalo $[-1, 1]$. Un 
 
 \section{Test de Hausman}\label{sec:modelo_estadistico}
 
-La elección metodológica entre la aproximación de efectos fijos y efectos aleatorios no se determina de forma discrecional, sino que se fundamenta en la consistencia estadística del modelo RE. El test de especificación de Hausman \cite{hausman1978} constituye la prueba estadística estándar para evaluar esta idoneidad, evaluando formalmente la consistencia del estimador RE frente a la ortogonalidad de los efectos individuales no observados de las 18 estaciones meteorológicas. Para esto se utilizó la librería \textit{linearmodels} de Python.
+La elección metodológica entre la aproximación de efectos fijos y efectos aleatorios no se determina de forma discrecional, sino que se fundamenta en la consistencia estadística del modelo RE. El test de especificación de Hausman \cite{hausman1978} constituye la prueba estadística estándar para evaluar esta idoneidad, evaluando formalmente la consistencia del estimador RE frente a la ortogonalidad de los efectos individuales no observados de las 18 bases meteorológicas. Para esto se utilizó la librería \textit{linearmodels} de Python.
 
 La hipótesis nula del test establece que no existen diferencias sistemáticas significativas entre ambos estimadores:
 \begin{equation}
@@ -147,7 +147,7 @@ Para controlar y corregir de manera simultánea la presencia de autocorrelación
 
 \section{Modelo de regresión de panel de efectos aleatorios}
 
-Para cuantificar las tendencias de largo plazo de la sequía y evaluar si estas varían según la región geográfica y la estación climática, se especifica un modelo de regresión para datos de panel con interacciones múltiples. El uso de la aproximación de Efectos Aleatorios (RE) resulta metodológicamente idóneo para este propósito, ya que permite estimar los coeficientes de variables categóricas que son invariantes en el tiempo para cada unidad de sección cruzada (como la pertenencia de una estación meteorológica a una región geográfica determinada), los cuales se omitirían bajo una especificación de Efectos Fijos.
+Para cuantificar las tendencias de largo plazo de la sequía y evaluar si estas varían según la región geográfica y la estación climática, se especifica un modelo de regresión para datos de panel con interacciones múltiples. El uso de la aproximación de Efectos Aleatorios (RE) resulta metodológicamente idóneo para este propósito, ya que permite estimar los coeficientes de variables categóricas que son invariantes en el tiempo para cada unidad de sección cruzada (como la pertenencia de una base meteorológica a una región geográfica determinada), los cuales se omitirían bajo una especificación de Efectos Fijos.
 
 La especificación formal del modelo se define como:
 
@@ -162,12 +162,40 @@ La especificación formal del modelo se define como:
 
 Donde:
 \begin{itemize}
-    \item $Y_{it}$ representa el valor del índice de sequía (SPEI-6 o SPI-6) para la estación $i$ en el mes $t$.
+    \item $Y_{it}$ representa el valor del índice de sequía (SPEI-6 o SPI-6) para la base $i$ en el mes $t$.
     \item $T_t$ es la variable de tendencia temporal continua (medida en meses, donde $t = 1, 2, \dots, 288$).
     \item $E_{s,t}$ es un conjunto de variables dicotómicas (\textit{dummies}) que representan las estaciones climáticas del año $s$ (invierno, primavera, verano, tomando el otoño como categoría de referencia).
-    \item $R_i$ es la variable dicotómica que identifica la región geográfica o clúster al que pertenece la estación $i$.
-    \item $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, donde $\alpha_i$ representa el efecto específico individual no observado de la estación $i$ y $\varepsilon_{it}$ representa el error idiosincrático.
+    \item $R_i$ es la variable dicotómica que identifica la región geográfica o clúster al que pertenece la base $i$.
+    \item $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, donde $\alpha_i$ representa el efecto específico individual no observado de la base $i$ y $\varepsilon_{it}$ representa el error idiosincrático.
 \end{itemize}
+
+\subsection{Estimación de tendencias netas mediante combinaciones lineales}
+
+Dado que la especificación del modelo (Ecuación \ref{eq:modelocompleto}) incorpora interacciones multiplicativas triples, las tasas de cambio temporal (tendencias netas) para cada escenario estacional y regional no corresponden a coeficientes individuales, sino que deben derivarse como combinaciones lineales de los parámetros estimados. 
+
+Para cualquier escenario geográfico y estacional $s$, la tendencia neta mensual ($\beta_{\text{neta}, s}$) se define formalmente como:
+\begin{equation}
+    \beta_{\text{neta}, s} = \mathbf{w}_s' \boldsymbol{\hat{\beta}}
+\label{eq:combinacion_lineal}
+\end{equation}
+Donde $\boldsymbol{\hat{\beta}}$ representa el vector de coeficientes estimados de dimensión $16 \times 1$, y $\mathbf{w}_s$ es un vector de pesos de dimensión $16 \times 1$ que selecciona los parámetros que interactúan con la variable temporal $T_t$ en el escenario $s$.
+
+Para evaluar la significancia estadística de estas tendencias ($H_0: \mathbf{w}_s' \boldsymbol{\beta} = 0$), se aplica una prueba de restricción lineal de Wald. El error estándar robusto de la combinación lineal se calcula a partir de la matriz de covarianza robusta a la autocorrelación y dependencia espacial de Driscoll y Kraay (1998) ($\mathbf{V}_{DK}$):
+\begin{equation}
+    SE(\beta_{\text{neta}, s}) = \sqrt{\mathbf{w}_s' \mathbf{V}_{DK} \mathbf{w}_s}
+\end{equation}
+
+El estadístico de prueba asintótico de Wald ($t$) se formuló consecuentemente como:
+\begin{equation}
+    t = \frac{\mathbf{w}_s' \boldsymbol{\hat{\beta}}}{SE(\beta_{\text{neta}, s})}
+\end{equation}
+Bajo la teoría asintótica de grandes muestras ($N \times T = 5094$), el estadístico $t$ converge a una distribución normal estándar ($Z$-score), permitiendo calcular los p-valores bilaterales correspondientes. 
+
+Finalmente, para facilitar la interpretación física de las tendencias en la sección de resultados, las pendientes mensuales se anualizan mediante su multiplicación por los doce meses del año:
+\begin{equation}
+    \text{Tendencia Anualizada}_s = 12 \times \beta_{\text{neta}, s}
+\label{eq:anualizacion}
+\end{equation}
 
 \section{Marco de contraste SPEI vs. SPI para el aislamiento del efecto térmico}
 
