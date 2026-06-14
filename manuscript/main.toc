@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {1.3}Hipótesis}{3}{section.1.3}%
 \contentsline {section}{\numberline {1.4}Objetivos de la investigación}{3}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Objetivo general}{3}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Objetivos específicos}{3}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.2}Objetivos específicos}{4}{subsection.1.4.2}%
 \contentsline {chapter}{\numberline {2}Marco Teórico}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}La sequía}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Características}{5}{subsection.2.1.1}%
@@ -21,7 +21,7 @@
 \contentsline {subsection}{\numberline {2.1.4}Consecuencias}{7}{subsection.2.1.4}%
 \contentsline {section}{\numberline {2.2}Aridificación}{7}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Proceso de aridificación}{7}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Impulsores: la sequía}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.2}Aridificación y sequía}{8}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}Revisión de estudios sobre sequía y aridificación}{8}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Contexto nacional}{9}{subsection.2.3.1}%
 \contentsline {section}{\numberline {2.4}Consistencia y completitud en series temporales}{10}{section.2.4}%
