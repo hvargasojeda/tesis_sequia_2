@@ -1,19 +1,19 @@
 # Fdb version 4
-["bibtex main"] 1782587288.69486 "main.aux" "main.bbl" "main" 1782587852.67803 0
+["bibtex main"] 1782587288.69486 "main.aux" "main.bbl" "main" 1782591008.29793 0
   "./bibliography.bib" 1782581406.88036 13861 34141c05803b22cb369b663692db9b96 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/apacite/apacite.bst" 1374530685 141073 9d7b79dbf9d91133318126032cff8c27 ""
-  "main.aux" 1782587852.43515 77150 d7202cf8ae3e82dbd9ff0a892ff22385 "pdflatex"
+  "main.aux" 1782591008.03465 77150 d7202cf8ae3e82dbd9ff0a892ff22385 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1782587846.8568 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" "main.pdf" "main" 1782587852.67862 0
+["pdflatex"] 1782591001.55073 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" "main.pdf" "main" 1782591008.29877 0
   "/etc/texmf/web2c/texmf.cnf" 1755191811.04725 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/hjvargaso/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk" 1755193332.1749 24132 9760ce61b366788e776ff6e57b27a0bf ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/main.tex" 1782582819.63203 12011 efbfb89183fa1ee2cacc8612f2a39b07 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png" 1781194997.00348 495264 1d1dd998f703e154b04780cf7f1af3e6 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png" 1781194761.99878 694415 374bc4e61026cf044163266e9e1f0cf4 ""
-  "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png" 1780885512.71908 94852 ef5b9d7b21ae205e0f8466fe4783aa0d ""
+  "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png" 1782590835.57468 112896 4cddc5c454ea926db831add7f6615cc2 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf" 1780545925.26669 243402 60be9d0be2ba5b56e8a028d990ce4580 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf" 1780546185.1431 162749 b36f9b75ccbb065c9e1491c56c88f6c3 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
@@ -155,17 +155,17 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755191821.77122 128067 403859e4d35fdff4c458758f0e5ea400 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755191845 7353677 dd6910b802aeac5551a5b8794ff44066 ""
   "logofacen.jpg" 1779883777.54106 11768 24d8bd1be38b882179b597166ffd267b ""
-  "main.aux" 1782587852.43515 77150 d7202cf8ae3e82dbd9ff0a892ff22385 "pdflatex"
+  "main.aux" 1782591008.03465 77150 d7202cf8ae3e82dbd9ff0a892ff22385 "pdflatex"
   "main.bbl" 1782587288.74725 22601 b530986a1dbac825f29dc9c03d78d402 "bibtex main"
-  "main.lof" 1782587852.46315 1752 b0f0ccfa52c60643618f45a39899baa8 "pdflatex"
-  "main.lot" 1782587852.46315 1859 eeedaf4fe26acf9c25fdb69f143563a2 "pdflatex"
+  "main.lof" 1782591008.06265 1752 b0f0ccfa52c60643618f45a39899baa8 "pdflatex"
+  "main.lot" 1782591008.05865 1859 eeedaf4fe26acf9c25fdb69f143563a2 "pdflatex"
   "main.tex" 1782582819.63203 12011 efbfb89183fa1ee2cacc8612f2a39b07 ""
-  "main.toc" 1782587852.46315 9529 535a9e442efe4a74c360f6c5bc32aa4e "pdflatex"
+  "main.toc" 1782591008.05865 9529 535a9e442efe4a74c360f6c5bc32aa4e "pdflatex"
   "sections/10_apendice.tex" 1781197812.42706 5540 afe243fc632383c7d727afd695b2ace5 ""
   "sections/1capitulo.tex" 1782587846.40315 7650 2b6481991145103771961457886621da ""
-  "sections/2capitulo.tex" 1782584970.45169 31814 066776422969c59250f64e5b9ae0cf41 ""
+  "sections/2capitulo.tex" 1782589268.15891 31817 82d369ebce4d69c1ac207ae398de69c8 ""
   "sections/3capitulo.tex" 1781198060.43578 23333 48fafe3d993b7ab4fb5e0abf1aa082ab ""
-  "sections/4capitulo.tex" 1782583779.99985 39781 4bf558f5c32c7ad6a788d9bda91ab07b ""
+  "sections/4capitulo.tex" 1782591000.84263 39766 8bd5aac87fb6f44127aaf38cd72458b2 ""
   "sections/5capitulo.tex" 1781198116.21829 20557 3c21b3ac7359c347983e643de395a2eb ""
   (generated)
   "main.aux"
