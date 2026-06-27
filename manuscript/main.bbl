@@ -323,6 +323,35 @@ McKee, T\BPBI B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Middleton%
+\ \BBA {} Thomas%
+}{%
+Middleton%
+\ \BBA {} Thomas%
+}{%
+{\protect \APACyear {1992}}%
+}]{%
+atlas1992}
+\APACinsertmetastar {%
+atlas1992}%
+\begin{APACrefauthors}%
+Middleton, N.%
+\BCBT {}\ \BBA {} Thomas, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1992}.
+\newblock
+\APACrefbtitle {World atlas of desertification.} {World atlas of desertification.}
+\newblock
+\APACaddressPublisher{London ;. 1992}{Edward Arnold :}.
+\newblock
+\begin{APACrefURL} \url{http://digitallibrary.un.org/record/246740} \end{APACrefURL}
+\newblock
+\APACrefnote{"Nicholas Middleton...in collaboration with David Thomas ...produced the text for the Atlas and contributed to the final design and layout".}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Mishra%
 \ \BBA {} Singh%
 }{%
@@ -662,6 +691,36 @@ Velasco, I.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Vera%
+\ \protect \BOthers {.}}{%
+Vera%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+vera2006}
+\APACinsertmetastar {%
+vera2006}%
+\begin{APACrefauthors}%
+Vera, C.%
+, Higgins, W.%
+, Amador, J.%
+, Ambrizzi, T.%
+, Garreaud, R.%
+, Gochis, D.%
+\BDBL {}Zhang, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Toward a unified view of the {American Monsoon Systems}} {Toward a unified view of the {American Monsoon Systems}}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{19}{20}{4977--5000}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/JCLI3896.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Vicente-Serrano%
 , Beguer{\'i}a%
 \BCBL {}\ \BBA {} L{\'o}pez-Moreno%
@@ -687,34 +746,6 @@ Vicente-Serrano, S\BPBI M.%
 \APACjournalVolNumPages{Journal of Climate}{23}{7}{1696--1718}.
 \newblock
 \begin{APACrefDOI} \doi{10.1175/2009JCLI2909.1} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Vicente-Serrano%
-, Tomas-Burguera%
-, Peña-Angulo%
-\BCBL {}\ \BBA {} Domínguez-Castro%
-}{%
-Vicente-Serrano%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2025}}%
-}]{%
-theconversation_aridificacion_2025}
-\APACinsertmetastar {%
-theconversation_aridificacion_2025}%
-\begin{APACrefauthors}%
-Vicente-Serrano, S\BPBI M.%
-, Tomas-Burguera, M.%
-, Peña-Angulo, D.%
-\BCBL {}\ \BBA {} Domínguez-Castro, F.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2025}{apr}{8}.
-\newblock
-\APACrefbtitle {La aridificación del clima, una silenciosa pero implacable amenaza global.} {La aridificación del clima, una silenciosa pero implacable amenaza global.}
-\newblock
-\begin{APACrefURL} \url{https://theconversation.com/la-aridificacion-del-clima-una-silenciosa-pero-implacable-amenaza-global-250969} \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
