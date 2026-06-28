@@ -192,6 +192,33 @@ Grassi, B.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Grimm%
+\ \BBA {} Tedeschi%
+}{%
+Grimm%
+\ \BBA {} Tedeschi%
+}{%
+{\protect \APACyear {2009}}%
+}]{%
+grimm2009}
+\APACinsertmetastar {%
+grimm2009}%
+\begin{APACrefauthors}%
+Grimm, A\BPBI M.%
+\BCBT {}\ \BBA {} Tedeschi, R\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2009}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {ENSO relations with {S}outh {A}merican rainfall: the role of {E}l {N}i{\~n}o and {L}a {N}i{\~n}a intensity} {Enso relations with {S}outh {A}merican rainfall: the role of {E}l {N}i{\~n}o and {L}a {N}i{\~n}a intensity}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Climate}{22}{22}{6058--6075}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/2009JCLI2429.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Hausman%
 }{%
 Hausman%
@@ -379,6 +406,30 @@ Mishra, A\BPBI K.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Mudelsee%
+}{%
+Mudelsee%
+}{%
+{\protect \APACyear {2010}}%
+}]{%
+mudelsee2010}
+\APACinsertmetastar {%
+mudelsee2010}%
+\begin{APACrefauthors}%
+Mudelsee, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2010}.
+\newblock
+\APACrefbtitle {Climate Time Series Analysis} {Climate time series analysis}.
+\newblock
+\APACaddressPublisher{Dordrecht, Netherlands}{Springer}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/978-90-481-9482-7} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Mungul%
 \ \BBA {} Nowbuth%
 }{%
@@ -457,6 +508,33 @@ Pasten, A.%
 \APACrefbtitle {An{\'a}lisis de eventos meteorol{\'o}gicos extremos en el {Paraguay}} {An{\'a}lisis de eventos meteorol{\'o}gicos extremos en el {Paraguay}}\ \APACbVolEdTR{}{\BTR{}}.
 \newblock
 \APACaddressInstitution{Asunci{\'o}n, Paraguay}{Direcci{\'o}n de Meteorolog{\'i}a e Hidrolog{\'i}a, DINAC}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Penalba%
+\ \BBA {} Rivera%
+}{%
+Penalba%
+\ \BBA {} Rivera%
+}{%
+{\protect \APACyear {2016}}%
+}]{%
+penalba2016}
+\APACinsertmetastar {%
+penalba2016}%
+\begin{APACrefauthors}%
+Penalba, O\BPBI C.%
+\BCBT {}\ \BBA {} Rivera, J\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Regional aspects of future drought characterization in southern {S}outh {A}merica} {Regional aspects of future drought characterization in southern {S}outh {A}merica}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Theoretical and Applied Climatology}{123}{3}{503--515}.
+\newblock
+\begin{APACrefDOI} \doi{10.1007/s00704-014-1358-y} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -770,6 +848,28 @@ Ward, J\BPBI H.%
 \APACjournalVolNumPages{Journal of the American Statistical Association}{58}{301}{236--244}.
 \newblock
 \begin{APACrefDOI} \doi{10.1080/01621459.1963.10500845} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Wilks%
+}{%
+Wilks%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+wilks2011}
+\APACinsertmetastar {%
+wilks2011}%
+\begin{APACrefauthors}%
+Wilks, D\BPBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2011}.
+\newblock
+\APACrefbtitle {Statistical methods in the atmospheric sciences} {Statistical methods in the atmospheric sciences}\ (\BVOL~100).
+\newblock
+\APACaddressPublisher{Oxford, United Kingdom}{Academic Press}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
