@@ -24,13 +24,13 @@ $k = 5$ & 0.1592 \\ \hline
 \end{tabular}
 \end{table}
 
-El coeficiente de silueta promedio alcanza su máximo global para una estructura de $k^* = 2$ clústeres ($s = 0.1758$), indicando que una partición de dos regiones climáticas proporciona la máxima cohesión intra-grupo y la mayor diferenciación inter-grupo. Las particiones alternativas de $3$, $4$ o $5$ grupos muestran un decaimiento progresivo en la calidad de la silueta, justificando estadísticamente la selección de dos subregiones hídricas óptimas a nivel nacional para el período bajo estudio.
+El coeficiente de silueta promedio alcanza su máximo global para una estructura de $k^* = 2$ clústeres ($s = 0.1758$), indicando que una partición de dos regiones climáticas proporciona la máxima cohesión intra-grupo y la mayor diferenciación inter-grupo. Las particiones alternativas de $3$, $4$ o $5$ grupos muestran un decaimiento progresivo en la calidad de la silueta, justificando estadísticamente la selección de dos subregiones óptimas a nivel nacional para el período bajo estudio.
 
 \subsection{Asignación de bases meteorológicas y validación de contigüidad geográfica}
 
 Para validar la coherencia climática y física de la regionalización propuesta, se contrastó la asignación temporal derivada del clustering de SPEI-6 con la ubicación geográfica (latitud y longitud) de las bases terrestres. La evaluación cuantitativa de las distancias de posicionamiento reveló que la distancia geográfica promedio entre bases asignadas al mismo clúster (distancia intra-clúster) es de $2.438^{\circ}$ decimales (aproximadamente $260$ km), mientras que la distancia promedio entre bases pertenecientes a clústeres distintos (distancia inter-clúster) asciende a los $3.322^{\circ}$ decimales (aproximadamente $360$ km).
 
-Esta diferencia confirma la existencia de una contigüidad geográfica compacta. Como se presenta visualmente en el mapa de la Figura \ref{fig:regionalizacion} (Panel C), la clasificación basada en el SPEI-6 ha particionado el territorio nacional de manera limpia, delimitando dos subregiones climáticas claramente definidas y coherentes con sus características geofísicas:
+Esta diferencia confirma la existencia de una contigüidad geográfica compacta. Como se presenta visualmente en el mapa de la Figura \ref{fig:regionalizacion} (Panel C), la clasificación basada en el SPEI-6 ha particionado el territorio nacional de manera limpia, delimitando dos subregiones climáticas claramente definidas y coherentes con sus características de balance hídricas:
 
 \begin{enumerate}
     \item \textit{Subregión sureste (Clúster 1 - naranja):} Integrada por las bases de Caazapá (CAAZ), Villarrica (VILL), Coronel Oviedo (COVIE), San Juan Bautista (SJBA), Minga Guazú (MINGA), Capitán Meza (CMEZA) y Encarnación (ENCAR). Este bloque representa la zona sur y este de la Región Oriental, históricamente caracterizada por ser el área de mayor pluviometría de Paraguay, con balances hídricos promedio superavitarios y una menor inercia a eventos de sequía extrema prolongada.
@@ -100,7 +100,7 @@ La extensión espacial se cuantificó como el porcentaje promedio de bases de la
     \label{fig:caracterizacion_descriptiva}
 \end{figure}
 
-Los resultados confirman que la sequía en Paraguay ha transitado de ser un fenómeno eminentemente local o subregional a principios del milenio, a convertirse en una anomalía de escala nacional y altamente generalizada durante la última década. La línea de tendencia muestra una pendiente positiva pronunciada que inicia cerca del 10\% de afectación espacial en el año 2000 y se proyecta por encima del 20\% para el año 2023. Durante el ciclo crítico de 2020--2021, la extensión espacial del déficit hídrico alcanzó niveles históricos sin precedentes, afectando de forma simultánea a un promedio anual superior al 35\% de la red de monitoreo nacional.
+Los resultados confirman que la sequía en Paraguay ha transitado de ser un fenómeno eminentemente zonal o subregional a principios del milenio, a convertirse en una anomalía de escala nacional y más generalizada durante la última década. La línea de tendencia muestra una pendiente positiva pronunciada que inicia cerca del 10\% de afectación espacial en el año 2000 y se proyecta por encima del 20\% para el año 2023. Durante el ciclo crítico de 2020--2021, la extensión espacial del déficit hídrico alcanzó niveles históricos sin precedentes, afectando de forma simultánea a un promedio anual superior al 35\% de la red de monitoreo nacional.
 
 \section{Resultados del modelo de datos de panel}
 
@@ -210,7 +210,7 @@ Tiempo $\times$ verano $\times$ clúster 1 ($\omega_3$) & -0.0018 & 0.0025 & -0.
 
 Debido a que el modelo de regresión especifica interacciones multiplicativas triples (tiempo $\times$ estación $\times$ región), los coeficientes individuales expuestos en el Cuadro \ref{tab:resultados_re} no representan los efectos marginales directos de las variables. Para decodificar e interpretar el comportamiento histórico del SPEI-6, es necesario operar el modelo integrando de manera conjunta los \textit{efectos de nivel} (parámetros de posición espacial y estacional que actúan como interceptos netos de partida) y los \textit{efectos de pendiente} (tasas dinámicas de cambio temporal o pendientes netas).
 
-Para ilustrar este mecanismo de aplicación de forma integral, considérese la estimación esperada del índice SPEI-6 para la subregión sur-este (Clúster 1) durante la estación de verano al término del período de estudio ($t = 283$ meses):
+Para ilustrar este mecanismo de aplicación de forma integral, considérese la estimación esperada del índice SPEI-6 para la subregión sureste (Clúster 1) durante la estación de verano al término del período de estudio ($t = 283$ meses):
 
 \begin{enumerate}
     \item \textit{Cálculo del efecto de nivel base (Intercepto neto):} Suma los coeficientes asociados a las variables dicotómicas de posición que definen la condición espacial y estacional de la categoría analizada en el origen de la serie ($t = 0$):
@@ -222,9 +222,9 @@ Para ilustrar este mecanismo de aplicación de forma integral, considérese la e
     \end{split}
     \label{eq:nivel_base}
     \end{equation}
-    Este valor positivo ($0.5411$) indica que al inicio del período (enero de 2000), las condiciones de balance hídrico estival en la subregión sur-este eran predominantemente húmedas en promedio.
+    Este valor positivo ($0.5411$) indica que al inicio del período (enero de 2000), las condiciones de balance hídrico estival en la subregión sureste eran predominantemente húmedas en promedio.
 
-    \item \textit{Cálculo del efecto de pendiente (Tendencia neta):} Representa la tasa dinámica de cambio mensual de la anomalía hídrica y se obtiene consolidando todos los coeficientes del modelo que interactúan directamente con la variable temporal:
+    \item \textit{Cálculo del efecto de pendiente (Tendencia neta):} Representa la tasa dinámica de cambio mensual del balance hídrico y se obtiene consolidando todos los coeficientes del modelo que interactúan directamente con la variable temporal:
     \begin{equation}
     \begin{split}
         \text{tendencia neta} & = \beta_1 \text{ (tiempo)} + \theta_3 \text{ (tiempo} \times \text{verano)} + \phi_1 \text{ (tiempo} \times \text{región)} + \omega_3 \text{ (triple interacción)} \\
@@ -243,7 +243,7 @@ Para ilustrar este mecanismo de aplicación de forma integral, considérese la e
 
 Cabe señalar que la tendencia de cambio mensual calculada de $-0.0030$ puntos de SPEI-6 (Ecuación \ref{eq:tendencia_neta}) equivale a una tasa de aridificación anual acumulada de $-0.0366$ puntos de SPEI-6 (obtenida al multiplicar la pendiente mensual por los 12 meses del año). Esta tasa anualizada corresponde exactamente al valor reportado y validado estadísticamente en el Cuadro \ref{tab:pendientes_netas} de la sección subsiguiente. 
 
-Este resultado puntual esperado de $-0.3079$ al final de la serie histórica evidencia que, bajo los efectos del aumento de la demanda evaporativa, los veranos de la subregión sur-este han transitado de un estado húmedo inicial hacia un balance de agua que se ubica en el espectro de sequedad, confirmando una trayectoria sostenida de aridificación estival.
+Este resultado puntual esperado de $-0.3079$ al final de la serie histórica evidencia que, bajo los efectos del aumento de la demanda evaporativa, los veranos de la subregión sureste han transitado de un estado húmedo inicial hacia un balance de agua que se ubica en el espectro de sequedad, confirmando una trayectoria sostenida de aridificación estival.
 
 \subsection{Análisis de las tendencias de largo plazo (pendientes netas)}
 
@@ -275,7 +275,7 @@ Los resultados expuestos en el Cuadro \ref{tab:pendientes_netas} revelan una mar
 
 \begin{enumerate}
     \item \textit{Estabilidad hídrica en períodos fríos:} Durante el invierno y el otoño, ambas subregiones geográficas exhiben tendencias de cambio de baja magnitud y estadísticamente no significativas ($p > 0.30$). Incluso, se registran tasas de cambio ligeramente positivas hacia la humedad en el invierno de ambos clústeres ($+0.0145$ y $+0.0120$ puntos por año), lo que sugiere que la época climatológicamente seca de Paraguay no ha experimentado un agravamiento sistemático de su déficit de base durante las últimas dos décadas.
-    \item \textit{Trayectoria de aridificación en períodos cálidos:} En contraste, las estaciones de primavera y verano muestran de manera sistemática pendientes negativas (hacia la sequedad) en todo el territorio nacional. Este comportamiento físico resulta de gran relevancia, ya que coincide con los meses de mayor actividad fotosintética y desarrollo agrícola en el país, sugiriendo un incremento del estrés hídrico estival de largo plazo.
+    \item \textit{Trayectoria de aridificación en períodos cálidos:} En contraste, las estaciones de primavera y verano muestran de manera sistemática pendientes negativas (hacia la sequedad) en todo el territorio nacional. Este comportamiento físico resulta de gran relevancia, ya que coincide con los meses de mayor desarrollo agrícola en el país, sugiriendo un incremento del estrés hídrico estival de largo plazo.
 \end{enumerate}
 
 El hallazgo más relevante de la estimación lineal se concentra en la subregión sureste (clúster 1) durante la estación estival. El verano en este bloque geográfico registra una tendencia de desecamiento de ${-0.0366}$ puntos de SPEI-6 por año, siendo casi tres veces más intensa que la tendencia estival estimada para el clúster 2 centrochaco ($-0.0120$). 
@@ -300,7 +300,7 @@ Dado que ambos índices comparten idéntica escala de tiempo de acumulación (6 
 \textbf{Región Climática} & \textbf{Estación del Año} & \textbf{Tendencia SPEI-6} & \textbf{Tendencia SPI-6} & \textbf{Diferencia ($\Delta \beta$)} & \textbf{Efecto del Calentamiento Global} \\ \hline
 Subregión sureste & verano & -0.0400* & -0.0339 & -0.0060* & \parbox[t]{5.5cm}{Sugerente (Tendencia de aridificación estival moderada).} \\
 (Clúster 1) & otoño & -0.0086 & -0.0057 & -0.0029 & \parbox[t]{5.5cm}{No significativo (Precipitación domina el balance de otoño).} \\ \hline
-Subregión centro-chaco & primavera & -0.0161 & -0.0059 & -0.0102* & \parbox[t]{5.5cm}{Sugerente (Extensión temporal de la sequedad primaveral).} \\
+Subregión centrochaco & primavera & -0.0161 & -0.0059 & -0.0102* & \parbox[t]{5.5cm}{Sugerente (Extensión temporal de la sequedad primaveral).} \\
 (Clúster 2) & verano & -0.0151 & -0.0026 & -0.0125** & \parbox[t]{5.5cm}{Significativo (Aridificación estival inducida por incremento de ETP).} \\ \hline
 \multicolumn{6}{l}{\small Nota: *** $p < 0.01$, ** $p < 0.05$, * $p < 0.1$. Los valores corresponden a tendencias anualizadas estimadas.} \\
 \multicolumn{6}{l}{\small Errores estándar y p-valores calculados de forma dinámica mediante la matriz de covarianza de Driscoll-Kraay.} \\
@@ -309,17 +309,17 @@ Subregión centro-chaco & primavera & -0.0161 & -0.0059 & -0.0102* & \parbox[t]{
 }
 \end{table}
 
-Los resultados expuestos en el Cuadro \ref{tab:contraste_spei_spi} aportan evidencia científica de gran relevancia para la deconstrucción física de los procesos de sequía en Paraguay:
+Los resultados expuestos en el Cuadro \ref{tab:contraste_spei_spi} aportan evidencia estadística de gran relevancia para la deconstrucción física de los procesos de sequía en Paraguay:
 
 \begin{enumerate}
     \item \textit{La estabilidad de la señal pluvial (SPI-6):} El análisis univariado de la precipitación revela que las tendencias temporales estimadas para el SPI-6 no son estadísticamente significativas en ninguna de las estaciones ni clústeres del país. Este hallazgo es fundamental, pues confirma que el volumen de lluvias acumuladas en Paraguay durante el período 2000--2023 ha permanecido estadísticamente estable, sin variaciones sistemáticas de largo plazo hacia el déficit en el suministro de agua.
     \item \textit{La presencia de una señal de aridificación térmica:} A pesar de que las precipitaciones no muestran un patrón de descenso significativo, la incorporación de la temperatura en el balance climático revela una trayectoria hacia condiciones de sequedad estacional. Esto se evidencia de forma particular en el verano de la subregión sureste (clúster 1), donde el SPEI-6 registra una tendencia anualizada hacia el secado de $-0.0400$ puntos (significativo al 10\%, $p < 0.10$), acumulando una pérdida de humedad de $-0.96$ desviaciones estándar a lo largo de los 24 años analizados.
 \end{enumerate}
 
-La validación estadística de la Hipótesis 3 (H3) se fundamenta en la significancia estadística del modelo de diferencia ($\Delta \beta$). En el verano de la subregión centro-chaco (clúster 2), la tendencia de precipitación (SPI-6) es prácticamente nula y estadísticamente irrelevante ($-0.0026$ puntos por año); no obstante, la diferencia de pendientes entre el SPEI-6 y el SPI-6 es de ${-0.0125}$ puntos por año, siendo estadísticamente significativa al 5\% ($p < 0.05$). 
+La validación estadística de la Hipótesis 3 (H3) se fundamenta en la significancia estadística del modelo de diferencia ($\Delta \beta$). En el verano de la subregión centrochaco (clúster 2), la tendencia de precipitación (SPI-6) es prácticamente nula y estadísticamente irrelevante ($-0.0026$ puntos por año); no obstante, la diferencia de pendientes entre el SPEI-6 y el SPI-6 es de ${-0.0125}$ puntos por año, siendo estadísticamente significativa al 5\% ($p < 0.05$). 
 
 Este resultado demuestra que, aun bajo regímenes de lluvias estables, el incremento térmico asociado al calentamiento global está induciendo un deterioro real y sistemático del balance hídrico mediante la elevación de la demanda evaporativa de la atmósfera (ETP), lo que empuja al sistema climatológico local hacia la aridificación estival.
 
-Un comportamiento análogo se observa en el verano del clúster 1 (sureste) y en la primavera del clúster 2 (centro-chaco), donde la diferencia de tendencias ($\Delta \beta$) arroja coeficientes negativos de $-0.0060$ y $-0.0102$, respectivamente, ambos estadísticamente significativos al 10\% ($p < 0.10$). La persistencia de estos estimadores de diferencia negativos confirma que, si bien la variabilidad pluvial sigue gobernando la dinámica interanual del balance de agua, la variable temperatura ha dejado de actuar de forma neutral. 
+Un comportamiento análogo se observa en el verano del clúster 1 (sureste) y en la primavera del clúster 2 (centrochaco), donde la diferencia de tendencias ($\Delta \beta$) arroja coeficientes negativos de $-0.0060$ y $-0.0102$, respectivamente, ambos estadísticamente significativos al 10\% ($p < 0.10$). La persistencia de estos estimadores de diferencia negativos confirma que, si bien la variabilidad pluvial sigue gobernando la dinámica interanual del balance de agua, la variable temperatura ha dejado de actuar de forma neutral. 
 
 Por el contrario, el incremento de las temperaturas vinculado al calentamiento global está introduciendo una tendencia sistemática de secado estival y primaveral en Paraguay, aportando soporte científico a la hipótesis de que las dinámicas de sequía contemporáneas se encuentran potenciadas por el peso del estrés térmico por encima de la señal meteorológica de las lluvias.

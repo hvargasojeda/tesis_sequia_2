@@ -81,9 +81,9 @@
 \contentsline {subsection}{\numberline {5.1.1}Interpretación física de las dinámicas hídricas y contraste geográfico (regional)}{47}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}El impacto del ruido interanual (ENSO) sobre el ajuste del modelo lineal}{48}{subsection.5.1.2}%
 \contentsline {subsection}{\numberline {5.1.3}Implicaciones de la robustez de Driscoll-Kraay en la inferencia climática}{49}{subsection.5.1.3}%
-\contentsline {section}{\numberline {5.2}Respuesta a las preguntas de investigación}{49}{section.5.2}%
+\contentsline {section}{\numberline {5.2}Respuesta a las preguntas de investigación}{50}{section.5.2}%
 \contentsline {section}{\numberline {5.3}Evaluación y contraste de las hipótesis}{51}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Conclusiones generales}{52}{section.5.4}%
+\contentsline {section}{\numberline {5.4}Conclusiones generales}{53}{section.5.4}%
 \contentsline {section}{\numberline {5.5}Recomendaciones y futuras líneas de investigación}{54}{section.5.5}%
 \contentsline {chapter}{\numberline {A}Listado de bases meteorológicas}{56}{appendix.Alph1}%
 \contentsline {chapter}{\numberline {B}Entorno computacional}{57}{appendix.Alph2}%
