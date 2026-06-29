@@ -25,7 +25,7 @@ Thumbs.db
 # Archivos de datos y salida
 # NUNCA subas datos brutos o resultados al repositorio, especialmente si son grandes
 # o contienen información sensible.
-/data/
+/data/raw
 /output/
 
 # Archivos de dependencias (si usas Poetry o Pipenv)
