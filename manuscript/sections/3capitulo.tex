@@ -173,12 +173,12 @@ Donde:
 
 Dado que la especificación del modelo (Ecuación \ref{eq:modelocompleto}) incorpora interacciones multiplicativas triples, las tasas de cambio temporal (tendencias netas) para cada escenario estacional y regional no corresponden a coeficientes individuales, sino que deben derivarse como combinaciones lineales de los parámetros estimados. 
 
-Para cualquier escenario geográfico y estacional $s$, la tendencia neta mensual ($\beta_{\text{neta}, s}$) se define formalmente como:
+Para cualquier escenario regional y estacional $s$, la tendencia neta mensual ($\beta_{\text{neta}, s}$) se define formalmente como:
 \begin{equation}
     \beta_{\text{neta}, s} = \mathbf{w}_s' \boldsymbol{\hat{\beta}}
 \label{eq:combinacion_lineal}
 \end{equation}
-Donde $\boldsymbol{\hat{\beta}}$ representa el vector de coeficientes estimados de dimensión $16 \times 1$, y $\mathbf{w}_s$ es un vector de pesos de dimensión $16 \times 1$ que selecciona los parámetros que interactúan con la variable temporal $T_t$ en el escenario $s$.
+Donde $\boldsymbol{\hat{\beta}}$ representa el vector de coeficientes estimados de dimensión $16 \times 1$, y $\mathbf{w}_s$ es un vector de pesos de dimensión $16 \times 1$ que selecciona los parámetros que interactúan con la variable temporal $t$ en el escenario $s$.
 
 Para evaluar la significancia estadística de estas tendencias ($H_0: \mathbf{w}_s' \boldsymbol{\beta} = 0$), se aplica una prueba de restricción lineal de Wald. El error estándar robusto de la combinación lineal se calcula a partir de la matriz de covarianza robusta a la autocorrelación y dependencia espacial de Driscoll y Kraay (1998) ($\mathbf{V}_{DK}$):
 \begin{equation}

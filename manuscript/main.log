@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  29 JUN 2026 00:11
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  29 JUN 2026 00:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,38 +676,18 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
- [40]
-Overfull \hbox (23.1291pt too wide) detected at line 224
-[]
- []
-
-
-Overfull \hbox (29.3747pt too wide) detected at line 224
-[][][][]
- []
-
-
-Overfull \hbox (99.62457pt too wide) detected at line 235
-[]
- []
-
-
-Overfull \hbox (29.3747pt too wide) detected at line 235
-[][][][]
- []
-
-[41]
-Overfull \hbox (3.30334pt too wide) in paragraph at lines 256--272
+ [40] [41]
+Overfull \hbox (3.30334pt too wide) in paragraph at lines 258--274
  [][] 
  []
 
 [42] [43]
-Underfull \hbox (badness 1953) in paragraph at lines 309--309
+Underfull \hbox (badness 1953) in paragraph at lines 311--311
 []\T1/ptm/m/n/12 No sig-ni-fi-ca-ti-vo (Pre-ci-pi-ta-ción
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 309--309
+Underfull \hbox (badness 1033) in paragraph at lines 311--311
 []\T1/ptm/m/n/12 Sugerente (Ex-ten-sión tem-po-ral
  []
 
@@ -842,7 +822,7 @@ Here is how much of TeX's memory you used:
  62 hyphenation exceptions out of 8191
  75i,18n,79p,2499b,786s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/hjvargaso/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (78 pages, 1779840 bytes).
+Output written on main.pdf (78 pages, 1779851 bytes).
 PDF statistics:
  1352 PDF objects out of 1440 (max. 8388607)
  1186 compressed objects within 12 object streams

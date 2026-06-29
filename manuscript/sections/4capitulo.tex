@@ -216,9 +216,10 @@ Para ilustrar este mecanismo de aplicación de forma integral, considérese la e
     \item \textit{Cálculo del efecto de nivel base (Intercepto neto):} Suma los coeficientes asociados a las variables dicotómicas de posición que definen la condición espacial y estacional de la categoría analizada en el origen de la serie ($t = 0$):
     \begin{equation}
     \begin{split}
-        \text{nivel base} & = \beta_0 \text{ (base)} + \gamma_3 \text{ (verano)} + \delta_1 \text{ (región)} + \psi_3 \text{ (interacción verano} \times \text{región)} \\
-        & = -0.1844 + 0.3447 - 0.0640 + 0.4448 \\
-        & = \mathbf{0.5411}
+    \text{nivel base} & = \beta_0 \text{(base)} + \gamma_3 \text{(verano)} + \delta_1 \text{(región)} \\
+    & \quad + \psi_3 \text{(interacción verano} \times \text{región)} \\
+    & = -0.1844 + 0.3447 - 0.0640 + 0.4448 \\
+    & = \mathbf{0.5411}
     \end{split}
     \label{eq:nivel_base}
     \end{equation}
@@ -227,9 +228,10 @@ Para ilustrar este mecanismo de aplicación de forma integral, considérese la e
     \item \textit{Cálculo del efecto de pendiente (Tendencia neta):} Representa la tasa dinámica de cambio mensual del balance hídrico y se obtiene consolidando todos los coeficientes del modelo que interactúan directamente con la variable temporal:
     \begin{equation}
     \begin{split}
-        \text{tendencia neta} & = \beta_1 \text{ (tiempo)} + \theta_3 \text{ (tiempo} \times \text{verano)} + \phi_1 \text{ (tiempo} \times \text{región)} + \omega_3 \text{ (triple interacción)} \\
-        & = 0.0012 - 0.0022 - 0.0002 - 0.0018 \\
-        & = \mathbf{-0.0030 \text{ puntos de SPEI-6 / mes}}
+    \text{tendencia neta} & = \beta_1 \text{(tiempo)} + \theta_3 \text{(tiempo} \times \text{verano)} \\
+    & \quad + \phi_1 \text{(tiempo} \times \text{región)} + \omega_3 \text{(triple interacción)} \\
+    & = 0.0012 - 0.0022 - 0.0002 - 0.0018 \\
+    & = \mathbf{-0.0030 \text{ puntos de SPEI-6 / mes}}
     \end{split}
     \label{eq:tendencia_neta}
     \end{equation}
