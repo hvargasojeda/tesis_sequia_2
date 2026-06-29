@@ -153,18 +153,18 @@ La especificación formal del modelo se define como:
 
 \begin{equation}
 \begin{split}
-    Y_{it} = & \beta_0 + \beta_1 T_t + \sum_{s=1}^{3} \gamma_s E_{s,t} + \delta_1 R_i \\
-    & + \sum_{s=1}^{3} \theta_s (T_t \times E_{s,t}) + \phi_1 (T_t \times R_i) + \sum_{s=1}^{3} \psi_s (E_{s,t} \times R_i) \\
-    & + \sum_{s=1}^{3} \omega_s (T_t \times E_{s,t} \times R_i) + u_{it}
+    Y_{it} = & \beta_0 + \beta_1 t + \sum_{s=1}^{3} \gamma_s E_{s,t} + \delta_1 R_i \\
+    & + \sum_{s=1}^{3} \theta_s (t \times E_{s,t}) + \phi_1 (t \times R_i) + \sum_{s=1}^{3} \psi_s (E_{s,t} \times R_i) \\
+    & + \sum_{s=1}^{3} \omega_s (t \times E_{s,t} \times R_i) + u_{it}
 \end{split}
 \label{eq:modelocompleto}
 \end{equation}
 
 Donde:
 \begin{itemize}
-    \item $Y_{it}$ representa el valor del índice de sequía (SPEI-6 o SPI-6) para la base $i$ en el mes $t$.
-    \item $T_t$ es la variable de tendencia temporal continua (medida en meses, donde $t = 1, 2, \dots, 288$).
-    \item $E_{s,t}$ es un conjunto de variables dicotómicas (\textit{dummies}) que representan las estaciones climáticas del año $s$ (invierno, primavera, verano, tomando el otoño como categoría de referencia).
+    \item $Y_{it}$ representa el valor del índice de sequía (SPEI-6 o SPI-6) para la base meteorológica $i$ en el mes $t$.
+    \item $t$ es la variable de tendencia temporal continua (medida en meses, donde $t = 1, 2, \dots, 288$).
+    \item $E_{s,t}$ es un conjunto de variables dicotómicas (\textit{dummies}) que representan las estaciones climáticas $s$ en el período $t$ (invierno, primavera, verano, tomando el otoño como categoría de referencia).
     \item $R_i$ es la variable dicotómica que identifica la región geográfica o clúster al que pertenece la base $i$.
     \item $u_{it} = \alpha_i + \varepsilon_{it}$ es el término de error compuesto, donde $\alpha_i$ representa el efecto específico individual no observado de la base $i$ y $\varepsilon_{it}$ representa el error idiosincrático.
 \end{itemize}
