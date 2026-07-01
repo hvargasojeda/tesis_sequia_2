@@ -3,9 +3,9 @@
 \contentsline {chapter}{Dedicatoria}{\es@scroman {iii}}{chapter*.1}%
 \contentsline {chapter}{Agradecimientos}{\es@scroman {iv}}{chapter*.2}%
 \contentsline {chapter}{Resumen}{\es@scroman {v}}{chapter*.3}%
-\contentsline {chapter}{Abstract}{\es@scroman {vii}}{chapter*.4}%
-\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {xiii}}{chapter*.6}%
-\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {xiv}}{chapter*.7}%
+\contentsline {chapter}{Abstract}{\es@scroman {vi}}{chapter*.4}%
+\contentsline {chapter}{\'{I}ndice de cuadros}{\es@scroman {xi}}{chapter*.6}%
+\contentsline {chapter}{\'{I}ndice de figuras}{\es@scroman {xii}}{chapter*.7}%
 \contentsline {chapter}{\numberline {1}Introducción}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Planteamiento del problema}{2}{section.1.1}%
 \contentsline {section}{\numberline {1.2}Justificación de la investigación}{2}{section.1.2}%
@@ -14,34 +14,31 @@
 \contentsline {subsection}{\numberline {1.4.1}Objetivo general}{3}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Objetivos específicos}{4}{subsection.1.4.2}%
 \contentsline {chapter}{\numberline {2}Marco Teórico}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}La sequía}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Características}{5}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Clasificación}{6}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Impulsores}{6}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Consecuencias}{7}{subsection.2.1.4}%
-\contentsline {section}{\numberline {2.2}Aridificación}{7}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Proceso de aridificación}{8}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Aridificación y sequía}{8}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.1}La sequía. Definición}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Características y clasificación}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Causas y consecuencias}{6}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Aridificación. Definición}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Procesos de aridificación y su vínculo con la sequía}{7}{subsection.2.2.1}%
 \contentsline {section}{\numberline {2.3}Revisión de estudios sobre sequía y aridificación}{8}{section.2.3}%
 \contentsline {subsection}{\numberline {2.3.1}Contexto nacional}{9}{subsection.2.3.1}%
-\contentsline {section}{\numberline {2.4}Consistencia y completitud en series temporales}{10}{section.2.4}%
-\contentsline {section}{\numberline {2.5}Cuantificación de la sequía meteorológica: Los índices SPI y SPEI}{10}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}El índice de precipitación estandarizada (SPI)}{10}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Balance hídrico y el índice de precipitación - evapotranspiración estandarizado (SPEI)}{11}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Acumulación del balance hídrico en múltiples escalas}{12}{subsection.2.5.3}%
-\contentsline {subsection}{\numberline {2.5.4}Limitaciones del índice SPEI}{12}{subsection.2.5.4}%
-\contentsline {section}{\numberline {2.6}Fundamentos del agrupamiento no supervisado (clustering) para regionalización geográfica de la sequía}{13}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Algoritmo de agrupamiento jerárquico aglomerativo}{13}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Determinación de la partición óptima mediante el coeficiente de silueta}{14}{subsection.2.6.2}%
-\contentsline {section}{\numberline {2.7}Fundamentos del modelado estadístico para datos de panel}{14}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Modelos de efectos fijos (FE) vs. efectos aleatorios (RE)}{14}{subsection.2.7.1}%
-\contentsline {subsubsection}{Modelo de efectos fijos (FE)}{15}{section*.8}%
+\contentsline {section}{\numberline {2.4}Cuantificación de la sequía meteorológica: Los índices SPI y SPEI}{9}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Consistencia y completitud en series temporales}{10}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}El índice de precipitación estandarizada (SPI)}{10}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Balance hídrico y el índice de precipitación - evapotranspiración estandarizado (SPEI)}{11}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Acumulación del balance hídrico en múltiples escalas}{11}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Limitaciones del índice SPEI}{12}{subsection.2.4.5}%
+\contentsline {section}{\numberline {2.5}Fundamentos del agrupamiento no supervisado (clustering) para regionalización geográfica de la sequía}{13}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Algoritmo de agrupamiento jerárquico aglomerativo}{13}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Determinación de la partición óptima mediante el coeficiente de silueta}{14}{subsection.2.5.2}%
+\contentsline {section}{\numberline {2.6}Fundamentos del modelado estadístico para datos de panel}{14}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Modelos de efectos fijos (FE) vs. efectos aleatorios (RE)}{14}{subsection.2.6.1}%
+\contentsline {subsubsection}{Modelo de efectos fijos (FE)}{14}{section*.8}%
 \contentsline {subsubsection}{Modelo de efectos aleatorios (RE)}{15}{section*.9}%
-\contentsline {subsection}{\numberline {2.7.2}Selección del modelo: El test de especificación de Hausman}{15}{subsection.2.7.2}%
-\contentsline {subsection}{\numberline {2.7.3}Supuestos del modelo de panel}{16}{subsection.2.7.3}%
-\contentsline {subsection}{\numberline {2.7.4}Test de Pesaran (dependencia espacial) y regresión de Driscoll - Kraay (HAC/CSD)}{16}{subsection.2.7.4}%
-\contentsline {subsection}{\numberline {2.7.5}Limitaciones del modelo de panel}{17}{subsection.2.7.5}%
-\contentsline {section}{\numberline {2.8}El rol del calentamiento global en las sequías}{18}{section.2.8}%
+\contentsline {subsection}{\numberline {2.6.2}Selección del modelo: El test de especificación de Hausman}{15}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}Supuestos del modelo de panel}{16}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Test de Pesaran (dependencia espacial) y regresión de Driscoll - Kraay (HAC/CSD)}{16}{subsection.2.6.4}%
+\contentsline {subsection}{\numberline {2.6.5}Limitaciones del modelo de panel}{17}{subsection.2.6.5}%
+\contentsline {section}{\numberline {2.7}El rol del calentamiento global en las sequías}{18}{section.2.7}%
 \contentsline {chapter}{\numberline {3}Materiales y Métodos}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Diseño de la investigación}{19}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Fuentes de datos y variables}{19}{section.3.2}%
