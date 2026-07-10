@@ -6,9 +6,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc} 
 \usepackage{mathptmx} % Fuente tipo Times
-\renewcommand{\baselinestretch}{1.3} % Interlineado
-\usepackage{hyperref}
+
+% INTERLINEADO GENERAL Y SALTO DE PÁRRAFO (AJUSTADO)
+\setlength{\parskip}{0.3cm} % Salto de párrafo más separado (0.3cm)\usepackage{hyperref}
 \usepackage{bookmark}
+
 % Mejora el manejo de comprobaciones de archivos auxiliares y reruns necesarios
 \usepackage{rerunfilecheck}
 
@@ -16,9 +18,15 @@
 \usepackage{geometry}
 \geometry{left=4cm, right=2.5cm, top=3.5cm, bottom=2.5cm}
 
-% PAQUETES PARA CITAS (Estilo APA)
+% PAQUETES PARA CITAS (Estilo APA) - AJUSTADO CON "et al." EN CURSIVA
 \usepackage{apacite}
 \let\cite\shortcite 
+
+% Forzar el uso de "et al." en cursiva en lugar de "y cols." en citas y bibliografía
+\AtBeginDocument{
+  \renewcommand{\BOthers}{\textit{et~al}}
+  \renewcommand{\BOthersPeriod}{\textit{et~al}}
+}
 
 % PAQUETES PARA GRÁFICOS, TABLAS Y OTROS
 \usepackage{graphicx}
@@ -29,20 +37,104 @@
 \usepackage{longtable}
 \usepackage{pdfpages} % para insertar páginas PDF externas
 
-% ENCABEZADOS Y PIES DE PÁGINA
+% ENCABEZADOS Y PIES DE PÁGINA (AJUSTADO: NÚMERO ABAJO Y CENTRADO)
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{} % Limpia todo
-\fancyhead[R]{\thepage} % Número página arriba-derecha
-\renewcommand{\headrulewidth}{0pt} % Sin línea encabezado
+\fancyhf{} % Limpia encabezados y pies de página anteriores
+\fancyfoot[C]{\thepage} % Fuerza el número de página abajo y centrado
+\renewcommand{\headrulewidth}{0pt} % Sin línea divisoria en el encabezado
+\renewcommand{\footrulewidth}{0pt} % Sin línea divisoria en el pie de página
 \setlength{\headheight}{14.5pt} % Soluciona advertencia de fancyhdr
 \addtolength{\topmargin}{-2.5pt} % Compensa el aumento de headheight
 
-% RENOMBRAR TÍTULOS
-\renewcommand{\chaptername}{Capítulo}
-\renewcommand{\contentsname}{Índice}
-\renewcommand{\listtablename}{Índice de Cuadros}
-\renewcommand{\listfigurename}{Índice de Figuras}
+% CONFIGURACIÓN PERSONALIZADA DE ÍNDICES (TOCLOFT) - NOMENCLATURA "TABLA"
+\usepackage{tocloft}
+
+% Fuerza a babel en español a usar títulos de Índices y de elementos en Mayúsculas Sostenidas y nomenclatura "Tabla"
+\addto\captionsspanish{
+  \renewcommand{\contentsname}{ÍNDICE}
+  \renewcommand{\listtablename}{ÍNDICE DE TABLAS} % <-- Cambiado de CUADROS a TABLAS
+  \renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}
+  \renewcommand{\tablename}{Tabla} % <-- Cambia globalmente la palabra "Cuadro" por "Tabla" en las leyendas
+}
+
+% 1. ÍNDICE GENERAL: Título centrado 16pt y etiqueta Página (Espaciado ajustado)
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\fontsize{16pt}{20pt}\selectfont\bfseries}
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}\par\vspace{0.5cm}\hfill\fontsize{12pt}{15pt}\selectfont Página}
+\setlength{\cftaftertoctitleskip}{0.2cm}
+
+% 2. ÍNDICE DE FIGURAS (LOF): Título centrado 16pt y etiqueta Página
+\renewcommand{\cftloftitlefont}{\hspace*{\fill}\fontsize{16pt}{20pt}\selectfont\bfseries}
+\renewcommand{\cftafterloftitle}{\hspace*{\fill}\par\vspace{0.5cm}\hfill\fontsize{12pt}{15pt}\selectfont Página}
+\setlength{\cftafterloftitleskip}{0.2cm}
+
+% 3. ÍNDICE DE TABLAS (LOT): Título centrado 16pt y etiqueta Página
+\renewcommand{\cftlottitlefont}{\hspace*{\fill}\fontsize{16pt}{20pt}\selectfont\bfseries}
+\renewcommand{\cftafterlottitle}{\hspace*{\fill}\par\vspace{0.5cm}\hfill\fontsize{12pt}{15pt}\selectfont Página}
+\setlength{\cftafterlottitleskip}{0.2cm}
+
+% 4. Agregar puntos suspensivos (dots) a los títulos de los Capítulos
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+% 5. Ajustar espaciado y estilos para que los capítulos queden limpios
+\renewcommand{\cftchapfont}{\normalfont\bfseries}
+\renewcommand{\cftchappagefont}{\normalfont\bfseries}
+
+% CONFIGURACIÓN DE TÍTULOS DE CAPÍTULOS, SECCIONES Y SUBSECCIONES (TITLESEC)
+\usepackage{titlesec}
+
+% 1. CAPÍTULOS: "1. INTRODUCCIÓN" (Tamaño 16, Negrita, Mayúsculas)
+\titleformat{\chapter}[block]
+  {\fontsize{16pt}{20pt}\selectfont\bfseries}
+  {\thechapter.\ }
+  {0pt}
+  {}
+\titlespacing*{\chapter}{0pt}{3.5cm}{20pt}
+\assignpagestyle{\chapter}{empty} % Oculta número de página en primera hoja de capítulos estándar
+
+% 2. SECCIONES: "1.1. Planteamiento del problema" (Tamaño 14, Negrita)
+\titleformat{\section}
+  {\fontsize{14pt}{18pt}\selectfont\bfseries}
+  {\thesection.\ }
+  {0pt}
+  {}
+
+% 3. SUBSECCIONES: "1.4.1. Objetivo general" (Tamaño 13, Negrita)
+\titleformat{\subsection}
+  {\fontsize{13pt}{16pt}\selectfont\bfseries}
+  {\thesubsection.\ }
+  {0pt}
+  {}
+
+% 1. Formato de capítulos: "1. INTRODUCCIÓN" (Sin la palabra "Capítulo", tamaño 16, negrita, mayúsculas)
+\titleformat{\chapter}[block]
+  {\fontsize{16pt}{20pt}\selectfont\bfseries}
+  {\thechapter.\ }
+  {0pt}
+  {}
+
+% 2. Margen superior de 7 cm en la primera hoja de cada capítulo
+% 3.5cm (margen superior de geometry) + 3.5cm (espaciado antes del título) = 7.0cm total desde el borde de la hoja
+\titlespacing*{\chapter}{0pt}{3.5cm}{20pt}
+
+% 3. No mostrar la numeración de la página en la primera hoja de cada capítulo (aplica estilo empty)
+\assignpagestyle{\chapter}{empty}
+
+% PAQUETES PARA CONTROL DE INTERLINEADO Y LEYENDAS (CAPTIONS - CORREGIDO)
+\usepackage{setspace}
+\singlespacing 
+
+\usepackage[font=small,labelfont={bf,small},labelsep=period]{caption} 
+% Ajuste clave: labelfont={bf,small} fuerza a que la etiqueta (Figura X.Y / Tabla X.Y) 
+% sea negrita y tenga EXACTAMENTE el mismo tamaño de letra chico (10pt) que la descripción.
+
+\setlength{\abovecaptionskip}{5pt}   % Reduce el espacio sobre la leyenda (aplica a Figuras)
+\setlength{\belowcaptionskip}{3pt}   % Reduce el espacio debajo de la leyenda (aplica a Tablas)
+
+\usepackage[font=small,labelfont=bf,labelsep=period]{caption} 
+% Reduce el tamaño de los títulos de tablas y figuras a 10pt (small), 
+% los pone en negrita (bf) y usa un punto final como separador académico.
+
 
 % COMIENZA EL DOCUMENTO
 \begin{document}
@@ -50,32 +142,58 @@
 % PORTADA
 \begin{titlepage}
     \centering
-    \vspace*{1cm}
+    \vspace*{0.5cm}
     \includegraphics[width=4cm]{logofacen.jpg}\par
-    \vspace{1cm}
-    {\large\bfseries UNIVERSIDAD NACIONAL DE ASUNCIÓN}\par
-    {\large Facultad de Ciencias Exactas y Naturales}\par
-    Departamento de Estadística\par
-    Maestría en Estadística\par
-    \vspace{2cm}
-    {\Large\bfseries Análisis de datos de panel del balance hídrico en Paraguay: Cuantificación de la sequía y la aridificación ante el calentamiento global (2000–2023)}\par % TÍTULO DE TESIS
-    \vspace{2cm}
-
-    {\large\bfseries Hernán J. Vargas Ojeda}\par
-    \vskip 0.5 cm
-
-    \begin{tabular}{l}
-    \hskip 5 cm    Orientador: Prof. Dr. Gonzalo Martin Vicente\\
-    \hskip 5 cm   Co-Orientador: Prof. Dr. Gustavo Ignacio Rivas M.\\
-    \end{tabular}
+    \vspace{0.8cm}
     
-    \vfill % Empuja el texto hacia abajo
-    Tesis presentada a la Facultad de Ciencias Exactas y Naturales,
-    Universidad Nacional de Asunción, como requisito para la 
-    obtención del Grado de Magíster en Estadística\par
-    \vspace{2cm}
-    SAN LORENZO - PARAGUAY\par
-    Junio - 2026\par % AÑO DE DEFENSA
+    % Bloque de la Institución
+    {\fontsize{16}{20}\selectfont\bfseries UNIVERSIDAD NACIONAL DE ASUNCIÓN}\par
+    \vspace{0.2cm}
+    {\fontsize{14}{18}\selectfont\bfseries Facultad de Ciencias Exactas y Naturales}\par
+    \vspace{0.15cm}
+    {\fontsize{14}{18}\selectfont Departamento de Estadística}\par
+    \vspace{0.15cm}
+    {\fontsize{11}{14}\selectfont\bfseries Maestría en Estadística}\par
+    
+    \vfill % Distribuye el espacio vertical de manera proporcional
+    
+    % Título de la Tesis (Tamaño 18, Negrita, Todo Mayúsculas)
+    {\fontsize{18}{22}\selectfont 
+    ANÁLISIS DE DATOS DE PANEL DEL BALANCE HÍDRICO EN PARAGUAY: 
+    CUANTIFICACIÓN DE LA SEQUÍA Y LA ARIDIFICACIÓN ANTE EL 
+    CALENTAMIENTO GLOBAL (2000–2023)}\par
+    
+    \vfill
+    
+    % Autor (Tamaño 16, Negrita, Todo Mayúsculas)
+    {\fontsize{16}{20}\selectfont\bfseries HERNÁN JAVIER VARGAS OJEDA}\par
+    
+    \vfill
+    
+    % Orientador y Co-orientador (Tamaño 14, alineado a la derecha, nombres en Mayúscula y Negrita)
+    \begin{flushright}
+    \fontsize{14}{18}\selectfont
+    \begin{tabular}{r@{\hskip 0.2cm}l}
+    Orientador: & \textbf{Prof. Dr. GONZALO MARTIN VICENTE} \\
+    Co-Orientador: & \textbf{Prof. Dr. GUSTAVO IGNACIO RIVAS M.}
+    \end{tabular}
+    \end{flushright}
+    
+    \vfill
+    
+    % Texto de Presentación de Tesis (Tamaño 14, regular)
+    {\fontsize{14}{18}\selectfont
+    Tesis presentada a la Facultad de Ciencias Exactas y Naturales\par
+    Universidad Nacional de Asunción, como requisito para la\par
+    Obtención del Grado de Magíster en Estadística\par}
+    
+    \vfill
+    
+    % Ubicación y Fecha (Ubicación 12pt, Fecha 17pt, todo Mayúsculas)
+    {\fontsize{12}{15}\selectfont SAN LORENZO – PARAGUAY}\par
+    \vspace{0.3cm}
+    {\fontsize{12}{15}\selectfont MAYO – 2026}\par
+    \vspace*{0.5cm}
 \end{titlepage}
 
 % PÁGINA DE AUTORIDADES / FICHA 
@@ -83,9 +201,6 @@
 \thispagestyle{empty} % Esta página no tendrá número
 \pagenumbering{roman} % A partir de aquí, la numeración es en números romanos
 \setcounter{page}{2} % Empezamos a contar desde ii
-
-\textbf{Ficha Catalográfica del Trabajo de Tesis}
-\vspace{1cm}
 
 \begin{justify} 
 Datos Internacionales de Catalogación en la Publicación (CIP) \\
@@ -112,84 +227,280 @@ DE LA BIBLIOTECA E INTERNET DE LA FACEN - UNA
 }}
 \clearpage % Salto de página
 
-% PÁGINA DE APROBACIÓN / MESA EXAMINADORA
-% pendiente
+% PÁGINA DE APROBACIÓN / MESA EXAMINADORA (CORREGIDA V2)
+\newpage
+\thispagestyle{fancy} % Muestra la numeración romana ii abajo al centro
+\pagenumbering{roman} % Numeración romana
+\setcounter{page}{2}  % Forzamos a que esta hoja sea la número II (ii)
+
+\begin{center}
+    % Título de la Tesis (Tamaño 13, Negrita, Mayúsculas)
+    {\fontsize{13pt}{16pt}\selectfont \textbf{ANÁLISIS DE DATOS DE PANEL DEL BALANCE HÍDRICO EN PARAGUAY: CUANTIFICACIÓN DE LA SEQUÍA Y LA ARIDIFICACIÓN ANTE EL CALENTAMIENTO GLOBAL (2000–2023)}\par}
+    
+    \vspace{0.4cm}
+    
+    % Autor (Tamaño 12, Regular, Mayúsculas - SIN NEGRITA)
+    {\fontsize{12pt}{15pt}\selectfont HERNÁN J. VARGAS OJEDA\par}
+\end{center}
+
+\vspace{0.3cm}
+
+% Texto de presentación (Tamaño 12, Justificado, SIN SANGRÍA EXPLICITAMENTE)
+\noindent{\fontsize{12pt}{15pt}\selectfont \justifying \noindent 
+Tesis presentada a la Facultad de Ciencias Exactas y Naturales, Universidad Nacional de Asunción, como requisito para la obtención del Grado de Magíster en Estadística.\par}
+
+\vspace{0.25cm}
+
+% Fecha de defensa (Tamaño 12, Centrado)
+\begin{center}
+    {\fontsize{12pt}{15pt}\selectfont Fecha de defensa: 25 de mayo de 2026\par}
+\end{center}
+
+\vspace{0.4cm}
+
+% Bloque local con sangría cero para alinear perfectamente todos los jurados a la izquierda
+\begingroup
+\setlength{\parindent}{0pt}
+\fontsize{12pt}{15pt}\selectfont
+
+% Mesa Examinadora (Tamaño 12, Negrita, Alineación izquierda limpia)
+\textbf{MESA EXAMINADORA}\par
+\vspace{0.1cm}
+\textbf{MIEMBROS:}\par
+\vspace{0.35cm}
+
+% Miembros (Nombres en Negrita, Universidades en Cursiva Regular, sin sangrías)
+\textbf{Prof. Dr. XXXXXXXXXXXXXXXXXXX} \par
+\textit{Universidad Autónoma de Barcelona, España} \par
+\vspace{0.25cm}
+
+\textbf{Prof. Dra. XXXXXXXXXXXXXXXXXXX} \par
+\textit{Universidad Nacional de la Pampa, Argentina} \par
+\vspace{0.25cm}
+
+\textbf{Prof. Dr. XXXXXXXXXXXXXXXXXXX} \par
+\textit{Universidad Nacional de Asunción, Paraguay} \par
+\vspace{0.25cm}
+
+\textbf{Prof. Dr. XXXXXXXXXXXXXXXX} \par
+\textit{Universidad Nacional de Asunción, Paraguay} \par
+\vspace{0.25cm}
+
+\textbf{Prof. MSc. XXXXXXXXXXXXX} \par
+\textit{Universidad Nacional de Río Cuarto, Argentina} \par
+\vspace{0.25cm}
+
+\textbf{Prof. MSc. XXXXXXXXXXXXXXXXX} \par
+\textit{Universidad Nacional de Asunción, Paraguay} \par
+
+\vfill % Espacio elástico proporcional
+
+% Texto de aprobación (Tamaño 12, Justificado, alineado a la izquierda sin sangría)
+Aprobado por la Dirección de Postgrado de la Facultad de Ciencias Exactas y Naturales, Universidad Nacional de Asunción, en fecha \_\_ de junio de 2026.
+\endgroup
+
+\vspace{0.6cm}
+
+% Firma del Director de Postgrado (Tamaño 12, Centrado, Nombre en Negrita)
+\begin{center}
+    \fontsize{12pt}{15pt}\selectfont
+    \textbf{Prof. MSc. Tomás Rodrigo López Arias} \par
+    Director de Postgrado, FACEN – UNA
+\end{center}
+\clearpage % Salto de página limpio
 
 % DEDICATORIA
-\chapter*{Dedicatoria}
-\addcontentsline{toc}{chapter}{Dedicatoria} % Añade la dedicatoria al índice
-\vspace*{10cm} % espacio vertical 
+\clearpage
+\thispagestyle{fancy} % Muestra la numeración de página abajo al centro
+
+\vspace*{11cm} % Espacio vertical para posicionar el texto elegantemente en el tercio inferior
 \begin{flushright}
-    \textit{A mi familia...} %dedicatoria aquí
+    {\fontsize{17pt}{22pt}\selectfont\itshape A mi familia...\par} % Su dedicatoria definitiva aquí
 \end{flushright}
 \clearpage
 
 % AGRADECIMIENTOS
-\chapter*{Agradecimientos}
-\addcontentsline{toc}{chapter}{Agradecimientos} % Añade al índice
+\clearpage
+\thispagestyle{fancy} % Muestra la numeración de página abajo al centro (romano iv)
+
+% Título del Capítulo Centrado (Tamaño 16, Negrita, Mayúsculas)
+\begin{center}
+    {\fontsize{16pt}{20pt}\selectfont\bfseries AGRADECIMIENTOS\par}
+\end{center}
+\vspace{1.2cm} % Espaciado vertical
+
+% Bloque sin sangrías
+\begingroup
+\setlength{\parindent}{0pt} % Anula la sangría en todos los párrafos de esta hoja
+\fontsize{12pt}{16pt}\selectfont % Tamaño de letra estándar con interlineado proporcional
+
 En primer lugar, deseo expresar mi más profundo agradecimiento a mis orientadores, por su invaluable guía y paciencia infinita. Sus agudas observaciones y su constante apoyo fueron fundamentales para dar forma y dirección a esta investigación.
 
-Agradezco a los miembros de la mesa examinadora de Coordinación de Postgrado e Investigación en Estadística,
-Departamento de Estadística, FACEN - UNA, por aceptar evaluar este trabajo y por sus valiosas sugerencias que sin duda lo enriquecerán.
+\vspace{0.4cm} % Separación necesaria entre párrafos al no haber sangría
+Agradezco a los miembros de la mesa examinadora de Coordinación de Postgrado e Investigación en Estadística, Departamento de Estadística, FACEN - UNA, por aceptar evaluar este trabajo y por sus valiosas sugerencias que sin duda lo enriquecerán.
 
+\vspace{0.4cm}
 Mi gratitud a la Facultad de Ciencias Exactas y Naturales de la Universidad Nacional de Asunción, y en especial al Departamento de Estadística, por brindarme el espacio y los recursos para mi formación de posgrado.
 
+\vspace{0.4cm}
 Quisiera extender un agradecimiento especial a la Dirección de Meteorología e Hidrología (DMH) por facilitar el acceso a los datos crudos que constituyen la base de este estudio.
 
+\vspace{0.4cm}
 A mis compañeros de la Maestría en Estadística, gracias por las largas jornadas de estudio, las discusiones enriquecedoras y el compañerismo que hicieron este camino más ameno.
 
+\vspace{0.4cm}
 A mis padres, María Asunción de Rodríguez y Mario Rodríguez M., por su amor incondicional y por inculcarme el valor del esfuerzo y la educación. A mi pareja, Adriana Viveros González, por su paciencia infinita, su aliento en los momentos difíciles y por ser mi principal apoyo. Sin ustedes, este logro no habría sido posible.
+\endgroup
+\clearpage % Salto de página limpio
+
+% RESUMEN (CORREGIDO SIN SANGRÍAS)
+\clearpage
+\thispagestyle{fancy} % Muestra la numeración romana v abajo al centro
+
+\begin{center}
+    % Título de la Tesis en Español (Tamaño 13, Negrita, Mayúsculas)
+    {\fontsize{13pt}{16pt}\selectfont\bfseries ANÁLISIS DE DATOS DE PANEL DEL BALANCE HÍDRICO EN PARAGUAY: CUANTIFICACIÓN DE LA SEQUÍA Y LA ARIDIFICACIÓN ANTE EL CALENTAMIENTO GLOBAL (2000–2023)\par}
+\end{center}
+
+\vspace{0.4cm}
+
+% Autor, Orientador y Co-orientador (Tamaño 12, alineados a la derecha, nombres en Mayúscula)
+\begin{flushright}
+    \fontsize{12pt}{15pt}\selectfont
+    Autor: HERNÁN JAVIER VARGAS OJEDA \\
+    Orientador: Prof. Dr. GONZALO MARTIN VICENTE \\
+    Co-orientador: Prof. MSc. GUSTAVO IGNACIO RIVAS M.
+\end{flushright}
+
+\vspace{0.5cm}
+
+% Título "RESUMEN" (Tamaño 13, Negrita, Centrado)
+\begin{flushleft}
+    {\fontsize{13pt}{16pt}\selectfont\bfseries RESUMEN\par}
+\end{flushleft}
+
+\vspace{0.3cm}
+
+% Cuerpo del resumen sin sangría (Tamaño 12, Justificado)
+\begingroup
+\setlength{\parindent}{0pt}
+\fontsize{12pt}{15pt}\selectfont\justifying
+\noindent La presente investigación evalúa la evolución temporal y espacial de las sequías y los procesos de aridificación en Paraguay durante el período 2000--2023, analizando el impacto del factor térmico y la demanda evaporativa en un contexto de calentamiento global. Con este propósito, se estructuró una base de datos en formato de datos de panel balanceado a partir de los registros diarios de la red oficial de bases meteorológicas oficiales del país. El territorio nacional fue regionalizado mediante técnicas de agrupamiento jerárquico aglomerativo (HAC) y optimizado mediante el coeficiente de silueta promedio, identificando dos subregiones climáticas homogéneas de balance hídrico. Las estimaciones de tendencias estacionales y regionales se realizaron mediante un modelo de regresión de datos de panel de efectos aleatorios, utilizando el test de Hausman para su validación estadística y aplicando los errores estándar de Driscoll y Kraay (1998) robustos a la correlación serial y a la fuerte dependencia espacial confirmada. Los resultados revelan una marcada divergencia estacional en el balance hídrico: mientras las estaciones de otoño e invierno se mantuvieron hídricamente estables, las épocas cálidas de primavera y verano registraron trayectorias de aridificación. La tasa de aridificación estival más intensa del país se concentró en la subregión agro productiva del sureste. El marco de contraste paralelo entre el modelo de balance climático (SPEI-6) y el de precipitación univariada (SPI-6) demostró la validez del rol del estrés térmico, evidencia que las sequías en Paraguay están adquiriendo una naturaleza predominantemente térmica en el siglo XXI, donde la evaporación forzada por el incremento sistemático de las temperaturas máximas extremas induce procesos de aridificación estacional incluso bajo volúmenes de precipitación estables.\par
+
+\vspace{0.8cm}
+
+% Palabras clave (Negrita, máximo 5 palabras simples, sin frases, separadas por comas, sin sangría)
+\noindent \textbf{Palabras clave:} Aridificación, sequía, SPEI, panel, Paraguay.
+\endgroup
 \clearpage
 
-% RESUMEN
-\chapter*{Resumen}
-\addcontentsline{toc}{chapter}{Resumen} % Añade al índice
-\vspace{1cm}
-La presente investigación evalúa la evolución temporal y espacial de las sequías y los procesos de aridificación en Paraguay durante el período 2000--2023, analizando el impacto del factor térmico y la demanda evaporativa en un contexto de calentamiento global. Con este propósito, se estructuró una base de datos en formato de datos de panel balanceado a partir de los registros diarios de la red oficial de bases meteorológicas oficiales del país. El territorio nacional fue regionalizado mediante técnicas de agrupamiento jerárquico aglomerativo (HAC) y optimizado mediante el coeficiente de silueta promedio, identificando dos subregiones climáticas homogéneas de balance hídrico. Las estimaciones de tendencias estacionales y regionales se realizaron mediante un modelo de regresión de datos de panel de efectos aleatorios, utilizando el test de Hausman para su validación estadística y aplicando los errores estándar de Driscoll y Kraay (1998) robustos a la correlación serial y a la fuerte dependencia espacial confirmada. Los resultados revelan una marcada divergencia estacional en el balance hídrico: mientras las estaciones de otoño e invierno se mantuvieron hídricamente estables, las épocas cálidas de primavera y verano registraron trayectorias de aridificación. La tasa de aridificación estival más intensa del país se concentró en la subregión agro productiva del sureste. El marco de contraste paralelo entre el modelo de balance climático (SPEI-6) y el de precipitación univariada (SPI-6) demostró la validez del rol del estrés térmico, evidencia que las sequías en Paraguay están adquiriendo una naturaleza predominantemente térmica en el siglo XXI, donde la evaporación forzada por el incremento sistemático de las temperaturas máximas extremas induce procesos de aridificación estacional incluso bajo volúmenes de precipitación estables.
-\vspace{1cm}
-
-\noindent\textbf{Palabras clave:} Datos de panel, balance hídrico, aridificación, SPEI, efectos aleatorios, Driscoll-Kraay, Calentamiento global, Paraguay.
+% ABSTRACT (CORREGIDO SIN SANGRÍAS)
 \clearpage
+\thispagestyle{fancy} % Muestra la numeración romana vi abajo al centro
 
-% ABSTRACT (SUMMARY)
-\chapter*{Abstract} % Título en inglés
-\addcontentsline{toc}{chapter}{Abstract} % Añade al índice
-\vspace{1cm}
-This research evaluates the temporal and spatial evolution of droughts and seasonal aridification processes in Paraguay during the 2000--2023 period, analyzing the impact of the thermal factor and evaporative demand under global warming. To achieve this, a balanced panel database was structured utilizing daily records from the country's official meteorological station network. The national territory was regionalized using hierarchical agglomerative clustering (HAC) and optimized via the average silhouette width, which identified two water-balance homogeneous subregions. Seasonal and regional trends were estimated using a random effects panel data regression model, validated statistically through the Hausman specification test, and adjusted using Driscoll and Kraay (1998) robust standard errors to control for serial autocorrelation and the strong cross-sectional dependence confirmed. The results reveal a marked seasonal divergence in the water balance: while autumn and winter seasons remained hydrologically stable, spring and summer warm seasons registered drying trends. The most intense summer aridification rate in the country was concentrated in the agricultural heartland of the South-East subregion, evidence that droughts in Paraguay are acquiring a predominantly thermal nature in the 21st century, where evaporation forced by the systematic increase in extreme maximum temperatures induces seasonal aridification processes even under stable precipitation volumes.
-\vspace{1cm}
+\begin{center}
+    % Título de la Tesis en Inglés (Tamaño 13, Negrita, Mayúsculas)
+    {\fontsize{13pt}{16pt}\selectfont\bfseries PANEL DATA ANALYSIS OF THE WATER BALANCE IN PARAGUAY: QUANTIFICATION OF DROUGHT AND ARIDIFICATION UNDER GLOBAL WARMING (2000–2023)\par}
+\end{center}
 
-\noindent\textbf{Keywords:} Panel data, water balance, aridification, SPEI, random effects, Driscoll-Kraay, Global warming, Paraguay.
+\vspace{0.4cm}
+
+% Autor, Asesores en Inglés (Tamaño 12, alineados a la derecha, nombres en Mayúscula)
+\begin{flushright}
+    \fontsize{12pt}{15pt}\selectfont
+    Author: HERNÁN JAVIER VARGAS OJEDA \\
+    Advisor: Prof. Dr. GONZALO MARTIN VICENTE \\
+    Co-advisor: Prof. MSc. GUSTAVO IGNACIO RIVAS M.
+\end{flushright}
+
+\vspace{0.5cm}
+
+% Título "SUMMARY" (Tamaño 13, Negrita, Centrado)
+\begin{flushleft}
+    {\fontsize{13pt}{16pt}\selectfont\bfseries SUMMARY\par}
+\end{flushleft}
+
+\vspace{0.3cm}
+
+% Cuerpo del Abstract sin sangría (Tamaño 12, Justificado)
+\begingroup
+\setlength{\parindent}{0pt}
+\fontsize{12pt}{15pt}\selectfont\justifying
+\noindent This research evaluates the temporal and spatial evolution of droughts and seasonal aridification processes in Paraguay during the 2000--2023 period, analyzing the impact of the thermal factor and evaporative demand under global warming. To achieve this, a balanced panel database was structured utilizing daily records from the country's official meteorological station network. The national territory was regionalized using hierarchical agglomerative clustering (HAC) and optimized via the average silhouette width, which identified two water-balance homogeneous subregions. Seasonal and regional trends were estimated using a random effects panel data regression model, validated statistically through the Hausman specification test, and adjusted using Driscoll and Kraay (1998) robust standard errors to control for serial autocorrelation and the strong cross-sectional dependence confirmed. The results reveal a marked seasonal divergence in the water balance: while autumn and winter seasons remained hydrologically stable, spring and summer warm seasons registered drying trends. The most intense summer aridification rate in the country was concentrated in the agricultural heartland of the South-East subregion, evidence that droughts in Paraguay are acquiring a predominantly thermal nature in the 21st century, where evaporation forced by the systematic increase in extreme maximum temperatures induces seasonal aridification processes even under stable precipitation volumes.\par
+
+\vspace{0.8cm}
+
+% Keywords en Inglés (Negrita, máximo 5 palabras simples, sin frases, separadas por comas, sin sangría)
+\noindent \textbf{Keywords:} Aridification, drought, SPEI, panel, Paraguay.
+\endgroup
 \clearpage
 
 % ÍNDICES
-\renewcommand{\contentsname}{Índice}
 \tableofcontents
 \clearpage
 
 \listoftables
-\addcontentsline{toc}{chapter}{\listtablename} % Añade al índice principal
 \clearpage
 
 \listoffigures
-\addcontentsline{toc}{chapter}{\listfigurename} % Añade al índice principal
 \clearpage
 
 % CUERPO PRINCIPAL DE LA TESIS
 \pagenumbering{arabic} % Empieza la numeración arábiga
+\onehalfspacing
 
+% CARGA DE LOS CAPÍTULOS DEL CUERPO
 \input{sections/1capitulo.tex}
 \input{sections/2capitulo.tex}
 \input{sections/3capitulo.tex}
 \input{sections/4capitulo.tex}
 \input{sections/5capitulo.tex}
-\input{sections/10_apendice.tex}
 
-% BIBLIOGRAFÍA
+% BIBLIOGRAFÍA (CONTROL ABSOLUTO Y SILENCIADO TOTAL DEL ÍNDICE)
 \cleardoublepage
-\addcontentsline{toc}{chapter}{Referencias} % Añade la entrada al Índice
 \hbadness=10000 % Ignora advertencias de espacios flojos hasta este nivel
 \sloppy
 \bibliographystyle{apacite}
-\bibliography{bibliography}
+
+% 1. Escribimos manualmente la línea PERFECTA de nivel capítulo en el índice (Negrita, sin sangría, Mayúsculas)
+\addcontentsline{toc}{chapter}{REFERENCIAS BIBLIOGRÁFICAS}
+
+% 2. Abrimos un grupo para desactivar CUALQUIER comando de escritura automática de apacite y forzar el interlineado sencillo
+\begingroup
+  \singlespacing % Fuerza el interlineado sencillo únicamente para esta sección de referencias
+  \renewcommand{\addcontentsline}[3]{}% Anula escrituras automáticas indirectas
+  \renewcommand{\addtocontents}[2]{}% Anula escrituras automáticas directas de apacite al TOC
+  \def\APACrefheading#1{\chapter*{REFERENCIAS BIBLIOGRÁFICAS}}% Fuerza el título físico como capítulo
+  \bibliography{bibliography}
+\endgroup
+
+
+% PÁGINA DIVISORIA: APÉNDICES (REGISTRADA EN EL ÍNDICE, SIN NÚMERO IMPRESO Y CON FORMATO DINÁMICO)
+\clearpage
+\thispagestyle{empty} % Fuerza a que esta hoja divisoria específica no muestre la numeración
+
+% Escribimos manualmente la línea de nivel capítulo para la hoja divisoria en el índice
+\addcontentsline{toc}{chapter}{APÉNDICES}
+
+% Modifica dinámicamente el comportamiento del índice a partir de este punto:
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchapfont}{\normalfont}} % Quita negrita del texto
+\addtocontents{toc}{\protect\renewcommand{\protect\cftchappagefont}{\normalfont}} % Quita negrita del número
+\addtocontents{toc}{\protect\setlength{\protect\cftchapindent}{2em}} % Agrega sangría (identación) de 2em
+
+\vspace*{9cm} % Centrado vertical aproximado en la página A4
+\begin{center}
+    {\fontsize{18pt}{22pt}\selectfont\textbf{APÉNDICES}\par}
+\end{center}
+\clearpage % Salto de página para que las secciones comiencen en la hoja siguiente
+
+
+% RESTAURAR ESTILO DE PÁGINA PARA LOS CAPÍTULOS DE APÉNDICES
+% Permite que las primeras páginas de los apéndices (A, B y C) vuelvan a mostrar el número abajo al centro
+\assignpagestyle{\chapter}{fancy}
+
+
+% CARGA DE LOS ARCHIVOS DE APÉNDICES (Secciones A, B y C)
+\input{sections/10_apendice.tex}
+
 
 \end{document}

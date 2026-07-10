@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  1 JUL 2026 09:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  10 JUL 2026 16:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -87,7 +87,9 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/ptm/m/it on input line 35.
 LaTeX Info: Redefining \hbar on input line 50.
-) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
  (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2022/02/03 v1.0f TeX engine tests
@@ -198,9 +200,7 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
 )
 \Hy@SectionHShift=\skip50
-) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
-Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
- (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 \BKM@id=\count277
 )) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
@@ -430,14 +430,86 @@ Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 \f@nch@O@erf=\skip86
 \f@nch@O@olf=\skip87
 \f@nch@O@orf=\skip88
+) (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip89
+\cftbeforetoctitleskip=\skip90
+\cftaftertoctitleskip=\skip91
+\cftbeforepartskip=\skip92
+\cftpartnumwidth=\skip93
+\cftpartindent=\skip94
+\cftbeforechapskip=\skip95
+\cftchapindent=\skip96
+\cftchapnumwidth=\skip97
+\cftbeforesecskip=\skip98
+\cftsecindent=\skip99
+\cftsecnumwidth=\skip100
+\cftbeforesubsecskip=\skip101
+\cftsubsecindent=\skip102
+\cftsubsecnumwidth=\skip103
+\cftbeforesubsubsecskip=\skip104
+\cftsubsubsecindent=\skip105
+\cftsubsubsecnumwidth=\skip106
+\cftbeforeparaskip=\skip107
+\cftparaindent=\skip108
+\cftparanumwidth=\skip109
+\cftbeforesubparaskip=\skip110
+\cftsubparaindent=\skip111
+\cftsubparanumwidth=\skip112
+\cftbeforeloftitleskip=\skip113
+\cftafterloftitleskip=\skip114
+\cftbeforefigskip=\skip115
+\cftfigindent=\skip116
+\cftfignumwidth=\skip117
+\c@lofdepth=\count309
+\c@lotdepth=\count310
+\cftbeforelottitleskip=\skip118
+\cftafterlottitleskip=\skip119
+\cftbeforetabskip=\skip120
+\cfttabindent=\skip121
+\cfttabnumwidth=\skip122
+) (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box60
+\beforetitleunit=\skip123
+\aftertitleunit=\skip124
+\ttl@plus=\dimen186
+\ttl@minus=\dimen187
+\ttl@toksa=\toks31
+\titlewidth=\dimen188
+\titlewidthlast=\dimen189
+\titlewidthfirst=\dimen190
+) (/usr/share/texlive/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen191
+\captionmargin=\dimen192
+\caption@leftmargin=\dimen193
+\caption@rightmargin=\dimen194
+\caption@width=\dimen195
+\caption@indent=\dimen196
+\caption@parindent=\dimen197
+\caption@hangindent=\dimen198
+Package caption Info: Standard document class detected.
 )
-LaTeX Font Info:    Trying to load font information for T1+ptm on input line 48.
+\c@caption@flags=\count311
+\c@continuedfloat=\count312
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+))
+LaTeX Font Info:    Trying to load font information for T1+ptm on input line 140.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ptm.fd
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count309
-\l__pdf_internal_box=\box60
+\l__color_backend_stack_int=\count313
+\l__pdf_internal_box=\box61
 ) (./main.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
@@ -446,27 +518,27 @@ LaTeX Info: Redefining \% on input line 13.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 48.
-LaTeX Font Info:    ... okay on input line 48.
-LaTeX Info: Redefining \. on input line 48.
-LaTeX Info: Redefining \% on input line 48.
-Package hyperref Info: Link coloring OFF on input line 48.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Info: Redefining \. on input line 140.
+LaTeX Info: Redefining \% on input line 140.
+Package hyperref Info: Link coloring OFF on input line 140.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -502,24 +574,24 @@ Package hyperref Info: Link coloring OFF on input line 48.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-\c@maskedRefs=\count310
+\c@maskedRefs=\count314
 (/usr/share/texlive/texmf-dist/tex/latex/apacite/spanish.apc
 File: spanish.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 138.
 LaTeX Info: Redefining \BHBI on input line 139.
 ) (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count311
-\scratchdimen=\dimen186
-\scratchbox=\box61
-\nofMPsegments=\count312
-\nofMParguments=\count313
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count314
-\MPscratchDim=\dimen187
-\MPnumerator=\count315
-\makeMPintoPDFobject=\count316
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count315
+\scratchdimen=\dimen199
+\scratchbox=\box62
+\nofMPsegments=\count316
+\nofMParguments=\count317
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count318
+\MPscratchDim=\dimen256
+\MPnumerator=\count319
+\makeMPintoPDFobject=\count320
+\everyMPtoPDFconversion=\toks33
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -534,41 +606,51 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 <logofacen.jpg, id=4, 91.09032pt x 95.6072pt>
 File: logofacen.jpg Graphic file (type jpg)
 <use logofacen.jpg>
-Package pdftex.def Info: logofacen.jpg  used on input line 54.
+Package pdftex.def Info: logofacen.jpg  used on input line 146.
 (pdftex.def)             Requested size: 113.81102pt x 119.45908pt.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 67.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 176.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 176.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 67.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 176.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 67.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 176.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 67.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 176.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 67.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 176.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 67.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.36008> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.40009> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
  [1
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./logofacen.jpg>] [2] [3
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./logofacen.jpg>] [2]
+pdfTeX warning (ext4): destination with the same identifier (name{page.II}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.310 \clearpage
+                 % Salto de pÃ¡gina limpio [2
+
+] [3
 
 
 ] [4
@@ -585,14 +667,19 @@ LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
 LaTeX Info: Redefining \% on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 3.
  [7
 
-
-] [8] [9])
+] [8])
 \tf@toc=\write3
 \openout3 = `main.toc'.
 
- [10] (./main.lot
+ [9] (./main.lot
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
 LaTeX Info: Redefining \. on input line 2.
@@ -601,8 +688,7 @@ LaTeX Info: Redefining \% on input line 2.
 \tf@lot=\write4
 \openout4 = `main.lot'.
 
- [11
-
+ [10
 
 ] (./main.lof
 LaTeX Info: Redefining \. on input line 1.
@@ -613,8 +699,7 @@ LaTeX Info: Redefining \% on input line 2.
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
- [12
-
+ [11
 
 ] (./sections/1capitulo.tex
 Cap\'{\i }tulo 1.
@@ -630,7 +715,19 @@ l.14
 Cap\'{\i }tulo 2.
 [5
 
-] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]) (./sections/3capitulo.tex [18]
+] [6] [7] [8] [9]
+Underfull \hbox (badness 1117) in paragraph at lines 84--85
+[]\T1/ptm/m/n/12 Para re-sol-ver las li-mi-ta-cio-nes con-cep-tua-les del SPI an-te el in-cre-men-to tér-
+ []
+
+[10]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+ [11] [12] [13] [14] [15] [16] [17]) (./sections/3capitulo.tex [18]
 Cap\'{\i }tulo 3.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 13.
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
@@ -642,124 +739,107 @@ Cap\'{\i }tulo 4.
 [30
 
 ] [31]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png, id=647, 1300.86pt x 397.485pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png, id=631, 1300.86pt x 397.485pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png  used on input line 44.
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png  used on input line 45.
 (pdftex.def)             Requested size: 412.56497pt x 126.05754pt.
  [32 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png>]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png, id=657, 722.7pt x 397.485pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png, id=641, 722.7pt x 397.485pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png  used on input line 59.
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png  used on input line 63.
 (pdftex.def)             Requested size: 350.68274pt x 192.87703pt.
- [33 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png>] [34] [35]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png, id=676, 1084.05pt x 794.97pt>
+ [33 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png>] [34]
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png, id=654, 1084.05pt x 794.97pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png  used on input line 98.
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png  used on input line 89.
 (pdftex.def)             Requested size: 412.56497pt x 302.54056pt.
- [36 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png>] [37] [38]
-Underfull \hbox (badness 10000) in paragraph at lines 151--151
-[]\T1/ptm/m/n/12 Obligatoriedad de im-ple-men-
- []
-
-
-Underfull \hbox (badness 2478) in paragraph at lines 151--151
-\T1/ptm/m/n/12 tar erro-res es-tán-dar ro-bus-tos de
- []
-
-[39]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 206.
- [40] [41]
-Overfull \hbox (3.30334pt too wide) in paragraph at lines 258--274
- [][] 
- []
-
-[42] [43]
-Underfull \hbox (badness 1953) in paragraph at lines 311--311
+ [35 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png>] [36] [37] [38] [39] [40] [41] [42] [43]
+Underfull \hbox (badness 1953) in paragraph at lines 334--334
 []\T1/ptm/m/n/12 No sig-ni-fi-ca-ti-vo (Pre-ci-pi-ta-ción
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 311--311
+Underfull \hbox (badness 1033) in paragraph at lines 334--334
 []\T1/ptm/m/n/12 Sugerente (Ex-ten-sión tem-po-ral
  []
 
-[44]) (./sections/5capitulo.tex [45] [46]
+[44] [45] [46] [47]) (./sections/5capitulo.tex [48]
 Cap\'{\i }tulo 5.
-[47
+[49
 
-] [48] [49] [50] [51] [52] [53] [54]) (./sections/10_apendice.tex [55]
+] [50] [51] [52] [53]) [54] (./main.bbl
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 142.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+) [55
+
+] [56]) [57] [58
+
+] (./sections/10_apendice.tex
 Ap\'{e}ndice A.
-[56
+[59
+
 
 ]
 Ap\'{e}ndice B.
-[57
-
-]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 65.
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-) [58]
-Ap\'{e}ndice C.
-[59
-
-]
-
-pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, id=873, 597.55246pt x 845.07724pt>
-File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
-<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf  used on input line 74.
-(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
-
-
-pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
-<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf  used on input line 74.
-(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
-
-
-pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, id=876, page=1, 597.55246pt x 845.07724pt>
-File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
-<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
-(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
-File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
-<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
-(pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
-File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
-<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
-(pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
-File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
-<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
-(pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
-File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
-<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
-Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
-(pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
 [60
+
+] [61]
+Ap\'{e}ndice C.
+[62
+
+]
+
+pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, id=881, 597.55246pt x 845.07724pt>
+File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
+<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf>
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf  used on input line 74.
+(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
+
+
+pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
+<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf>
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf  used on input line 74.
+(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
+
+
+pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+
+
+pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
+</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, id=884, page=1, 597.55246pt x 845.07724pt>
+File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
+<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
+(pdftex.def)             Requested size: 597.551pt x 845.07518pt.
+File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
+<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
+(pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
+File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
+<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
+(pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
+File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
+<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
+(pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
+File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
+<use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
+Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
+(pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
+[63
 
 
  </home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf>]
 
 pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, id=888, 597.55246pt x 845.07724pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, id=896, 597.55246pt x 845.07724pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf Graphic file (type pdf)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf  used on input line 77.
@@ -777,7 +857,7 @@ pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/util
 
 
 pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, id=891, page=1, 597.55246pt x 845.07724pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, id=899, page=1, 597.55246pt x 845.07724pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf Graphic file (type pdf)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, page 1>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf , page1 used on input line 77.
@@ -798,11 +878,9 @@ File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf Gra
 <use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, page 1>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf , page1 used on input line 77.
 (pdftex.def)             Requested size: 507.92198pt x 718.31905pt.
-[61
+[64
 
- </home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf>]) (./main.bbl [62
-
-] [63]) [64] (./main.aux
+ </home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf>]) (./main.aux
 LaTeX Info: Redefining \. on input line 12.
 LaTeX Info: Redefining \% on input line 12.
 LaTeX Info: Redefining \. on input line 13.
@@ -814,18 +892,18 @@ L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15068 strings out of 476009
- 233117 string characters out of 5789406
- 1942975 words of memory out of 5000000
- 36539 multiletter control sequences out of 15000+600000
- 638143 words of font info for 150 fonts, out of 8000000 for 9000
+ 17078 strings out of 476009
+ 269552 string characters out of 5789406
+ 1945975 words of memory out of 5000000
+ 38532 multiletter control sequences out of 15000+600000
+ 658803 words of font info for 187 fonts, out of 8000000 for 9000
  62 hyphenation exceptions out of 8191
- 75i,18n,79p,1986b,813s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 89i,18n,93p,2000b,798s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/hjvargaso/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (76 pages, 1777506 bytes).
+Output written on main.pdf (76 pages, 1780291 bytes).
 PDF statistics:
- 1328 PDF objects out of 1440 (max. 8388607)
- 1164 compressed objects within 12 object streams
- 279 named destinations out of 1000 (max. 500000)
- 741 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1295 PDF objects out of 1440 (max. 8388607)
+ 1131 compressed objects within 12 object streams
+ 268 named destinations out of 1000 (max. 500000)
+ 693 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,59 @@
+\begin{thebibliography}{}
+
+\bibitem[{Comisi{\'o}n Econ{\'o}mica para Am{\'e}rica Latina y el Caribe (CEPAL)}, 2014]{cepal2014}
+{Comisi{\'o}n Econ{\'o}mica para Am{\'e}rica Latina y el Caribe (CEPAL)} (2014).
+\newblock La econom{\'i}a del cambio clim{\'a}tico en el paraguay.
+\newblock Technical report, Naciones Unidas (CEPAL), Santiago, Chile.
+
+\bibitem[Masson-Delmotte et~al., 2021]{massondelmotte2021}
+Masson-Delmotte, V., Zhai, P., Pirani, A., Connors, S., P{\'e}an, C., Berger, S., Caud, N., Chen, Y., Goldfarb, L., Gomis, M.~I., Huang, M., Leitzell, E., Lonnoy, E., Matthews, J.~R., Maycock, T.~K., Waterfield, Y., Yelek{\c{c}}i, O., Yu, R., and Zhou, B., editors (2021).
+\newblock {\em Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}.
+\newblock Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA.
+
+\bibitem[Mishra and Singh, 2010]{mishra2010}
+Mishra, A.~K. and Singh, V.~P. (2010).
+\newblock A review of drought concepts.
+\newblock {\em Journal of Hydrology}, 391(1-2):202--216.
+
+\bibitem[Rousseeuw, 1987]{rousseeuw1987}
+Rousseeuw, P.~J. (1987).
+\newblock Silhouettes: a graphical aid to the interpretation and validation of cluster analysis.
+\newblock {\em Journal of Computational and Applied Mathematics}, 20:53--65.
+
+\bibitem[Stocker et~al., 2013]{stocker_climate_2013}
+Stocker, T.~F., Qin, D., and {etc.}, editors (2013).
+\newblock {\em Climate {Change} 2013: {The} {Physical} {Science} {Basis}. {Contribution} of {Working} {Group} {I} to the {Fifth} {Assessment} {Report} of the {Intergovernmental} {Panel} on {Climate} {Change}}.
+\newblock Cambridge University Press, Cambridge, UK and New York, NY, USA.
+
+\bibitem[Thornthwaite, 1948]{thornthwaite_approach_1948}
+Thornthwaite, C.~W. (1948).
+\newblock An approach toward a rational classification of climate.
+\newblock {\em Geographical review}, 38(1):55--94.
+\newblock Publisher: JSTOR.
+
+\bibitem[Trenberth et~al., 2014]{trenberth_global_2014}
+Trenberth, K., Dai, A., \{van der Schrier\}, G., Jones, P., Barichivich, J., Briffa, K., and Sheffield, J. (2014).
+\newblock Global warming and changes in drought.
+\newblock {\em Nature Climate Change}, 4:17--22.
+
+\bibitem[Velasco et~al., 2005]{velasco2005sequia}
+Velasco, I., Ochoa, L., and Guti{\'e}rrez, C. (2005).
+\newblock Sequ{\'\i}a, un problema de perspectiva y gesti{\'o}n.
+\newblock {\em Regi{\'o}n y sociedad}, 17(34):35--71.
+
+\bibitem[Vicente-Serrano et~al., 2010]{vicenteserrano2010}
+Vicente-Serrano, S.~M., Beguer{\'i}a, S., and L{\'o}pez-Moreno, J.~I. (2010).
+\newblock A multiscalar drought index sensitive to global warming: The standardized precipitation evapotranspiration index.
+\newblock {\em Journal of Climate}, 23(7):1696--1718.
+
+\bibitem[Wooldridge, 2010]{wooldridge2010}
+Wooldridge, J.~M. (2010).
+\newblock {\em Econometric analysis of cross section and panel data}.
+\newblock MIT Press, Cambridge, MA, USA.
+
+\bibitem[{World Meteorological Organization}, 2017]{wmo2017}
+{World Meteorological Organization} (2017).
+\newblock {WMO} guidelines on the calculation of climate normals.
+\newblock Technical Report WMO-No. 1203, World Meteorological Organization, Geneva, Switzerland.
+
+\end{thebibliography}

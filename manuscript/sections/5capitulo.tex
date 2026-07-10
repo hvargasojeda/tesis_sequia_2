@@ -1,36 +1,4 @@
-\chapter{Discusión, conclusiones y recomendaciones}
-
-\section{Discusión de resultados}
-
-\subsection{Interpretación física de las dinámicas hídricas y contraste geográfico (regional)}
-
-Los resultados obtenidos en esta investigación aportan un marco explicativo cuantitativo para comprender las dinámicas contemporáneas de la sequía y la aridificación en Paraguay. El hallazgo de que el volumen de precipitación pluvial (medido a través del SPI-6) ha permanecido estadísticamente estable durante las últimas dos décadas, mientras que el balance hídrico integrado (medido por el SPEI-6) muestra tendencias negativas significativas en las estaciones de primavera y verano, constituye una validación empírica del concepto de ``sequías más cálidas'' (\textit{hotter droughts}) acuñado por \citeA{trenberth_global_2014}. En este tipo de sequías, el déficit de humedad en el suelo ya no es impulsado de forma exclusiva por la escasez de lluvias, sino también por el incremento de las temperaturas que exacerban la demanda evaporativa de la atmósfera.
-
-Este comportamiento coincide y profundiza los hallazgos de investigaciones nacionales previas. Por un lado, \citeA{chavez2023} confirmó tendencias de calentamiento sistemáticas y significativas en la temperatura media anual en Paraguay (1960--2018). Por otro lado, \citeA{grassi2020} observó que, a pesar de registrarse aumentos leves en los promedios pluviales anuales en ciertas áreas del país, la frecuencia y los impactos de las sequías extremas han aumentado significativamente durante el siglo XXI. 
-
-El modelo de datos de panel estimado en este estudio desvela el mecanismo físico de esta aparente contradicción: el incremento sostenido de las temperaturas (Chávez, 2023; Grassi, 2020) eleva la evapotranspiración potencial mensual, neutralizando los aportes de las precipitaciones y acelerando la aridificación estacional.
-
-La focalización de la máxima tasa de aridificación durante el verano en la subregión sureste (clúster 1), con una pendiente de $-0.04$ puntos de SPEI-6 por año, tiene profundas implicaciones socioeconómicas. El sureste de la región oriental representa el núcleo agroproductivo del país, concentrando la mayor superficie de cultivos de soja y maíz de renta \cite{cepal2014}. 
-
-Que el verano (la época crítica agronómica) experimente una aridificación sistemática impulsada por el factor térmico, explica por qué las pérdidas por sequías en Paraguay han adquirido una magnitud económica tan desastrosa en el siglo XXI (como en la zafra 2021--2022) \cite{enciso2022soja}. Esto confirma que las proyecciones de vulnerabilidad de la \citeA{cepal2014} y de la \citeA{secretaria2017} se están materializando bajo la forma de una agravación de las bases climáticos estivales.
-
-\subsection{El impacto del ruido interanual (ENSO) sobre el ajuste del modelo lineal}
-
-Un aspecto metodológico relevante del modelo de panel estimado es el valor modesto del coeficiente de determinación global y dentro ($R^2 = 0.0356$). Aunque en disciplinas como la econometría aplicada a las ciencias sociales un $R^2$ bajo puede sugerir problemas de especificación o variable omitida, en la modelación climática de alta frecuencia basada en anomalías (Z-scores) este comportamiento es habitual y esperado.
-
-La dinámica hidrometeorológica de Paraguay está fuertemente influenciada por la variabilidad interanual de gran escala, gobernada principalmente por El Niño-Oscilación del Sur (ENSO) \cite{grimm2009}. La alternancia recurrente entre fases frías (La Niña, estrechamente asociada a sequías severas en la Cuenca de la Plata) y fases cálidas (El Niño, asociada a excesos hídricos) introduce fluctuaciones cíclicas de alta frecuencia que se comportan estadísticamente como ruido de fondo alrededor de la tendencia lineal de largo plazo \cite{penalba2016}.
-
-Al intentar ajustar una línea de tendencia lineal de largo plazo sobre una serie de tiempo climática que oscila de forma sinusoidal o cíclica en períodos de 3 a 7 años, la varianza residual o inexplicable del modelo lineal tiende de manera natural a ser elevada \cite{wilks2011}. De acuerdo con \citeA{mudelsee2010}, la persistencia de procesos autocorrelacionados de fondo y las variaciones periódicas de los sistemas de circulación general dificultan que un modelo de tendencia puramente lineal capture un alto porcentaje de la variabilidad de corto plazo (obteniéndose un coeficiente $R^2$ modesto). No obstante, como lo señalan las directrices del IPCC \cite{stocker_climate_2013}, la presencia de este ruido cíclico interanual no disminuye la consistencia asintótica ni la validez de los estimadores de pendiente a largo plazo, los cuales logran aislar de forma matemática la dirección del cambio climático subyacente.
-
-\subsection{Implicaciones de la robustez de Driscoll-Kraay en la inferencia climática}
-
-Finalmente, es fundamental discutir el nivel de significancia estadística alcanzado por las pendientes netas. Bajo la especificación robusta de Driscoll-Kraay (1998), la tendencia de aridificación estival del clúster 1 resultó significativa al 11\% ($p = 0.1086$), mientras que la diferencia de tendencias entre el SPEI-6 y el SPI-6 para el verano del clúster 2 resultó significativa al 5\% ($p < 0.05$).
-
-En la investigación climatológica es frecuente encontrar estudios que reportan coeficientes ``altamente significativos'' ($p < 0.01$) utilizando modelos de mínimos cuadrados ordinarios (OLS) o modelos de panel con errores estándares convencionales. Sin embargo, en presencia de una red de bases meteorológicas expuestas a choques sinópticos comunes, omitir la dependencia espacial (sección cruzada) produce una subestimación severa de los errores estándar y un incremento artificial del estadístico t, induciendo a Error Tipo I o falsos positivos \cite{wooldridge2010}.
-
-El test de Pesaran calculado en esta investigación arrojó un estadístico CD de $70.5878$, confirmando de manera contundente que los residuos del panel climático de Paraguay se encuentran fuertemente acoplados de manera sincrónica. Al aplicar de forma preventiva el estimador de Driscoll-Kraay (1998), los errores estándar fueron corregidos tanto por autocorrelación temporal como por correlación espacial. 
-
-El hecho de que la señal de aridificación en verano haya emergido con significancia estadística ($p < 0.11$) bajo este tratamiento sumamente conservador constituye un sello de robustez metodológica. Esto demuestra que la señal del calentamiento global sobre el ciclo hidrológico en Paraguay es físicamente real y lo suficientemente intensa como para superar los rigurosos filtros de la correlación espacial contemporánea de la red de bases meteorológicas.
+\chapter{CONCLUSIONES Y RECOMENDACIONES}
 
 \section{Respuesta a las preguntas de investigación}
 
