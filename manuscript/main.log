@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  13 JUL 2026 08:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.8.14)  13 JUL 2026 08:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -613,41 +613,53 @@ File: logofacen.jpg Graphic file (type jpg)
 <use logofacen.jpg>
 Package pdftex.def Info: logofacen.jpg  used on input line 146.
 (pdftex.def)             Requested size: 113.81102pt x 119.45908pt.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 176.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 176.
+ [1
+
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./logofacen.jpg>]
+File: logofacen.jpg Graphic file (type jpg)
+<use logofacen.jpg>
+Package pdftex.def Info: logofacen.jpg  used on input line 198.
+(pdftex.def)             Requested size: 113.81102pt x 119.45908pt.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 228.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 228.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 176.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 228.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 176.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 228.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 176.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 228.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 176.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 228.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.36008> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.40009> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 176.
- [1
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 228.
 
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.251 \end{titlepage}
+                      [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./logofacen.jpg>] [2]
+] [2]
 pdfTeX warning (ext4): destination with the same identifier (name{page.II}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.318 \clearpage
+l.372 \clearpage
                  % Salto de página limpio [2
 
 ] [3
@@ -739,19 +751,19 @@ Cap\'{\i }tulo 4.
 [30
 
 ] [31]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png, id=631, 1300.86pt x 397.485pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png, id=635, 1300.86pt x 397.485pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png  used on input line 45.
 (pdftex.def)             Requested size: 412.56497pt x 126.05754pt.
  [32 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png>]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png, id=641, 722.7pt x 397.485pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png, id=644, 722.7pt x 397.485pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png  used on input line 63.
 (pdftex.def)             Requested size: 350.68274pt x 192.87703pt.
  [33 </home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png>] [34]
-</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png, id=654, 1084.05pt x 794.97pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png, id=657, 1084.05pt x 794.97pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png Graphic file (type png)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png  used on input line 89.
@@ -794,7 +806,7 @@ Ap\'{e}ndice C.
 ]
 
 pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, id=881, 597.55246pt x 845.07724pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, id=884, 597.55246pt x 845.07724pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf  used on input line 74.
@@ -812,7 +824,7 @@ pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/util
 
 
 pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, id=884, page=1, 597.55246pt x 845.07724pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, id=887, page=1, 597.55246pt x 845.07724pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf Graphic file (type pdf)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf, page 1>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf , page1 used on input line 74.
@@ -839,7 +851,7 @@ Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/corr
  </home/hjvargaso/proyectos/tesis_sequia_2/src/utils/correo_datos.pdf>]
 
 pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, id=896, 597.55246pt x 845.07724pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, id=899, 597.55246pt x 845.07724pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf Graphic file (type pdf)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf  used on input line 77.
@@ -857,7 +869,7 @@ pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/util
 
 
 pdfTeX warning: pdflatex (file /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf): PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, id=899, page=1, 597.55246pt x 845.07724pt>
+</home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, id=902, page=1, 597.55246pt x 845.07724pt>
 File: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf Graphic file (type pdf)
 <use /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf, page 1>
 Package pdftex.def Info: /home/hjvargaso/proyectos/tesis_sequia_2/src/utils/datos_proveidos.pdf , page1 used on input line 77.
@@ -900,10 +912,10 @@ Here is how much of TeX's memory you used:
  62 hyphenation exceptions out of 8191
  89i,18n,93p,2000b,798s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/hjvargaso/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (76 pages, 1780400 bytes).
+Output written on main.pdf (77 pages, 1781387 bytes).
 PDF statistics:
- 1295 PDF objects out of 1440 (max. 8388607)
- 1131 compressed objects within 12 object streams
+ 1298 PDF objects out of 1440 (max. 8388607)
+ 1133 compressed objects within 12 object streams
  268 named destinations out of 1000 (max. 500000)
  693 words of extra memory for PDF output out of 10000 (max. 10000000)
 
