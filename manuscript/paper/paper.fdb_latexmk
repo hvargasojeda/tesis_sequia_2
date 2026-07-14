@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex paper"] 1783516597.25464 "paper.aux" "paper.bbl" "paper" 1783516599.88589 0
+["bibtex paper"] 1783965757.81615 "paper.aux" "paper.bbl" "paper" 1783965759.66937 0
   "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/bibliography.bib" 1782660117.63729 14771 773f7e55731a090fd724e40009c7d298 ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "paper.aux" 1783516599.76299 13325 743ee23e052c398a9ac6f08956210b93 "pdflatex"
+  "paper.aux" 1783965759.56272 13153 50b037088276606a50690d224bd983bb "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1783516597.2996 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/paper/paper.tex" "paper.pdf" "paper" 1783516599.88619 0
+["pdflatex"] 1783965757.84076 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/paper/paper.tex" "paper.pdf" "paper" 1783965759.66971 0
   "/etc/texmf/web2c/texmf.cnf" 1755191811.04725 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/paper/paper.tex" 1783516591.01475 34594 854835f69fe72bd30425e7657e7c8013 ""
+  "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/paper/paper.tex" 1783965755.21618 35618 ff723980f730ba306c6c7daf7ace11e2 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png" 1781194761.99878 694415 374bc4e61026cf044163266e9e1f0cf4 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
@@ -139,9 +139,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755191821.77122 128067 403859e4d35fdff4c458758f0e5ea400 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755191845 7353677 dd6910b802aeac5551a5b8794ff44066 ""
-  "paper.aux" 1783516599.76299 13325 743ee23e052c398a9ac6f08956210b93 "pdflatex"
-  "paper.bbl" 1783516597.2865 3273 c738a56ee03972de81cbd32a3d4a2e5b "bibtex paper"
-  "paper.tex" 1783516591.01475 34594 854835f69fe72bd30425e7657e7c8013 ""
+  "paper.aux" 1783965759.56272 13153 50b037088276606a50690d224bd983bb "pdflatex"
+  "paper.bbl" 1783965757.83154 3727 3d2985bd49de1d9fc14f58fe6f76ecd1 "bibtex paper"
+  "paper.tex" 1783965755.21618 35618 ff723980f730ba306c6c7daf7ace11e2 ""
   (generated)
   "paper.aux"
   "paper.log"
