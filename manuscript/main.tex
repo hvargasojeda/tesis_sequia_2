@@ -91,13 +91,12 @@
   {}
 \titlespacing*{\chapter}{0pt}{3.5cm}{20pt}
 \assignpagestyle{\chapter}{empty} % Oculta número de página en primera hoja de capítulos estándar
-
 % 2. SECCIONES: "1.1. Planteamiento del problema" (Tamaño 14, Negrita)
 \titleformat{\section}
-  {\fontsize{14pt}{18pt}\selectfont\bfseries}
-  {\thesection.\ }
-  {0pt}
-  {}
+{\fontsize{14pt}{18pt}\selectfont\bfseries}
+{\thesection.\ }
+{0pt}
+{}
 
 % 3. SUBSECCIONES: "1.4.1. Objetivo general" (Tamaño 13, Negrita)
 \titleformat{\subsection}
@@ -123,9 +122,10 @@
 % PAQUETES PARA CONTROL DE INTERLINEADO Y LEYENDAS (CAPTIONS - CORREGIDO)
 \usepackage{setspace}
 \singlespacing 
+\usepackage{threeparttable} %ajuste de captions en tablas con notas al pie
 
-\usepackage[font=small,labelfont={bf,small},labelsep=period]{caption} 
-% Ajuste clave: labelfont={bf,small} fuerza a que la etiqueta (Figura X.Y / Tabla X.Y) 
+\usepackage[font=footnotesize,labelfont={bf,footnotesize},labelsep=period]{caption} 
+% Ajuste clave: labelfont={bf,footnotesize} fuerza a que la etiqueta (Figura X.Y / Tabla X.Y) 
 % sea negrita y tenga EXACTAMENTE el mismo tamaño de letra chico (10pt) que la descripción.
 
 \setlength{\abovecaptionskip}{5pt}   % Reduce el espacio sobre la leyenda (aplica a Figuras)

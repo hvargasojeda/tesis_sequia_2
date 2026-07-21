@@ -12,6 +12,7 @@ La jerarquía de fusiones consecutivas calculada por el algoritmo de Ward se rep
 
 \begin{table}[ht!]
 \centering
+\begin{threeparttable}
 \caption{Coeficiente de silueta promedio según el número de particiones (clústeres).}
 \label{tab:silueta}
 \vspace{-0.6cm}
@@ -25,6 +26,7 @@ $k = 3$ & 0.1682 \\
 $k = 4$ & 0.1548 \\
 $k = 5$ & 0.1592 \\ \hline\hline
 \end{tabular}
+\end{threeparttable}
 \end{table}
 
 El coeficiente de silueta promedio alcanza su máximo global para una estructura de $k^* = 2$ clústeres ($s = 0.1758$), indicando que una partición de dos regiones climáticas proporciona la máxima cohesión intra-grupo y la mayor diferenciación inter-grupo. Las particiones alternativas de $3$, $4$ o $5$ grupos muestran un decaimiento progresivo en la calidad de la silueta, justificando estadísticamente la selección de dos subregiones óptimas a nivel nacional para el período bajo estudio.
@@ -44,15 +46,18 @@ Esta diferencia confirma la existencia de una contigüidad geográfica compacta.
 \centering
 \includegraphics[width=\textwidth]{/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png}
 \vspace{-0.75cm}
+\begin{minipage}{13cm}
 \caption{Resultados de la regionalización climática de la sequía en Paraguay (periodo 2000--2023): (A) Dendrograma de agrupamiento jerárquico aglomerativo utilizando la distancia de disimilitud de Ward; (B) Optimización del número de clústeres ($k$) mediante el coeficiente de silueta promedio; (C) Distribución espacial resultante de las bases meteorológicas terrestres clasificadas por subregión climática.}
+\vspace{0.5cm}
 \label{fig:regionalizacion}
+\end{minipage}
 \end{figure}
 
 Esta partición de dos subregiones climáticas óptimas reemplazará la división regional clásica (región oriental y occidental) en todos los análisis descriptivos e inferenciales subsiguientes de la investigación, permitiendo examinar el proceso de aridificación con un mayor grado de precisión espacial y de balance hídrico.
 
 \section{Caracterización descriptiva de las dinámicas de sequía (2000--2023)}
 
-Para comprender las características de las sequías en Paraguay, esta sección aborda cinco dimensiones analíticas fundamentales: estacionalidad anual, frecuencia de eventos, intensidad, duración temporal y extensión espacial de las anomalías de balance hídrico. Los resultados estadísticos se sintetizan de forma gráfica en la Figura \ref{fig:caracterizacion_descriptiva}.
+Para comprender las características de las sequías en Paraguay, esta sección aborda cinco dimensiones analíticas fundamentales: estacionalidad anual, frecuencia de eventos, intensidad, duración temporal y extensión espacial de las anomalías de balance hídrico. Los resultados estadísticos se sintetizan de forma gráfica en la Figura \ref{fig:caracterizacion}.
 
 \subsection{Patrones estacionales del balance hídrico}
 
@@ -62,8 +67,11 @@ El análisis de la distribución mensual del SPEI-6, presentado mediante diagram
     \centering
     \includegraphics[width=0.85\textwidth]{/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png}
     \vspace{-0.25cm}
+    \begin{minipage}{12cm}
+    \centering
     \caption{Distribución mensual del índice SPEI-6 para las 18 bases seleccionadas durante el período 2000--2023. La línea horizontal negra dentro de cada caja representa la mediana de la distribución; los límites naranja y rojo indican los umbrales de sequía moderada ($\leq -1.0$) y severa ($\leq -1.5$), respectivamente. Los valores atípicos se grafican como puntos grises fuera de los bigotes.}
     \label{fig:distribucion_mensual}
+    \end{minipage}
 \end{figure}
 
 Como se ilustra en la Figura \ref{fig:distribucion_mensual}, el final del invierno y el inicio de la primavera (agosto y septiembre) constituyen climatológicamente los meses más secos a nivel de base. Durante este bimestre, las medianas del SPEI-6 se posicionan de manera sistemática en valores negativos, siendo las únicas del ciclo anual situadas por debajo de la línea de neutralidad hídrica (SPEI = 0). Este comportamiento físico se corresponde con la marcada disminución estacional de las precipitaciones en el territorio nacional durante el período frío, lo que reduce la humedad disponible en el suelo.
@@ -74,28 +82,28 @@ A pesar de que el verano se caracteriza en promedio por un balance hídrico neut
 
 \subsection{Análisis de frecuencia de eventos extremos}
 
-Para cuantificar los cambios en la ocurrencia de la sequía, se evaluó la frecuencia anual de ``meses-bases'' que superaron los umbrales de sequía moderada ($SPEI-6 \leq -1.0$) y sequía severa/extrema ($SPEI-6 \leq -1.5$). Como se ilustra en la Figura \ref{fig:caracterizacion_descriptiva} (Panel A), existe una tendencia positiva y sostenida en la frecuencia de estos eventos a lo largo de los 24 años analizados.
+Para cuantificar los cambios en la ocurrencia de la sequía, se evaluó la frecuencia anual de ``meses-bases'' que superaron los umbrales de sequía moderada ($SPEI-6 \leq -1.0$) y sequía severa/extrema ($SPEI-6 \leq -1.5$). Como se ilustra en la Figura \ref{fig:caracterizacion} (Panel A), existe una tendencia positiva y sostenida en la frecuencia de estos eventos a lo largo de los 24 años analizados.
 
 Durante la primera década del estudio (2000--2009), la ocurrencia de meses en sequía se mantuvo dentro de los límites de variabilidad interanual normal del país. No obstante, a partir de 2019 se observa un quiebre estructural sin precedentes en la serie histórica. El pico máximo de frecuencia se registró en el año 2020, acumulando una cifra récord de 80 meses-bases bajo condiciones de sequía moderada o severa. Considerando que el total anual posible de meses-bases para la red de 18 bases es de 216 ($18 \text{ bases} \times 12 \text{ meses}$), este resultado indica que aproximadamente el 37\% del territorio nacional monitoreado experimentó déficit hídrico de forma simultánea a lo largo del año 2020, consolidando la crisis hídrica más generalizada de las últimas dos décadas.
 
 \subsection{Análisis de intensidad del déficit hídrico}
 
-La intensidad de la sequía se examinó mediante dos descriptores anuales: la intensidad promedio de los meses en sequía ($SPEI-6 \leq -1.0$) y el valor mínimo absoluto registrado en la red de bases. Como se expone en la Figura \ref{fig:caracterizacion_descriptiva} (Panel B), ambas métricas muestran una trayectoria de agravamiento del déficit.
+La intensidad de la sequía se examinó mediante dos descriptores anuales: la intensidad promedio de los meses en sequía ($SPEI-6 \leq -1.0$) y el valor mínimo absoluto registrado en la red de bases. Como se expone en la Figura \ref{fig:caracterizacion} (Panel B), ambas métricas muestran una trayectoria de agravamiento del déficit.
 
 El promedio anual de la intensidad de las sequías ha transitado de valores cercanos a $-1.15$ a inicios del período estudiado, hacia promedios sistemáticamente inferiores a $-1.60$ en los últimos años del registro. El mínimo absoluto de toda la serie histórica se registró en diciembre de 2023 (2023-12), alcanzando un valor extremo de $-3.7103$ en la base de Mariscal Estigarribia (MCAL), ubicada en el chaco central. Este registro, que se sitúa a casi cuatro desviaciones estándar por debajo de la normal climatológica, supera ampliamente el umbral técnico de sequía extrema ($SPEI-6 \leq -2.0$). Este comportamiento ilustra la severidad que adquieren las sequías de Paraguay cuando las anomalías de temperatura potencian la demanda evaporativa en ausencia de precipitaciones, actuando como un impulsor físico del proceso de aridificación local.
 
 \begin{figure}[htbp]
     \centering
+    \begin{minipage}{14cm}
     \includegraphics[width=\textwidth]{/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png}
-    \vspace{-0.75cm}
-    \caption{Caracterización analítico-descriptiva de las dinámicas de la sequía en Paraguay (2000--2023): (A) Frecuencia anual de meses-bases en sequía moderada y severa con línea de tendencia ajustada; (B) Evolución de la intensidad promedio y mínima anual del SPEI-6; (C) Distribución comparativa de la duración de eventos continuos entre el Periodo 1 (2000--2011) y el Periodo 2 (2012--2023); (D) Extensión espacial promedio anual (porcentaje de  afectadas de forma simultánea) con línea de tendencia.}
-    \label{fig:caracterizacion_descriptiva}
+    \caption{Caracterización de las dinámicas de sequía en Paraguay (2000--2023): (A) Frecuencia anual de meses-bases en sequía moderada y severa; (B) Evolución de la intensidad promedio y mínima anual; (C) Distribución comparativa de la duración de eventos entre el Periodo 1 (2000--2011) y el Periodo 2 (2012--2023); (D) Extensión espacial promedio anual (\% de bases afectadas simultáneamente).}
+    \label{fig:caracterizacion}
+    \end{minipage}
 \end{figure}
-
 
 \subsection{Análisis de la duración temporal (persistencia)}
 
-La duración de los eventos de sequía (persistencia temporal) se evaluó mediante un análisis de rachas, definiendo la duración de un evento como el número de meses consecutivos en que una base meteorológica registra un valor de $SPEI-6 \leq -1.0$. Bajo este esquema metodológico, la duración promedio general de los eventos de sequía para el territorio nacional durante los 24 años analizados se ubicó en $2.96$ meses, registrándose una racha máxima absoluta de $14$ meses continuos de déficit hídrico extremo. En la Figura \ref{fig:caracterizacion_descriptiva} (Panel C) se presenta la distribución de estas duraciones, acotada visualmente a un rango de 12 meses para preservar la escala de los histogramas.
+La duración de los eventos de sequía (persistencia temporal) se evaluó mediante un análisis de rachas, definiendo la duración de un evento como el número de meses consecutivos en que una base meteorológica registra un valor de $SPEI-6 \leq -1.0$. Bajo este esquema metodológico, la duración promedio general de los eventos de sequía para el territorio nacional durante los 24 años analizados se ubicó en $2.96$ meses, registrándose una racha máxima absoluta de $14$ meses continuos de déficit hídrico extremo. En la Figura \ref{fig:caracterizacion} (Panel C) se presenta la distribución de estas duraciones, acotada visualmente a un rango de 12 meses para preservar la escala de los histogramas.
 
 Para examinar si las fluctuaciones climáticas de las últimas décadas han alterado la persistencia temporal de estos fenómenos, se contrastaron los resultados agregados del primer intervalo de estudio (Periodo 1: 2000--2011) frente al intervalo de calentamiento más pronunciado (Periodo 2: 2012--2023). 
 
@@ -105,7 +113,7 @@ Esta prolongación de las rachas consecutivas indica que, en las últimas dos d�
 
 \subsection{Análisis de la extensión espacial de la sequía}
 
-La extensión espacial se cuantificó como el porcentaje promedio de bases de la red que experimentaron condiciones de sequía simultáneamente ($SPEI-6 \leq -1.0$) en cada año calendario. El promedio anual de afectación y su correspondiente línea de tendencia lineal se presentan en la Figura \ref{fig:caracterizacion_descriptiva} (Panel D).
+La extensión espacial se cuantificó como el porcentaje promedio de bases de la red que experimentaron condiciones de sequía simultáneamente ($SPEI-6 \leq -1.0$) en cada año calendario. El promedio anual de afectación y su correspondiente línea de tendencia lineal se presentan en la Figura \ref{fig:caracterizacion} (Panel D).
 
 Los resultados confirman que la sequía en Paraguay ha transitado de ser un fenómeno eminentemente zonal o subregional a principios del milenio, a convertirse en una anomalía de escala nacional y más generalizada durante la última década. La línea de tendencia muestra una pendiente positiva pronunciada que inicia cerca del 10\% de afectación espacial en el año 2000 y se proyecta por encima del 20\% para el año 2023. Durante el ciclo crítico de 2020--2021, la extensión espacial del déficit hídrico alcanzó niveles históricos sin precedentes, afectando de forma simultánea a un promedio anual superior al 35\% de la red de monitoreo nacional.
 
@@ -117,20 +125,22 @@ Para cuantificar y evaluar las tendencias temporales del balance hídrico en Par
 
 La elección metodológica entre el modelo de regresión de efectos fijos (FE) y el de efectos aleatorios (RE) constituye una decisión crítica para garantizar la consistencia y la eficiencia de los parámetros estimados \cite{wooldridge2010}. Los resultados numéricos del test de Hausman se detallan en la Tabla \ref{tab:test_hausman}.
 
-\begin{table}[htbp]
+\begin{table}[ht!]
 \centering
+\begin{threeparttable}
 \caption{Resultados del test de especificación de Hausman para la selección del estimador.}
 \label{tab:test_hausman}
 \vspace{-0.6cm}
 \singlespacing % <-- ACTIVA INTERLINEADO SENCILLO LOCAL
 \small         % <-- ACTIVA TAMAÑO DE LETRA CHICA LOCAL (10pt)
-\begin{tabular}{lc}
+\begin{tabular}{p{6cm}c}
 \hline\hline
 \textbf{Test} & \textbf{Valor} \\ \hline
 Estadístico de Prueba ($\chi^2$) & -0.0035 \\
 Grados de Libertad ($k$) & 15 \\
 p-valor & 1.0000 \\ \hline\hline
 \end{tabular}
+\end{threeparttable}
 \end{table}
 
 De acuerdo con los resultados expuestos en la Tabla \ref{tab:test_hausman}, el estadístico de prueba de Hausman arroja un valor de $-0.0035$, con un p-valor correspondiente de $1.0000$. En la práctica econométrica con muestras finitas, la obtención de un estadístico de Hausman negativo es un fenómeno común que ocurre cuando la diferencia entre las matrices de covarianza de ambos modelos ($\boldsymbol{V}_{FE} - \boldsymbol{V}_{RE}$) no es definida positiva \cite{baltagi2021}. Conforme con la literatura de referencia \cite{hausman1981}, este resultado se interpreta formalmente como la imposibilidad de rechazar la hipótesis nula de ortogonalidad, convalidando la consistencia del estimador de efectos aleatorios.
@@ -150,6 +160,7 @@ La Tabla \ref{tab:test_pesaran} resume los resultados del test de Pesaran, recha
 
 \begin{table}[ht!]
 \centering
+\begin{threeparttable}
 \caption{Resultados de la prueba de dependencia de sección cruzada (CD) de Pesaran (2004) sobre los residuos del panel.}
 \label{tab:test_pesaran}
 \vspace{-0.6cm}
@@ -163,6 +174,7 @@ Dependencia de Sección Cruzada de Pesaran & 70.5878 & 0.0000 \\ \hline
 \textbf{Decisión Estadística} & \multicolumn{2}{p{6cm}}{Rechazar $H_0$ a un nivel de significancia de $\alpha = 0.01$.} \\
 \textbf{Implicación Metodológica} & \multicolumn{2}{p{6cm}}{Obligatoriedad de implementar errores estándar robustos de Driscoll-Kraay (1998).} \\ \hline\hline
 \end{tabular}
+\end{threeparttable}
 \end{table}
 
 \subsection{Estimación del modelo final}
@@ -171,12 +183,13 @@ Una vez confirmada la idoneidad del estimador de efectos aleatorios mediante el 
 
 \begin{table}[ht!]
 \centering
+\begin{threeparttable}
 \caption{Estadísticas de ajuste del modelo de efectos aleatorios estimado con errores robustos de Driscoll y Kraay (1998).}
 \label{tab:estadisticas_modelo}
 \vspace{-0.6cm}
 \singlespacing % <-- ACTIVA INTERLINEADO SENCILLO LOCAL
 \small         % <-- ACTIVA TAMAÑO DE LETRA CHICA LOCAL (10pt)
-\begin{tabular}{lc}
+\begin{tabular}{p{8cm}c}
 \hline\hline
 \textbf{Métrica de Ajuste} & \textbf{Valor del Estimador} \\ \hline
 Número de Observaciones ($N \times T$) & 5094 \\
@@ -187,6 +200,7 @@ Estadístico F conjunto robusto & 1.9807 \\
 p-valor de la regresión conjunta & 0.0132 \\
 \hline\hline
 \end{tabular}
+\end{threeparttable}
 \end{table}
 
 El modelo en su conjunto es estadísticamente significativo, con un p-valor del estadístico F conjunto robusto de $0.0132$. Aunque el coeficiente de determinación global y dentro es modesto ($R^2 = 0.0356$), este comportamiento es consistente y esperado en modelos climáticos basados en anomalías de alta frecuencia, donde el componente de variabilidad a corto plazo introduce un volumen significativo de ruido blanco que no disminuye la consistencia ni la validez de los estimadores de pendiente de largo plazo \cite{stocker_climate_2013}. No obstante, cabe destacar el poder explicativo inter-base ($R^2 \text{ between} = 0.1903$), el cual denota que el modelo captura de forma consistente las diferencias sistemáticas en el balance hídrico promedio entre los clústeres geográficos de Paraguay.
@@ -272,6 +286,7 @@ Para responder de forma directa a la hipótesis de estacionalidad y divergencia 
 
 \begin{table}[ht!]
 \centering
+\begin{threeparttable}
 \caption{Tendencias netas anualizadas del balance hídrico (SPEI-6) en Paraguay por subregión y estación climática (2000--2023).}
 \label{tab:pendientes_netas}
 \vspace{-0.6cm} 
@@ -293,6 +308,7 @@ Para responder de forma directa a la hipótesis de estacionalidad y divergencia 
 \multicolumn{4}{l}{\small utilizando la matriz de covarianza de Driscoll-Kraay (1998).} \\
 \hline\hline
 \end{tabular}
+\end{threeparttable}
 \end{table}
 
 Los resultados expuestos en la Tabla \ref{tab:pendientes_netas} revelan una marcada divergencia estacional en la evolución del balance hídrico del Paraguay. Las estimaciones de las tendencias temporales se dividen de forma consistente según el régimen de temperatura y radiación solar:

@@ -10,25 +10,71 @@ Ch{\'a}vez, C. (2023).
 \newblock La econom{\'i}a del cambio clim{\'a}tico en el paraguay.
 \newblock Technical report, Naciones Unidas (CEPAL), Santiago, Chile.
 
+\bibitem[Enciso, 2022]{enciso2022soja}
+Enciso, V. (2022).
+\newblock Soja: De cara a la nueva campa{\~n}a agr{\'\i}cola 2022/2023.
+\newblock Technical report, Facultad de Ciencias Agrarias, Universidad Nacional de Asu{\~n}cion, San Lorenzo, Paraguay.
+
+\bibitem[Gong and Richman, 1995]{gong1995}
+Gong, X. and Richman, M.~B. (1995).
+\newblock On the classification of {North American} climates.
+\newblock {\em Journal of Climate}, 8(5):1157--1188.
+
 \bibitem[Grassi, 2020]{grassi2020}
 Grassi, B. (2020).
 \newblock Estudio del clima paraguay 2019.
 \newblock Technical report, Asociaci{\'o}n Alter Vida, Asunci{\'o}n, Paraguay.
+
+\bibitem[Hausman, 1978]{hausman1978}
+Hausman, J.~A. (1978).
+\newblock Specification tests in econometrics.
+\newblock {\em Econometrica: Journal of the Econometric Society}, 46(6):1251--1271.
 
 \bibitem[Masson-Delmotte et~al., 2021]{massondelmotte2021}
 Masson-Delmotte, V., Zhai, P., Pirani, A., Connors, S., P{\'e}an, C., Berger, S., Caud, N., Chen, Y., Goldfarb, L., Gomis, M.~I., Huang, M., Leitzell, E., Lonnoy, E., Matthews, J.~R., Maycock, T.~K., Waterfield, Y., Yelek{\c{c}}i, O., Yu, R., and Zhou, B., editors (2021).
 \newblock {\em Climate Change 2021: The Physical Science Basis. Contribution of Working Group I to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change}.
 \newblock Cambridge University Press, Cambridge, United Kingdom and New York, NY, USA.
 
+\bibitem[McKee et~al., 1993]{mckee1993}
+McKee, T.~B., Doesken, N.~J., and Kleist, J. (1993).
+\newblock The relationship of drought frequency and duration to time scales.
+\newblock In {\em Proceedings of the 8th Conference on Applied Climatology}, volume~17, pages 179--183, Anaheim, CA, USA.
+
+\bibitem[Middleton and Thomas, 1992]{atlas1992}
+Middleton, N. and Thomas, D. (1992).
+\newblock {\em World atlas of desertification.}
+\newblock Edward Arnold :, London ;. 1992.
+\newblock "Nicholas Middleton...in collaboration with David Thomas ...produced the text for the Atlas and contributed to the final design and layout".
+
 \bibitem[Mishra and Singh, 2010]{mishra2010}
 Mishra, A.~K. and Singh, V.~P. (2010).
 \newblock A review of drought concepts.
 \newblock {\em Journal of Hydrology}, 391(1-2):202--216.
 
+\bibitem[Mudelsee, 2010]{mudelsee2010}
+Mudelsee, M. (2010).
+\newblock {\em Climate Time Series Analysis}.
+\newblock Springer, Dordrecht, Netherlands.
+
+\bibitem[Penalba and Rivera, 2016]{penalba2016}
+Penalba, O.~C. and Rivera, J.~A. (2016).
+\newblock Regional aspects of future drought characterization in southern {S}outh {A}merica.
+\newblock {\em Theoretical and Applied Climatology}, 123(3):503--515.
+
+\bibitem[Pesaran, 2004]{pesaran2004}
+Pesaran, M.~H. (2004).
+\newblock General diagnostic tests for cross-section dependence in panels.
+\newblock Technical Report 0435, University of Cambridge, Department of Applied Economics, Cambridge, United Kingdom.
+
 \bibitem[Rousseeuw, 1987]{rousseeuw1987}
 Rousseeuw, P.~J. (1987).
 \newblock Silhouettes: a graphical aid to the interpretation and validation of cluster analysis.
 \newblock {\em Journal of Computational and Applied Mathematics}, 20:53--65.
+
+\bibitem[{Secretar{\'i}a del Ambiente}, 2017]{secretaria2017}
+{Secretar{\'i}a del Ambiente} (2017).
+\newblock Tercera comunicaci{\'o}n nacional sobre cambio clim{\'a}tico de la rep{\'u}blica del paraguay.
+\newblock Technical report, Gobierno del Paraguay / Secretar{\'i}a del Ambiente, Asunci{\'o}n, Paraguay.
 
 \bibitem[Stocker et~al., 2013]{stocker_climate_2013}
 Stocker, T.~F., Qin, D., and {etc.}, editors (2013).
