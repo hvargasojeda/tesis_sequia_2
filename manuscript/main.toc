@@ -7,6 +7,7 @@
 \contentsline {section}{\numberline {1.4}Objetivos de la investigación}{4}{section.1.4}%
 \contentsline {subsection}{\numberline {1.4.1}Objetivo general}{4}{subsection.1.4.1}%
 \contentsline {subsection}{\numberline {1.4.2}Objetivos específicos}{4}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Nota sobre la nomenclatura numérica}{4}{subsection.1.4.3}%
 \contentsline {chapter}{\numberline {2}MARCO TEÓRICO}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}La sequía. Definición}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Características y clasificación}{5}{subsection.2.1.1}%
