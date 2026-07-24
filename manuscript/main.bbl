@@ -1,6 +1,34 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Allen%
+, Pereira%
+, Raes%
+\BCBL {}\ \BBA {} Smith%
+}{%
+Allen%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1998}}%
+}]{%
+allen1998crop}
+\APACinsertmetastar {%
+allen1998crop}%
+\begin{APACrefauthors}%
+Allen, R\BPBI G.%
+, Pereira, L\BPBI S.%
+, Raes, D.%
+\BCBL {}\ \BBA {} Smith, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1998}{}{}.
+\newblock
+\APACrefbtitle {Crop Evapotranspiration: Guidelines for Computing Crop Water Requirements} {Crop evapotranspiration: Guidelines for computing crop water requirements}\ \APACbVolEdTR {}{FAO Irrigation and Drainage Paper\ \BNUM~56}.
+\newblock
+\APACaddressInstitution{Rome, Italy}{Food and Agriculture Organization of the United Nations (FAO)}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Baltagi%
 }{%
 Baltagi%

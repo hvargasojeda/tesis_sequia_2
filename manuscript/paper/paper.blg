@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: paper.aux
 The style file: apalike.bst
 Database file #1: /home/hjvargaso/proyectos/tesis_sequia_2/manuscript/bibliography.bib
-You've used 22 entries,
+You've used 23 entries,
             1935 wiz_defined-function locations,
-            616 strings with 8114 characters,
-and the built_in function-call counts, 8340 in all, are:
-= -- 818
-> -- 346
-< -- 20
-+ -- 124
-- -- 116
-* -- 695
-:= -- 1500
-add.period$ -- 68
-call.type$ -- 22
-change.case$ -- 167
-chr.to.int$ -- 22
-cite$ -- 22
-duplicate$ -- 309
-empty$ -- 568
-format.name$ -- 146
-if$ -- 1600
+            624 strings with 8382 characters,
+and the built_in function-call counts, 8709 in all, are:
+= -- 853
+> -- 369
+< -- 21
++ -- 132
+- -- 124
+* -- 728
+:= -- 1572
+add.period$ -- 71
+call.type$ -- 23
+change.case$ -- 176
+chr.to.int$ -- 23
+cite$ -- 23
+duplicate$ -- 321
+empty$ -- 586
+format.name$ -- 155
+if$ -- 1667
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 19
-newline$ -- 115
-num.names$ -- 68
-pop$ -- 130
+newline$ -- 120
+num.names$ -- 71
+pop$ -- 137
 preamble$ -- 1
-purify$ -- 168
+purify$ -- 177
 quote$ -- 0
-skip$ -- 232
+skip$ -- 240
 stack$ -- 0
-substring$ -- 542
-swap$ -- 28
-text.length$ -- 4
+substring$ -- 554
+swap$ -- 29
+text.length$ -- 5
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 122
+type$ -- 128
 warning$ -- 0
-while$ -- 67
+while$ -- 69
 width$ -- 0
-write$ -- 300
+write$ -- 314

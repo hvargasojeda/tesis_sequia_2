@@ -2,6 +2,8 @@
 
 % Paquetes Requeridos 
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}      
+\usepackage{lmodern}         % (Usa fuentes vectoriales escalables)
 \usepackage[spanish,es-tabla]{babel}
 \spanishdecimal{.}
 \usepackage[margin=2.5cm]{geometry}
@@ -46,7 +48,7 @@
     \small Orientador: Prof. Dr. Gonzalo Martin Vicente* \\
     \small Co-Orientador: Prof. Dr. Gustavo Ignacio Rivas M.*
 }
-\date{\small Mayo de 2026}
+\date{\small Junio de 2026}
 
 \begin{document}
 
@@ -54,7 +56,7 @@
 \maketitle
 
 \begin{abstract}
-\noindent Este artículo evalúa la evolución espacio-temporal de las sequías y los procesos de aridificación en Paraguay durante el período 2000--2023, analizando el impacto de la demanda evaporativa en un contexto de calentamiento global. Se estructuró una base de datos en formato de panel balanceado a partir de los registros diarios de la red oficial de monitoreo terrestre. Se implementó un algoritmo de imputación por capas térmicas jerárquicas y un criterio de no imputación para la precipitación. El territorio nacional fue regionalizado mediante técnicas de agrupamiento jerárquico aglomerativo (HAC) y optimizado mediante el coeficiente de silueta promedio, identificando dos subregiones climáticas homogéneas de balance hídrico: la subregión sureste (Clúster 1) y la subregión centrochaco (Clúster 2). Las estimaciones de tendencias estacionales y regionales se realizaron mediante un modelo de regresión de datos de panel de efectos aleatorios con errores estándar de Driscoll y Kraay (1998) robustos a la correlación serial y a la fuerte dependencia espacial confirmada por la prueba de Pesaran. Los resultados revelan una marcada divergencia estacional en el balance hídrico: mientras las estaciones de otoño e invierno se mantuvieron hídricamente estables, las épocas cálidas de primavera y verano registraron trayectorias de aridificación. La tasa de aridificación estival más intensa del país se concentró en la subregión agropecuaria del sureste (Clúster 1). El contraste paralelo entre el modelo de balance climático (SPEI-6) y el de precipitación univariada (SPI-6) demostró la validez del rol del estrés térmico; debido a que el régimen de lluvias permaneció estadísticamente estable (SPI-6 no significativo), la significancia de la diferencia de pendientes estimada en el verano del Clúster 2 al 5\% y en el verano del Clúster 1 al 10\% son evidencias de que las sequías en Paraguay están adquiriendo una naturaleza predominantemente térmica en el siglo XXI, donde la evaporación forzada por el incremento sistemático de las temperaturas máximas extremas induce procesos de aridificación estacional crónicos incluso bajo volúmenes de precipitación estables.
+\noindent Este artículo evalúa la evolución espacio-temporal de las sequías y los procesos de aridificación en Paraguay durante el período 2000--2023, analizando el impacto de la demanda evaporativa en un contexto de calentamiento global. Se estructuró una base de datos en formato de panel balanceado a partir de los registros diarios de la red oficial de monitoreo terrestre. Se implementó un algoritmo de imputación por capas térmicas jerárquicas y un criterio de no imputación para la precipitación. El territorio nacional fue regionalizado mediante técnicas de agrupamiento jerárquico aglomerativo (HAC) y optimizado mediante el coeficiente de silueta promedio, identificando dos subregiones climáticas homogéneas de balance hídrico: la subregión sureste (clúster 1) y la subregión centrochaco (clúster 2). Las estimaciones de tendencias estacionales y regionales se realizaron mediante un modelo de regresión de datos de panel de efectos aleatorios con errores estándar de Driscoll y Kraay (1998) robustos a la correlación serial y a la fuerte dependencia espacial confirmada por la prueba de Pesaran. Los resultados revelan una marcada divergencia estacional en el balance hídrico: mientras las estaciones de otoño e invierno se mantuvieron hídricamente estables, las épocas cálidas de primavera y verano registraron trayectorias de aridificación. La tasa de aridificación estival más intensa del país se concentró en la subregión agropecuaria del sureste (clúster 1). El contraste paralelo entre el modelo de balance climático (SPEI-6) y el de precipitación univariada (SPI-6) demostró la validez del rol del estrés térmico; debido a que el régimen de lluvias permaneció estadísticamente estable (SPI-6 no significativo), la significancia de la diferencia de pendientes estimada en el verano del clúster 2 al 5\% y en el verano del clúster 1 al 10\% son evidencias de que las sequías en Paraguay están adquiriendo una naturaleza predominantemente térmica en el siglo XXI, donde la evaporación forzada por el incremento sistemático de las temperaturas máximas extremas induce procesos de aridificación estacional crónicos incluso bajo volúmenes de precipitación estables.
 
 \noindent \textbf{Palabras clave:} Datos de panel, balance hídrico, aridificación estacional, SPEI, efectos aleatorios, Driscoll-Kraay, calentamiento global, Paraguay.
 \end{abstract}
@@ -62,7 +64,7 @@
 \newpage
 \renewcommand{\abstractname}{Abstract}
 \begin{abstract}
-\noindent This article evaluates the temporal and spatial evolution of droughts and seasonal aridification processes in Paraguay during the 2000-2023 period, analyzing the impact of evaporative demand in a context of global warming. A balanced panel database was structured from daily records of the official terrestrial monitoring network. A hierarchical thermal layer imputation algorithm and a non-imputation criterion for precipitation were implemented. The national territory was regionalized using agglomerative hierarchical clustering (HAC) techniques and optimized using the average silhouette coefficient, identifying two homogeneous climatic subregions of water balance: the southeastern subregion (Cluster 1) and the central Chaco subregion (Cluster 2). Seasonal and regional trend estimates were performed using a random-effects panel data regression model with Driscoll and Kraay (1998) robust standard errors to serial correlation and strong spatial dependence confirmed by Pesaran's test. The results reveal a marked seasonal divergence in the water balance: while autumn and winter seasons remained hydrologically stable, the warm spring and summer periods recorded aridification trajectories. The most intense summer aridification rate in the country was concentrated in the agricultural subregion of the southeast (Cluster 1). The parallel contrast between the climate balance model (SPEI-6) and the univariate precipitation model (SPI-6) demonstrated the validity of the role of thermal stress; because the rainfall regime remained statistically stable (SPI-6 not significant), the significance of the estimated slope difference in summer of Cluster 2 at 5\% and in summer of Cluster 1 at 10\% are evidence that droughts in Paraguay are acquiring a predominantly thermal nature in the 21st century, where evaporation forced by the systematic increase of extreme maximum temperatures induces chronic seasonal aridification processes even under stable precipitation volumes.
+\noindent This article evaluates the temporal and spatial evolution of droughts and seasonal aridification processes in Paraguay during the 2000-2023 period, analyzing the impact of evaporative demand in a context of global warming. A balanced panel database was structured from daily records of the official terrestrial monitoring network. A hierarchical thermal layer imputation algorithm and a non-imputation criterion for precipitation were implemented. The national territory was regionalized using agglomerative hierarchical clustering (HAC) techniques and optimized using the average silhouette coefficient, identifying two homogeneous climatic subregions of water balance: the southeastern subregion (cluster 1) and the central Chaco subregion (cluster 2). Seasonal and regional trend estimates were performed using a random-effects panel data regression model with Driscoll and Kraay (1998) robust standard errors to serial correlation and strong spatial dependence confirmed by Pesaran's test. The results reveal a marked seasonal divergence in the water balance: while autumn and winter seasons remained hydrologically stable, the warm spring and summer periods recorded aridification trajectories. The most intense summer aridification rate in the country was concentrated in the agricultural subregion of the southeast (cluster 1). The parallel contrast between the climate balance model (SPEI-6) and the univariate precipitation model (SPI-6) demonstrated the validity of the role of thermal stress; because the rainfall regime remained statistically stable (SPI-6 not significant), the significance of the estimated slope difference in summer of cluster 2 at 5\% and in summer of cluster 1 at 10\% are evidence that droughts in Paraguay are acquiring a predominantly thermal nature in the 21st century, where evaporation forced by the systematic increase of extreme maximum temperatures induces chronic seasonal aridification processes even under stable precipitation volumes.
 
 \noindent \textbf{Key words:} Panel data, water balance, seasonal aridification, SPEI, random effects, Driscoll-Kraay, global warming, Paraguay.
 \end{abstract}
@@ -164,14 +166,52 @@ bajo la condición estricta de ortogonalidad:
     Cov(\alpha_i, x_{it}) = 0
 \end{equation}
 
-La elección entre modelos de efectos fijos y efectos aleatorios se fundamenta en el test de especificación de Hausman \citep{hausman1978,wooldridge2010}. Asimismo, dado que los datos climáticos suelen presentar autocorrelación temporal y dependencia espacial entre unidades, se consideran pruebas de dependencia transversal y errores estándar robustos, incluyendo la corrección de Driscoll--Kraay cuando corresponde \citep{pesaran2004}. Este enfoque permite estimar tendencias del balance hídrico con mayor solidez frente a estructuras de correlación frecuentes en series climáticas espaciales.
+La elección entre modelos de efectos fijos y efectos aleatorios se fundamenta en el test de especificación de Hausman \citep{hausman1978,wooldridge2010}. Asimismo, dado que los datos climáticos suelen presentar autocorrelación temporal y dependencia espacial entre unidades, se consideran pruebas de dependencia transversal y errores estándar robustos, incluyendo la corrección de Driscoll--Kraay cuando corresponde \citep{pesaran2004}. este enfoque permite estimar tendencias del balance hídrico con mayor solidez frente a estructuras de correlación frecuentes en series climáticas espaciales.
 
 %METODOLOGÍA===================================================
 
 \section{Metodología}
 
 \subsection{Fuentes de datos y variables}
-Los datos primarios corresponden a los registros diarios de precipitación acumulada ($P_t$, mm), temperatura media diaria ($T_{\mathrm{med},t}$, $^\circ$C), temperatura máxima ($T_{\mathrm{max},t}$, $^\circ$C) y temperatura mínima ($T_{\mathrm{min},t}$, $^\circ$C) para el período comprendido entre el 1 de enero de 2000 y el 31 de diciembre de 2023, provistos por la Dirección de Meteorología e Hidrología (DMH) de Paraguay. La base original contenía 19 bases meteorológicas terrestres. Tras un análisis de completitud temporal, se determinó que la base de Paraguarí (PARA) presentaba un truncamiento severo (pérdida masiva del 26\% de la serie), por lo que fue excluida definitivamente. Las 18 bases restantes exhibieron tasas de completitud de fechas superiores al 97.9\%, conformando la base del panel balanceado inicial de 157788 registros diarios.
+Los datos primarios corresponden a los registros diarios de precipitación acumulada ($P_t$, mm), temperatura media diaria ($T_{\mathrm{med},t}$, $^\circ$C), temperatura máxima ($T_{\mathrm{max},t}$, $^\circ$C) y temperatura mínima ($T_{\mathrm{min},t}$, $^\circ$C) para el período comprendido entre el 1 de enero de 2000 y el 31 de diciembre de 2023, provistos por la Dirección de Meteorología e Hidrología (DMH) de Paraguay. La base original contenía 19 bases meteorológicas terrestres. Tras un análisis de completitud temporal, se determinó que la base de Paraguarí (PARA) presentaba un truncamiento severo (pérdida masiva del 26\% de la serie), por lo que fue excluida definitivamente. Las 18 bases restantes exhibieron tasas de completitud de fechas superiores al 97.9\%, conformando la base del panel balanceado inicial de 157788 registros diarios. En la Tabla \ref{tab:estaciones} se detalla la red final de monitoreo terrestre utilizada en este estudio junto con sus metadatos de ubicación geográfica y asignación regional.
+
+\begin{table}[ht!]
+\centering
+\begin{threeparttable}
+\caption{Listado de las 18 bases meteorológicas oficiales utilizadas en el estudio y su clasificación regional.}
+\label{tab:estaciones}
+\vspace{-0.4cm}
+\singlespacing
+\footnotesize
+\begin{tabular}{llccc}
+\hline\hline
+\textbf{ID Base} & \textbf{Nombre Completo} & \textbf{Latitud ($^\circ$)} & \textbf{Longitud ($^\circ$)} & \textbf{Subregión Asignada} \\
+\hline
+MCAL & Aeropuerto de Mariscal Estigarribia & -22.03 & -60.62 & clúster 2 (centro-chaco) \\
+PTOC & Puerto Casado & -22.16 & -57.94 & clúster 2 (centro-chaco) \\
+PJC & Aeródromo de Pedro Juan Caballero & -22.64 & -55.83 & clúster 2 (centro-chaco) \\
+PCOL & Pozo Colorado & -23.50 & -58.79 & clúster 2 (centro-chaco) \\
+CONC & Aeródromo de Concepción & -23.44 & -57.43 & clúster 2 (centro-chaco) \\
+GBRU & Gral. José María Bruguez & -24.74 & -58.84 & clúster 2 (centro-chaco) \\
+SPED & Aeródromo de San Pedro del Ycuamandyyú & -24.03 & -57.02 & clúster 2 (centro-chaco) \\
+SEST & San Estanislao & -24.67 & -56.46 & clúster 2 (centro-chaco) \\
+SGUA & Aeródromo de Salto del Guairá & -24.03 & -54.35 & clúster 2 (centro-chaco) \\
+LUQUE & Aeropuerto Internacional Silvio Pettirossi & -25.24 & -57.51 & clúster 2 (centro-chaco) \\
+VILL & Villarrica del Espíritu Santo & -25.75 & -56.44 & clúster 1 (sureste) \\
+COVIE & Coronel Oviedo & -25.52 & -56.41 & clúster 1 (sureste) \\
+MINGA & Aeropuerto Int. Guaraní (Minga Guazú) & -25.50 & -54.77 & clúster 1 (sureste) \\
+PILAR & Aeródromo de Pilar & -26.88 & -58.32 & clúster 2 (centro-chaco) \\
+SJBA & San Juan Bautista & -26.67 & -57.13 & clúster 1 (sureste) \\
+CAAZ & Caazapá & -26.17 & -56.36 & clúster 1 (sureste) \\
+CMEZA & Base Aérea de Capitán Meza & -26.83 & -55.33 & clúster 1 (sureste) \\
+ENCAR & Encarnación & -27.34 & -55.87 & Clúster 1 (sureste) \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}
+\item \scriptsize Nota: La estación Paraguarí (PARA; Lat: -25.60, Long: -57.15) fue excluida por presentar 26\% de datos faltantes.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
 
 \subsection{Procesamiento, depuración e imputación de datos}
 Para garantizar la continuidad de la serie de temperatura media diaria ($T_{\text{med}}$) y evitar la pérdida de observaciones mensuales, se diseñó e implementó un algoritmo de imputación estructurado en tres capas jerárquicas:
@@ -292,9 +332,10 @@ En cuanto a la duración (Panel C), el promedio general de las rachas de sequía
 Durante el segundo período (2012--2023), el indicador de persistencia se incrementó a $3.12$ meses (un aumento relativo del 12\%), reduciéndose drásticamente las sequías transitorias e incrementándose los eventos persistentes y acumulativos de 2 a 4 meses de duración, lo que denota una pérdida de capacidad de recuperación de los sistemas de balance de agua en el país. Por último, la extensión espacial (Panel D) muestra una pendiente positiva, transitando de un promedio anual de afectación del 10\% de la red en el año 2000 a más del 20\% para el año 2023.
 
 \subsection{Resultados del modelo de datos de panel robusto (Driscoll y Kraay)}
+
 La elección entre estimadores se evaluó mediante la prueba de especificación de Hausman (1978). La obtención de un estadístico negativo de $-0.0035$ con un p-valor de $1.0000$ (Tabla \ref{tab:hausman_pesaran}) convalida la consistencia matemática y la mayor eficiencia del estimador de efectos aleatorios (RE). Físicamente, este resultado indica que la estandarización normal local en el cálculo del SPEI-6 remueve eficientemente la media climatológica de cada estación, garantizando la ortogonalidad entre los efectos fijos específicos individuales ($\alpha_i$) y los regresores temporales y estacionales del modelo. 
 
-De manera simultánea, la prueba de Dependencia de Sección Cruzada de Pesaran (2004) sobre los residuos del panel arrojó un estadístico CD de $70.5878$ con un p-valor de $0.0000$, rechazando categóricamente la hipótesis nula de independencia espacial y confirmando la fuerte sincronía de las perturbaciones hídricas en la red meteorológica de Paraguay, lo cual exige el uso de Driscoll-Kraay.
+De manera simultánea, la prueba de Dependencia de Sección Cruzada de Pesaran (2004) sobre los residuos del panel arrojó un estadístico CD de $70.5878$ con un p-valor de $0.0000$, rechazando categóricamente la hipótesis nula de independencia espacial y confirmando la fuerte sincronía de las perturbaciones hídricas en la red meteorológica de Paraguay, lo cual exige el uso de la corrección de Driscoll y Kraay (1998).
 
 \begin{table}[ht!]
 \centering
@@ -302,46 +343,114 @@ De manera simultánea, la prueba de Dependencia de Sección Cruzada de Pesaran (
 \caption{Resultados de las pruebas de especificación de Hausman y de dependencia de sección cruzada (CD) de Pesaran (2004).}
 \label{tab:hausman_pesaran}
 \vspace{-0.6cm}
-\singlespacing % <-- ACTIVA INTERLINEADO SENCILLO LOCAL
-\small         % <-- ACTIVA TAMAÑO DE LETRA CHICA LOCAL (10pt)
-% Usar columnas con ancho fijo para evitar desbordes horizontales
+\singlespacing
+\small
 \begin{tabular}{p{5.2cm}c c c}
-\hline
+\hline\hline
 \textbf{Prueba Estadística} & \textbf{Estadístico} & \textbf{Grados de Libertad ($k$)} & \textbf{p-valor} \\
 \hline
 Especificación de Hausman ($\chi^2$) & -0.0035 & 15 & 1.0000 \\
 Dependencia de Sección Cruzada (CD) de Pesaran & 70.5878 & - & 0.0000 \\
-\hline
+\hline\hline
 \end{tabular}
 \end{threeparttable}
 \end{table}
 
 El modelo robusto estimado con errores estándar de Driscoll-Kraay arrojó un estadístico F conjunto robusto de $1.9807$, siendo estadísticamente significativo al 5\% ($p = 0.0132$). El coeficiente de determinación inter-base meteorológica ($R^2 \text{ between} = 0.1903$) demuestra que la modelación captura consistentemente las diferencias geográficas sistemáticas en el balance de agua entre los clústeres del Paraguay.
 
-A partir del modelo general, el cálculo de las tendencias netas anualizadas del SPEI-6 demostró una marcada divergencia estacional (Tabla \ref{tab:pendientes_netas}). Durante los períodos fríos y de transición seca (invierno y otoño), ambas regiones climáticas exhibieron coeficientes de cambio de baja magnitud y estadísticamente no significativos ($p > 0.30$). 
+Los coeficientes estimados para la especificación completa del modelo con interacciones triples (Ecuación \ref{eq:modelo_completo}) se detallan en la Tabla \ref{tab:coeficientes_completos}.
 
-En contraste, los períodos cálidos y de mayor relevancia de desarrollo vegetativo (primavera y verano) presentaron tendencias negativas de aridificación sistemática. El patrón más severo del país se concentró de manera localizada en la subregión sureste (Clúster 1) durante el verano, registrando una tendencia hacia el secado de $-0.0400$ puntos de SPEI-6 por año (significativo al 11\%, $p = 0.11$).
+\begin{table}[ht!]
+\centering
+\begin{threeparttable}
+\caption{Resultados del modelo de panel con efectos aleatorios para la variable dependiente SPEI-6. Errores estándar de Driscoll y Kraay (1998) robustos a la correlación espacial.}
+\label{tab:coeficientes_completos}
+\vspace{-0.4cm}
+\singlespacing
+\footnotesize
+\begin{tabular}{l c c c c}
+\hline\hline
+\textbf{Regresor} & \textbf{Coeficiente} & \textbf{Error Est.} & \textbf{Estadístico $t$} & \textbf{p-valor} \\
+\hline
+intercepto ($\beta_0$) & -0.1844 & 0.1513 & -1.22 & 0.2232 \\
+otoño ($\gamma_1$) & 0.3050 & 0.1892 & 1.61 & 0.1070 \\
+primavera ($\gamma_2$) & 0.0892 & 0.2071 & 0.43 & 0.6665 \\
+verano ($\gamma_3$) & 0.3447 & 0.2265 & 1.52 & 0.1282 \\
+clúster 1 ($\delta_1$) & -0.0640 & 0.2174 & -0.29 & 0.7684 \\
+otoño $\times$ clúster 1 ($\psi_1$) & 0.0158 & 0.2522 & 0.06 & 0.9502 \\
+primavera $\times$ clúster 1 ($\psi_2$) & 0.3467 & 0.2860 & 1.21 & 0.2254 \\
+verano $\times$ clúster 1 ($\psi_3$) & 0.4448 & 0.3620 & 1.23 & 0.2191 \\
+tiempo ($\beta_1$) & 0.0012 & 0.0012 & 1.00 & 0.3150 \\
+tiempo $\times$ otoño ($\theta_1$) & -0.0002 & 0.0015 & -0.15 & 0.8833 \\
+tiempo $\times$ primavera ($\theta_2$) & -0.0023 & 0.0015 & -1.54 & 0.1244 \\
+tiempo $\times$ verano ($\theta_3$) & -0.0022 & 0.0017 & -1.27 & 0.2056 \\
+tiempo $\times$ clúster 1 ($\phi_1$) & -0.0002 & 0.0017 & -0.12 & 0.9008 \\
+tiempo $\times$ otoño $\times$ clúster 1 ($\omega_1$) & -0.0015 & 0.0017 & -0.86 & 0.3890 \\
+tiempo $\times$ primavera $\times$ clúster 1 ($\omega_2$) & 0.0003 & 0.0023 & 0.15 & 0.8846 \\
+tiempo $\times$ verano $\times$ clúster 1 ($\omega_3$) & -0.0018 & 0.0025 & -0.74 & 0.4600 \\
+\hline\hline
+\end{tabular}
+\begin{tablenotes}
+\item \scriptsize Nota: Categorías de referencia: invierno y clúster 2 (centro-chaco).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
+\subsubsection{Mecánica del modelo explicativo e integración de efectos}
+
+Debido a que el modelo especifica interacciones multiplicativas triples ($\text{tiempo} \times \text{estación} \times \text{región}$), los coeficientes individuales de la Tabla \ref{tab:coeficientes_completos} no representan los efectos marginales directos de las variables. Para decodificar e interpretar el comportamiento histórico del SPEI-6, es necesario operar el modelo integrando de manera conjunta los \textit{efectos de nivel} (parámetros de posición que actúan como interceptos netos de partida) y los \textit{efectos de pendiente} (tasas dinámicas de cambio temporal o pendientes netas).
+
+Para ilustrar este mecanismo de integración, considérese la estimación esperada del índice SPEI-6 para la subregión sureste (clúster 1) durante la estación de verano al término del período de estudio ($t = 283$ meses):
+
+1. \textit{Efecto de nivel base (intercepto neto):} Suma los coeficientes asociados a las variables dicotómicas de posición que definen la condición espacial y estacional en el origen ($t = 0$):
+\begin{equation}
+\begin{split}
+\text{Nivel base} &= \beta_0 + \gamma_3(\text{verano}) + \delta_1(\text{clúster 1}) + \psi_3(\text{verano} \times \text{clúster 1}) \\
+&= -0.1844 + 0.3447 - 0.0640 + 0.4448 = \mathbf{0.5411}
+\end{split}
+\end{equation}
+este valor positivo ($0.5411$) indica que al inicio del período (enero de 2000), las condiciones de balance hídrico estival en el sureste eran predominantemente húmedas.
+
+2. \textit{Efecto de pendiente (Tendencia neta):} Representa la tasa de cambio mensual del balance hídrico y se obtiene consolidando todos los coeficientes que interactúan con la variable temporal $T_t$:
+\begin{equation}
+\begin{split}
+\text{Tendencia neta} &= \beta_1 + \theta_3(\text{tiempo} \times \text{verano}) + \phi_1(\text{tiempo} \times \text{clúster 1}) + \omega_3(\text{triple interacción}) \\
+&= 0.0012 - 0.0022 - 0.0002 - 0.0018 = \mathbf{-0.0030} \text{ puntos de SPEI-6 / mes}
+\end{split}
+\end{equation}
+Multiplicando esta pendiente mensual por 12 meses, se obtiene la tasa de aridificación anualizada de $\mathbf{-0.0360} \approx \mathbf{-0.0400}$ puntos/año.
+
+3. \textit{Evaluación de la ecuación al mes $t = 283$:}
+\begin{equation}
+\text{SPEI}_{t=283} = 0.5411 + (-0.0030 \times 283) = 0.5411 - 0.8490 = \mathbf{-0.3079}
+\end{equation}
+este resultado demuestra que, bajo el efecto del incremento en la demanda evaporativa, los veranos de la subregión sureste han transitado de un estado húmedo inicial ($0.5411$) hacia un balance hídrico deficitario ($-0.3079$).
+
+A partir de este procedimiento de combinación lineal ($\beta_{\text{neta},s} = \mathbf{w}_s' \boldsymbol{\hat{\beta}}$) aplicado a todos los escenarios regionales y estacionales, se derivaron las tendencias netas anualizadas validadas estadísticamente que se presentan en la Tabla \ref{tab:pendientes_netas}.
 
 \begin{table}[ht!]
 \centering
 \begin{threeparttable}
 \caption{Tendencias netas anualizadas del balance hídrico (SPEI-6) en Paraguay por subregión y estación climática (periodo 2000--2023).}
 \label{tab:pendientes_netas}
+\vspace{-0.4cm}
+\singlespacing
+\small
 \begin{tabular}{llcc}
-\hline
+\hline\hline
 \textbf{Subregión Geográfica} & \textbf{Estación Climática} & \textbf{Tendencia Anualizada} & \textbf{p-valor} \\ \hline
-\textbf{Clúster 2 (Centro-Chaco)} & invierno & 0.0145 & 0.3149 \\
+\textbf{Clúster 2 (centro-chaco)} & invierno & 0.0145 & 0.3149 \\
                                  & otoño & 0.0119 & 0.5015 \\
                                  & primavera & -0.0133 & 0.4047 \\
                                  & verano & -0.0120 & 0.4730 \\ \hline
-\textbf{Clúster 1 (Sur-Este)}    & invierno & 0.0120 & 0.5705 \\
+\textbf{Clúster 1 (sureste)}    & invierno & 0.0120 & 0.5705 \\
                                  & otoño & -0.0082 & 0.6925 \\
                                  & primavera & -0.0119 & 0.5318 \\
-                                 & \textbf{verano} & \textbf{-0.0400} & \textbf{0.1086} \\ \hline
-\multicolumn{4}{l}{\small Nota: Estimaciones de tendencias netas anualizadas basadas en combinaciones lineales.} \\
-\multicolumn{4}{l}{\small p-valores calculados de forma dinámica mediante la matriz de covarianza de Driscoll-Kraay.} \\
-\hline
+                                 & \textbf{verano} & \textbf{-0.0400} & \textbf{0.1086} \\ \hline\hline
 \end{tabular}
+\begin{tablenotes}
+\item \scriptsize Nota: Estimaciones basadas en combinaciones lineales de los parámetros del modelo. p-valores calculados mediante pruebas de restricción lineal de Wald utilizando la matriz de covarianza de Driscoll-Kraay (1998).
+\end{tablenotes}
 \end{threeparttable}
 \end{table}
 
@@ -357,9 +466,9 @@ Para determinar de forma concluyente la contribución del incremento térmico so
 \hline
 \textbf{Región Climática} & \textbf{Estación del Año} & \textbf{Tendencia SPEI-6} & \textbf{Tendencia SPI-6} & \textbf{Diferencia ($\Delta \beta$)} & \textbf{Efecto del Calentamiento Global} \\ \hline
 Subregión sureste & verano & -0.0400* & -0.0339 & -0.0060* & \parbox[t]{5.5cm}{Sugerente (Tendencia de aridificación estival moderada).} \\
-(Clúster 1) & otoño & -0.0086 & -0.0057 & -0.0029 & \parbox[t]{5.5cm}{No significativo (Precipitación domina el balance de otoño).} \\ \hline
-Subregión centrochaco & primavera & -0.0161 & -0.0059 & -0.0102* & \parbox[t]{5.5cm}{Sugerente (Extensión temporal de la sequedad primaveral).} \\
-(Clúster 2) & verano & -0.0151 & -0.0026 & -0.0125** & \parbox[t]{5.5cm}{Significativo (Aridificación estival inducida por incremento de ETP).} \\ \hline
+(clúster 1) & otoño & -0.0086 & -0.0057 & -0.0029 & \parbox[t]{5.5cm}{No significativo (Precipitación domina el balance de otoño).} \\ \hline
+Subregión centro-chaco & primavera & -0.0161 & -0.0059 & -0.0102* & \parbox[t]{5.5cm}{Sugerente (Extensión temporal de la sequedad primaveral).} \\
+(clúster 2) & verano & -0.0151 & -0.0026 & -0.0125** & \parbox[t]{5.5cm}{Significativo (Aridificación estival inducida por incremento de ETP).} \\ \hline
 \multicolumn{6}{l}{\small Nota: *** $p < 0.01$, ** $p < 0.05$, * $p < 0.1$. Los valores corresponden a tendencias anualizadas estimadas.} \\
 \multicolumn{6}{l}{\small Errores estándar y p-valores calculados de forma dinámica mediante la matriz de covarianza de Driscoll-Kraay.} \\
 \hline
@@ -369,11 +478,13 @@ Subregión centrochaco & primavera & -0.0161 & -0.0059 & -0.0102* & \parbox[t]{5
 
 El contraste aporta un hallazgo de gran valor científico: las estimaciones univariadas de precipitación (SPI-6) no mostraron coeficientes de tendencia temporal significativos en ningún escenario, demostrando que el régimen de lluvias en Paraguay ha permanecido estadísticamente estable durante las últimas dos décadas. Sin embargo, el modelo de diferencias reveló tendencias sistemáticamente negativas y estadísticamente significativas para la diferencia de pendientes ($\Delta \beta$). 
 
-Esto es particularmente agudo en el verano del Clúster 2 (centro-chaco), donde la diferencia de tendencias ($\Delta \beta = -0.0125^{**}$) es altamente significativa al 5\% ($p < 0.05$), y en el verano del Clúster 1 (sureste, $\Delta \beta = -0.0060^*$), donde es significativa al 10\% ($p < 0.10$). Este resultado prueba que el agravamiento de las sequías contemporáneas en Paraguay responde al incremento de la ETP inducida por el aumento sostenido de las temperaturas asociadas al cambio climático global, y no a cambios en los patrones de lluvia.
+Esto es particularmente agudo en el verano del clúster 2 (centro-chaco), donde la diferencia de tendencias ($\Delta \beta = -0.0125^{**}$) es altamente significativa al 5\% ($p < 0.05$), y en el verano del clúster 1 (sureste, $\Delta \beta = -0.0060^*$), donde es significativa al 10\% ($p < 0.10$). Este resultado prueba que el agravamiento de las sequías contemporáneas en Paraguay responde al incremento de la ETP inducida por el aumento sostenido de las temperaturas asociadas al cambio climático global, y no a cambios en los patrones de lluvia.
 
 
-% 4. DISCUSIÓN Y CONCLUSIONEs======================================
-\section{Discusión}
+% DISCUSIÓN ======================================
+\section{Discusiones}
+
+Si bien el método empírico de Thornthwaite depende fundamentalmente de la temperatura y puede presentar sensibilidad en la magnitud absoluta de la ETP frente a la formulación de Penman-Monteith \citep{allen1998crop}, constituye la aproximación física óptima y estándar ante la ausencia de series históricas continuas de radiación solar y velocidad del viento en la red terrestre paraguaya.
 
 El hallazgo de que el volumen de precipitación pluvial (medido a través del SPI-6) ha permanecido estadísticamente estable durante las últimas dos décadas, mientras que el balance hídrico integrado (medido por el SPEI-6) muestra tendencias negativas significativas en las estaciones de primavera y verano, constituye una validación empírica del concepto de ``sequías más cálidas'' (\textit{hotter droughts}) acuñado por \citet{trenberth_global_2014}. En este tipo de sequías, el déficit de humedad en el suelo ya no es impulsado de forma exclusiva por la escasez de lluvias, sino también por el incremento de las temperaturas que exacerban la demanda evaporativa de la atmósfera.
 
@@ -390,7 +501,10 @@ Un aspecto metodológico relevante del modelo de panel estimado es el valor mode
 Finalmente, es fundamental discutir el nivel de significancia estadística alcanzado por las pendientes netas. Bajo la especificación robusta de Driscoll-Kraay (1998), la tendencia de aridificación estival del clúster 1 resultó significativa al 11\% ($p = 0.1086$), mientras que la diferencia de tendencias entre el SPEI-6 y el SPI-6 para el verano del clúster 2 resultó significativa al 5\% ($p < 0.05$). En la investigación climatológica es frecuente encontrar estudios que reportan coeficientes ``altamente significativos'' ($p < 0.01$) utilizando modelos de mínimos cuadrados ordinarios (OLS) o modelos de panel con errores estándares convencionales. Sin embargo, en presencia de una red de bases meteorológicas expuestas a choques sinópticos comunes, omitir la dependencia espacial (sección cruzada) produce una subestimación severa de los errores estándar y un incremento artificial del estadístico t, induciendo a Error Tipo I o falsos positivos \citep{wooldridge2010}. Al aplicar de forma preventiva el estimador de Driscoll-Kraay (1998), los errores estándar fueron corregidos tanto por autocorrelación temporal como por correlación espacial. 
 
 El hecho de que la señal de aridificación en verano haya emergido con significancia estadística ($p < 0.11$) bajo este tratamiento sumamente conservador constituye un sello de robustez metodológica. Esto demuestra que la señal del calentamiento global sobre el ciclo hidrológico en Paraguay es físicamente real y lo suficientemente intensa como para superar los rigurosos filtros de la correlación espacial contemporánea de la red de bases meteorológicas.
-\section{Conclusiones}
+%=========================================================================================
+\section{Conclusiones y recomendaciones}
+
+\subsection{Conclusiones principales}
 
 La estructuración de una base de datos en formato de panel a partir de los registros diarios de la red oficial de monitoreo terrestre permitió conformar una muestra altamente consistente de 18 bases meteorológicas balanceadas para un período continuo de 24 años. La aplicación de un algoritmo de imputación térmica por capas jerárquicas y la política de no imputación para la variable de precipitación garantizaron la consistencia física de la serie temporal agregada mensual ($N \times T = 5094$ observaciones).
 
@@ -404,7 +518,20 @@ La estimación del modelo de regresión de datos de panel mediante el estimador 
 
 El análisis de contraste paralelo entre los modelos de balance hídrico (SPEI-6) y precipitación univariada (SPI-6) demostró la validez del rol dominante del estrés térmico asociado al calentamiento global. Debido a que las lluvias medias (SPI-6) permanecieron estadísticamente estables en todos los casos, la significancia estadística de la diferencia de pendientes ($\Delta \beta < 0$) estimada en el verano del Clúster 2 al 5\% de significancia ($\Delta \beta = -0.0125^{**}$) y en el verano del clúster 1 al 10\% ($\Delta \beta = -0.0060^{*}$) comprueba que el agravamiento de las sequías contemporáneas en Paraguay responde al incremento sistemático de la evapotranspiración potencial (demanda atmosférica) inducida por el aumento de las temperaturas máximas extremas, y no a un cambio en el volumen de las precipitaciones.
 
+\subsection{Recomendaciones y futuras líneas de investigación}
 
+Sobre la base de los hallazgos y las limitaciones identificadas en este estudio, se formulan las siguientes recomendaciones para los ámbitos técnico, de política pública y científico:
+
+\begin{enumerate}
+    \item \textit{Fortalecimiento del monitoreo climático (DMH/DINAC):} Se sugiere a las autoridades meteorológicas fortalecer y modernizar la red de bases terrestres del país. Para superar las limitaciones del método de Thornthwaite en la estimación de la ETP (que depende únicamente de la temperatura media), es indispensable asegurar el registro continuo y de calidad de variables como la velocidad del viento, la radiación solar y la humedad relativa, permitiendo transicionar hacia modelos físicos más precisos como el estándar Penman-Monteith (FAO-56) \citep{allen1998crop}.
+    \item \textit{Políticas de adaptación y gestión del riesgo (MAG/MADES):} Se recomienda a los ministerios sectoriales e instituciones agropecuarias incorporar métricas sensibles a la temperatura (como el SPEI) en la formulación de planes de contingencia agrícola y proyectos de infraestructura de riego. Los resultados demuestran que planificar la seguridad hídrica basándose exclusivamente en el monitoreo tradicional de lluvias (SPI) introduce sesgos críticos, ya que regímenes de precipitación estables pueden coexistir con déficits severos de humedad en el suelo inducidos por olas de calor estivales.
+    \item \textit{Futuras líneas de investigación científica:} Se alienta a futuros investigadores a explorar modelos econométricos no lineales para datos de panel (tales como modelos \textit{panel threshold}) para capturar potenciales quiebres estructurales abruptos en el balance hídrico. Asimismo, resulta de gran interés integrar información de sensores remotos e índices satelitales de vegetación (NDVI/EVI) para validar la magnitud de las tendencias de aridificación estimadas con los impactos reales sobre la productividad agrícola en Paraguay.
+\end{enumerate}
+
+\section*{Declaración de disponibilidad de datos y código}
+\addcontentsline{toc}{section}{Declaración de disponibilidad de datos y código}
+
+Los datos meteorológicos primarios fueron provistos de forma oficial por la Dirección de Meteorología e Hidrología (DMH) de la Dirección Nacional de Aeronáutica Civil (DINAC) del Paraguay (Expediente N.º 213042/2024). El conjunto de datos procesado, los códigos de depuración, la estimación de modelos econométricos y la generación de gráficos desarrollados en Python se encuentran disponibles públicamente en el repositorio abierto de GitHub: \url{https://github.com/hvargasojeda/tesis_sequia_2.git}.
 
 \bibliographystyle{apalike} 
 \bibliography{/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/bibliography.bib}
