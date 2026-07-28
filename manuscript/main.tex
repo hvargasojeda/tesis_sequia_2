@@ -54,8 +54,8 @@
 % Fuerza a babel en español a usar títulos de Índices y de elementos en Mayúsculas Sostenidas y nomenclatura "Tabla"
 \addto\captionsspanish{
   \renewcommand{\contentsname}{ÍNDICE}
-  \renewcommand{\listtablename}{ÍNDICE DE TABLAS} % <-- Cambiado de CUADROS a TABLAS
-  \renewcommand{\listfigurename}{ÍNDICE DE FIGURAS}
+  \renewcommand{\listtablename}{LISTA DE TABLAS} % <-- Cambiado de CUADROS a TABLAS
+  \renewcommand{\listfigurename}{LISTA DE FIGURAS}
   \renewcommand{\tablename}{Tabla} % <-- Cambia globalmente la palabra "Cuadro" por "Tabla" en las leyendas
 }
 
@@ -144,8 +144,8 @@
 \begin{titlepage}
     \centering
     \vspace*{0.5cm}
-    \includegraphics[width=4cm]{logofacen.jpg}\par
-    \vspace{0.8cm}
+    \includegraphics[width=3.5cm]{logofacen.jpg}\par
+    \vspace{-0.2cm}
     
     % Bloque de la Institución
     {\fontsize{16}{20}\selectfont\bfseries UNIVERSIDAD NACIONAL DE ASUNCIÓN}\par
@@ -184,10 +184,10 @@
     
     \vfill
     
-    % Ubicación y Fecha (Ubicación 12pt, Fecha 17pt, todo Mayúsculas)
-    {\fontsize{12}{15}\selectfont SAN LORENZO – PARAGUAY}\par
+    % Ubicación y Fecha (todo Mayúsculas)
+    {\fontsize{14}{18}\selectfont \textsc{San Lorenzo – Paraguay}}\par
     \vspace{-0.3cm}
-    {\fontsize{12}{15}\selectfont MAYO – 2026}\par
+    {\fontsize{12}{15}\selectfont \textsc{Mayo – 2026}}\par
     \vspace*{0.5cm}
 \end{titlepage}
 
@@ -196,8 +196,8 @@
 \begin{titlepage}
     \centering
     \vspace*{0.5cm}
-    \includegraphics[width=4cm]{logofacen.jpg}\par
-    \vspace{0.8cm}
+    \includegraphics[width=3.5cm]{logofacen.jpg}\par
+    \vspace{-0.2cm}
     
     % Bloque de la Institución
     {\fontsize{16}{20}\selectfont\bfseries UNIVERSIDAD NACIONAL DE ASUNCIÓN}\par
@@ -225,7 +225,7 @@
     
     % Orientador y Co-orientador (Tamaño 14, alineado a la derecha, nombres en Mayúscula y Negrita)
     \begin{flushright}
-    \fontsize{14}{18}\selectfont
+    \fontsize{16}{20}\selectfont
     \begin{tabular}{r@{\hskip 0.2cm}l}
     Orientador: & \textbf{Prof. Dr. GONZALO MARTIN VICENTE} \\
     Co-Orientador: & \textbf{Prof. Dr. GUSTAVO IGNACIO RIVAS M.}
@@ -244,10 +244,10 @@
     
     \vfill
     
-    % Ubicación y Fecha (Ubicación 12pt, Fecha 17pt, todo Mayúsculas)
-    {\fontsize{12}{15}\selectfont SAN LORENZO – PARAGUAY}\par
+    % Ubicación y Fecha (todo Mayúsculas)
+    {\fontsize{14}{18}\selectfont \textsc{San Lorenzo – Paraguay}}\par
     \vspace{-0.3cm}
-    {\fontsize{12}{15}\selectfont MAYO – 2026}\par
+    {\fontsize{12}{15}\selectfont \textsc{Mayo – 2026}}\par
     \vspace*{0.5cm}
 \end{titlepage}
 
@@ -298,7 +298,7 @@ DE LA BIBLIOTECA E INTERNET DE LA FACEN - UNA
     \vspace{0.4cm}
     
     % Autor (Tamaño 12, Regular, Mayúsculas - SIN NEGRITA)
-    {\fontsize{12pt}{15pt}\selectfont HERNÁN J. VARGAS OJEDA\par}
+    {\fontsize{12pt}{15pt}\selectfont HERNÁN JAVIER VARGAS OJEDA\par}
 \end{center}
 
 \vspace{0.3cm}
@@ -331,7 +331,7 @@ Tesis presentada a la Facultad de Ciencias Exactas y Naturales, Universidad Naci
 
 \textbf{Prof. Dr. GONZALO MARTÍN VICENTE} \par
 \vspace{-0.25cm}
-\textit{Universidad Pública de Navarra, España} \par
+\textit{Universidad Nacional de Cuyo, Argentina} \par
 \vspace{0.25cm}
 
 \textbf{Prof. MSc. CRISTINA BEATRIZ CUESTA} \par
@@ -360,8 +360,9 @@ Tesis presentada a la Facultad de Ciencias Exactas y Naturales, Universidad Naci
 
 \vfill % Espacio elástico proporcional
 
+\vspace{1cm}
 % Texto de aprobación (Tamaño 12, Justificado, alineado a la izquierda sin sangría)
-Aprobado por la Dirección de Postgrado de la Facultad de Ciencias Exactas y Naturales, Universidad Nacional de Asunción, en fecha \_\_ de junio de 2026.
+Aprobado y catalogado por la Dirección de Postgrado de la Facultad de Ciencias Exactas y Naturales, Universidad Nacional de Asunción, en fecha 24 de julio de 2026.
 \endgroup
 
 \vspace{1cm}
@@ -435,7 +436,7 @@ A mis padres, María Asunción de Rodríguez y Mario Rodríguez M., por su amor 
     \fontsize{12pt}{15pt}\selectfont
     Autor: HERNÁN JAVIER VARGAS OJEDA \\
     Orientador: Prof. Dr. GONZALO MARTIN VICENTE \\
-    Co-orientador: Prof. MSc. GUSTAVO IGNACIO RIVAS M.
+    Co-orientador: Prof. Dr. GUSTAVO IGNACIO RIVAS M.
 \end{flushright}
 
 \vspace{0.5cm}
@@ -476,7 +477,7 @@ A mis padres, María Asunción de Rodríguez y Mario Rodríguez M., por su amor 
     \fontsize{12pt}{15pt}\selectfont
     Author: HERNÁN JAVIER VARGAS OJEDA \\
     Advisor: Prof. Dr. GONZALO MARTIN VICENTE \\
-    Co-advisor: Prof. MSc. GUSTAVO IGNACIO RIVAS M.
+    Co-advisor: Prof. Dr. GUSTAVO IGNACIO RIVAS M.
 \end{flushright}
 
 \vspace{0.5cm}
@@ -520,9 +521,10 @@ A mis padres, María Asunción de Rodríguez y Mario Rodríguez M., por su amor 
 \input{sections/2capitulo.tex}
 \input{sections/3capitulo.tex}
 \input{sections/4capitulo.tex}
+\addtocontents{toc}{\protect\clearpage}  %crea un salto de página en el índice antes del capítulo 5
 \input{sections/5capitulo.tex}
 
-% BIBLIOGRAFÍA (CONTROL ABSOLUTO Y SILENCIADO TOTAL DEL ÍNDICE)
+% BIBLIOGRAFÍA (CONTROL ABSOLUTO CON CABECERA MANUAL CENTRADA E INTERLINEADO SENCILLO)
 \cleardoublepage
 \hbadness=10000 % Ignora advertencias de espacios flojos hasta este nivel
 \sloppy
@@ -531,12 +533,26 @@ A mis padres, María Asunción de Rodríguez y Mario Rodríguez M., por su amor 
 % 1. Escribimos manualmente la línea PERFECTA de nivel capítulo en el índice (Negrita, sin sangría, Mayúsculas)
 \addcontentsline{toc}{chapter}{REFERENCIAS BIBLIOGRÁFICAS}
 
-% 2. Abrimos un grupo para desactivar CUALQUIER comando de escritura automática de apacite y forzar el interlineado sencillo
+% 2. Imprimimos el título de la página física CENTRADO, EN MAYÚSCULAS Y TAMAÑO 16 (Igual al de Agradecimientos)
+\begin{center}
+    {\fontsize{16pt}{20pt}\selectfont\bfseries REFERENCIAS BIBLIOGRÁFICAS\par}
+\end{center}
+\vspace{-1.5cm} % Espacio reducido para compensar el espacio que agrega la primera referencia automáticamente
+
+% 3. Abrimos un grupo para desactivar la escritura y el título automáticos de apacite, forzando interlineados
 \begingroup
-  \singlespacing % Fuerza el interlineado sencillo únicamente para esta sección de referencias
-  \renewcommand{\addcontentsline}[3]{}% Anula escrituras automáticas indirectas
+  \singlespacing % Interlineado sencillo para el texto de las referencias
+  
+  % Anulamos las variables de nombre de apacite/spanish.apc para que el título automático sea 100% invisible
+  \renewcommand{\refname}{}
+  \renewcommand{\bibname}{}
+  
+  % Truco definitivo para inyectar espacio vertical (un renglón simple) entre referencias de forma inmune a apacite
+  \let\oldbibitem\bibitem
+  \renewcommand{\bibitem}[2][]{\vspace{\baselineskip}\oldbibitem[#1]{#2}}
+  
+  \renewcommand{\addcontentsline}[3]{}% Anula escrituras automáticas indirectas al índice
   \renewcommand{\addtocontents}[2]{}% Anula escrituras automáticas directas de apacite al TOC
-  \def\APACrefheading#1{\chapter*{REFERENCIAS BIBLIOGRÁFICAS}}% Fuerza el título físico como capítulo
   \bibliography{bibliography}
 \endgroup
 
@@ -560,13 +576,25 @@ A mis padres, María Asunción de Rodríguez y Mario Rodríguez M., por su amor 
 \clearpage % Salto de página para que las secciones comiencen en la hoja siguiente
 
 
+% RECONFIGURACIÓN DEFENSIVA DEL COMANDO APPENDIX
+% Redefinimos \appendix para que reinicie los capítulos a cero pero fuerce números arábigos (1, 2, 3)
+\renewcommand{\appendix}{%
+  \setcounter{chapter}{0}% Reinicia el contador de capítulos a 0 para esta sección
+  \renewcommand{\thechapter}{\arabic{chapter}}% Fuerza la numeración arábiga
+}
+\appendix % Ejecutamos nuestra redefinición antes de importar el archivo
+
+
 % RESTAURAR ESTILO DE PÁGINA PARA LOS CAPÍTULOS DE APÉNDICES
-% Permite que las primeras páginas de los apéndices (A, B y C) vuelvan a mostrar el número abajo al centro
+% Permite que las primeras páginas de los apéndices (1, 2 y 3) vuelvan a mostrar el número abajo al centro
 \assignpagestyle{\chapter}{fancy}
 
 
-% CARGA DE LOS ARCHIVOS DE APÉNDICES (Secciones A, B y C)
-\input{sections/10_apendice.tex}
+% CARGA DE LOS ARCHIVOS DE APÉNDICES (Secciones A, B y C - EN INTERLINEADO SENCILLO)
+\begingroup
+  \singlespacing % Fuerza el interlineado sencillo únicamente para toda la sección de apéndices (1, 2 y 3)
+  \input{sections/10_apendice.tex}
+\endgroup
 
 
 \end{document}

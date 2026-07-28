@@ -2,12 +2,12 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {chapter}{\numberline {1}INTRODUCCIÓN}{1}{chapter.1}%
 \contentsline {section}{\numberline {1.1}Planteamiento del problema}{2}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Justificación de la investigación}{3}{section.1.2}%
-\contentsline {section}{\numberline {1.3}Hipótesis}{3}{section.1.3}%
-\contentsline {section}{\numberline {1.4}Objetivos de la investigación}{4}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Objetivo general}{4}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Objetivos específicos}{4}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Nota sobre la nomenclatura numérica}{4}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.2}Justificación}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Objetivos}{3}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Objetivo general}{3}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Objetivos específicos}{3}{subsection.1.3.2}%
+\contentsline {section}{\numberline {1.4}Hipótesis}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}Nota sobre la nomenclatura numérica}{4}{section.1.5}%
 \contentsline {chapter}{\numberline {2}MARCO TEÓRICO}{5}{chapter.2}%
 \contentsline {section}{\numberline {2.1}La sequía. Definición}{5}{section.2.1}%
 \contentsline {subsection}{\numberline {2.1.1}Características y clasificación}{5}{subsection.2.1.1}%
@@ -22,7 +22,7 @@
 \contentsline {subsection}{\numberline {2.4.3}Balance hídrico y el índice de precipitación - evapotranspiración estandarizado (SPEI)}{11}{subsection.2.4.3}%
 \contentsline {subsection}{\numberline {2.4.4}Acumulación del balance hídrico en múltiples escalas}{11}{subsection.2.4.4}%
 \contentsline {subsection}{\numberline {2.4.5}Limitaciones del índice SPEI}{12}{subsection.2.4.5}%
-\contentsline {section}{\numberline {2.5}Fundamentos del agrupamiento no supervisado (clustering) para regionalización geográfica de la sequía}{13}{section.2.5}%
+\contentsline {section}{\numberline {2.5}Fundamentos del agrupamiento no supervisado (\textit {clustering}) para regionalización geográfica de la sequía}{13}{section.2.5}%
 \contentsline {subsection}{\numberline {2.5.1}Algoritmo de agrupamiento jerárquico aglomerativo}{13}{subsection.2.5.1}%
 \contentsline {subsection}{\numberline {2.5.2}Determinación de la partición óptima mediante el coeficiente de silueta}{14}{subsection.2.5.2}%
 \contentsline {section}{\numberline {2.6}Fundamentos del modelado estadístico para datos de panel}{14}{section.2.6}%
@@ -55,33 +55,35 @@
 \contentsline {section}{\numberline {4.1}Regionalización climatológica de la sequía en Paraguay}{30}{section.4.1}%
 \contentsline {subsection}{\numberline {4.1.1}Optimización y selección del número de clústeres}{30}{subsection.4.1.1}%
 \contentsline {subsection}{\numberline {4.1.2}Asignación de bases meteorológicas y validación de contigüidad geográfica}{31}{subsection.4.1.2}%
-\contentsline {section}{\numberline {4.2}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{32}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Patrones estacionales del balance hídrico}{32}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Análisis de frecuencia de eventos extremos}{34}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Análisis de intensidad del déficit hídrico}{34}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Análisis de la duración temporal (persistencia)}{35}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Análisis de la extensión espacial de la sequía}{36}{subsection.4.2.5}%
-\contentsline {section}{\numberline {4.3}Resultados del modelo de datos de panel}{37}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Selección del estimador: El test de especificación de Hausman}{37}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Verificación de la dependencia de sección cruzada (correlación espacial)}{38}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Estimación del modelo final}{38}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Mecánica del modelo explicativo e integración de efectos}{40}{subsection.4.3.4}%
-\contentsline {subsection}{\numberline {4.3.5}Análisis de las tendencias de largo plazo (pendientes netas)}{42}{subsection.4.3.5}%
-\contentsline {section}{\numberline {4.4}Aislamiento del efecto térmico: Análisis comparativo entre SPEI-6 y SPI-6}{43}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Discusión de resultados}{45}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Interpretación física de las dinámicas hídricas y contraste geográfico (regional)}{45}{subsection.4.5.1}%
-\contentsline {subsection}{\numberline {4.5.2}El impacto del ruido interanual (ENSO) sobre el ajuste del modelo lineal}{46}{subsection.4.5.2}%
-\contentsline {subsection}{\numberline {4.5.3}Implicaciones de la robustez de Driscoll-Kraay en la inferencia climática}{47}{subsection.4.5.3}%
+\contentsline {section}{\numberline {4.2}Patrones estacionales del balance hídrico}{32}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Caracterización descriptiva de las dinámicas de sequía (2000--2023)}{34}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Análisis de frecuencia de eventos extremos}{34}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Análisis de intensidad del déficit hídrico}{35}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Análisis de la duración temporal (persistencia)}{35}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Análisis de la extensión espacial de la sequía}{36}{subsection.4.3.4}%
+\contentsline {section}{\numberline {4.4}Resultados del modelo de datos de panel}{37}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Selección del estimador: El test de especificación de Hausman}{37}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Verificación de la dependencia de sección cruzada (correlación espacial)}{38}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Estimación del modelo final}{38}{subsection.4.4.3}%
+\contentsline {subsection}{\numberline {4.4.4}Mecánica del modelo explicativo e integración de efectos}{40}{subsection.4.4.4}%
+\contentsline {subsection}{\numberline {4.4.5}Análisis de las tendencias de largo plazo (pendientes netas)}{42}{subsection.4.4.5}%
+\contentsline {section}{\numberline {4.5}Aislamiento del efecto térmico: Análisis comparativo entre SPEI-6 y SPI-6}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Discusión de resultados}{45}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Interpretación física de las dinámicas hídricas y contraste geográfico (regional)}{45}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}El impacto del ruido interanual (ENSO) sobre el ajuste del modelo lineal}{46}{subsection.4.6.2}%
+\contentsline {subsection}{\numberline {4.6.3}Implicaciones de la robustez de Driscoll-Kraay en la inferencia climática}{47}{subsection.4.6.3}%
+\clearpage 
 \contentsline {chapter}{\numberline {5}CONCLUSIONES Y RECOMENDACIONES}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Respuesta a las preguntas de investigación}{49}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Evaluación y contraste de las hipótesis}{50}{section.5.2}%
-\contentsline {section}{\numberline {5.3}Conclusiones generales}{52}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Recomendaciones y futuras líneas de investigación}{53}{section.5.4}%
+\contentsline {section}{\numberline {5.1}Conclusiones}{49}{section.5.1}%
+\contentsline {subsubsection}{Respuesta a las preguntas de investigación}{49}{section.5.1}%
+\contentsline {subsubsection}{Evaluación y contraste de las hipótesis}{50}{Item.34}%
+\contentsline {subsubsection}{Conclusiones generales}{52}{Item.34}%
+\contentsline {section}{\numberline {5.2}Recomendaciones}{53}{section.5.2}%
 \contentsline {chapter}{REFERENCIAS BIBLIOGRÁFICAS}{55}{Item.43}%
-\contentsline {chapter}{APÉNDICES}{58}{Item.43}%
+\contentsline {chapter}{APÉNDICES}{59}{Item.43}%
 \renewcommand {\cftchapfont }{\normalfont }
 \renewcommand {\cftchappagefont }{\normalfont }
 \setlength {\cftchapindent }{2em}
-\contentsline {chapter}{\numberline {A}Listado de bases meteorológicas}{59}{appendix.Alph1}%
-\contentsline {chapter}{\numberline {B}Entorno computacional}{60}{appendix.Alph2}%
-\contentsline {chapter}{\numberline {C}Fuente oficial de los datos}{62}{appendix.Alph3}%
+\contentsline {chapter}{\numberline {1}Listado de bases meteorológicas}{60}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Entorno computacional}{61}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Fuente oficial de los datos}{62}{chapter.3}%

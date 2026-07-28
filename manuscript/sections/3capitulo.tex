@@ -84,21 +84,21 @@ Para el cálculo del Índice de Precipitación - Evapotranspiración Estandariza
     \end{equation}
 
     Donde se estableció un límite de tolerancia $\epsilon = 10^{-6}$.
-    \item \textit{Estandarización Normal estándar:} La probabilidad acumulada ajustada $P_{\text{ajustada}}$ se transformó finalmente en anomalías estandarizadas normales ($Z$-scores) mediante la función cuantil normal estándar (\textit{norm.ppf}), resultando en la variable dependiente final acotada, SPEI-6.
+    \item \textit{Estandarización Normal estándar:} La probabilidad acumulada ajustada $P_{\text{ajustada}}$ se transformó finalmente en anomalías estandarizadas normales (\textit{$Z$-scores}) mediante la función cuantil normal estándar (\textit{norm.ppf}), resultando en la variable dependiente final acotada, SPEI-6.
 \end{enumerate}
 
 \section{Regionalización geográfica mediante agrupamiento no supervisado}
 
 Para analizar la distribución espacial de la sequía y evitar límites políticos arbitrarios, se aplicó un algoritmo de agrupamiento jerárquico aglomerativo (HAC) sobre las series de SPEI-6 de las 18 bases. Se implementó la distancia de disimilitud euclídea y el criterio de enlace de varianza mínima de Ward. El número óptimo de subregiones climáticas ($k^*$) se determinó mediante la maximización del Coeficiente de Silueta Promedio de \citeA{rousseeuw1987}.
 
-Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementó el criterio de enlace de Ward (Ward's minimum variance method). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de \citeA{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como una de las técnicas más eficientes para la regionalización de variables continuas. Esto asegura que las bases dentro de cada clúster tengan series de SPEI-6 sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
+Para dirigir de manera óptima las fusiones de los grupos en cada etapa y garantizar la homogeneidad interna, se implementó el criterio de enlace de Ward (\textit{Ward's minimum variance method}). Este método busca minimizar de manera iterativa el incremento en la suma de los cuadrados de las distancias intra-grupo. El método de \citeA{ward1963} es ampliamente reconocido en la literatura meteorológica y climatológica como una de las técnicas más eficientes para la regionalización de variables continuas. Esto asegura que las bases dentro de cada clúster tengan series de SPEI-6 sumamente homogéneas y que los límites de los clústeres tiendan a ser esféricos y geográficamente compactos \cite{santos2010}.
 
 La disimilitud o distancia temporal entre dos entidades $X$ y $Y$ se cuantifica mediante la distancia euclídea clásica calculada sobre la totalidad de sus observaciones a lo largo de la serie histórica:
 \begin{equation}
     d(X, Y) = \sqrt{\sum_{t=1}^{T} (X_t - Y_t)^2}
     \label{eq:euclidea}
 \end{equation}
-Donde $T$ es el número de periodos analizados en el panel. Dado que el SPEI es un índice normalizado con media cero y desviación estándar unitaria ($Z$-score) en cada base, la distancia euclídea al cuadrado guarda una relación directa con el coeficiente de correlación de Pearson ($r_{xy}$) entre ambas series:
+Donde $T$ es el número de periodos analizados en el panel. Dado que el SPEI es un índice normalizado con media cero y desviación estándar unitaria (\textit{$Z$-score}) en cada base, la distancia euclídea al cuadrado guarda una relación directa con el coeficiente de correlación de Pearson ($r_{xy}$) entre ambas series:
 \begin{equation}
     d^2(X, Y) = 2T(1 - r_{xy})
 \end{equation}
