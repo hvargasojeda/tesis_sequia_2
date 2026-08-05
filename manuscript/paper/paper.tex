@@ -147,7 +147,7 @@ La sequía no se distribuye de manera uniforme en el espacio. Por ello, una etap
 
 \subsection{Modelado de datos de panel}
 
-Una vez definidas las regiones homogéneas, el análisis de tendencias se aborda mediante modelos de datos de panel, adecuados para estructuras que combinan variación temporal y espacial. Esta estrategia permite aprovechar simultáneamente la información longitudinal de cada estación o región y las diferencias entre unidades. El análisis de datos de panel, o datos longitudinales, proporciona el marco de inferencia estadístico adecuado para aislar y resolver este problema \citep{wooldridge2010}. 
+Una vez definidas las regiones homogéneas, el análisis de tendencias se aborda mediante modelos de datos de panel, adecuados para estructuras que combinan variación temporal y espacial. Esta estrategia permite aprovechar simultáneamente la información longitudinal de cada estación o región y las diferencias entre unidades. El análisis de datos de panel, o datos longitudinales, proporciona el marco de inferencia estadística adecuado para aislar y resolver este problema \citep{wooldridge2010}. 
 
 Existen dos aproximaciones teóricas alternativas para especificar estadísticamente la heterogeneidad no observada de las bases meteorológicas: el Modelo de efectos fijos (FE) y el Modelo de efectos aleatorios (RE). La elección entre ambos modelos depende de la naturaleza de la heterogeneidad no observada y de la correlación potencial entre los efectos individuales y las variables explicativas. La especificación general del modelo FE se define como:
 \begin{equation}
@@ -166,7 +166,7 @@ bajo la condición estricta de ortogonalidad:
     Cov(\alpha_i, x_{it}) = 0
 \end{equation}
 
-La elección entre modelos de efectos fijos y efectos aleatorios se fundamenta en el test de especificación de Hausman \citep{hausman1978,wooldridge2010}. Asimismo, dado que los datos climáticos suelen presentar autocorrelación temporal y dependencia espacial entre unidades, se consideran pruebas de dependencia transversal y errores estándar robustos, incluyendo la corrección de Driscoll--Kraay cuando corresponde \citep{pesaran2004}. este enfoque permite estimar tendencias del balance hídrico con mayor solidez frente a estructuras de correlación frecuentes en series climáticas espaciales.
+La elección entre modelos de efectos fijos y efectos aleatorios se fundamenta en el test de especificación de Hausman \citep{hausman1978,wooldridge2010}. Asimismo, dado que los datos climáticos suelen presentar autocorrelación temporal y dependencia espacial entre unidades, se consideran pruebas de dependencia transversal y errores estándar robustos, incluyendo la corrección de Driscoll--Kraay cuando corresponde \citep{pesaran2004}. Este enfoque permite estimar tendencias del balance hídrico con mayor solidez frente a estructuras de correlación frecuentes en series climáticas espaciales.
 
 %METODOLOGÍA===================================================
 

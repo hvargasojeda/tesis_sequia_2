@@ -1,15 +1,15 @@
 # Fdb version 4
-["bibtex paper"] 1784829818.94461 "paper.aux" "paper.bbl" "paper" 1784903032.64084 0
+["bibtex paper"] 1784829818.94461 "paper.aux" "paper.bbl" "paper" 1785934017.94854 0
   "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/bibliography.bib" 1784829683.81099 15193 7da2d3c321ec8011653c7b90eb22082b ""
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/apalike.bst" 1292289607 24635 604dafcc79f521a11ea73e506e1fbd98 ""
-  "paper.aux" 1784903032.42449 22970 ffb0ae13529e5ad185598c41115e1ffc "pdflatex"
+  "paper.aux" 1785934017.69938 22970 ffb0ae13529e5ad185598c41115e1ffc "pdflatex"
   (generated)
   "paper.bbl"
   "paper.blg"
   (rewritten before read)
-["pdflatex"] 1784903028.38477 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/paper/paper.tex" "paper.pdf" "paper" 1784903032.64122 0
+["pdflatex"] 1785934012.44179 "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/paper/paper.tex" "paper.pdf" "paper" 1785934017.949 0
   "/etc/texmf/web2c/texmf.cnf" 1755191811.04725 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/paper/paper.tex" 1784903027.88353 61731 ac128beaf2e306ea59a1b7a92460e076 ""
+  "/home/hjvargaso/proyectos/tesis_sequia_2/manuscript/paper/paper.tex" 1785934012.00105 61731 032d74527af116c0c7623029670e347a ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/analisis_regionalizacion_sequia.png" 1781194997.00348 495264 1d1dd998f703e154b04780cf7f1af3e6 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/caracterizacion_descriptiva_sequia.png" 1781194761.99878 694415 374bc4e61026cf044163266e9e1f0cf4 ""
   "/home/hjvargaso/proyectos/tesis_sequia_2/output/figures/distribucion_mensual_spei6.png" 1782590835.57468 112896 4cddc5c454ea926db831add7f6615cc2 ""
@@ -179,9 +179,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755191821.77122 128067 403859e4d35fdff4c458758f0e5ea400 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755191845 7353677 dd6910b802aeac5551a5b8794ff44066 ""
-  "paper.aux" 1784903032.42449 22970 ffb0ae13529e5ad185598c41115e1ffc "pdflatex"
+  "paper.aux" 1785934017.69938 22970 ffb0ae13529e5ad185598c41115e1ffc "pdflatex"
   "paper.bbl" 1784829818.96694 6271 ebda1cf10edff0a08fbab29d5dd697ba "bibtex paper"
-  "paper.tex" 1784903027.88353 61731 ac128beaf2e306ea59a1b7a92460e076 ""
+  "paper.tex" 1785934012.00105 61731 032d74527af116c0c7623029670e347a ""
   (generated)
   "paper.aux"
   "paper.log"
