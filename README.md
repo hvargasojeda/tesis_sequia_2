@@ -6,6 +6,14 @@ Acceda a la tesis:
            
       manuscript> main.pdf
 
+Acceda a los códigos:
+
+       src>
+
+Acceda a los datos: 
+
+       data>
+
 ## Cita
 
 Si utiliza estos datos, por favor cite la tesis:
